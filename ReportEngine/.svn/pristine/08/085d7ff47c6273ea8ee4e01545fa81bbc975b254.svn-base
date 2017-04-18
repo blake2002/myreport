@@ -1,0 +1,224 @@
+﻿using System;
+using Topshelf.Logging;
+using Dapper;
+using Dapper.Contrib.Extensions;
+using System.Data;
+using MySql.Data.MySqlClient;
+using System.Collections.Generic;
+
+namespace NetSCADA.MESReportServer
+{
+	public class RptDb
+	{
+		LogWriter log = HostLogger.Get ("RptManageModule");
+
+		public static bool SaveDir (RptDirectory dir)
+		{
+			try {
+				if (dir == null)
+					return false;
+				using (var conn = new MySqlConnection (CommonConst.ConStr)) {
+					if (string.IsNullOrEmpty (dir.Id)) {
+						dir.Id = Guid.NewGuid ().ToString ("N");
+						dir.LastModifyTime = dir.CreateTime = DateTime.Now.ToString ("yyyyMMddHHmmss");
+						conn.Insert (dir);
+					} else {
+						var d = conn.Get<RptDirectory> (dir.Id);
+						if (d == null) {
+							dir.Id = Guid.NewGuid ().ToString ("N");
+							dir.LastModifyTime = dir.CreateTime = DateTime.Now.ToString ("yyyyMMddHHmmss");
+							conn.Insert (dir);
+						} else {
+							d.DirPath = dir.DirPath;
+							d.DirName = dir.DirName;
+							d.LastModifyUser = dir.LastModifyUser;
+							d.LastModifyTime = DateTime.Now.ToString ("yyyyMMddHHmmss");
+							conn.Update (d);
+						}
+					}
+				}
+
+			} catch (Exception ex) {
+				log.Error (string.Format ("message:{0},StackTrace:{1}", ex.Message, ex.StackTrace));
+				return false;
+			}
+		}
+
+		public static bool SaveRptDesign (RptDesign rpt)
+		{
+			try {
+				if (rpt == null)
+					return false;
+				using (var conn = new MySqlConnection (CommonConst.ConStr)) {
+					if (string.IsNullOrEmpty (rpt.Id)) {
+						rpt.Id = Guid.NewGuid ().ToString ("N");
+						conn.Insert (rpt);
+					} else {
+						var d = conn.Get<RptDesign> (rpt.Id);
+						if (d == null) {
+							rpt.Id = Guid.NewGuid ().ToString ("N");
+							conn.Insert (rpt);
+						}
+					}
+				}
+
+			} catch (Exception ex) {
+				log.Error (string.Format ("message:{0},StackTrace:{1}", ex.Message, ex.StackTrace));
+				return false;
+			}
+		}
+
+		public static bool SaveRptRuntime (RptRuntime rpt)
+		{
+			try {
+				if (rpt == null)
+					return false;
+				using (var conn = new MySqlConnection (CommonConst.ConStr)) {
+					if (string.IsNullOrEmpty (rpt.Id)) {
+						rpt.Id = Guid.NewGuid ().ToString ("N");
+						rpt.LastQueryTime = DateTime.Now.ToString ("yyyyMMddHHmmss");
+						conn.Insert (rpt);
+					} else {
+						var d = conn.Get<RptRuntime> (rpt.Id);
+						if (d == null) {
+							rpt.Id = Guid.NewGuid ().ToString ("N");
+							rpt.LastQueryTime = DateTime.Now.ToString ("yyyyMMddHHmmss");
+							conn.Insert (rpt);
+						} else {
+							d.ExportCount = rpt.ExportCount;
+							d.LastQeuryPerson = rpt.LastQeuryPerson;
+							d.QueryCount = d.QueryCount;
+							d.LastQueryTime = DateTime.Now.ToString ("yyyyMMddHHmmss");
+							conn.Update (d);
+						}
+					}
+				}
+
+			} catch (Exception ex) {
+				log.Error (string.Format ("message:{0},StackTrace:{1}", ex.Message, ex.StackTrace));
+				return false;
+			}
+		}
+
+		public static List<RptRuntime> GetAllRptRuntime ()
+		{
+			try {
+				using (var conn = new MySqlConnection (CommonConst.ConStr)) {
+					return conn.GetAll<RptRuntime> ().AsList ();
+				}
+
+			} catch (Exception ex) {
+				log.Error (string.Format ("message:{0},StackTrace:{1}", ex.Message, ex.StackTrace));
+				return null;
+			}
+		}
+
+		public static List<RptDesign> GetAllRptDesign ()
+		{
+			try {
+				using (var conn = new MySqlConnection (CommonConst.ConStr)) {
+					return conn.GetAll<RptDesign> ().AsList ();
+				}
+
+			} catch (Exception ex) {
+				log.Error (string.Format ("message:{0},StackTrace:{1}", ex.Message, ex.StackTrace));
+				return null;
+			}
+		}
+
+		public static List<RptDirectory> GetAllRptDirectory ()
+		{
+			try {
+				using (var conn = new MySqlConnection (CommonConst.ConStr)) {
+					return conn.GetAll<RptDirectory> ().AsList ();
+				}
+
+			} catch (Exception ex) {
+				log.Error (string.Format ("message:{0},StackTrace:{1}", ex.Message, ex.StackTrace));
+				return null;
+			}
+		}
+
+		public static bool DeleteRptDirectory (RptDirectory dir)
+		{
+			IDbTransaction tran = null;
+			try {
+				if (dir == null || string.IsNullOrEmpty (dir.Id))
+					return false;
+				using (var conn = new MySqlConnection (CommonConst.ConStr)) {
+					tran = conn.BeginTransaction ();
+					var flag = false;
+					var list = conn.Query<RptDesign> ("select * from rpt_design where DirId=@DirId", new {DirId = dir.Id}, tran).AsList ();
+					if (list == null || list.Count == 0) {
+						flag = conn.Delete (dir, tran);
+					} else {
+						foreach (var rpt in list) {
+							flag &= conn.Execute ("delete from rpt_runtime where RptId=@RptId", new {RptId = rpt.Id}, tran);
+							flag &= conn.Delete (rpt, tran);
+						}
+
+						flag &= conn.Delete (dir, tran);
+					}
+					tran.Commit ();
+					return flag;
+				}
+
+			} catch (Exception ex) {
+				log.Error (string.Format ("message:{0},StackTrace:{1}", ex.Message, ex.StackTrace));
+				if (tran != null) {
+					tran.Rollback ();
+				}
+				return false;
+			}
+		}
+
+		public static bool DeleteRptDesign (RptDesign rpt)
+		{
+			IDbTransaction tran = null;
+			try {
+				if (rpt == null || string.IsNullOrEmpty (rpt.Id))
+					return false;
+				using (var conn = new MySqlConnection (CommonConst.ConStr)) {
+					tran = conn.BeginTransaction ();
+					var flag = conn.Delete (rpt);
+					flag &= conn.Execute ("delete from rpt_runtime where RptId=@RptId", new {RptId = rpt.Id}, tran);
+
+					tran.Commit ();
+					return flag;
+				}
+
+			} catch (Exception ex) {
+				log.Error (string.Format ("message:{0},StackTrace:{1}", ex.Message, ex.StackTrace));
+				if (tran != null) {
+					tran.Rollback ();
+				}
+				return false;
+			}
+		}
+
+		public static bool DeleteRptRuntime (RptRuntime rpt)
+		{
+			IDbTransaction tran = null;
+			try {
+				if (rpt == null || string.IsNullOrEmpty (rpt.Id))
+					return false;
+				using (var conn = new MySqlConnection (CommonConst.ConStr)) {
+					tran = conn.BeginTransaction ();
+					var flag = conn.Delete (rpt);
+					flag &= conn.Execute ("delete from rpt_design where Id=@Id", new {Id = rpt.RptId}, tran);
+
+					tran.Commit ();
+					return flag;
+				}
+
+			} catch (Exception ex) {
+				log.Error (string.Format ("message:{0},StackTrace:{1}", ex.Message, ex.StackTrace));
+				if (tran != null) {
+					tran.Rollback ();
+				}
+				return false;
+			}
+		}
+	}
+}
+

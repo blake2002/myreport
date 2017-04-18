@@ -1,0 +1,226 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AF281CF4-2C0E-49E6-B740-829A3D80BCE8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NetSCADA.ReportEngine</RootNamespace>
+    <AssemblyName>NetSCADA.ReportEngine</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="iTextAsian">
+      <HintPath>..\..\..\bin\%24%28Configuration%29\iTextAsian.dll</HintPath>
+    </Reference>
+    <Reference Include="iTextAsianCmaps">
+      <HintPath>..\..\..\bin\%24%28Configuration%29\iTextAsianCmaps.dll</HintPath>
+    </Reference>
+    <Reference Include="MES.ExpressionEngine">
+      <HintPath>..\..\..\bin\%24%28Configuration%29\MES.ExpressionEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="MES.MESTable">
+      <HintPath>..\..\..\bin\%24%28Configuration%29\MES.MESTable.dll</HintPath>
+    </Reference>
+    <Reference Include="MES.NetSCADACurve">
+      <HintPath>..\..\..\bin\%24%28Configuration%29\MES.NetSCADACurve.dll</HintPath>
+    </Reference>
+    <Reference Include="MES.ReportExpressionEngine">
+      <HintPath>..\..\..\bin\%24%28Configuration%29\MES.ReportExpressionEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="itextsharp">
+      <HintPath>..\..\..\bin\%24%28Configuration%29\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="PMS.PMSPublicInfo">
+      <HintPath>..\..\..\bin\%24%28Configuration%29\PMS.PMSPublicInfo.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\..\bin\%24%28Configuration%29\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PMS.BarcodeLib">
+      <HintPath>..\..\..\bin\%24%28Configuration%29\PMS.BarcodeLib.dll</HintPath>
+    </Reference>
+    <Reference Include="MES.2DCodeLib">
+      <HintPath>..\..\..\bin\%24%28Configuration%29\MES.2DCodeLib.dll</HintPath>
+    </Reference>
+    <Reference Include="EcmaScript.NET">
+      <HintPath>..\..\..\bin\%24%28Configuration%29\EcmaScript.NET.dll</HintPath>
+    </Reference>
+    <Reference Include="Yahoo.Yui.Compressor">
+      <HintPath>..\..\..\bin\%24%28Configuration%29\Yahoo.Yui.Compressor.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.ObjectPool">
+      <HintPath>..\..\..\bin\%24%28Configuration%29\Microsoft.Extensions.ObjectPool.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms.DataVisualization">
+      <HintPath>..\..\..\bin\$(Configuration)\System.Windows.Forms.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="PMS.PMSChart">
+      <HintPath>..\..\..\bin\%24%28Configuration%29\PMS.PMSChart.dll</HintPath>
+    </Reference>
+    <Reference Include="PMS.PmsPublicData">
+      <HintPath>..\..\..\bin\%24%28Configuration%29\PMS.PmsPublicData.dll</HintPath>
+    </Reference>
+    <Reference Include="PMS.ReportControls">
+      <HintPath>..\..\..\bin\%24%28Configuration%29\PMS.ReportControls.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataTableManager.cs" />
+    <Compile Include="InvokeDll.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <DependentUpon>Resources.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReportRuntime.cs" />
+    <Compile Include="ReportPage.cs" />
+    <Compile Include="ReportPages.cs" />
+    <Compile Include="ProcessForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProcessForm.Designer.cs">
+      <DependentUpon>ProcessForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportElement.cs" />
+    <Compile Include="SizeConversion.cs" />
+    <Compile Include="SourceFieldDataTable.cs" />
+    <Compile Include="ReportDrawing.cs" />
+    <Compile Include="ReportDrawing.Designer.cs">
+      <DependentUpon>ReportDrawing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportPageDrawing.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ReportPageDrawing.Designer.cs">
+      <DependentUpon>ReportPageDrawing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ReportViewer.Designer.cs">
+      <DependentUpon>ReportViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LogMessageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LogMessageForm.Designer.cs">
+      <DependentUpon>LogMessageForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SerializationUnit.cs" />
+    <Compile Include="Extension.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="LogMessageForm.resx">
+      <DependentUpon>LogMessageForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportViewer.en.resx">
+      <DependentUpon>ReportViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportViewer.resx">
+      <DependentUpon>ReportViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportDrawing.resx">
+      <DependentUpon>ReportDrawing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProcessForm.resx">
+      <DependentUpon>ProcessForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resource\FirstPage.png" />
+    <None Include="Resource\FitPage.png" />
+    <None Include="Resource\FitPageWidth.png" />
+    <None Include="Resource\FullPage.png" />
+    <None Include="Resource\LastPage.png" />
+    <None Include="Resource\Log.png" />
+    <None Include="Resource\NextPage.png" />
+    <None Include="Resource\Open.png" />
+    <None Include="Resource\PrePage.png" />
+    <None Include="Resource\PreView.png" />
+    <None Include="Resource\printer.png" />
+    <None Include="Resource\Refresh.png" />
+    <None Include="Resource\Save.png" />
+    <None Include="Resource\stop.png" />
+    <None Include="Resource\Stop64.png" />
+    <None Include="Resource\ZoomIn.png" />
+    <None Include="Resource\ZoomOut.png" />
+    <None Include="Resource\Cancel.png" />
+    <None Include="Resource\ok.png" />
+    <None Include="Resource\SubView.png" />
+    <None Include="Resource\Option.png" />
+    <None Include="Resource\Configer.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)/Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>cp  $(TargetPath)  $(SolutionDir)bin\$(ConfigurationName) 
+cp  $(TargetDir)$(TargetName).dll.mdb  $(SolutionDir)bin\$(ConfigurationName)\pdb\
+$(SolutionDir)copy.sh $(TargetPath) $(SolutionDir)bin</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\DesignerLib\DesignerLib-mono.csproj">
+      <Project>{90A4D424-B4D8-4D6C-9C77-C225DC55C599}</Project>
+      <Name>DesignerLib-mono</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\MESPublicInterface\MESPublicInterface-mono.csproj">
+      <Project>{5A8061E9-58DF-44FA-A983-85813A8ABA10}</Project>
+      <Name>MESPublicInterface-mono</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\ECharts\ECharts-mono.csproj">
+      <Project>{653DE17A-F178-46F8-8E47-2D7586883E32}</Project>
+      <Name>ECharts-mono</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\HtmlTags\HtmlTags-mono.csproj">
+      <Project>{F01C84F2-6E41-404C-AC8D-BF189A9EC05B}</Project>
+      <Name>HtmlTags-mono</Name>
+    </ProjectReference>
+  </ItemGroup>
+</Project>

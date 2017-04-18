@@ -1,0 +1,724 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="PMSCenter" Class="PMSCenterDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=RUBYBLUE-LAPTOP\SQL2005;Initial Catalog=PMSCenter;Persist Security Info=True;User ID=sa" SettingsObjectName="PMS.Libraries.ToolControls.PMSPublicInfo.Properties.Settings" SettingsPropertyName="PMSCenterConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.NetSCADA_SMS_HIS_Table" Member="NetSCADA_SMS_HIS_Tables">
+    <Type Name="NetSCADA_SMS_HIS_Table">
+      <Column Name="SMID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="SMGID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SMType" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SMMSG" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="SMTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="SMSendTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Result" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PMSSys_UserMap" Member="PMSSys_UserMaps">
+    <Type Name="PMSSys_UserMap">
+      <Column Name="MAPID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ParentID" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="RelationParentID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="[Level]" Member="Level" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SequenceUnderParent" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ModelID" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Association Name="PMSSys_UserMap_PMSSys_UserMap" Member="PMSSys_UserMaps" OtherKey="ParentID" Type="PMSSys_UserMap" />
+      <Association Name="PMSSys_UserMap_PMSSys_UserInfo_PMSSys_UserMap_Relation" Member="PMSSys_UserInfo_PMSSys_UserMap_Relations" OtherKey="MAPID" Type="PMSSys_UserInfo_PMSSys_UserMap_Relation" />
+      <Association Name="PMSSys_UserMap_PMSSys_UserMap" Member="PMSSys_UserMap1" ThisKey="ParentID" Type="PMSSys_UserMap" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.NetSCADA_SMS_OrgMap_Table" Member="NetSCADA_SMS_OrgMap_Tables">
+    <Type Name="NetSCADA_SMS_OrgMap_Table">
+      <Column Name="MAPID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ParentID" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="RelationParentID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="[Level]" Member="Level" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SequenceUnderParent" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ModelID" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Association Name="NetSCADA_SMS_OrgMap_Table_NetSCADA_SMS_OrgMap_Table" Member="NetSCADA_SMS_OrgMap_Tables" OtherKey="ParentID" Type="NetSCADA_SMS_OrgMap_Table" />
+      <Association Name="NetSCADA_SMS_OrgMap_Table_NetSCADA_SMS_SMGroup_Table_NetSCADA_SMS_OrgMap_Table_Relation" Member="NetSCADA_SMS_SMGroup_Table_NetSCADA_SMS_OrgMap_Table_Relations" OtherKey="MAPID" Type="NetSCADA_SMS_SMGroup_Table_NetSCADA_SMS_OrgMap_Table_Relation" />
+      <Association Name="NetSCADA_SMS_OrgMap_Table_NetSCADA_SMS_User_Table_NetSCADA_SMS_OrgMap_Table_Relation" Member="NetSCADA_SMS_User_Table_NetSCADA_SMS_OrgMap_Table_Relations" OtherKey="MAPID" Type="NetSCADA_SMS_User_Table_NetSCADA_SMS_OrgMap_Table_Relation" />
+      <Association Name="NetSCADA_SMS_OrgMap_Table_NetSCADA_SMS_OrgMap_Table" Member="NetSCADA_SMS_OrgMap_Table1" ThisKey="ParentID" Type="NetSCADA_SMS_OrgMap_Table" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.NetSCADA_SMS_RT_Table" Member="NetSCADA_SMS_RT_Tables">
+    <Type Name="NetSCADA_SMS_RT_Table">
+      <Column Name="SMID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="SMGID" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="SMType" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SMMSG" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="SMTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.NetSCADA_SMS_SMGroup_Table" Member="NetSCADA_SMS_SMGroup_Tables">
+    <Type Name="NetSCADA_SMS_SMGroup_Table">
+      <Column Name="SMGID" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ModelID" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Association Name="NetSCADA_SMS_SMGroup_Table_NetSCADA_SMS_SMGroup_Table_NetSCADA_SMS_OrgMap_Table_Relation" Member="NetSCADA_SMS_SMGroup_Table_NetSCADA_SMS_OrgMap_Table_Relations" OtherKey="SMGID" Type="NetSCADA_SMS_SMGroup_Table_NetSCADA_SMS_OrgMap_Table_Relation" />
+      <Association Name="NetSCADA_SMS_SMGroup_Table_NetSCADA_SMS_SMGroupUser_Table" Member="NetSCADA_SMS_SMGroupUser_Tables" OtherKey="SMGID" Type="NetSCADA_SMS_SMGroupUser_Table" />
+    </Type>
+  </Table>
+  <Table Name="dbo.NetSCADA_SMS_SMGroup_Table_NetSCADA_SMS_OrgMap_Table_Relation" Member="NetSCADA_SMS_SMGroup_Table_NetSCADA_SMS_OrgMap_Table_Relations">
+    <Type Name="NetSCADA_SMS_SMGroup_Table_NetSCADA_SMS_OrgMap_Table_Relation">
+      <Column Name="SMGID" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="MAPID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Association Name="NetSCADA_SMS_OrgMap_Table_NetSCADA_SMS_SMGroup_Table_NetSCADA_SMS_OrgMap_Table_Relation" Member="NetSCADA_SMS_OrgMap_Table" ThisKey="MAPID" Type="NetSCADA_SMS_OrgMap_Table" IsForeignKey="true" />
+      <Association Name="NetSCADA_SMS_SMGroup_Table_NetSCADA_SMS_SMGroup_Table_NetSCADA_SMS_OrgMap_Table_Relation" Member="NetSCADA_SMS_SMGroup_Table" ThisKey="SMGID" Type="NetSCADA_SMS_SMGroup_Table" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.NetSCADA_SMS_SMGroupUser_Table" Member="NetSCADA_SMS_SMGroupUser_Tables">
+    <Type Name="NetSCADA_SMS_SMGroupUser_Table">
+      <Column Name="SMGID" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="UID" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="NetSCADA_SMS_SMGroup_Table_NetSCADA_SMS_SMGroupUser_Table" Member="NetSCADA_SMS_SMGroup_Table" ThisKey="SMGID" Type="NetSCADA_SMS_SMGroup_Table" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="PMSSys_UserInfo_NetSCADA_SMS_SMGroupUser_Table" Member="PMSSys_UserInfo" ThisKey="UID" Type="PMSSys_UserInfo" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.NetSCADA_SMS_User_Table" Member="NetSCADA_SMS_User_Tables">
+    <Type Name="NetSCADA_SMS_User_Table">
+      <Column Name="UID" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Enable" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ModelID" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="Mobile" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="NetSCADA_SMS_User_Table_NetSCADA_SMS_User_Table_NetSCADA_SMS_OrgMap_Table_Relation" Member="NetSCADA_SMS_User_Table_NetSCADA_SMS_OrgMap_Table_Relations" OtherKey="UID" Type="NetSCADA_SMS_User_Table_NetSCADA_SMS_OrgMap_Table_Relation" />
+    </Type>
+  </Table>
+  <Table Name="dbo.NetSCADA_SMS_User_Table_NetSCADA_SMS_OrgMap_Table_Relation" Member="NetSCADA_SMS_User_Table_NetSCADA_SMS_OrgMap_Table_Relations">
+    <Type Name="NetSCADA_SMS_User_Table_NetSCADA_SMS_OrgMap_Table_Relation">
+      <Column Name="UID" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="MAPID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Association Name="NetSCADA_SMS_OrgMap_Table_NetSCADA_SMS_User_Table_NetSCADA_SMS_OrgMap_Table_Relation" Member="NetSCADA_SMS_OrgMap_Table" ThisKey="MAPID" Type="NetSCADA_SMS_OrgMap_Table" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="NetSCADA_SMS_User_Table_NetSCADA_SMS_User_Table_NetSCADA_SMS_OrgMap_Table_Relation" Member="NetSCADA_SMS_User_Table" ThisKey="UID" Type="NetSCADA_SMS_User_Table" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.NetSCADAPMSDeviceInfo" Member="NetSCADAPMSDeviceInfos">
+    <Type Name="NetSCADAPMSDeviceInfo">
+      <Column Name="DID" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Enable" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="ModelID" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Status" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="NetSCADAPMSDeviceInfo_NetSCADAPMSDeviceInfo_NetSCADATyreOrgMap_Relation" Member="NetSCADAPMSDeviceInfo_NetSCADATyreOrgMap_Relations" OtherKey="DID" Type="NetSCADAPMSDeviceInfo_NetSCADATyreOrgMap_Relation" />
+      <Association Name="NetSCADAPMSDeviceInfo_NetSCADAPMSDeviceStopInform" Member="NetSCADAPMSDeviceStopInforms" OtherKey="NS_PMS_DEVICE_ID" Type="NetSCADAPMSDeviceStopInform" />
+    </Type>
+  </Table>
+  <Table Name="dbo.NetSCADAPMSDeviceInfo_NetSCADATyreOrgMap_Relation" Member="NetSCADAPMSDeviceInfo_NetSCADATyreOrgMap_Relations">
+    <Type Name="NetSCADAPMSDeviceInfo_NetSCADATyreOrgMap_Relation">
+      <Column Name="DID" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="MAPID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Association Name="NetSCADAPMSDeviceInfo_NetSCADAPMSDeviceInfo_NetSCADATyreOrgMap_Relation" Member="NetSCADAPMSDeviceInfo" ThisKey="DID" Type="NetSCADAPMSDeviceInfo" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="NetSCADATyreOrgMap_NetSCADAPMSDeviceInfo_NetSCADATyreOrgMap_Relation" Member="NetSCADATyreOrgMap" ThisKey="MAPID" Type="NetSCADATyreOrgMap" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.NetSCADAPMSDeviceStopInform" Member="NetSCADAPMSDeviceStopInforms">
+    <Type Name="NetSCADAPMSDeviceStopInform">
+      <Column Name="NS_PMS_DEVICE_ID" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="NS_PMS_DEVICE_STARTTIME" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="NS_PMS_DEVICE_ENDTIME" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="NS_PMS_DEVICE_STOPTYPE" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="NS_PMS_DEVICE_USER" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="NetSCADAPMSDeviceInfo_NetSCADAPMSDeviceStopInform" Member="NetSCADAPMSDeviceInfo" ThisKey="NS_PMS_DEVICE_ID" Type="NetSCADAPMSDeviceInfo" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.NetSCADAPMSDisfigurementInform" Member="NetSCADAPMSDisfigurementInforms">
+    <Type Name="NetSCADAPMSDisfigurementInform">
+      <Column Name="NS_PMS_DISFIGUREMENT_ID" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="NS_PMS_DISFIGUREMENT_NAME" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="NS_PMS_DISFIGUREMENT_MODULUS" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="NS_PMS_DISFIGUREMENT_LEVEL" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="NS_PMS_DISFIGUREMENT_STATUS" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="NS_PMS_DISFIGUREMENT_DISTYPE" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NS_PMS_DISFIGUREMENT_DEPART" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="NetSCADAPMSDisfigurementInform_NetSCADAPMSProductDefect" Member="NetSCADAPMSProductDefects" OtherKey="NS_PMS_DISFIGUREMENT_ID" Type="NetSCADAPMSProductDefect" />
+    </Type>
+  </Table>
+  <Table Name="dbo.NetSCADAPMSProductDefect" Member="NetSCADAPMSProductDefects">
+    <Type Name="NetSCADAPMSProductDefect">
+      <Column Name="NS_PMS_PRODUCT_ID" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="NS_PMS_DISFIGUREMENT_ID" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CheckUser" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="CheckDevice" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="CheckTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="NetSCADAPMSDisfigurementInform_NetSCADAPMSProductDefect" Member="NetSCADAPMSDisfigurementInform" ThisKey="NS_PMS_DISFIGUREMENT_ID" Type="NetSCADAPMSDisfigurementInform" IsForeignKey="true" />
+      <Association Name="NetSCADAPMSProductInform_NetSCADAPMSProductDefect" Member="NetSCADAPMSProductInform" ThisKey="NS_PMS_PRODUCT_ID" Type="NetSCADAPMSProductInform" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.NetSCADAPMSProductInform" Member="NetSCADAPMSProductInforms">
+    <Type Name="NetSCADAPMSProductInform">
+      <Column Name="NS_PMS_PRODUCT_ID" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="NS_PMS_DEVICE_ID" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="NS_PMS_PRODUCT_SPECS" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="NS_PMS_PRODUCT_BATCH" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="NS_PMS_PRODUCT_OPERATOR" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="NS_PMS_PRODUCT_STARTTIME" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="NS_PMS_PRODUCT_ENDTIME" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="NetSCADAPMSProductInform_NetSCADAPMSProductDefect" Member="NetSCADAPMSProductDefects" OtherKey="NS_PMS_PRODUCT_ID" Type="NetSCADAPMSProductDefect" />
+      <Association Name="NetSCADAPMSProductInform_NetSCADAPMSQuality" Member="NetSCADAPMSQualities" OtherKey="NS_PMS_PRODUCT_ID" Type="NetSCADAPMSQuality" />
+    </Type>
+  </Table>
+  <Table Name="dbo.NetSCADAPMSQuality" Member="NetSCADAPMSQualities">
+    <Type Name="NetSCADAPMSQuality">
+      <Column Name="NS_PMS_PRODUCT_ID" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CheckUser" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="CheckDeviceType" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="CheckTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="[01]" Member="_01" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="[01_1]" Member="_01_1" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="[01_2]" Member="_01_2" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="[01_3]" Member="_01_3" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="[02]" Member="_02" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="[02_1]" Member="_02_1" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="[02_2]" Member="_02_2" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="[02_3]" Member="_02_3" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="[03]" Member="_03" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="[03_1]" Member="_03_1" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="[03_2]" Member="_03_2" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="[03_3]" Member="_03_3" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="[04]" Member="_04" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="[05]" Member="_05" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="NetSCADAPMSProductInform_NetSCADAPMSQuality" Member="NetSCADAPMSProductInform" ThisKey="NS_PMS_PRODUCT_ID" Type="NetSCADAPMSProductInform" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.NetSCADATyreOrgMap" Member="NetSCADATyreOrgMaps">
+    <Type Name="NetSCADATyreOrgMap">
+      <Column Name="MAPID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ParentID" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="RelationParentID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="[Level]" Member="Level" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SequenceUnderParent" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ModelID" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Association Name="NetSCADATyreOrgMap_NetSCADAPMSDeviceInfo_NetSCADATyreOrgMap_Relation" Member="NetSCADAPMSDeviceInfo_NetSCADATyreOrgMap_Relations" OtherKey="MAPID" Type="NetSCADAPMSDeviceInfo_NetSCADATyreOrgMap_Relation" />
+      <Association Name="NetSCADATyreOrgMap_NetSCADATyreOrgMap" Member="NetSCADATyreOrgMaps" OtherKey="ParentID" Type="NetSCADATyreOrgMap" />
+      <Association Name="NetSCADATyreOrgMap_NetSCADATyreOrgMap" Member="NetSCADATyreOrgMap1" ThisKey="ParentID" Type="NetSCADATyreOrgMap" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PMSSys_ActionAffirmPowerGroupInfo" Member="PMSSys_ActionAffirmPowerGroupInfos">
+    <Type Name="PMSSys_ActionAffirmPowerGroupInfo">
+      <Column Name="AID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="PGID" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="PMSSys_ActionInfo_PMSSys_ActionAffirmPowerGroupInfo" Member="PMSSys_ActionInfo" ThisKey="AID" Type="PMSSys_ActionInfo" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="PMSSys_PowerGroupInfo_PMSSys_ActionAffirmPowerGroupInfo" Member="PMSSys_PowerGroupInfo" ThisKey="PGID" Type="PMSSys_PowerGroupInfo" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PMSSys_ActionInfo" Member="PMSSys_ActionInfos">
+    <Type Name="PMSSys_ActionInfo">
+      <Column Name="AID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Type" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="[Save]" Member="Save" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="PGEnable" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="AFPGEnable" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="VAPGEnable" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="PMSSys_ActionInfo_PMSSys_ActionAffirmPowerGroupInfo" Member="PMSSys_ActionAffirmPowerGroupInfos" OtherKey="AID" Type="PMSSys_ActionAffirmPowerGroupInfo" />
+      <Association Name="PMSSys_ActionInfo_PMSSys_ActionPowerGroupInfo" Member="PMSSys_ActionPowerGroupInfos" OtherKey="AID" Type="PMSSys_ActionPowerGroupInfo" />
+      <Association Name="PMSSys_ActionInfo_PMSSys_ActionValidatePowerGroupInfo" Member="PMSSys_ActionValidatePowerGroupInfos" OtherKey="AID" Type="PMSSys_ActionValidatePowerGroupInfo" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PMSSys_ActionPowerGroupInfo" Member="PMSSys_ActionPowerGroupInfos">
+    <Type Name="PMSSys_ActionPowerGroupInfo">
+      <Column Name="AID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="PGID" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="PMSSys_ActionInfo_PMSSys_ActionPowerGroupInfo" Member="PMSSys_ActionInfo" ThisKey="AID" Type="PMSSys_ActionInfo" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="PMSSys_PowerGroupInfo_PMSSys_ActionPowerGroupInfo" Member="PMSSys_PowerGroupInfo" ThisKey="PGID" Type="PMSSys_PowerGroupInfo" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PMSSys_ActionValidatePowerGroupInfo" Member="PMSSys_ActionValidatePowerGroupInfos">
+    <Type Name="PMSSys_ActionValidatePowerGroupInfo">
+      <Column Name="AID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="PGID" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="PMSSys_ActionInfo_PMSSys_ActionValidatePowerGroupInfo" Member="PMSSys_ActionInfo" ThisKey="AID" Type="PMSSys_ActionInfo" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="PMSSys_PowerGroupInfo_PMSSys_ActionValidatePowerGroupInfo" Member="PMSSys_PowerGroupInfo" ThisKey="PGID" Type="PMSSys_PowerGroupInfo" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PMSSys_Administrators" Member="PMSSys_Administrators">
+    <Type Name="PMSSys_Administrator">
+      <Column Name="UID" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Pass" Type="System.String" DbType="NVarChar(128)" CanBeNull="true" />
+      <Column Name="Enable" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Active" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PMSSys_ConfigFileInfo" Member="PMSSys_ConfigFileInfos">
+    <Type Name="PMSSys_ConfigFileInfo">
+      <Column Name="FID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="RelativePath" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Type" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="Content" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="TimeStamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Version" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[Check]" Member="Check" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="[Current]" Member="Current" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="CheckUserID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ModelID" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Association Name="PMSSys_ConfigFileInfo_PMSSys_ConfigFileInfo_PMSSys_ConfigFileInfoMap_Relation" Member="PMSSys_ConfigFileInfo_PMSSys_ConfigFileInfoMap_Relations" OtherKey="FID" Type="PMSSys_ConfigFileInfo_PMSSys_ConfigFileInfoMap_Relation" />
+      <Association Name="PMSSys_ConfigFileInfo_PMSSys_FilePowerGroupInform" Member="PMSSys_FilePowerGroupInforms" OtherKey="FID" Type="PMSSys_FilePowerGroupInform" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PMSSys_ConfigFileInfo_PMSSys_ConfigFileInfoMap_Relation" Member="PMSSys_ConfigFileInfo_PMSSys_ConfigFileInfoMap_Relations">
+    <Type Name="PMSSys_ConfigFileInfo_PMSSys_ConfigFileInfoMap_Relation">
+      <Column Name="FID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="MAPID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Association Name="PMSSys_ConfigFileInfo_PMSSys_ConfigFileInfo_PMSSys_ConfigFileInfoMap_Relation" Member="PMSSys_ConfigFileInfo" ThisKey="FID" Type="PMSSys_ConfigFileInfo" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="PMSSys_ConfigFileInfoMap_PMSSys_ConfigFileInfo_PMSSys_ConfigFileInfoMap_Relation" Member="PMSSys_ConfigFileInfoMap" ThisKey="MAPID" Type="PMSSys_ConfigFileInfoMap" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PMSSys_ConfigFileTemplateInfo" Member="PMSSys_ConfigFileTemplateInfos">
+    <Type Name="PMSSys_ConfigFileTemplateInfo">
+      <Column Name="TID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="OldFID" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="RelativePath" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Type" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="Content" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="TimeStamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="[Check]" Member="Check" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="CheckUserID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ModelID" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Association Name="PMSSys_ConfigFileTemplateInfo_PMSSys_ConfigFileTemplateInfo_PMSSys_ConfigFileTemplateMap_Relation" Member="PMSSys_ConfigFileTemplateInfo_PMSSys_ConfigFileTemplateMap_Relations" OtherKey="TID" Type="PMSSys_ConfigFileTemplateInfo_PMSSys_ConfigFileTemplateMap_Relation" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PMSSys_ConfigFileTemplateInfo_PMSSys_ConfigFileTemplateMap_Relation" Member="PMSSys_ConfigFileTemplateInfo_PMSSys_ConfigFileTemplateMap_Relations">
+    <Type Name="PMSSys_ConfigFileTemplateInfo_PMSSys_ConfigFileTemplateMap_Relation">
+      <Column Name="TID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="MAPID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Association Name="PMSSys_ConfigFileTemplateInfo_PMSSys_ConfigFileTemplateInfo_PMSSys_ConfigFileTemplateMap_Relation" Member="PMSSys_ConfigFileTemplateInfo" ThisKey="TID" Type="PMSSys_ConfigFileTemplateInfo" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="PMSSys_ConfigFileTemplateMap_PMSSys_ConfigFileTemplateInfo_PMSSys_ConfigFileTemplateMap_Relation" Member="PMSSys_ConfigFileTemplateMap" ThisKey="MAPID" Type="PMSSys_ConfigFileTemplateMap" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PMSSys_ConfigFileTemplateMap" Member="PMSSys_ConfigFileTemplateMaps">
+    <Type Name="PMSSys_ConfigFileTemplateMap">
+      <Column Name="MAPID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ParentID" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="RelationParentID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="[Level]" Member="Level" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SequenceUnderParent" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ModelID" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Association Name="PMSSys_ConfigFileTemplateMap_PMSSys_ConfigFileTemplateInfo_PMSSys_ConfigFileTemplateMap_Relation" Member="PMSSys_ConfigFileTemplateInfo_PMSSys_ConfigFileTemplateMap_Relations" OtherKey="MAPID" Type="PMSSys_ConfigFileTemplateInfo_PMSSys_ConfigFileTemplateMap_Relation" />
+      <Association Name="PMSSys_ConfigFileTemplateMap_PMSSys_ConfigFileTemplateMap" Member="PMSSys_ConfigFileTemplateMaps" OtherKey="ParentID" Type="PMSSys_ConfigFileTemplateMap" />
+      <Association Name="PMSSys_ConfigFileTemplateMap_PMSSys_ConfigFileTemplateMap" Member="PMSSys_ConfigFileTemplateMap1" ThisKey="ParentID" Type="PMSSys_ConfigFileTemplateMap" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PMSSys_DeviceInfo" Member="PMSSys_DeviceInfos">
+    <Type Name="PMSSys_DeviceInfo">
+      <Column Name="DID" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MAPID" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="Enable" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="ModelID" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Association Name="PMSSys_DeviceInfo_PMSSys_DeviceInfo_PMSSys_DeviceMap_Relation" Member="PMSSys_DeviceInfo_PMSSys_DeviceMap_Relations" OtherKey="DID" Type="PMSSys_DeviceInfo_PMSSys_DeviceMap_Relation" />
+      <Association Name="PMSSys_DeviceInfo_PMSSys_DeviceUserInfo" Member="PMSSys_DeviceUserInfos" OtherKey="DID" Type="PMSSys_DeviceUserInfo" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PMSSys_DeviceInfo_PMSSys_DeviceMap_Relation" Member="PMSSys_DeviceInfo_PMSSys_DeviceMap_Relations">
+    <Type Name="PMSSys_DeviceInfo_PMSSys_DeviceMap_Relation">
+      <Column Name="DID" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="MAPID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Association Name="PMSSys_DeviceInfo_PMSSys_DeviceInfo_PMSSys_DeviceMap_Relation" Member="PMSSys_DeviceInfo" ThisKey="DID" Type="PMSSys_DeviceInfo" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="PMSSys_DeviceMap_PMSSys_DeviceInfo_PMSSys_DeviceMap_Relation" Member="PMSSys_DeviceMap" ThisKey="MAPID" Type="PMSSys_DeviceMap" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PMSSys_DeviceMap" Member="PMSSys_DeviceMaps">
+    <Type Name="PMSSys_DeviceMap">
+      <Column Name="MAPID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ParentID" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="RelationParentID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="[Level]" Member="Level" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SequenceUnderParent" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ModelID" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Association Name="PMSSys_DeviceMap_PMSSys_DeviceInfo_PMSSys_DeviceMap_Relation" Member="PMSSys_DeviceInfo_PMSSys_DeviceMap_Relations" OtherKey="MAPID" Type="PMSSys_DeviceInfo_PMSSys_DeviceMap_Relation" />
+      <Association Name="PMSSys_DeviceMap_PMSSys_DeviceMap" Member="PMSSys_DeviceMaps" OtherKey="ParentID" Type="PMSSys_DeviceMap" />
+      <Association Name="PMSSys_DeviceMap_PMSSys_DeviceMap" Member="PMSSys_DeviceMap1" ThisKey="ParentID" Type="PMSSys_DeviceMap" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PMSSys_DeviceUserInfo" Member="PMSSys_DeviceUserInfos">
+    <Type Name="PMSSys_DeviceUserInfo">
+      <Column Name="UID" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="DID" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="PMSSys_DeviceInfo_PMSSys_DeviceUserInfo" Member="PMSSys_DeviceInfo" ThisKey="DID" Type="PMSSys_DeviceInfo" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="PMSSys_UserInfo_PMSSys_DeviceUserInfo" Member="PMSSys_UserInfo" ThisKey="UID" Type="PMSSys_UserInfo" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PMSSys_FilePowerGroupInform" Member="PMSSys_FilePowerGroupInforms">
+    <Type Name="PMSSys_FilePowerGroupInform">
+      <Column Name="FID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="PGID" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="PMSSys_ConfigFileInfo_PMSSys_FilePowerGroupInform" Member="PMSSys_ConfigFileInfo" ThisKey="FID" Type="PMSSys_ConfigFileInfo" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="PMSSys_PowerGroupInfo_PMSSys_FilePowerGroupInform" Member="PMSSys_PowerGroupInfo" ThisKey="PGID" Type="PMSSys_PowerGroupInfo" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PMSSys_HeadShip" Member="PMSSys_HeadShips">
+    <Type Name="PMSSys_HeadShip">
+      <Column Name="MAPID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ParentID" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="RelationParentID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="[Level]" Member="Level" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SequenceUnderParent" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ModelID" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Association Name="PMSSys_HeadShip_PMSSys_HeadShip" Member="PMSSys_HeadShips" OtherKey="ParentID" Type="PMSSys_HeadShip" />
+      <Association Name="PMSSys_HeadShip_PMSSys_HeadShip" Member="PMSSys_HeadShip1" ThisKey="ParentID" Type="PMSSys_HeadShip" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PMSSys_LogInfo" Member="PMSSys_LogInfos">
+    <Type Name="PMSSys_LogInfo">
+      <Column Name="LogTime" Type="System.DateTime" DbType="DateTime NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="LogType" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="Source" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="UID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ActionName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ActionObject" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Result" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="SigType" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="SigAffirmUID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SigAffirmTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="SigAffirmResult" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="SigCheckUID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SigCheckTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="SigCheckResult" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Association Name="PMSSys_UserInfo_PMSSys_LogInfo" Member="PMSSys_UserInfo" ThisKey="UID" Type="PMSSys_UserInfo" IsForeignKey="true" />
+      <Association Name="PMSSys_UserInfo_PMSSys_LogInfo1" Member="PMSSys_UserInfo1" ThisKey="SigAffirmUID" Type="PMSSys_UserInfo" IsForeignKey="true" />
+      <Association Name="PMSSys_UserInfo_PMSSys_LogInfo2" Member="PMSSys_UserInfo2" ThisKey="SigCheckUID" Type="PMSSys_UserInfo" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PMSSys_OrgnizeStructModelFile" Member="PMSSys_OrgnizeStructModelFiles">
+    <Type Name="PMSSys_OrgnizeStructModelFile">
+      <Column Name="TableName" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Content" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PMSSys_PowerGroupInfo" Member="PMSSys_PowerGroupInfos">
+    <Type Name="PMSSys_PowerGroupInfo">
+      <Column Name="PGID" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Enable" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="ModelID" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Association Name="PMSSys_PowerGroupInfo_PMSSys_ActionAffirmPowerGroupInfo" Member="PMSSys_ActionAffirmPowerGroupInfos" OtherKey="PGID" Type="PMSSys_ActionAffirmPowerGroupInfo" />
+      <Association Name="PMSSys_PowerGroupInfo_PMSSys_ActionPowerGroupInfo" Member="PMSSys_ActionPowerGroupInfos" OtherKey="PGID" Type="PMSSys_ActionPowerGroupInfo" />
+      <Association Name="PMSSys_PowerGroupInfo_PMSSys_ActionValidatePowerGroupInfo" Member="PMSSys_ActionValidatePowerGroupInfos" OtherKey="PGID" Type="PMSSys_ActionValidatePowerGroupInfo" />
+      <Association Name="PMSSys_PowerGroupInfo_PMSSys_FilePowerGroupInform" Member="PMSSys_FilePowerGroupInforms" OtherKey="PGID" Type="PMSSys_FilePowerGroupInform" />
+      <Association Name="PMSSys_PowerGroupInfo_PMSSys_PowerGroupInfo_PMSSys_PowerGroupMap_Relation" Member="PMSSys_PowerGroupInfo_PMSSys_PowerGroupMap_Relations" OtherKey="PGID" Type="PMSSys_PowerGroupInfo_PMSSys_PowerGroupMap_Relation" />
+      <Association Name="PMSSys_PowerGroupInfo_PMSSys_PowerGroupUserInfo" Member="PMSSys_PowerGroupUserInfos" OtherKey="PGID" Type="PMSSys_PowerGroupUserInfo" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PMSSys_PowerGroupInfo_PMSSys_PowerGroupMap_Relation" Member="PMSSys_PowerGroupInfo_PMSSys_PowerGroupMap_Relations">
+    <Type Name="PMSSys_PowerGroupInfo_PMSSys_PowerGroupMap_Relation">
+      <Column Name="PGID" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="MAPID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Association Name="PMSSys_PowerGroupInfo_PMSSys_PowerGroupInfo_PMSSys_PowerGroupMap_Relation" Member="PMSSys_PowerGroupInfo" ThisKey="PGID" Type="PMSSys_PowerGroupInfo" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="PMSSys_PowerGroupMap_PMSSys_PowerGroupInfo_PMSSys_PowerGroupMap_Relation" Member="PMSSys_PowerGroupMap" ThisKey="MAPID" Type="PMSSys_PowerGroupMap" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PMSSys_PowerGroupMap" Member="PMSSys_PowerGroupMaps">
+    <Type Name="PMSSys_PowerGroupMap">
+      <Column Name="MAPID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ParentID" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="RelationParentID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="[Level]" Member="Level" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SequenceUnderParent" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ModelID" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Association Name="PMSSys_PowerGroupMap_PMSSys_PowerGroupInfo_PMSSys_PowerGroupMap_Relation" Member="PMSSys_PowerGroupInfo_PMSSys_PowerGroupMap_Relations" OtherKey="MAPID" Type="PMSSys_PowerGroupInfo_PMSSys_PowerGroupMap_Relation" />
+      <Association Name="PMSSys_PowerGroupMap_PMSSys_PowerGroupMap" Member="PMSSys_PowerGroupMaps" OtherKey="ParentID" Type="PMSSys_PowerGroupMap" />
+      <Association Name="PMSSys_PowerGroupMap_PMSSys_PowerGroupMap" Member="PMSSys_PowerGroupMap1" ThisKey="ParentID" Type="PMSSys_PowerGroupMap" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PMSSys_PowerGroupUserInfo" Member="PMSSys_PowerGroupUserInfos">
+    <Type Name="PMSSys_PowerGroupUserInfo">
+      <Column Name="UID" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="PGID" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="PMSSys_PowerGroupInfo_PMSSys_PowerGroupUserInfo" Member="PMSSys_PowerGroupInfo" ThisKey="PGID" Type="PMSSys_PowerGroupInfo" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="PMSSys_UserInfo_PMSSys_PowerGroupUserInfo" Member="PMSSys_UserInfo" ThisKey="UID" Type="PMSSys_UserInfo" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PMSSys_TableFieldProperty" Member="PMSSys_TableFieldProperties">
+    <Type Name="PMSSys_TableFieldProperty">
+      <Column Name="PropertyGuid" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="PropertyName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="PropertyValue" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FieldGuid" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Association Name="PMSSys_TableFieldInfo_PMSSys_TableFieldProperty" Member="PMSSys_TableFieldInfo" ThisKey="FieldGuid" Type="PMSSys_TableFieldInfo" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PMSSys_TableInfo" Member="PMSSys_TableInfos">
+    <Type Name="PMSSys_TableInfo">
+      <Column Name="TableGuid" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TableName" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Association Name="PMSSys_TableInfo_PMSSys_TableProperty" Member="PMSSys_TableProperties" OtherKey="TableGuid" Type="PMSSys_TableProperty" />
+      <Association Name="PMSSys_TableInfo_PMSSys_IITableRelationInfo" Member="PMSSys_IITableRelationInfos" OtherKey="InfoTableGuid" Type="PMSSys_IITableRelationInfo" />
+      <Association Name="PMSSys_TableInfo_PMSSys_IITableRelationInfo1" Member="PMSSys_IITableRelationInfos1" OtherKey="InfoTableGuid1" Type="PMSSys_IITableRelationInfo" />
+      <Association Name="PMSSys_TableInfo_PMSSys_IITableRelationInfo2" Member="PMSSys_IITableRelationInfos2" OtherKey="RelationTableGuid" Type="PMSSys_IITableRelationInfo" />
+      <Association Name="PMSSys_TableInfo_PMSSys_MITableRelationInfo" Member="PMSSys_MITableRelationInfos" OtherKey="MapTableGuid" Type="PMSSys_MITableRelationInfo" />
+      <Association Name="PMSSys_TableInfo_PMSSys_MITableRelationInfo1" Member="PMSSys_MITableRelationInfos1" OtherKey="InfoTableGuid" Type="PMSSys_MITableRelationInfo" />
+      <Association Name="PMSSys_TableInfo_PMSSys_MITableRelationInfo2" Member="PMSSys_MITableRelationInfos2" OtherKey="RelationTableGuid" Type="PMSSys_MITableRelationInfo" />
+      <Association Name="PMSSys_TableInfo_PMSSys_TableFieldInfo" Member="PMSSys_TableFieldInfos" OtherKey="TableGuid" Type="PMSSys_TableFieldInfo" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PMSSys_TableProperty" Member="PMSSys_TableProperties">
+    <Type Name="PMSSys_TableProperty">
+      <Column Name="PropertyGuid" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TableGuid" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="PropertyName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="PropertyValue" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="PMSSys_TableInfo_PMSSys_TableProperty" Member="PMSSys_TableInfo" ThisKey="TableGuid" Type="PMSSys_TableInfo" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PMSSys_UserInfo" Member="PMSSys_UserInfos">
+    <Type Name="PMSSys_UserInfo">
+      <Column Name="UID" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Pass" Type="System.String" DbType="NVarChar(128)" CanBeNull="true" />
+      <Column Name="Enable" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Active" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ModelID" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="Mobile" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="PMSSys_UserInfo_NetSCADA_SMS_SMGroupUser_Table" Member="NetSCADA_SMS_SMGroupUser_Tables" OtherKey="UID" Type="NetSCADA_SMS_SMGroupUser_Table" />
+      <Association Name="PMSSys_UserInfo_PMSSys_DeviceUserInfo" Member="PMSSys_DeviceUserInfos" OtherKey="UID" Type="PMSSys_DeviceUserInfo" />
+      <Association Name="PMSSys_UserInfo_PMSSys_LogInfo" Member="PMSSys_LogInfos" OtherKey="UID" Type="PMSSys_LogInfo" />
+      <Association Name="PMSSys_UserInfo_PMSSys_LogInfo1" Member="PMSSys_LogInfos1" OtherKey="SigAffirmUID" Type="PMSSys_LogInfo" />
+      <Association Name="PMSSys_UserInfo_PMSSys_LogInfo2" Member="PMSSys_LogInfos2" OtherKey="SigCheckUID" Type="PMSSys_LogInfo" />
+      <Association Name="PMSSys_UserInfo_PMSSys_PowerGroupUserInfo" Member="PMSSys_PowerGroupUserInfos" OtherKey="UID" Type="PMSSys_PowerGroupUserInfo" />
+      <Association Name="PMSSys_UserInfo_PMSSys_UserInfo_PMSSys_UserMap_Relation" Member="PMSSys_UserInfo_PMSSys_UserMap_Relations" OtherKey="UID" Type="PMSSys_UserInfo_PMSSys_UserMap_Relation" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PMSSys_UserInfo_PMSSys_UserMap_Relation" Member="PMSSys_UserInfo_PMSSys_UserMap_Relations">
+    <Type Name="PMSSys_UserInfo_PMSSys_UserMap_Relation">
+      <Column Name="UID" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="MAPID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Association Name="PMSSys_UserInfo_PMSSys_UserInfo_PMSSys_UserMap_Relation" Member="PMSSys_UserInfo" ThisKey="UID" Type="PMSSys_UserInfo" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="PMSSys_UserMap_PMSSys_UserInfo_PMSSys_UserMap_Relation" Member="PMSSys_UserMap" ThisKey="MAPID" Type="PMSSys_UserMap" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.View_GetInfoTable" Member="View_GetInfoTables">
+    <Type Name="View_GetInfoTable">
+      <Column Name="TableGuid" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="TableName" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.View_GetMapTable" Member="View_GetMapTables">
+    <Type Name="View_GetMapTable">
+      <Column Name="TableGuid" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="TableName" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.View_GetTableFieldProp" Member="View_GetTableFieldProps">
+    <Type Name="View_GetTableFieldProp">
+      <Column Name="TableName" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="FieldName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PropertyName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="PropertyValue" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PMSSys_FlagTable" Member="PMSSys_FlagTables">
+    <Type Name="PMSSys_FlagTable">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ViewOrgStructConfiging" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="CheckUserID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DBVersion" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PMSSys_ConfigFileInfoMap" Member="PMSSys_ConfigFileInfoMaps">
+    <Type Name="PMSSys_ConfigFileInfoMap">
+      <Column Name="MAPID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ParentID" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="RelationParentID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="[Level]" Member="Level" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SequenceUnderParent" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ModelID" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="Visible" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="PMSSys_ConfigFileInfoMap_PMSSys_ConfigFileInfo_PMSSys_ConfigFileInfoMap_Relation" Member="PMSSys_ConfigFileInfo_PMSSys_ConfigFileInfoMap_Relations" OtherKey="MAPID" Type="PMSSys_ConfigFileInfo_PMSSys_ConfigFileInfoMap_Relation" />
+      <Association Name="PMSSys_ConfigFileInfoMap_PMSSys_ConfigFileInfoMap" Member="PMSSys_ConfigFileInfoMaps" OtherKey="ParentID" Type="PMSSys_ConfigFileInfoMap" />
+      <Association Name="PMSSys_ConfigFileInfoMap_PMSSys_ConfigFileInfoMap" Member="PMSSys_ConfigFileInfoMap1" ThisKey="ParentID" Type="PMSSys_ConfigFileInfoMap" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PMSSys_SysCustomizeViewFile" Member="PMSSys_SysCustomizeViewFiles">
+    <Type Name="PMSSys_SysCustomizeViewFile">
+      <Column Name="ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Content" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
+    </Type>
+  </Table>
+  <Table Name="dbo.View_GetMapAndInfoTable" Member="View_GetMapAndInfoTables">
+    <Type Name="View_GetMapAndInfoTable">
+      <Column Name="TableGuid" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="TableName" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PMSSys_IITableRelationInfo" Member="PMSSys_IITableRelationInfos">
+    <Type Name="PMSSys_IITableRelationInfo">
+      <Column Name="TableRelationGuid" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="InfoTableGuid" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="RelationTableGuid" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="InfoTableGuid1" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="Enable" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="PMSSys_TableInfo_PMSSys_IITableRelationInfo" Member="PMSSys_TableInfo" ThisKey="InfoTableGuid" Type="PMSSys_TableInfo" IsForeignKey="true" />
+      <Association Name="PMSSys_TableInfo_PMSSys_IITableRelationInfo1" Member="PMSSys_TableInfo1" ThisKey="InfoTableGuid1" Type="PMSSys_TableInfo" IsForeignKey="true" />
+      <Association Name="PMSSys_TableInfo_PMSSys_IITableRelationInfo2" Member="PMSSys_TableInfo2" ThisKey="RelationTableGuid" Type="PMSSys_TableInfo" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PMSSys_MITableRelationInfo" Member="PMSSys_MITableRelationInfos">
+    <Type Name="PMSSys_MITableRelationInfo">
+      <Column Name="TableRelationGuid" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MapTableGuid" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="RelationTableGuid" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="InfoTableGuid" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="Enable" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="PMSSys_TableInfo_PMSSys_MITableRelationInfo" Member="PMSSys_TableInfo" ThisKey="MapTableGuid" Type="PMSSys_TableInfo" IsForeignKey="true" />
+      <Association Name="PMSSys_TableInfo_PMSSys_MITableRelationInfo1" Member="PMSSys_TableInfo1" ThisKey="InfoTableGuid" Type="PMSSys_TableInfo" IsForeignKey="true" />
+      <Association Name="PMSSys_TableInfo_PMSSys_MITableRelationInfo2" Member="PMSSys_TableInfo2" ThisKey="RelationTableGuid" Type="PMSSys_TableInfo" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PMSSys_TableFieldInfo" Member="PMSSys_TableFieldInfos">
+    <Type Name="PMSSys_TableFieldInfo">
+      <Column Name="FieldGuid" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TableGuid" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="FieldID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FieldName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="FieldType" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="FieldLength" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="FieldPrimaryKey" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="FieldIdentity" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="FieldNullAble" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="FieldIsSystem" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="FieldDefault" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FieldDescription" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Association Name="PMSSys_TableFieldInfo_PMSSys_TableFieldProperty" Member="PMSSys_TableFieldProperties" OtherKey="FieldGuid" Type="PMSSys_TableFieldProperty" />
+      <Association Name="PMSSys_TableFieldInfo_PMSSys_TableFieldInfo" Member="PMSSys_TableFieldInfo2" OtherKey="FieldGuid" Type="PMSSys_TableFieldInfo" Cardinality="One" />
+      <Association Name="PMSSys_TableFieldInfo_PMSSys_TableFieldInfo" Member="PMSSys_TableFieldInfo1" ThisKey="FieldGuid" Type="PMSSys_TableFieldInfo" IsForeignKey="true" />
+      <Association Name="PMSSys_TableInfo_PMSSys_TableFieldInfo" Member="PMSSys_TableInfo" ThisKey="TableGuid" Type="PMSSys_TableInfo" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.View_GetTableFieldInfo" Member="View_GetTableFieldInfos">
+    <Type Name="View_GetTableFieldInfo">
+      <Column Name="TableName" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="FieldID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FieldName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FieldType" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FieldLength" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FieldNullAble" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="FieldPrimaryKey" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="FieldIdentity" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="FieldIsSystem" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="FieldDefault" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FieldDescription" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.View_GetTableProp" Member="View_GetTableProps">
+    <Type Name="View_GetTableProp">
+      <Column Name="TableName" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="PropertyName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="PropertyValue" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.View_GetIITableRelation" Member="View_GetIITableRelations">
+    <Type Name="View_GetIITableRelation">
+      <Column Name="TableGuid" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="InfoTable" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="RelationTable" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="InfoTable1" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Enable" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.View_GetMITableRelation" Member="View_GetMITableRelations">
+    <Type Name="View_GetMITableRelation">
+      <Column Name="TableGuid" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="TableName" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="InfoTable" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="RelationTable" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Enable" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.View_GetGeneralTable" Member="View_GetGeneralTables">
+    <Type Name="View_GetGeneralTable">
+      <Column Name="TableGuid" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="TableName" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PMSSys_DBSourceDefine" Member="PMSSys_DBSourceDefines">
+    <Type Name="PMSSys_DBSourceDefine">
+      <Column Name="Name" Type="System.String" DbType="NVarChar(255) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="DBType" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DBServer" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="DBName" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="UserID" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="Password" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Protocol" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="PortID" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="ConnectString" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Path" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Function Name="dbo.Create_InfoTable" Method="Create_InfoTable">
+    <Parameter Name="table" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="tableDescription" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="mapTable" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="tableType" Type="System.String" DbType="VarChar(10)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.Create_MapTable" Method="Create_MapTable">
+    <Parameter Name="table" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="tableDescription" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="tableType" Type="System.String" DbType="VarChar(10)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.fn_GetGuidFromTableName" Method="fn_GetGuidFromTableName" IsComposable="true">
+    <Parameter Name="TableName" Parameter="tableName" Type="System.String" DbType="NVarChar(255)" />
+    <Return Type="System.Guid" />
+  </Function>
+  <Function Name="dbo.fn_GetTableNameFromGuid" Method="fn_GetTableNameFromGuid" IsComposable="true">
+    <Parameter Name="TableGuid" Parameter="tableGuid" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Return Type="System.String" />
+  </Function>
+  <Function Name="dbo.Create_MapTableTrigger" Method="Create_MapTableTrigger">
+    <Parameter Name="table" Type="System.String" DbType="VarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.Bind_IITable" Method="Bind_IITable">
+    <Parameter Name="infotable" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="infotable1" Type="System.String" DbType="NVarChar(255)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.Bind_MITable" Method="Bind_MITable">
+    <Parameter Name="maptable" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="infotable" Type="System.String" DbType="NVarChar(255)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.UnBind_IITable" Method="UnBind_IITable">
+    <Parameter Name="infotable" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="infotable1" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="bDelRelationData" Type="System.Boolean" DbType="Bit" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.UnBind_MITable" Method="UnBind_MITable">
+    <Parameter Name="maptable" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="infotable" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="bDelRelationData" Type="System.Boolean" DbType="Bit" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.Create_MapTableTriggerEx" Method="Create_MapTableTriggerEx">
+    <Parameter Name="table" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="preTrigger" Type="System.String" DbType="VarChar(8000)" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>

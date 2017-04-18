@@ -1,0 +1,658 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="close" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources/close.bmp;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PMSDBAnalyseNavigateBarControl_DelAllReportAffirm" xml:space="preserve">
+    <value>确认要删除所有报表?此操作不可恢复</value>
+  </data>
+  <data name="PMSDBAnalyseNavigateBarControl_DelReportAffirm" xml:space="preserve">
+    <value>确认要删除报表-【{0}】?此操作不可恢复</value>
+  </data>
+  <data name="PMSDBAnalyseNavigateBarControl_DelReportGroupAffirm" xml:space="preserve">
+    <value>确认要删除组-【{0}】及组-【{1}】内所有报表?此操作不可恢复</value>
+  </data>
+  <data name="PMSDBAnalyseNavigateBarControl_NewReport" xml:space="preserve">
+    <value>新建报表</value>
+  </data>
+  <data name="PMSDBAnalyseNavigateBarControl_ReportName" xml:space="preserve">
+    <value>报表名</value>
+  </data>
+  <data name="PMSDBConnectCtrl_DBConTestFail" xml:space="preserve">
+    <value>测试连接失败</value>
+  </data>
+  <data name="PMSDBConnectCtrl_DBConTestSucceed" xml:space="preserve">
+    <value>测试连接成功</value>
+  </data>
+  <data name="PMSDBConnectCtrl_DBServerNameIsNull" xml:space="preserve">
+    <value>服务器名称为空</value>
+  </data>
+  <data name="PMSDBConnectCtrl_RetrievingDataSources" xml:space="preserve">
+    <value>正在枚举数据库服务器...</value>
+  </data>
+  <data name="PMSDBDBNameNULL" xml:space="preserve">
+    <value>数据库名不可为空</value>
+  </data>
+  <data name="PMSDBServerNULL" xml:space="preserve">
+    <value>服务器不可为空</value>
+  </data>
+  <data name="PMSDBUserIDNULL" xml:space="preserve">
+    <value>数据库用户名不可为空</value>
+  </data>
+  <data name="PMSDVCtrl_DocumentOutlineForm" xml:space="preserve">
+    <value>视图提纲</value>
+  </data>
+  <data name="PMSDVCtrl_ErrorList" xml:space="preserve">
+    <value>错误列表</value>
+  </data>
+  <data name="PMSDVCtrl_LogForm" xml:space="preserve">
+    <value>日志列表栏</value>
+  </data>
+  <data name="PMSDVCtrl_NavagateBar" xml:space="preserve">
+    <value>导航栏</value>
+  </data>
+  <data name="PMSDVCtrl_OutputForm" xml:space="preserve">
+    <value>输出栏</value>
+  </data>
+  <data name="PMSDVCtrl_ProjectExplorer" xml:space="preserve">
+    <value>项目管理器</value>
+  </data>
+  <data name="PMSDVCtrl_PropertyGridForm" xml:space="preserve">
+    <value>属性列表栏</value>
+  </data>
+  <data name="PMSDVCtrl_ToolBoxForm" xml:space="preserve">
+    <value>工具箱</value>
+  </data>
+  <data name="PMSFile_Copy" xml:space="preserve">
+    <value>_复制</value>
+  </data>
+  <data name="PMSGlobalClass_FileExisted" xml:space="preserve">
+    <value>文件【{0}】已存在!</value>
+  </data>
+  <data name="PMSGlobalClass_TableExisted" xml:space="preserve">
+    <value>数据库表【{0}】已存在!</value>
+  </data>
+  <data name="PMSLogForm_ErrorsFormat" xml:space="preserve">
+    <value>{0} 错误</value>
+  </data>
+  <data name="PMSLogForm_InfoFormat" xml:space="preserve">
+    <value>{0} 消息</value>
+  </data>
+  <data name="PMSLogForm_WarningFormat" xml:space="preserve">
+    <value>{0} 警告</value>
+  </data>
+  <data name="PMSLoginUserNULL" xml:space="preserve">
+    <value>登录账号不可为空</value>
+  </data>
+  <data name="PMSNavigateBarControl_DelGroupAffirm" xml:space="preserve">
+    <value>删除组后其子节点将升级为根节点，确认要删除组【{0}】?此操作不可恢复！</value>
+  </data>
+  <data name="PMSNavigateBarControl_DelGroupViewsAffirm" xml:space="preserve">
+    <value>确认要删除组【{0}】内所有视图?此操作不可恢复！</value>
+  </data>
+  <data name="PMSNavigateBarControl_GroupName" xml:space="preserve">
+    <value>组名</value>
+  </data>
+  <data name="PMSNavigateBarControl_GroupNameCantNull" xml:space="preserve">
+    <value>组名不可为空</value>
+  </data>
+  <data name="PMSNavigateBarControl_NewGroup" xml:space="preserve">
+    <value>新建组</value>
+  </data>
+  <data name="PMSNavigateBarControl_RefreshAllAffirm" xml:space="preserve">
+    <value>【刷新所有】动作将关闭所有打开文档并下载数据库最新视图，可能会处理一段时间，确认要刷新所有？</value>
+  </data>
+  <data name="PMSNewOrgStructTable_TableNameCantNull" xml:space="preserve">
+    <value>表名不可为空</value>
+  </data>
+  <data name="PMSOrgNavigateBarControl_DelAllOrgAffirm" xml:space="preserve">
+    <value>确认要删除所有组织功能图?此操作不可恢复</value>
+  </data>
+  <data name="PMSOrgNavigateBarControl_DelOrgAffirm" xml:space="preserve">
+    <value>确认要删除组织功能图-【{0}】?此操作不可恢复</value>
+  </data>
+  <data name="PMSOrgNavigateBarControl_DelOrgGroupAffirm" xml:space="preserve">
+    <value>确认要删除组-【{0}】及组-【{1}】内所有组织功能图?此操作不可恢复</value>
+  </data>
+  <data name="PMSOrgNavigateBarControl_NewOrg" xml:space="preserve">
+    <value>新建组织功能图</value>
+  </data>
+  <data name="PMSOrgNavigateBarControl_OrgName" xml:space="preserve">
+    <value>组织功能图名</value>
+  </data>
+  <data name="PMSSheetDesignerNavigateBarControl_DelAllSheetAffirm" xml:space="preserve">
+    <value>确认要删除所有表单?此操作不可恢复</value>
+  </data>
+  <data name="PMSSheetDesignerNavigateBarControl_DelSheetAffirm" xml:space="preserve">
+    <value>确认要删除表单-【{0}】?此操作不可恢复</value>
+  </data>
+  <data name="PMSSheetDesignerNavigateBarControl_DelSheetGroupAffirm" xml:space="preserve">
+    <value>确认要删除组-【{0}】及组-【{1}】内所有表单?此操作不可恢复</value>
+  </data>
+  <data name="PMSSheetDesignerNavigateBarControl_NewSheet" xml:space="preserve">
+    <value>新建表单</value>
+  </data>
+  <data name="PMSSheetDesignerNavigateBarControl_SheetName" xml:space="preserve">
+    <value>表单名</value>
+  </data>
+  <data name="PMSSqlAssistance_DBNULL" xml:space="preserve">
+    <value>服务器上无此数据库--【{0}】</value>
+  </data>
+  <data name="PMSTemplateNavigateBarControl_DelAllTemplateAffirm" xml:space="preserve">
+    <value>确认要删除所有模板?此操作不可恢复</value>
+  </data>
+  <data name="PMSTemplateNavigateBarControl_DelTemplateAffirm" xml:space="preserve">
+    <value>确认要删除模板-【{0}】?此操作不可恢复</value>
+  </data>
+  <data name="PMSTemplateNavigateBarControl_DelUserTemplateAffirm" xml:space="preserve">
+    <value>确认要删除组-【{0}】及组-【{1}】内所有模板?此操作不可恢复</value>
+  </data>
+  <data name="PMSTemplateNavigateBarControl_NewTemplate" xml:space="preserve">
+    <value>新建模板</value>
+  </data>
+  <data name="PMSTemplateNavigateBarControl_TemplateName" xml:space="preserve">
+    <value>模板名</value>
+  </data>
+  <data name="PMSUserCustomNavigateBarControl_DelAllUserCustomAffirm" xml:space="preserve">
+    <value>确认要删除所有用户自定义视图?此操作不可恢复</value>
+  </data>
+  <data name="PMSUserCustomNavigateBarControl_DelUserCustomAffirm" xml:space="preserve">
+    <value>确认要删除用户自定义视图-【{0}】?此操作不可恢复</value>
+  </data>
+  <data name="PMSUserCustomNavigateBarControl_DelUserCustomGroupAffirm" xml:space="preserve">
+    <value>确认要删除组-【{0}】及组-【{1}】内所有用户自定义视图?此操作不可恢复</value>
+  </data>
+  <data name="PMSUserCustomNavigateBarControl_NewUserCustom" xml:space="preserve">
+    <value>新建自定义视图</value>
+  </data>
+  <data name="PMSUserCustomNavigateBarControl_UserCustomName" xml:space="preserve">
+    <value>视图名</value>
+  </data>
+  <data name="PMSUserViewNavigateBarControl_AllVersionHasDeletedByOther" xml:space="preserve">
+    <value>视图【{0}】的所有版本已经被其他用户删除，将移除此视图节点！</value>
+  </data>
+  <data name="PMSUserViewNavigateBarControl_DelAllViewVersions" xml:space="preserve">
+    <value>确定要删除视图【{0}】的所有版本?此操作不可恢复！</value>
+  </data>
+  <data name="PMSUserViewNavigateBarControl_DelCurrentActiveView" xml:space="preserve">
+    <value>删除当前活动视图，在重新设置此视图活动版本前，客户端对此视图不可见，确定要删除当前活动视图【{0}】?此操作不可恢复！</value>
+  </data>
+  <data name="PMSUserViewNavigateBarControl_DelView" xml:space="preserve">
+    <value>确定要删除视图【{0}】?此操作不可恢复！</value>
+  </data>
+  <data name="PMSUserViewNavigateBarControl_FormatTabText" xml:space="preserve">
+    <value>{0}-[V{1}]</value>
+  </data>
+  <data name="PMSUserViewNavigateBarControl_FormatTabToolTipText" xml:space="preserve">
+    <value>视图ID:[{0}]
+视图名:[{1}]
+描述:[{2}]
+版本号:[{3}]
+签出状态:[{4}]
+活动状态:[{5}]
+签出用户:[{6}]
+最后修改时间:[{7}]</value>
+  </data>
+  <data name="PMSUserViewNavigateBarControl_HasCheckOutByOther" xml:space="preserve">
+    <value>视图【{0}】已经被用户【{1}】签出，请稍后再试！</value>
+  </data>
+  <data name="PMSUserViewNavigateBarControl_HasCheckOutByOthersStopOrContinue" xml:space="preserve">
+    <value>视图【{0}】已经被用户【{1}】签出，点击【终止】终止本次及后续删除操作，点击【重试】继续删除后续视图(继续提醒)，点击【忽略】忽略后续已被其他用户签出的视图(停止提醒)，继续删除动作！</value>
+  </data>
+  <data name="PMSUserViewNavigateBarControl_HasDeletedByOther" xml:space="preserve">
+    <value>视图【{0}】已经被其他用户删除，将移除此视图节点！</value>
+  </data>
+  <data name="PMSUserViewNavigateBarControl_OpenViewAsync" xml:space="preserve">
+    <value>正在打开视图【{0}】,请稍等...</value>
+  </data>
+  <data name="PMSUserViewNavigateBarControl_OtherUserConfiging" xml:space="preserve">
+    <value>用户【{0}】正在配置视图结构，请稍后再试！</value>
+  </data>
+  <data name="PMSUserViewNavigateBarControl_RefreshFromDBTip" xml:space="preserve">
+    <value>刷新动作将关闭相关被刷新视图，并从数据库读取最新视图文件，可能会处理一段时间，确认刷新此节点？</value>
+  </data>
+  <data name="PMSUserViewNavigateBarControl_RunViewAsync" xml:space="preserve">
+    <value>正在测试运行视图【{0}】,请稍等...</value>
+  </data>
+  <data name="PMS_ConnectError" xml:space="preserve">
+    <value>连接服务器【{0}】上的数据库【{1}】失败！</value>
+  </data>
+  <data name="PMS_CoverOrNew" xml:space="preserve">
+    <value>【是】- 新增版本、【否】- 覆盖版本、【取消】- 取消操作</value>
+  </data>
+  <data name="PMS_DBDesigner" xml:space="preserve">
+    <value>数据库设计</value>
+  </data>
+  <data name="PMS_Edit" xml:space="preserve">
+    <value>编辑</value>
+  </data>
+  <data name="PMS_Error" xml:space="preserve">
+    <value>错误</value>
+  </data>
+  <data name="PMS_Fail" xml:space="preserve">
+    <value>失败</value>
+  </data>
+  <data name="PMS_IsExpanding" xml:space="preserve">
+    <value>(正在展开...)</value>
+  </data>
+  <data name="PMS_Msg" xml:space="preserve">
+    <value>消息</value>
+  </data>
+  <data name="PMS_NotExisted" xml:space="preserve">
+    <value>不存在</value>
+  </data>
+  <data name="PMS_OrgnizationStruct" xml:space="preserve">
+    <value>组织结构</value>
+  </data>
+  <data name="PMS_Report" xml:space="preserve">
+    <value>报表</value>
+  </data>
+  <data name="PMS_Runtime" xml:space="preserve">
+    <value> [运行时]</value>
+  </data>
+  <data name="PMS_Sheet" xml:space="preserve">
+    <value>表单</value>
+  </data>
+  <data name="PMS_Static" xml:space="preserve">
+    <value>统计图</value>
+  </data>
+  <data name="PMS_Succeed" xml:space="preserve">
+    <value>成功</value>
+  </data>
+  <data name="PMS_TestRunTime" xml:space="preserve">
+    <value>测试运行时</value>
+  </data>
+  <data name="PMS_UserCustom" xml:space="preserve">
+    <value>用户自定义视图</value>
+  </data>
+  <data name="PMS_Warnning" xml:space="preserve">
+    <value>警告</value>
+  </data>
+  <data name="skin" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources/skin.bmp;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PMSDBAccessPathNULL" xml:space="preserve">
+    <value>数据库路径不可为空</value>
+  </data>
+  <data name="DBStructAnalyseNavigateBarControl_Tables" xml:space="preserve">
+    <value>表</value>
+  </data>
+  <data name="DBStructAnalyseNavigateBarControl_Views" xml:space="preserve">
+    <value>视图</value>
+  </data>
+  <data name="PMSNavigateBarControl_LoadAs" xml:space="preserve">
+    <value>加载为...</value>
+  </data>
+  <data name="PMS_FileError" xml:space="preserve">
+    <value>文件异常!</value>
+  </data>
+  <data name="PMS_DBVersionNotMatch" xml:space="preserve">
+    <value>数据库版本不匹配，请联系客服更新数据库</value>
+  </data>
+  <data name="PMS_DBVersionLower" xml:space="preserve">
+    <value>检测到目标数据库版本为【{0}】,低于所需版本【{1}】,请联系客服更新数据库版本</value>
+  </data>
+  <data name="PMS_CannotBeNull" xml:space="preserve">
+    <value>{0}不可为空！</value>
+  </data>
+  <data name="PMSClient_Login" xml:space="preserve">
+    <value>客户端用户登陆</value>
+  </data>
+  <data name="PMSClient_Logout" xml:space="preserve">
+    <value>客户端用户登出</value>
+  </data>
+  <data name="PMSDEV_Login" xml:space="preserve">
+    <value>开发器用户登陆</value>
+  </data>
+  <data name="PMSDEV_Logout" xml:space="preserve">
+    <value>开发器用户登出</value>
+  </data>
+  <data name="PMSDBStructLoading" xml:space="preserve">
+    <value>数据库结构加载中...</value>
+  </data>
+  <data name="PMSLoadTip" xml:space="preserve">
+    <value>加载提示</value>
+  </data>
+  <data name="PMSUserViewNavigateBarControl_MoveWhenInsertSameNamedView" xml:space="preserve">
+    <value>存在同名视图【{0}】，点击【确定】系统将原视图以新版本形式加入同名目标视图中。</value>
+  </data>
+  <data name="PMS_Tip" xml:space="preserve">
+    <value>提示</value>
+  </data>
+  <data name="PMSUserViewNavigateBarControl_ViewPowerGroupConfig" xml:space="preserve">
+    <value>视图权限配置</value>
+  </data>
+  <data name="PMSViewNameCantNull" xml:space="preserve">
+    <value>视图名不可为空</value>
+  </data>
+  <data name="PMS_Rename" xml:space="preserve">
+    <value>重命名</value>
+  </data>
+  <data name="PMS_ReportDesigner" xml:space="preserve">
+    <value>报表设计时</value>
+  </data>
+  <data name="PMS_DBTableDesigner" xml:space="preserve">
+    <value> [数据表设计]</value>
+  </data>
+  <data name="PMSDBDesignerNavigateBarControl_ColumnProtected" xml:space="preserve">
+    <value>字段【】为系统保护类型，不可更改！</value>
+  </data>
+  <data name="PMSDBDesignerNavigateBarControl_DelTable" xml:space="preserve">
+    <value>确定要删除数据表【{0}】?此操作不可恢复!</value>
+  </data>
+  <data name="PMSDBDesignerNavigateBarControl_DelTableColumn" xml:space="preserve">
+    <value>确定要删除数据表【{0}】的字段【{1}】?此操作不可恢复!</value>
+  </data>
+  <data name="PMSDBDesignerControl_CheckValidateNeedColumnName" xml:space="preserve">
+    <value>第{0}行：缺少列名</value>
+  </data>
+  <data name="PMSDBDesignerControl_CheckValidateNeedColumnType" xml:space="preserve">
+    <value>第{0}行：缺少列类型</value>
+  </data>
+  <data name="PMSDBTableRelationConfig" xml:space="preserve">
+    <value>数据表关系配置</value>
+  </data>
+  <data name="PMS_DBTableRecord" xml:space="preserve">
+    <value> [数据表记录]</value>
+  </data>
+  <data name="NewDBSourceForm_DBSourceCantNull" xml:space="preserve">
+    <value>数据源名不可为空</value>
+  </data>
+  <data name="NewDBSourceForm_DBSourceExisted" xml:space="preserve">
+    <value>数据源名【{0}】已存在!</value>
+  </data>
+  <data name="DBRefConnectionSelectForm_NoSelectDBSource" xml:space="preserve">
+    <value>未选择任何数据源</value>
+  </data>
+  <data name="PMSDBOraclePortIDNULL" xml:space="preserve">
+    <value>端口号不可为空</value>
+  </data>
+  <data name="PMSDBOracleSIDNULL" xml:space="preserve">
+    <value>Oracle数据源不可为空</value>
+  </data>
+  <data name="MES_SheetDesigner" xml:space="preserve">
+    <value>MES表单设计</value>
+  </data>
+  <data name="PMSDVCtrl_SourceConfigToolWindow" xml:space="preserve">
+    <value>组织结构数据模型</value>
+  </data>
+  <data name="PMSDVCtrl_DataSourceToolWindow" xml:space="preserve">
+    <value>组织结构数据源列表</value>
+  </data>
+  <data name="PMSDVCtrl_NodeTemplateWindow" xml:space="preserve">
+    <value>组织结构节点模板</value>
+  </data>
+  <data name="MESControlProperty" xml:space="preserve">
+    <value>MES控件属性</value>
+  </data>
+  <data name="PMSDVCtrl_WorkFlowManagerForm" xml:space="preserve">
+    <value>工作流管理</value>
+  </data>
+  <data name="PMS_WorkFlowDesign" xml:space="preserve">
+    <value>【工作流设计】</value>
+  </data>
+  <data name="PMS_WorkFlowMonitor" xml:space="preserve">
+    <value>【工作流监视】</value>
+  </data>
+  <data name="PMSDVCtrl_WorkFlowMonitoringForm" xml:space="preserve">
+    <value>工作流监视</value>
+  </data>
+  <data name="MESBusinessTableGenerateForm_NoField" xml:space="preserve">
+    <value>【{0}】业务表未定义字段，无法生成相应表，请重新定义</value>
+  </data>
+  <data name="MESBusinessTableGenerateForm_TableGenerated" xml:space="preserve">
+    <value>成功生成【{0}】业务表。</value>
+  </data>
+  <data name="MESBusinessTableGenerateForm_TableGenerating" xml:space="preserve">
+    <value>【{0}】业务表生成中</value>
+  </data>
+  <data name="PMSDVCtrl_ClipboardForm" xml:space="preserve">
+    <value>剪贴板</value>
+  </data>
+  <data name="PMS_WorkFlowINstanceMonitor" xml:space="preserve">
+    <value>【流程实例监控】</value>
+  </data>
+  <data name="PMSDVCtrl_WorkFlowCustomForm" xml:space="preserve">
+    <value>自定义活动</value>
+  </data>
+  <data name="PMS_WorkFlowCustomDesign" xml:space="preserve">
+    <value>【自定义活动设计】</value>
+  </data>
+  <data name="PMSDVCtrl_DBStructAnalyseForm" xml:space="preserve">
+    <value>数据结构分析</value>
+  </data>
+  <data name="PMSDVCtrl_WorkFlowProcessList" xml:space="preserve">
+    <value>用户处理列表</value>
+  </data>
+  <data name="MES_RefDBNotFound" xml:space="preserve">
+    <value>数据源【{0}】未找到</value>
+  </data>
+  <data name="PMSUserCustomNavigateBarControl_CheckInSucceed" xml:space="preserve">
+    <value>签入成功！</value>
+  </data>
+  <data name="imageList1.ImageStream" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
+        LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
+        ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAABy
+        EAAAAk1TRnQBSQFMAgEBCAEAAVwBAAFcAQABEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        AwABQAMAATADAAEBAQABCAYAAQwYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
+        AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
+        AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA
+        AWYDAAGZAwABzAIAATMDAAIzAgABMwFmAgABMwGZAgABMwHMAgABMwH/AgABZgMAAWYBMwIAAmYCAAFm
+        AZkCAAFmAcwCAAFmAf8CAAGZAwABmQEzAgABmQFmAgACmQIAAZkBzAIAAZkB/wIAAcwDAAHMATMCAAHM
+        AWYCAAHMAZkCAALMAgABzAH/AgAB/wFmAgAB/wGZAgAB/wHMAQABMwH/AgAB/wEAATMBAAEzAQABZgEA
+        ATMBAAGZAQABMwEAAcwBAAEzAQAB/wEAAf8BMwIAAzMBAAIzAWYBAAIzAZkBAAIzAcwBAAIzAf8BAAEz
+        AWYCAAEzAWYBMwEAATMCZgEAATMBZgGZAQABMwFmAcwBAAEzAWYB/wEAATMBmQIAATMBmQEzAQABMwGZ
+        AWYBAAEzApkBAAEzAZkBzAEAATMBmQH/AQABMwHMAgABMwHMATMBAAEzAcwBZgEAATMBzAGZAQABMwLM
+        AQABMwHMAf8BAAEzAf8BMwEAATMB/wFmAQABMwH/AZkBAAEzAf8BzAEAATMC/wEAAWYDAAFmAQABMwEA
+        AWYBAAFmAQABZgEAAZkBAAFmAQABzAEAAWYBAAH/AQABZgEzAgABZgIzAQABZgEzAWYBAAFmATMBmQEA
+        AWYBMwHMAQABZgEzAf8BAAJmAgACZgEzAQADZgEAAmYBmQEAAmYBzAEAAWYBmQIAAWYBmQEzAQABZgGZ
+        AWYBAAFmApkBAAFmAZkBzAEAAWYBmQH/AQABZgHMAgABZgHMATMBAAFmAcwBmQEAAWYCzAEAAWYBzAH/
+        AQABZgH/AgABZgH/ATMBAAFmAf8BmQEAAWYB/wHMAQABzAEAAf8BAAH/AQABzAEAApkCAAGZATMBmQEA
+        AZkBAAGZAQABmQEAAcwBAAGZAwABmQIzAQABmQEAAWYBAAGZATMBzAEAAZkBAAH/AQABmQFmAgABmQFm
+        ATMBAAGZATMBZgEAAZkBZgGZAQABmQFmAcwBAAGZATMB/wEAApkBMwEAApkBZgEAA5kBAAKZAcwBAAKZ
+        Af8BAAGZAcwCAAGZAcwBMwEAAWYBzAFmAQABmQHMAZkBAAGZAswBAAGZAcwB/wEAAZkB/wIAAZkB/wEz
+        AQABmQHMAWYBAAGZAf8BmQEAAZkB/wHMAQABmQL/AQABzAMAAZkBAAEzAQABzAEAAWYBAAHMAQABmQEA
+        AcwBAAHMAQABmQEzAgABzAIzAQABzAEzAWYBAAHMATMBmQEAAcwBMwHMAQABzAEzAf8BAAHMAWYCAAHM
+        AWYBMwEAAZkCZgEAAcwBZgGZAQABzAFmAcwBAAGZAWYB/wEAAcwBmQIAAcwBmQEzAQABzAGZAWYBAAHM
+        ApkBAAHMAZkBzAEAAcwBmQH/AQACzAIAAswBMwEAAswBZgEAAswBmQEAA8wBAALMAf8BAAHMAf8CAAHM
+        Af8BMwEAAZkB/wFmAQABzAH/AZkBAAHMAf8BzAEAAcwC/wEAAcwBAAEzAQAB/wEAAWYBAAH/AQABmQEA
+        AcwBMwIAAf8CMwEAAf8BMwFmAQAB/wEzAZkBAAH/ATMBzAEAAf8BMwH/AQAB/wFmAgAB/wFmATMBAAHM
+        AmYBAAH/AWYBmQEAAf8BZgHMAQABzAFmAf8BAAH/AZkCAAH/AZkBMwEAAf8BmQFmAQAB/wKZAQAB/wGZ
+        AcwBAAH/AZkB/wEAAf8BzAIAAf8BzAEzAQAB/wHMAWYBAAH/AcwBmQEAAf8CzAEAAf8BzAH/AQAC/wEz
+        AQABzAH/AWYBAAL/AZkBAAL/AcwBAAJmAf8BAAFmAf8BZgEAAWYC/wEAAf8CZgEAAf8BZgH/AQAC/wFm
+        AQABIQEAAaUBAANfAQADdwEAA4YBAAOWAQADywEAA7IBAAPXAQAD3QEAA+MBAAPqAQAD8QEAA/gBAAHw
+        AfsB/wEAAaQCoAEAA4ADAAH/AgAB/wMAAv8BAAH/AwAB/wEAAf8BAAL/AgAD//8A/wD/AP8ABgAO/xEA
+        AfcCZgG1AZEFrgFtBWwB9wpmBQAB/wEIAkkITwICAe8B/wQAAfcKZgEAAbUB/wHwAbUB/wHzAfAIvAFs
+        AfcB/wHyAvEB8AG8AgcBuwFmBQAB/wlPAS4DLQECAf8EAAH3Af8BvAIHAe8EtQFmAQABtQL/AbUC/wEZ
+        AbUB6wESBPQBvAFsAfcB/wEHArsB9wpmAf8ITwJVAjMBLQECAf8EAAH3A/8B9AHzARkB8QHwAbUBZgEA
+        BLUC/wFtAQcBGQLzAfABEwEHAbwBbAH3BP8B9wH/AfIC8QHwAbwCBwG7AWYB/wNPAnIBTwGXAQgDVQEz
+        AS0BAgH/AQAB7wHrAQcB7wH/AgcBuwW1AWYBAAG1Av8BtQH/AfMBEgHzA/QBrgESARMBvAFsAbUB/wK8
+        AQcB9wH/AQcCuwH0A7UBBwFmAf8CTwRyAZgB/wGYAlUBMwEtAU8B/wEAAe8BOAFSAQcE/wH0AvMBGQG1
+        AWYBAAG1Av8BtQH/Aq4BEgH/AvQB8AHqAfQBvAFtAe8B/wH3AmYB9wT/AvQCGQEHAWYB/wFPBXIBTwGY
+        Af8BmAJVAU4BTwH/AQABmQKgAVEB8wIHAbsFtQFmAQAB7wK1Ae8B/wHzAbQBGQH/AfQB8AHvAe0B9AHw
+        Aa4BuwH/AfcB/wHyAbUB/wK8AQcB/wO1AfABZgH/AU8BcgGXA5gClwHxAf8BmANPAf8CAAGZAfYBoAFL
+        AfIE/wH0AfMB7wFmAQAB7wL/Ae8F/wG0Aa4B7QEZAfQBGQGuAbsB/wH3Af8BBwHvB/8B9AHxAWYB/wFP
+        ApcI/wNPAf8CAAG8AZkB9gF6AUsBvAG7BLUBBwFmAQAB7wL/Ae8L/wGRAtYB9wL/AbsB/wO8Af8CuwG1
+        AfIBZgH/AU8ClwKYAXgClwHxAf8BmANPAf8BAAJzAW0B7AHDAXoBSgHyBP8BBwFmAQABuwK1A+8ItQH3
+        AbUB1gEJAbUB/wG8AbsJ/wFmAf8BcgOXAnIBUAGYAf8BmARPAf8BAAGZBMMBoAF6AUQBtQL/AbwBBwFm
+        AQABuwL/AbUC/wG1Av8BtQL/AbUB/wG8AWYC1gHvAv8D1gHVBLQDrQH/AXICmAKXAXIBmAH/AZgFTwH/
+        AQABvAGZAfYBwwFZAXMB8gP/AfcDZgEAAbsC/wG1Av8BtQL/AbUC/wG1Av8BZgIAAbsB/wG8AdYCCQPc
+        AdYD1QGtAf8BlwOYApcBmAEIA3IDTwH/AgABmQPDAVkBbgHwAbUB/wG1AbwBZgEHAQAF1gHVBrQErQIA
+        AbsC/wTWBbQCrQH/AZcDmAaXAXICTwFJAf8CAAG8AZkB9gHDAaABWQFtAfIB/wHvAWYBBwIAAdYG9AHc
+        BtYB1QGtAgAD1gHVBLQDrQMAAf8B8AKXAXIBUAhPAQcB/wMAAZkDwwF6AXkBEgHxAgcDAATWArUGtAHP
+        A60CAAHWAgkD3AHWA9UBrQQADv8EAAG8BZkBcwHrFwAE1gW0Aq0TAAGYAXIBTwHsAW0BEgETAesCrgFt
+        BWwgABBmAXIBmAGeAZgCBwHvAe0HvAFsAnMB6wFuAW0BSgETARUBQwERAQ8BDgEPEwABbAb/AvQB8wMZ
+        At0BZgFzAZ8BngGYAQcBCAG7AusBEgT0AbwBbAFzARwBeQcxAksBRAGFAgABcwHsAesB6gETARUBEQgP
+        AQABbAf/AfQC1QG0Aa0BGQHdAWYBmAHCAZ8B9wHzAQcB6wHtARkC8wHwARMBBwG8AWwB7AGZARwBmgN6
+        AlkBUwFSATEBSwFmAgABcwGaAXoBeQFYBlIBMQJLAQ8BAAHqBf8B1QG0Aa0B9AHzAxkB3QFmApgBeAG8
+        Af8BBwESAfED9AGuARIBEwG8AWwB7QGaARwBmQV6AlkBUwExAUQBoQEAAewBGgGgAZoEegFZAVMCUgEx
+        AUsBEQEAAa4C/wHVAbQBrQP/AvQB8wMZAWYBBwH0AeoB6wH3AW0BrgESAf8C9AHwAeoB9AG8AW0B7QGa
+        AZkBHAGaBXoDWQFLAWYBAAHtARoCoAGaBHoBWQFTAlIBMQEVAQABrgn/AfQB8wMZAWYBvAEOAfcC7wLs
+        ARkB/wH0AfAB7wHtAfQB8AGuARwCmgEcAZkHegFZAVIBSgGhAe0CwwGgApoEegFZAVMBUgExARMBAAGu
+        Ae0DkQHsBq4DbAFmARQBQwHwAgcB7wGSAv8BtAGuAe0BGQH0ARkBrgEcAZoBoAGZARwHmgJ6AXQBhgEc
+        AsMCoAKaBHoBWQFSATEBEgEAAa4BvAEHAa4C/wHvAf8B9AHvAhkB7wEZAd0BZgISAe8BvAHwAQcB9wj/
+        AZEBHAOgApkGHALtAewBcwEcA8MCoAKaBHoBUgExAW0BAAGuAfABvAGRC+8BZgHsAm0C7AEHAZIHtQH3
+        AbUBHASgAZoGegFzAwABHATDAqACmgR6AVIB6wEAAa4B8wHxAZEC/wHvAv8B7wHzARkB7wEZAd0BZgEH
+        AesB7AH3Ae0BEgEHAv8BtQL/AbUB/wG8AWYBHAGgAcMDoAF6AxwC7QFzAwABHAbDAqACmgN6AesBAAHs
+        AfQB8wHtAv8B7wL/Ae8B9AHzAe8CGQFmAfEBvALtAewB8AHzAv8BtQL/AbUC/wFmARwBmQLDAqABHAGu
+        BQADrgccAZIGHAGGAQABkQHtA5EB7AauA2wBZgIJAhkCCQa0BK0BpwUcAa4GAAGnAq4BHAEaA8MBmgEc
+        Aa4IAAGRAfABBwH3AfABBwH3AfABBwH3AfABBwH3AfABBwFmAdwC9AH/AvQBGQHcBtYB1QGtCQABrgGn
+        AQABoQHtAacBrgGnBRwBpwkAAe0B9AHxAfcB9AHxAfcB9AHxAfcB9AHxAfcB9AHxAWYE1gK1BrQBzwOt
+        CQABpwLtAbUBpxIAAbUB7QORAewGrgNsAWYwAAFCAU0BPgcAAT4DAAEoAwABQAMAATADAAEBAQABAQUA
+        AYABARYAA/+BAAGAAQEC/wMAAR8CAAHwAQEDAAEfAgAB8AEBBgAB8AEBBgABgAEBBgABgAEBBgABgAEB
+        BgABwAEBBgABwAEBBgABgAEBBgABgAEBBgABgAEBAgABwAMAAcABAQIAAcADAAHAAQMCAAHAAQcCAAHg
+        AQcCAAHAAQcBgAEBAeABHwL/AcABBwL/AgAE/wUAAQcC/wUAAQMBAAEBBQABAwEAAQEFAAEBAQABAQUA
+        AQEBAAEBBwABAQcAAQEHAAEBBQABBwEAAQEFAAEHAQABAQUAAfgBAAEBBAABAQH4AQAB/wQAAf8BkAEB
+        Af8EAAH/AYMC/wIABv8L
+</value>
+  </data>
+  <data name="MESPleaseSelectForm" xml:space="preserve">
+    <value>请选择表单</value>
+  </data>
+  <data name="MESPleaseSelectReport" xml:space="preserve">
+    <value>请选择报表</value>
+  </data>
+  <data name="MESPleaseSelectView" xml:space="preserve">
+    <value>请选择视图</value>
+  </data>
+  <data name="MESNavigatorDesigner" xml:space="preserve">
+    <value>导航设计</value>
+  </data>
+  <data name="MES_ExitSystem" xml:space="preserve">
+    <value>确定要退出系统?</value>
+  </data>
+  <data name="PMSDBConnectCtrl_UserLoginFail" xml:space="preserve">
+    <value>用户登录失败</value>
+  </data>
+  <data name="MES_UpdateRefDBFileToServerFail" xml:space="preserve">
+    <value>更新数据源文件至服务器失败！</value>
+  </data>
+  <data name="MESCantFindWFWaitTaskForm" xml:space="preserve">
+    <value>工作流实例【{0}】查询不到当前用户【{1}】的待处理表单</value>
+  </data>
+  <data name="MES_LogOut" xml:space="preserve">
+    <value>确定要登出吗?</value>
+  </data>
+  <data name="PMSOleDBConnectStringNull" xml:space="preserve">
+    <value>连接字符串不可为空</value>
+  </data>
+  <data name="MESReportIsNotAuthorized" xml:space="preserve">
+    <value>(未检测到狗或者狗未经授权)</value>
+  </data>
+  <data name="DBStructAnalyseNavigateBarControl_StoredProcedures" xml:space="preserve">
+    <value>存储过程</value>
+  </data>
+  <data name="PMSDVCtrl_WorkFlowDesign" xml:space="preserve">
+    <value>流程设计</value>
+  </data>
+  <data name="PMSDVCtrl_WorkFlowRun" xml:space="preserve">
+    <value>流程运行</value>
+  </data>
+  <data name="MESUserHasLogin" xml:space="preserve">
+    <value>该用户已登陆！</value>
+  </data>
+  <data name="MESUserIDDuplicate" xml:space="preserve">
+    <value>用户名重复！</value>
+  </data>
+  <data name="MESUserIDIsNotEnable" xml:space="preserve">
+    <value>该用户未启用！</value>
+  </data>
+  <data name="MESUserIDNotExist" xml:space="preserve">
+    <value>用户名不存在！</value>
+  </data>
+  <data name="MESUserPswError" xml:space="preserve">
+    <value>用户密码错误！</value>
+  </data>
+  <data name="PMSUserViewNavigateBarControl_RuntimeFormatTabToolTipText" xml:space="preserve">
+    <value>运行时
+视图ID:[{0}]
+n视图名:[{1}]
+描述:[{2}]
+版本号:[{3}]
+签出状态:[{4}]
+活动状态:[{5}]
+签出用户:[{6}]
+最后修改时间:[{7}]</value>
+  </data>
+  <data name="PMSUserViewNavigateBarControl_TemplateFormatTabToolTipText" xml:space="preserve">
+    <value>视图ID:[{0}]
+视图名:[{1}]
+描述:[{2}]
+n签出状态:[{3}]
+签出用户:[{4}]
+最后修改时间:[{5}]</value>
+  </data>
+  <data name="PMSDVCtrl_SystemConfig" xml:space="preserve">
+    <value>系统配置</value>
+  </data>
+  <data name="MESPublishToServerAsync" xml:space="preserve">
+    <value>正在发布【{0}】至服务,请稍等...</value>
+  </data>
+  <data name="NotCheckOutReadOnlyWarning" xml:space="preserve">
+    <value>未签出，只读模式，将以未修改版本运行！</value>
+  </data>
+  <data name="PMSGlobalClass_GroupExisted" xml:space="preserve">
+    <value>组【{0}】已存在!</value>
+  </data>
+</root>

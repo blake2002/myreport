@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6FA738F2-B458-4B66-87D7-4A65EF2DF6EB}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>NetSCADA.MESReportServer</RootNamespace>
+    <AssemblyName>MESReportServer</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Externalconsole>true</Externalconsole>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MES.MESReportRun">
+      <HintPath>..\bin\%24%28Configuration%29\MES.MESReportRun.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="Nancy">
+      <HintPath>..\bin\%24%28Configuration%29\Nancy.dll</HintPath>
+    </Reference>
+    <Reference Include="Nancy.Hosting.Self">
+      <HintPath>..\bin\%24%28Configuration%29\Nancy.Hosting.Self.dll</HintPath>
+    </Reference>
+    <Reference Include="Topshelf">
+      <HintPath>..\bin\%24%28Configuration%29\Topshelf.dll</HintPath>
+    </Reference>
+    <Reference Include="Topshelf.Linux">
+      <HintPath>..\bin\%24%28Configuration%29\Topshelf.Linux.dll</HintPath>
+    </Reference>
+    <Reference Include="Topshelf.Nancy">
+      <HintPath>..\bin\%24%28Configuration%29\Topshelf.Nancy.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Configuration" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="PMS.PMSPublicInfo">
+      <HintPath>..\bin\%24%28Configuration%29\PMS.PMSPublicInfo.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog">
+      <HintPath>..\bin\%24%28Configuration%29\NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="FluentScheduler">
+      <HintPath>..\bin\%24%28Configuration%29\FluentScheduler.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\bin\%24%28Configuration%29\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NetSCADA.ReportEngine">
+      <HintPath>..\bin\%24%28Configuration%29\NetSCADA.ReportEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data">
+      <HintPath>..\bin\%24%28Configuration%29\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Dapper.Contrib">
+      <HintPath>..\bin\%24%28Configuration%29\Dapper.Contrib.dll</HintPath>
+    </Reference>
+    <Reference Include="Dapper">
+      <HintPath>..\bin\%24%28Configuration%29\Dapper.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="TinyMapper">
+      <HintPath>..\bin\%24%28Configuration%29\TinyMapper.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReportModule.cs" />
+    <Compile Include="ServiceBoot.cs" />
+    <Compile Include="CommonConst.cs" />
+    <Compile Include="ReportBootstrapper.cs" />
+    <Compile Include="Login.cs" />
+    <Compile Include="NLogLogWriter.cs" />
+    <Compile Include="NLogLogWriterFactory.cs" />
+    <Compile Include="StaticContentConventionBuilderEx.cs" />
+    <Compile Include="PeriodRules.cs" />
+    <Compile Include="ReportJobManage.cs" />
+    <Compile Include="RptDbManage\RptDesign.cs" />
+    <Compile Include="RptDbManage\RptRuntime.cs" />
+    <Compile Include="RptDbManage\Directory.cs" />
+    <Compile Include="RptManageModule.cs" />
+    <Compile Include="RptDbManage\RptDb.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="ServerWeb\echarts.min.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="ServerWeb\jquery-1.10.2.min.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="UserCustom\tmp.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="NLog.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="NLog.xsd">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Conf\usr.conf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Web\readme.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Conf\job配置说明.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Conf\job %28copy%29.conf" />
+    <None Include="Conf\job.conf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="rptdb.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ServerWeb\Export\" />
+    <Folder Include="ServerWeb\Query\" />
+    <Folder Include="RptDbManage\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <PostBuildEvent>python $(SolutionDir)copy.py $(TargetPath)  $(SolutionDir)bin\$(ConfigurationName) $(TargetDir)$(TargetName)  $(SolutionDir)bin\$(ConfigurationName)\pdb\ $(TargetPath) $(SolutionDir)bin\</PostBuildEvent>
+  </PropertyGroup>
+</Project>

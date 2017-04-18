@@ -1,0 +1,10 @@
+<?xml version="1.0" standalone="yes"?>
+<Options xmlns="http://tempuri.org/Options.xsd">
+  <General>
+    <AuthorizationServerAddress>192.168.10.32:8087</AuthorizationServerAddress>
+    <EnableSoftKeyBoard>false</EnableSoftKeyBoard>
+  </General>
+  <Network>
+    <ProxyType>0</ProxyType>
+  </Network>
+</Options>

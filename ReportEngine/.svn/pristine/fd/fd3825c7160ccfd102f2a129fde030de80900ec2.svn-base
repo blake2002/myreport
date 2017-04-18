@@ -1,0 +1,878 @@
+﻿using System;
+using Nancy;
+using System.IO;
+using PMS.Libraries.ToolControls;
+using PMS.Libraries.ToolControls.PMSPublicInfo;
+using System.Collections.Generic;
+using NetSCADA.ReportEngine;
+using NLog;
+using System.Runtime.InteropServices;
+using Nancy.ModelBinding;
+using System.Dynamic;
+using Newtonsoft.Json;
+using System.Threading;
+using Newtonsoft.Json.Converters;
+using System.Reflection.Emit;
+using Topshelf.Logging;
+using Newtonsoft.Json.Linq;
+using System.Text.RegularExpressions;
+using NLog.Filters;
+using System.Linq;
+using System.Text;
+using System.Security.Cryptography;
+using System.Collections.Specialized;
+
+namespace NetSCADA.MESReportServer
+{
+	public class ReportModule:NancyModule
+	{
+		static readonly string BaseDomain = string.Format ("{0}:{1}", CommonConst.Domain, CommonConst.Port);
+		static string ExportUrl = string.Empty;
+		LogWriter log = HostLogger.Get ("MESReportServer");
+
+		public ReportModule ()
+		{
+			CurrentPrjInfo.CurrentEnvironment = MESEnvironment.MESReportServer;
+			ProjectPathClass.ProjectPath = AppDomain.CurrentDomain.BaseDirectory;
+			ExportUrl = string.Format ("{0}/{1}/{2}", BaseDomain, ProjectPathClass.MesReportServerServerWeb, ProjectPathClass.MesReportServerExport);
+			//CurrentPrjInfo.CurrentLoginUserID = userName;
+			// 查询
+			Get ["/query/{clientId}/{queryId}/{reportName}"] = _ => {
+				try {
+					string clientId = _.clientId;
+					string queryId = _.queryId;
+					string reportName = _.reportname;
+					string user = this.Request.Query.user;
+					GetRptFullName (ref reportName);
+					string filter = string.Empty;
+					log.InfoFormat ("query-cliendId:{0},queryId:{1},reportName:{2},filter:{3}", clientId, queryId, reportName, filter);
+					//var flag = Run (clientId, string.Format ("{0}{1}", clientId, queryId), reportName, ref filter, ReportViewType.Query);
+					var flag = Run (clientId, queryId, reportName, ref filter, ReportViewType.Query, Path.GetFileName (reportName));
+					var code = flag ? 0 : 1;
+					string str = GetResult (code, filter);
+					RptDb.RecordRuntime (reportName, user, 0);
+					return this.Response.AsText (str);
+				} catch (Exception ex) {
+					Message.Info (string.Format ("query--message:{0},StackTrace:{1}", ex.Message, ex.StackTrace));
+					string str = GetResult (1, ex.Message);
+					return this.Response.AsText (str);
+				}
+			};
+			//query后 想导出 自定义导出文件夹名称
+			Get ["/export/{clientId}/{queryId}/{reportname}/{reportdir}"] = _ => {
+				try {
+					string clientId = _.clientId;
+					string queryId = _.queryId;
+					string reportdir = _.reportdir;
+					string reportName = _.reportname;
+					GetRptFullName (ref reportName);
+					log.InfoFormat ("export-cliendId:{0},queryId:{1},reportName:{2},reportdir:{3}", clientId, queryId, reportName, reportdir);
+					//var flag = Export (string.Format ("{0}{1}", clientId, queryId), reportdir, reportName);
+					var flag = Export (queryId, reportdir, reportName);
+					int code = flag ? 0 : 1;
+					string str = GetResult (code, "");
+					return this.Response.AsText (str);
+				} catch (Exception ex) {
+					Message.Info (string.Format ("export--message:{0},StackTrace:{1}", ex.Message, ex.StackTrace));
+					string str = GetResult (1, ex.Message);
+					return this.Response.AsText (str);
+				}
+			};
+			//query后 想导出 默认rpt文件hashcode名称
+			Get ["/export/{clientId}/{queryId}/{reportname}"] = _ => {
+				try {
+					string clientId = _.clientId;
+					string queryId = _.queryId;
+					string repordir = _.repordir;
+					string reportName = _.reportname;
+					GetRptFullName (ref reportName);
+					log.InfoFormat ("export-cliendId:{0},queryId:{1},reportName:{2}", clientId, queryId, reportName);
+					//var flag = Export (string.Format ("{0}{1}", clientId, queryId), repordir, reportName);
+					var flag = Export (queryId, repordir, reportName);
+					int code = flag ? 0 : 1;
+					string str = GetResult (code, "");
+					return this.Response.AsText (str);
+				} catch (Exception ex) {
+					Message.Info (string.Format ("export--default--message:{0},StackTrace:{1}", ex.Message, ex.StackTrace));
+					string str = GetResult (1, ex.Message);
+					return this.Response.AsText (str);
+				}
+			};
+			//导出
+			Get ["/exportquery/{clientId}/{queryId}/{reportname}/{reportdir}"] = _ => {
+				try {
+					string clientId = _.clientId;
+					string queryId = _.queryId;
+					string reportName = _.reportname;
+					string reportdir = _.reportdir;
+					string user = this.Request.Query.user;
+					GetRptFullName (ref reportName);
+					string filter = string.Empty;
+					log.InfoFormat ("exportquery-cliendId:{0},queryId:{1},reportName:{2}", clientId, queryId, reportName);
+					var exportFileName = reportdir.TrimStart ('$').Replace ('$', Path.DirectorySeparatorChar);
+					//var flag = Run (clientId, string.Format ("{0}{1}", clientId, queryId), reportName, ref filter, ReportViewType.ExportQuery);
+					var flag = Run (clientId, queryId, reportName, ref filter, ReportViewType.ExportQuery, exportFileName);
+					int code = flag ? 0 : 1;
+					string str = GetResult (code, filter);
+					RptDb.RecordRuntime (reportName, user, 1);
+					return this.Response.AsText (str);
+				} catch (Exception ex) {
+					Message.Info (string.Format ("exportquery--message:{0},StackTrace:{1}", ex.Message, ex.StackTrace));
+					string str = GetResult (1, ex.Message);
+					return this.Response.AsText (str);
+				}
+			};
+
+			Get ["/cancel/{clientId}/{queryId}"] = _ => {
+				//string clientId = _.clientId;
+				try {
+					string clientId = _.clientId;
+					string queryId = _.queryId;
+					log.InfoFormat ("cancel-cliendId:{0},queryId:{1}", clientId, queryId);
+
+					//MESReportRun.Instance.CancelRunReportServer (string.Format ("{0}{1}", clientId, queryId));
+					MESReportRun.Instance.CancelRunReportServer (queryId);
+					string str = GetResult (0, "");
+					return this.Response.AsText (str);
+				} catch (Exception ex) {
+					Message.Info (string.Format ("cancel--message:{0},StackTrace:{1}", ex.Message, ex.StackTrace));
+					string str = GetResult (1, ex.Message);
+					return this.Response.AsText (str);
+				}
+			};
+
+			//rpt 文件列表
+			Get ["/rptlist"] = _ => {
+				try {
+					string dirName = this.Request.Query.dirname;
+					string isDir = this.Request.Query.isdir;
+					log.InfoFormat ("rptlist-dirName:{0},isDir:{1}", dirName, isDir);
+					if ((dirName == null || string.IsNullOrEmpty (dirName) || string.IsNullOrWhiteSpace (dirName))
+					    && (isDir == null || string.IsNullOrEmpty (isDir) || string.IsNullOrWhiteSpace (isDir))) {
+						var files = GetRptList (ProjectPathClass.UserCustomPath);
+						string result = GetResult (0, files);
+						return this.Response.AsText (result);
+					} else {
+						if (isDir == "0") {
+							string str = GetResult (0, "");
+							return this.Response.AsText (str);
+						}
+						GetRptFullName (ref dirName);
+						var dir = Path.Combine (ProjectPathClass.UserCustomPath, dirName);
+						if (dirName == "/")
+							dir = ProjectPathClass.UserCustomPath;
+						var files = GetRptList (dir);
+						string result = GetResult (0, files);
+						return this.Response.AsText (result);
+					}
+				} catch (Exception ex) {
+					Message.Info (string.Format ("rptlist--message:{0},StackTrace:{1}", ex.Message, ex.StackTrace));
+					string str = GetResult (1, ex.Message);
+					return this.Response.AsText (str);
+				}
+				
+			};
+			//已经导出文件列表
+			Get ["/reportlist"] = _ => {
+				try {
+					string dirName = this.Request.Query.dirname;
+					log.InfoFormat ("reportlist-dirName:{0}", dirName);
+					if (dirName == null || string.IsNullOrEmpty (dirName) || string.IsNullOrWhiteSpace (dirName)) {
+						var list = GetReportList (ProjectPathClass.ServerWebExport);
+						string result = GetResult (0, list);
+						return this.Response.AsText (result);
+					} else {
+						var dir = Path.Combine (ProjectPathClass.ServerWebExport, dirName);
+						var flag = IsDirExisted (dir);
+						if (!flag) {
+							dir = Path.Combine (ProjectPathClass.ServerWebExport, Util.Hash_MD5_16 (dirName, false));
+							flag = IsDirExisted (dir);
+							if (!flag) {
+								string str = GetResult (1, "报表路径不存在");
+								return this.Response.AsText (str);
+							}
+						}
+						var list = GetReportList (dir);
+						string result = GetResult (0, list);
+						return this.Response.AsText (result);
+					}
+				} catch (Exception ex) {
+					Message.Info (string.Format ("reportlist--message:{0},StackTrace:{1}", ex.Message, ex.StackTrace));
+					string str = GetResult (1, ex.Message);
+					return this.Response.AsText (str);
+				}
+			};
+				
+			//查看已经导出的报表
+//			Get ["/reportinfo"] = _ => {
+//				try {
+//					string dirName = this.Request.Query.dirname;
+//					if (dirName == null || string.IsNullOrEmpty (dirName) || string.IsNullOrWhiteSpace (dirName)) {
+//						string result = GetResult (1, "报表不存在！");
+//						return this.Response.AsText (result);
+//					} else {
+//						var dir = Path.Combine (ProjectPathClass.ServerWebExport, dirName);
+//						var flag = IsDirExisted (dir);
+//						if (!flag) {
+//							dir = Path.Combine (ProjectPathClass.ServerWebExport, Util.Hash_MD5_16 (dirName, false));
+//							flag = IsDirExisted (dir);
+//							if (!flag) {
+//								string str = GetResult (1, "报表路径不存在");
+//								return this.Response.AsText (str);
+//							}
+//						}
+//						var url = string.Format ("{0}:{1}/{2}", CommonConst.Domain, CommonConst.Port, dir);
+//
+//						string result = GetResult (0, url);
+//						return this.Response.AsText (result);
+//					}
+//				} catch (Exception ex) {
+//					Message.Info (string.Format ("message:{0},StackTrace:{1}", ex.Message, ex.StackTrace));
+//					string str = GetResult (1, ex.Message);
+//					return this.Response.AsText (str);
+//				}
+//			};
+			//获取
+			Get ["/state/{clientId}/{queryId}"] = _ => {
+				//string clientId = _.clientId;
+				try {
+					string clientId = _.clientId;
+					string queryId = _.queryId;
+					log.InfoFormat ("state-clientId:{0},queryId:{1}", clientId, queryId);
+
+					var queryReport = MESReportRun.Instance.ReportQueryManager.Get (queryId);// (string.Format ("{0}{1}", clientId, queryId));
+
+					if (queryReport != null) {
+						dynamic result = new ExpandoObject ();
+						result.ClientId = queryReport.ClientId;
+						result.ReportId = queryReport.ReportId;
+						result.QueryID = queryReport.QueryID;
+						result.FilterDialogFlag = queryReport.FilterDialogFlag;
+						result.IsCompleted = queryReport.IsCompleted;
+						result.PageIndex = queryReport.PageIndex;
+						result.PageCount = queryReport.PageCount;
+						result.PageWidth = queryReport.HtmlWidth;
+						result.PageHeight = queryReport.HtmlHeight;
+						result.Url = string.Format ("{0}/{1}", BaseDomain, queryReport.Url);
+						string str = GetResult (0, result);
+						log.InfoFormat ("state-clientId:{0},queryId:{1},result:{2}", clientId, queryId, str);
+						//					if (result.IsCompleted == 1) {
+						//						MESReportRun.Instance.ReportQueryManager.Remove (queryId);
+						//					}
+						return this.Response.AsText (str);
+					}
+					string resultStr = GetResult (1, "没有找到查询id。");
+					return this.Response.AsText (resultStr);
+				} catch (Exception ex) {
+					Message.Info (string.Format ("state--message:{0},StackTrace:{1}", ex.Message, ex.StackTrace));
+					string str = GetResult (1, ex.Message);
+					return this.Response.AsText (str);
+				}
+			};
+
+			Post ["/login"] = _ => {
+				try {
+					var user = this.Bind<UserInfo> ();
+					var login = new ReportLogin ();
+					log.InfoFormat ("login-userName:{0}", user.UserName);
+					var flag = login.Login (user.UserName, user.Pwd);
+					if (flag) {
+						CurrentPrjInfo.CurrentLoginUserID = user.UserName;
+						string str = GetResult (0, "");
+						return this.Response.AsText (str);
+					} else {
+						string str = GetResult (1, "用户名或密码错误!");
+						return this.Response.AsText (str);
+					}
+				} catch (Exception ex) {
+					Message.Info (string.Format ("login--message:{0},StackTrace:{1}", ex.Message, ex.StackTrace));
+					string str = GetResult (1, ex.Message);
+					return this.Response.AsText (str);
+				}
+
+			};
+
+			Post ["/logout"] = _ => {
+				try {
+					//var user = this.Bind<UserInfo> ();
+					//var login = new ReportLogin ();
+					//var flag = login.Login (user.UserName, user.Pwd);
+					//if (flag) {
+					log.InfoFormat ("logout-userName:{0}", CurrentPrjInfo.CurrentLoginUserID);
+					CurrentPrjInfo.CurrentLoginUserID = string.Empty;
+
+					string str = GetResult (0, "");
+					return this.Response.AsText (str);
+					//} else {
+					/*		string str = GetResult (1, "");
+						return this.Response.AsText (str);
+					}*/
+				} catch (Exception ex) {
+					Message.Info (string.Format ("logout--message:{0},StackTrace:{1}", ex.Message, ex.StackTrace));
+					string str = GetResult (1, ex.Message);
+					return this.Response.AsText (str);
+				}
+
+			};
+
+			Post ["/filterquery/{clientId}/{queryId}"] = _ => {
+				
+				try {
+					string clientId = _.clientId;
+					string queryId = _.queryId;
+					var filter = GetPostFilter ();
+					log.InfoFormat ("filterquery-clientId:{0},queryId:{1},filter:{2}", clientId, queryId, filter);
+					//MESReportRun.Instance.ContinueRunReportServer (filter, string.Format ("{0}{1}", clientId, queryId));
+					MESReportRun.Instance.ContinueRunReportServer (filter, queryId);
+
+					string str = GetResult (0, "");
+					return this.Response.AsText (str);
+				} catch (Exception ex) {
+					Message.Info (string.Format ("filterquery--message:{0},StackTrace:{1}", ex.Message, ex.StackTrace));
+					string str = GetResult (1, ex.Message);
+					return this.Response.AsText (str);
+				}
+			};
+
+			Post ["/queryreport/{clientId}/{queryId}/{reportName}"] = _ => {
+				try {
+					string clientId = _.clientId;
+					string queryId = _.queryId;
+					string reportName = _.reportname;
+					GetRptFullName (ref reportName);
+					string filter = GetPostFilter ();
+					log.InfoFormat ("queryreport-cliendId:{0},queryId:{1},reportName:{2},filter:{3}", clientId, queryId, reportName, filter);
+					Run (clientId, queryId, reportName, filter, ReportViewType.ExportQuery);
+					string str = GetResult (0, string.Empty);
+					return this.Response.AsText (str);
+				} catch (Exception ex) {
+					Message.Info (string.Format ("queryreport--message:{0},StackTrace:{1}", ex.Message, ex.StackTrace));
+					string str = GetResult (1, ex.Message);
+					return this.Response.AsText (str);
+				}
+			};
+
+			Get ["/exportedDirs"] = _ => {
+				try {
+					dynamic root = GetAllDirs ();
+					string str = GetResult (0, root);
+					return this.Response.AsText (str);
+				} catch (Exception ex) {
+					Message.Info (string.Format ("exportedDirs--message:{0},StackTrace:{1}", ex.Message, ex.StackTrace));
+					string str = GetResult (1, ex.Message);
+					return this.Response.AsText (str);
+				}
+			};
+		}
+
+		/// <summary>
+		/// Records the runtime.
+		/// </summary>
+		/// <param name="rptName">Rpt name.</param>
+		/// <param name="flag">Flag. 0 query 1 export</param>
+
+
+		private void GetRptFullName (ref string rptName)
+		{
+			if (!rptName.Contains ("$"))
+				return;
+			rptName = rptName.Replace ('$', Path.DirectorySeparatorChar);
+		}
+
+		private bool IsLogin ()
+		{
+			if (CommonConst.IsUsedLogin == "0")
+				return true;
+			return CurrentPrjInfo.CurrentLoginUserID != string.Empty;
+		}
+
+		private string GetResult (int code, object o)
+		{
+			dynamic result = new ExpandoObject ();
+			result.code = code;
+			result.data = o;
+			return JsonConvert.SerializeObject (result);
+		}
+
+		private bool IsRptExisted (string filePath)
+		{
+			if (string.IsNullOrEmpty (filePath))
+				return false;
+			return File.Exists (filePath);
+		}
+
+		private bool IsDirExisted (string dir)
+		{
+			if (string.IsNullOrEmpty (dir))
+				return false;
+			return Directory.Exists (dir);
+		}
+
+		/// <summary>
+		/// 前段传过来完整路径
+		/// </summary>
+		/// <returns>The rpt path.</returns>
+		/// <param name="reportName">Report name.</param>
+		private string GetRptPath (string reportName)
+		{
+			if (string.IsNullOrEmpty (reportName)) {
+				return string.Empty;
+			}
+
+			return Path.Combine (ProjectPathClass.UserCustomPath, reportName);
+		}
+
+		private string GetRptBySearchPath (string reportName)
+		{
+			if (string.IsNullOrEmpty (reportName)) {
+				return string.Empty;
+			}
+			var files = GetFiles (ProjectPathClass.UserCustomPath);
+			var reportFullPath = files.FirstOrDefault (f => Path.GetFileName (f) == reportName);
+			if (string.IsNullOrEmpty (reportFullPath)) {
+				return string.Empty;
+			} else {
+				return reportFullPath;
+			}
+		}
+
+		private dynamic GetAllDirs ()
+		{
+			dynamic root = new ExpandoObject ();
+			root.Name = "已导出报表目录";
+			root.isDir = 1;
+			root.FullPath = "$";
+			GetAllSubDirs (root, ProjectPathClass.ServerWebExport);
+			return root;
+		}
+
+		public void GetAllSubDirs (dynamic node, string path)
+		{
+			var allDir = Directory.GetDirectories (path);
+			node.Childs = new List<dynamic> ();
+			foreach (var dir in allDir) {  
+				var dirName = Path.GetFileName (dir);
+				if (dirName == "barCode" || dirName == "image" || dirName == "qrCode")
+					continue;
+				var html = Directory.GetFiles (dir, "*.html", SearchOption.TopDirectoryOnly);
+				dynamic nodeDir = new ExpandoObject ();
+				if (html == null || html.Length == 0) {
+					nodeDir.isDir = 1;
+				} else {
+					nodeDir.isDir = 0; // 是报表文件名的文件夹
+				}
+				nodeDir.Name = dirName;
+				nodeDir.FullPath = dir.Replace (ProjectPathClass.ServerWebExport, "").Replace (Path.DirectorySeparatorChar, '$');
+				node.Childs.Add (nodeDir);
+				GetAllSubDirs (nodeDir, dir);  
+			}  
+		}
+
+
+		private string[] GetFiles (string dir, string regexPattern = null, bool recurse = false, bool throwEx = false)
+		{
+			List<string> lst = new List<string> ();
+
+			try {
+				foreach (string item in Directory.GetFileSystemEntries(dir)) {
+					try {
+						bool isFile = (File.GetAttributes (item) & FileAttributes.Directory) != FileAttributes.Directory;
+
+						if (isFile && (regexPattern == null || Regex.IsMatch (Path.GetFileName (item), regexPattern, RegexOptions.IgnoreCase | RegexOptions.Multiline))) {
+							lst.Add (item);
+						}
+
+						//递归
+						if (recurse && !isFile) {
+							lst.AddRange (GetFiles (item, regexPattern, true));
+						}
+					} catch {
+						if (throwEx) {
+							throw;
+						}
+					}
+				}
+			} catch {
+				if (throwEx) {
+					throw;
+				}
+			}
+
+			return lst.ToArray ();
+		}
+
+		private string GetFilter ()
+		{
+			if (this.Request.Form == null) {
+				return string.Empty;
+			}
+
+			//Dictionary<string,string> dict = this.Request.Form as Dictionary<string,string>;
+			List<string> list = new List<string> ();
+			foreach (var kv in this.Request.Form) {
+				string value = this.Request.Form [kv];
+				var s = string.Format ("{0}={1}", kv, value);
+				list.Add (s);
+			}
+
+			if (list.Count == 0) {
+				return string.Empty;
+			}
+
+			return string.Join (";", list);
+		}
+
+		private string GetPostFilter ()
+		{
+			if (this.Request.Body.Length <= 0) {
+				return string.Empty;
+			}
+
+			byte[] bs = new byte[this.Request.Body.Length];
+			this.Request.Body.Read (bs, 0, bs.Length);
+			var json = System.Text.Encoding.Default.GetString (bs);
+			var obj = JsonConvert.DeserializeObject<Dictionary<string,string>> (json);
+			List<string> list = new List<string> ();
+			foreach (var d in obj) {
+				list.Add (string.Format ("{0}={1}", d.Key, d.Value));
+			}
+
+			if (list.Count == 0) {
+				return string.Empty;
+			}
+
+			return string.Join (";", list);
+		}
+
+		private bool Run (string clientId, string queryId, string reportName, ref string filterStr, ReportViewType reportViewType, string exportFileName)
+		{
+			try {
+				var fileName = string.Format ("{0}.rpt", reportName);
+				var filePath = GetRptPath (fileName);
+				if (string.IsNullOrEmpty (clientId) || string.IsNullOrEmpty (queryId) || string.IsNullOrEmpty (filePath) || !IsRptExisted (filePath)) {
+					return false;
+				}
+				var run = MESReportRun.Instance;
+				run.ReportClientId = clientId;
+				/*	var queryReport = run.ReportQueryManager.Get (clientId, fileName);
+                    if (queryReport != null) {
+                        if (queryReport.QueryID == queryId) {
+                            if (queryReport.IsCompleted == 0) {
+                                if (queryReport.ReportRuntime != null) {
+                                    filterStr = queryReport.ReportRuntime.FilterStr;
+                                }
+                                return true;	
+                            }
+                            return true;
+                        }
+                    }*/
+				var key = clientId + queryId;
+				var queryReport = run.ReportQueryManager.Get (key);
+				if (queryReport != null) {
+					if (queryReport.IsCompleted == 0) {
+						if (queryReport.ReportRuntime != null) {
+							filterStr = queryReport.ReportRuntime.FilterStr;
+						}
+						return true;
+					}
+				}
+
+				return run.RunReportServer (filePath, fileName, queryId, true, ref filterStr, reportViewType, true, exportFileName);
+			} catch (Exception ex) {
+				Message.Info (string.Format ("message:{0},StackTrace:{1}", ex.Message, ex.StackTrace));
+				return false;
+			}
+		}
+
+		private bool Run (string clientId, string queryId, string reportName, string filterStr, ReportViewType reportViewType)
+		{
+			try {
+				var fileName = string.Format ("{0}.rpt", reportName);
+				var filePath = GetRptBySearchPath (fileName);
+				if (string.IsNullOrEmpty (clientId) || string.IsNullOrEmpty (queryId) || string.IsNullOrEmpty (filePath) || !IsRptExisted (filePath)) {
+					return false;
+				}
+				var run = MESReportRun.Instance;
+				run.ReportClientId = clientId;
+				//var queryReport = run.ReportQueryManager.Get (clientId, fileName);
+				var queryReport = run.ReportQueryManager.Get (queryId);
+				if (queryReport != null) {
+					//if (queryReport.QueryID == queryId) {
+					return true;
+					//}
+				}
+				return run.RunReportServer (filePath, fileName, queryId, true, ref filterStr, reportViewType, false, Path.GetFileName (reportName));
+			} catch (Exception ex) {
+				Message.Info (string.Format ("message:{0},StackTrace:{1}", ex.Message, ex.StackTrace));
+				return false;
+			}
+		}
+
+		private List<dynamic> GetRptList (string dir = "", bool onlyRpt = false)
+		{
+
+			var dirName = dir;// Path.Combine (ProjectPathClass.UserCustomPath, dir);
+			if (!Directory.Exists (dir)) {
+				//Directory.CreateDirectory (dirName);
+				return null;
+			}
+			// rpt 文件
+			var rptList = Directory.GetFiles (dirName, "*.rpt");
+			
+			var list = new List<dynamic> ();
+			if (rptList != null && rptList.Length > 0) {
+				foreach (var rpt in rptList) {
+					var rptName = Path.GetFileNameWithoutExtension (rpt);
+					dynamic rptPath = new ExpandoObject ();
+					rptPath.Name = rptName;
+					rptPath.IsDir = 0; //文件 
+					list.Add (rptPath);
+				}
+			}
+			if (onlyRpt)
+				return list;
+
+			var dirs = Directory.GetDirectories (dirName);
+			foreach (var d in dirs) {
+				var name = Path.GetFileName (d);
+				dynamic rptPath = new ExpandoObject ();
+				rptPath.Name = name;
+				rptPath.IsDir = 1; // 文件夹
+				list.Add (rptPath);
+			}
+			// 加入跟目录
+			dynamic root = new ExpandoObject ();
+			root.Name = "报表rpt文件";
+			root.IsDir = 1; // 文件夹
+			list.Add (root);
+			return list;
+		}
+
+		private List<string> GetAllRptList (string path)
+		{
+			List<string> list = new List<string> ();
+			var rpts = GetRptList (path, true);
+			if (rpts != null) {
+				foreach (var i in rpts) {
+					list.Add (i.Name);
+				}
+			}
+
+			var dirs = Directory.GetDirectories (path);
+			if (dirs == null || dirs.Length == 0)
+				return list;
+			else {
+				foreach (var d in dirs) {
+					var l = GetAllRptList (d);
+					list.AddRange (l);
+				}
+			}
+
+			return list;
+
+		}
+
+
+		private List<dynamic> GetReportList (string dirPathName)
+		{
+			var dict = new Dictionary<string,string> ();
+			/*var rptList = GetAllRptList (ProjectPathClass.UserCustomPath);
+			if (rptList == null || rptList.Count == 0) {
+				return null;
+			}
+
+			foreach (var rpt in rptList) {
+				var hash = Util.Hash_MD5_16 (rpt, false);
+				dict [hash] = rpt;
+			}*/
+			var dir = dirPathName;// Path.Combine (ProjectPathClass.ServerWebExport, dirPathName);
+			if (!Directory.Exists (dir)) {
+				//Directory.CreateDirectory (dir);
+				return null;
+			}
+				
+			var dirs = Directory.GetDirectories (dir);
+				
+			if (dirs == null || dirs.Length == 0) {
+				return null;
+			}
+				
+			List<dynamic> list = new List<dynamic> ();
+			string rptName = string.Empty;
+			foreach (var d in dirs) {
+				var dirName = Path.GetFileName (d);
+				if (dirName == "barCode" || dirName == "image" || dirName == "qrCode")
+					continue;
+				if (dict.TryGetValue (dirName, out rptName)) {
+					dynamic item = new ExpandoObject ();
+					item.Name = rptName;
+					if (dir != ProjectPathClass.ServerWebExport)
+						item.Url = string.Format ("{0}/{1}/{2}", ExportUrl, Path.GetFileName (dir), dirName);
+					else
+						item.Url = string.Format ("{0}/{1}", ExportUrl, dirName);
+					var htmls = Directory.GetFiles (d, "*.html");
+					if (htmls != null && htmls.Length > 0) {
+						item.PageCount = htmls.Length;
+
+					} else {
+						item.PageCount = 0;
+					}
+					GetPageSize (ref item, d);
+					list.Add (item);
+				} else {
+					dynamic item = new ExpandoObject ();
+					item.Name = dirName;
+					var htmls = Directory.GetFiles (d, "*.html");
+					if (htmls != null && htmls.Length > 0) {
+						if (dir != ProjectPathClass.ServerWebExport) {
+							item.Url = string.Format ("{0}/{1}/{2}", ExportUrl, dir.Replace (Path.DirectorySeparatorChar, '/'), dirName);
+						} else {
+							item.Url = string.Format ("{0}/{1}", ExportUrl, dirName);
+						}
+						item.PageCount = htmls.Length;
+
+					} else {
+						item.Url = string.Empty;
+						item.PageCount = 0;
+					}
+					GetPageSize (ref item, d);
+					list.Add (item);
+				}
+			}
+
+			dynamic root = new ExpandoObject ();
+			root.Name = "已导出报表";
+			root.Url = string.Empty;
+			root.PageCount = 0;
+			root.PageWidth = -1;
+			root.PageHeight = -1;
+			list.Add (root);
+			return list;
+		}
+
+		private void GetPageSize (ref dynamic item, string dir)
+		{
+			var path = Path.Combine (dir, "config.cfg");
+			if (!File.Exists (path)) {
+				item.PageWidth = -1;
+				item.PageHeight = -1;
+				return;
+			}
+			var configStr = File.ReadAllText (path);
+			if (string.IsNullOrEmpty (configStr) || string.IsNullOrWhiteSpace (configStr)) {
+				item.PageWidth = -1;
+				item.PageHeight = -1;
+				return;
+			}
+			dynamic config = JObject.Parse (configStr);
+			item.PageWidth = config.PageWidth;
+			item.PageHeight = config.PageHeight;
+		}
+
+		private string GetQueryPathByQueryId (string queryId)
+		{
+			var dirs = Directory.GetDirectories (ProjectPathClass.ServerWebQuery);
+
+			foreach (var dir in dirs) {
+				var dirName = Path.GetFileName (dir);
+				if (dirName.StartsWith (string.Format ("{0}_", queryId))) {
+					return dir;
+				}
+			}
+			return string.Empty;
+		}
+
+		private bool Export (string queryId, string repordir, string reportName)
+		{
+			var targetDir = repordir.TrimStart ('$').Replace ('$', Path.DirectorySeparatorChar);
+			//var targetName = Path.GetFileName (targetDir);
+			var source = GetQueryPathByQueryId (queryId);
+			//var dirName = Path.GetFileName (source);
+
+			/*if (string.IsNullOrEmpty (repordir)) {
+				if (!string.IsNullOrEmpty (dirName)) {
+					repordir = dirName.Split (new char[]{ '_' }) [1];
+				} else {
+					repordir = Util.Hash_MD5_16 (reportName, false);
+				}
+			}*/
+			var target = Path.Combine (ProjectPathClass.ServerWebExport, targetDir);
+			if (!string.IsNullOrEmpty (source) && !string.IsNullOrEmpty (target)) {
+				return BakExport (source, target);
+			} else {
+				if (string.IsNullOrEmpty (source)) {
+					Message.Info ("源路径不存在！");
+					throw new Exception ("源路径不存在！");
+				}
+				if (string.IsNullOrEmpty (target)) {
+					Message.Info ("目标路径为空！");
+					throw new Exception ("目标路径为空！");
+				}
+				return false;
+			}
+		}
+
+		private bool BakExport (string sourceDir, string targetDir)
+		{
+			try {
+				ManagedThreadPool.QueueUserWorkItem ((o) => CopyDir (sourceDir, targetDir));
+
+				return true;
+			} catch (Exception ex) {
+				Message.Info (string.Format ("message:{0},StackTrace:{1}", ex.Message, ex.StackTrace));
+				return false;
+			}
+		}
+
+		private void CopyDir (string srcPath, string aimPath)
+		{
+			　
+			try {
+				　// 检查目标目录是否以目录分割字符结束如果不是则添加
+				　
+				if (aimPath [aimPath.Length - 1] != System.IO.Path.DirectorySeparatorChar) {
+					　
+					aimPath += System.IO.Path.DirectorySeparatorChar;
+				}
+//				if (srcPath [srcPath.Length - 1] != System.IO.Path.DirectorySeparatorChar) {
+//					　
+//					srcPath += System.IO.Path.DirectorySeparatorChar;
+//				}
+				　// 判断目标目录是否存在如果不存在则新建
+		
+				if (!System.IO.Directory.Exists (aimPath)) {
+					　
+					System.IO.Directory.CreateDirectory (aimPath);
+				}
+				　// 得到源目录的文件列表，该里面是包含文件以及目录路径的一个数组
+				　// 如果你指向copy目标文件下面的文件而不包含目录请使用下面的方法
+				　// string[] fileList = Directory.GetFiles（srcPath）；
+				　//System.IO.Directory.GetFileSystemEntries (srcPath);
+				string[] fileList = Directory.GetFileSystemEntries (srcPath);
+				　// 遍历所有的文件和目录
+				　
+				foreach (string file in fileList) {
+					　// 先当作目录处理如果存在这个目录就递归Copy该目录下面的文件
+					　
+					if (System.IO.Directory.Exists (file)) {
+						　
+						CopyDir (file, Path.Combine (aimPath, System.IO.Path.GetFileName (file)));
+					}
+					　// 否则直接Copy文件
+					　else {
+						　
+						System.IO.File.Copy (file, Path.Combine (aimPath, System.IO.Path.GetFileName (file)), true);
+					}
+				}
+			} catch (Exception ex) {
+				　
+				Message.Info (string.Format ("message:{0},StackTrace:{1}", ex.Message, ex.StackTrace));
+				return;
+				　
+			}
+		}
+
+
+	}
+}
+

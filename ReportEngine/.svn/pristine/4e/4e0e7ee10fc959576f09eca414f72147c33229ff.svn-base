@@ -1,0 +1,235 @@
+﻿using System;
+using FluentScheduler;
+using System.IO;
+using System.Collections.Generic;
+using Newtonsoft.Json;
+using System.ComponentModel;
+using PMS.Libraries.ToolControls.PMSPublicInfo;
+using PMS.Libraries.ToolControls;
+using Topshelf.Logging;
+using System.Linq;
+using System.Threading;
+
+namespace NetSCADA.MESReportServer
+{
+	public class ReportJobManage
+	{
+		static LogWriter log = HostLogger.Get ("ReportJobManage");
+
+		static void RuleParse (JobRuler ruler, Schedule schedule)
+		{
+			try {
+				if (ruler.SchedulerRuler.RunType == 1) {
+					var time = DateTime.ParseExact (ruler.SchedulerRuler.RealTime, "yyyyMMddHHmmss", System.Globalization.CultureInfo.CurrentCulture);
+					switch (ruler.SchedulerRuler.CycleType) {
+					case "Y":
+						schedule.ToRunEvery (1).Years ().On (ruler.SchedulerRuler.OffsetDays).At (time.Hour, time.Minute);
+						break;
+					case "M":
+						schedule.ToRunEvery (1).Months ().On (ruler.SchedulerRuler.OffsetDays).At (time.Hour, time.Minute);
+						break;
+					case "W":
+						DayOfWeek dayOfWeek = DayOfWeek.Monday;
+						Enum.TryParse<DayOfWeek> (ruler.SchedulerRuler.OffsetDays.ToString (), out dayOfWeek);
+						schedule.ToRunEvery (1).Weeks ().On (dayOfWeek).At (time.Hour, time.Minute);
+						break;
+					case "D":
+						schedule.ToRunEvery (1).Days ().At (time.Hour, time.Minute);
+						break;
+					case "H":
+						schedule.ToRunEvery (1).Hours ();
+						break;
+					case "Min":
+						schedule.ToRunEvery (1).Minutes ();
+						break;
+					case "S":
+						schedule.ToRunEvery (1).Seconds ();
+						break;
+					}
+				
+				} else if (ruler.SchedulerRuler.RunType == 0) {
+					var time = DateTime.ParseExact (ruler.SchedulerRuler.RealTime, "yyyyMMddHHmmss", System.Globalization.CultureInfo.CurrentCulture);
+
+					schedule.ToRunOnceAt (time);
+				}
+			} catch (Exception ex) {
+				log.Error (string.Format ("message:{0},StackTrace:{1}", ex.Message, ex.StackTrace));
+			}
+		}
+
+		private static List<JobRuler> GetJobRulers ()
+		{
+			try {
+				var rulercfg = Path.Combine (AppDomain.CurrentDomain.BaseDirectory, "Conf", "job.conf");
+				if (!File.Exists (rulercfg))
+					return null;
+				var cfg = File.ReadAllText (rulercfg);
+				if (string.IsNullOrEmpty (cfg) || string.IsNullOrWhiteSpace (cfg))
+					return null;
+				List<JobRuler> jobrulers = JsonConvert.DeserializeObject (cfg, typeof(List<JobRuler>)) as List<JobRuler>;
+				if (jobrulers == null)
+					return null;
+				return jobrulers;
+			} catch (Exception ex) {
+				log.Error (string.Format ("message:{0},StackTrace:{1}", ex.Message, ex.StackTrace));
+				return null;
+			}
+		}
+
+		public static void InitialJobs ()
+		{
+			try {
+				List<JobRuler> jobRulers = GetJobRulers ();
+				if (jobRulers == null)
+					return;
+				var time = DateTime.Now;
+				foreach (var ruler in jobRulers) {
+					if (ruler.SchedulerRuler.RunType == 0) {
+						time = DateTime.ParseExact (ruler.SchedulerRuler.RealTime, "yyyyMMddHHmmss", System.Globalization.CultureInfo.CurrentCulture);
+						if (time <= DateTime.Now)
+							continue;
+					}
+					JobManager.AddJob (() => {
+						System.Diagnostics.Debug.WriteLine ("---" + DateTime.Now.ToString ("yyyyMMddHHmmss"));
+						Run (Guid.NewGuid ().ToString ("N"), Guid.NewGuid ().ToString ("N"), ruler.RptName, string.Empty, ReportViewType.ExportQuery);
+					},
+						(s) => {
+							RuleParse (ruler, s);
+						});
+				}
+			} catch (Exception ex) {
+				log.Error (string.Format ("message:{0},StackTrace:{1}", ex.Message, ex.StackTrace));
+			}
+		}
+
+		private static bool Run (string clientId, string queryId, string reportName, string filterStr, ReportViewType reportViewType)
+		{
+			try {
+				var fileName = reportName.EndsWith ("rpt") ? reportName : string.Format ("{0}.rpt", reportName);
+				var filePath = Path.Combine (AppDomain.CurrentDomain.BaseDirectory, fileName);
+				if (string.IsNullOrEmpty (clientId) || string.IsNullOrEmpty (queryId) || string.IsNullOrEmpty (filePath) || !File.Exists (filePath)) {
+					return false;
+				}
+				var run = MESReportRun.Instance;
+				run.ReportClientId = clientId;
+				return run.RunReportServer (filePath, fileName, queryId, true, ref filterStr, reportViewType, false);
+			} catch (Exception ex) {
+				log.Info (string.Format ("message:{0},StackTrace:{1}", ex.Message, ex.StackTrace));
+				return false;
+			}
+		}
+
+		/// <summary>
+		/// 扫描ProjectPathClass.UserCustomPath 目录 ，将未在数据库中的文件夹，放入数据库
+		/// </summary>
+		public static void DealWithDirs ()
+		{
+			try {
+				var userCustomPath = Path.Combine (AppDomain.CurrentDomain.BaseDirectory, "UserCustom");
+				var dirs = Directory.GetDirectories (userCustomPath, "*", SearchOption.AllDirectories);
+				var dbDirs = RptDb.GetAllRptDirectory ();
+				var tempDirs = new List<string> ();
+				//文件夹 与数据库同步
+				if (dirs != null) {
+					foreach (var d in dirs) {
+						var relativePath = d.Replace (userCustomPath, "");
+						tempDirs.Add (relativePath);
+						var subDirs = relativePath.Split (new char[]{ Path.DirectorySeparatorChar }, StringSplitOptions.RemoveEmptyEntries);
+						if (subDirs == null || subDirs.Length == 0)
+							continue;
+						List<string> subs = new List<string> (subDirs);
+						for (var i = 0; i < subDirs.Length; i++) {
+							var p = Path.Combine (subs.ToArray ());
+							if (!p.StartsWith (Path.DirectorySeparatorChar.ToString ())) {
+								p = Path.Combine (Path.DirectorySeparatorChar.ToString (), p);
+							}
+							var dbDir = dbDirs.FirstOrDefault ((direct) => direct.DirPath == p);//RptDb.GetRptDirectoryByName (p);
+							if (dbDir == null) {
+								//var time = DateTime.Now.ToString ("yyyyMMddHHmmss");
+								RptDb.SaveDir (new RptDirectory () {
+									DirName = subs [subs.Count - 1],
+									DirPath = p,
+									//CreateTime = time,
+									//LastModifyTime = time,
+									LastModifyUser = "system" // 
+								});
+							}
+
+							subs.RemoveAt (subs.Count - 1);
+						}
+					}
+				
+
+					if (dbDirs != null) {
+						foreach (var dbDir in dbDirs) {
+							if (dbDir.DirName == "$")
+								continue;
+							var dir = tempDirs.FirstOrDefault ((d) => d == dbDir.DirPath);
+							if (dir == null) {
+								RptDb.DeleteRptDirectory (dbDir);
+							}
+						}
+					}
+				}
+				// 根目录
+				var rootList = RptDb.GetRptDirectoryByName ("$");
+				if (rootList == null || rootList.Count == 0) {
+					RptDb.SaveDir (new RptDirectory () {
+						DirName = "$",
+						DirPath = Path.DirectorySeparatorChar.ToString (),
+						//CreateTime = time,
+						//LastModifyTime = time,
+						LastModifyUser = "system" // 
+					});
+				}
+
+				var files = Directory.GetFiles (userCustomPath, "*.rpt", SearchOption.AllDirectories);
+				var dbfiles = RptDb.GetAllRptDesign ();
+				if (files != null) {
+					foreach (var file in files) {
+						var fileName = Path.GetFileNameWithoutExtension (file);
+						if (string.IsNullOrEmpty (fileName))
+							continue;
+						var design = RptDb.GetRptDesignByName (fileName);
+						if (design == null) {
+							var fileDir = Path.GetDirectoryName (file);
+							var dir = fileDir.Replace (userCustomPath, "").Replace (Path.DirectorySeparatorChar, '$');
+							if (string.IsNullOrEmpty (dir))
+								dir = "$";
+							var rptDir = RptDb.GetRptDirectoryByName (dir).FirstOrDefault ();
+							var rtpDesign = new RptDesign () {
+								DirId = rptDir == null ? string.Empty : rptDir.Id,
+								RptName = fileName,
+								UploadPerson = "system", //文件是复制过来的
+								UploadTime = DateTime.Now.ToString ("yyyyMMddHHmmss")
+							};
+							var flag = RptDb.SaveRptDesign (rtpDesign);
+							if (flag)
+								RptDb.SaveRptRuntime (new RptRuntime (){ RptId = rtpDesign.Id });
+						} else {
+						
+						}
+					}
+				
+					var fileIds = new List<string> ();
+					if (dbfiles != null) {
+						foreach (var dbfile in dbfiles) {
+							var file = files.FirstOrDefault (f => Path.GetFileNameWithoutExtension (f) == dbfile.RptName);
+							if (file == null) {
+								fileIds.Add (dbfile.Id);
+							}
+						}
+						if (fileIds.Count > 0) {
+							RptDb.DeleteRptDesign (fileIds);
+						}
+					}
+				}
+			} catch (IOException ex) {
+				log.Info (string.Format ("message:{0},StackTrace:{1}", ex.Message, ex.StackTrace));
+				//return false;
+			}
+		}
+
+	}
+}
+

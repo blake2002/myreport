@@ -1,0 +1,38 @@
+﻿<Properties StartupItem="MESReportServer/MESReportServer.csproj" RefactoringSettings.EnableRefactorings="True">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench>
+    <Files>
+      <File FileName="MESReportServer/ReportModule.cs" Line="584" Column="18" />
+      <File FileName="MESReportRun/MESReportRun.cs" Line="1" Column="1" />
+      <File FileName="PMSToolControls/ReportEngine/ReportEngine/ReportRuntime.cs" Line="1" Column="1" />
+      <File FileName="PMSToolControls/ReportEngine/ReportEngine/ReportDrawing.cs" Line="1" Column="1" />
+      <File FileName="PMSToolControls/ReportEngine/ReportEngine/ReportPageDrawing.cs" Line="1" Column="1" />
+      <File FileName="MESReportServer/app.config" Line="1" Column="1" />
+      <File FileName="MESReportServer/ReportJobManage.cs" Line="1" Column="1" />
+      <File FileName="MESReportServer/ServiceBoot.cs" Line="1" Column="1" />
+      <File FileName="MESReportServer/Program.cs" Line="1" Column="1" />
+      <File FileName="PmsReport/Controls/BasicControl/BarCode.cs" Line="289" Column="19" />
+      <File FileName="Loader/RunTimeLoader.cs" Line="505" Column="33" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/home/administrator/svn/ReportEngine/MESReportServer/RptManageModule.cs" line="363" column="1" />
+      <Breakpoint file="/home/administrator/svn/ReportEngine/MESReportServer/RptManageModule.cs" line="380" column="1" />
+      <Breakpoint file="/home/administrator/svn/ReportEngine/MESReportServer/RptManageModule.cs" line="261" column="1" />
+      <Breakpoint file="/home/administrator/svn/ReportEngine/MESReportServer/RptManageModule.cs" line="156" column="1" />
+      <Breakpoint file="/home/administrator/svn/ReportEngine/MESReportServer/RptManageModule.cs" line="173" column="1" />
+      <Breakpoint file="/home/administrator/svn/ReportEngine/MESReportServer/RptManageModule.cs" line="203" column="1" />
+      <Breakpoint file="/home/administrator/svn/ReportEngine/MESReportServer/RptManageModule.cs" line="404" column="1" />
+      <Breakpoint file="/home/administrator/svn/ReportEngine/MESReportServer/ReportModule.cs" line="42" column="1" />
+      <Breakpoint file="/home/administrator/svn/ReportEngine/MESReportRun/MESReportRun.cs" line="881" column="1" />
+      <Breakpoint file="/home/administrator/svn/ReportEngine/MESReportRun/MESReportRun.cs" line="973" column="1" />
+      <Breakpoint file="/home/administrator/svn/ReportEngine/PMSToolControls/ReportEngine/ReportEngine/ReportDrawing.cs" line="1335" column="1" />
+      <Breakpoint file="/home/administrator/svn/ReportEngine/MESReportServer/ReportModule.cs" line="104" column="1" />
+      <Breakpoint file="/home/administrator/svn/ReportEngine/MESReportServer/ReportModule.cs" line="178" column="1" />
+      <Breakpoint file="/home/administrator/svn/ReportEngine/MESReportServer/ReportModule.cs" line="147" column="1" />
+      <Breakpoint file="/home/administrator/svn/ReportEngine/MESReportServer/ReportModule.cs" line="633" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

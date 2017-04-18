@@ -1,0 +1,5 @@
+/home/administrator/svn/ReportEngine/MESPublicInterface/obj/Release/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/home/administrator/svn/ReportEngine/bin/Debug/MES.PublicInterface.dll.mdb
+/home/administrator/svn/ReportEngine/bin/Debug/MES.PublicInterface.dll
+/home/administrator/svn/ReportEngine/MESPublicInterface/obj/Release/MES.PublicInterface.dll
+/home/administrator/svn/ReportEngine/MESPublicInterface/obj/Release/MES.PublicInterface.dll.mdb

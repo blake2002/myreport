@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0CDFEEA8-950E-43FF-8AD0-D8A27FE2FBCE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PMS.Libraries.ToolControls</RootNamespace>
+    <AssemblyName>MES.MESReportViewer</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RegisterForComInterop>true</RegisterForComInterop>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\bin\Debug</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RegisterForComInterop>true</RegisterForComInterop>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>PMSKey.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="MES.DataMapTable">
+      <HintPath>..\bin\Debug\MES.DataMapTable.dll</HintPath>
+    </Reference>
+    <Reference Include="PMS.PMSReport">
+      <HintPath>..\bin\Debug\PMS.PMSReport.dll</HintPath>
+    </Reference>
+    <Reference Include="PMS.PropertyTree">
+      <HintPath>..\bin\Debug\PMS.PropertyTree.dll</HintPath>
+    </Reference>
+    <Reference Include="PMS.ReportControls">
+      <HintPath>..\bin\Debug\PMS.ReportControls.dll</HintPath>
+    </Reference>
+    <Reference Include="Emf2Svg">
+      <HintPath>..\bin\Debug\Emf2Svg.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ExportWait.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExportWait.designer.cs">
+      <DependentUpon>ExportWait.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MESReportIndependentRun.cs" />
+    <Compile Include="MESReportServiceClass.cs" />
+    <Compile Include="MESReportViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MESReportViewer.Designer.cs">
+      <DependentUpon>MESReportViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReportConfigForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportConfigForm.Designer.cs">
+      <DependentUpon>ReportConfigForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportViewerDoModalForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportViewerDoModalForm.Designer.cs">
+      <DependentUpon>ReportViewerDoModalForm.cs</DependentUpon>
+    </Compile>
+    <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ExportWait.resx">
+      <DependentUpon>ExportWait.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportConfigForm.en.resx">
+      <DependentUpon>ReportConfigForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportConfigForm.resx">
+      <DependentUpon>ReportConfigForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportViewerDoModalForm.resx">
+      <DependentUpon>ReportViewerDoModalForm.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PMSKey.snk" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ItemGroup>
+    <ProjectReference Include="..\PmsPublicData\PmsPublicData.csproj">
+      <Project>{7E954C96-CCD4-4D7A-9C62-BC87609A6EF1}</Project>
+      <Name>PmsPublicData</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MESReportRun\MESReportRun4windows.csproj">
+      <Project>{F8158BA8-F643-4E41-A55C-38C1882B0CDC}</Project>
+      <Name>MESReportRun4windows</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PMSToolControls\ReportEngine\ReportEngine\ReportEngine4windows.csproj">
+      <Project>{AF281CF4-2C0E-49E6-B740-829A3D80BCE8}</Project>
+      <Name>ReportEngine4windows</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PMSPublicInfo\PMSPublicInfo.csproj">
+      <Project>{A63C94FE-0F3D-4580-BC15-E78D8A790F32}</Project>
+      <Name>PMSPublicInfo</Name>
+    </ProjectReference>
+  </ItemGroup>
+</Project>

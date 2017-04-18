@@ -1,0 +1,751 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 26, 28.375" name="PMSCenter">
+  <DataContextMoniker Name="/PMSCenterDataContext" />
+  <nestedChildShapes>
+    <classShape Id="0d156722-4865-4432-b415-f5aae236e442" absoluteBounds="12.75, 19.375, 2, 1.9542057291666666">
+      <DataClassMoniker Name="/PMSCenterDataContext/NetSCADA_SMS_HIS_Table" />
+      <nestedChildShapes>
+        <elementListCompartment Id="67a47ad3-053a-41cb-acb1-445cf4185c74" absoluteBounds="12.765, 19.835, 1.9700000000000002, 1.3942057291666665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e0181b0d-a83d-4e77-a036-c390a376f9dd" absoluteBounds="11.75, 1.375, 2, 2.1228255208333335">
+      <DataClassMoniker Name="/PMSCenterDataContext/PMSSys_UserMap" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ad8973b3-9fbe-4bc8-97f5-eef3f6e4435b" absoluteBounds="11.765, 1.835, 1.9700000000000002, 1.5628255208333335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="efd2bc24-0bbd-419b-98fa-f40432164222" absoluteBounds="0.75, 14, 2, 2.1228255208333362">
+      <DataClassMoniker Name="/PMSCenterDataContext/NetSCADA_SMS_OrgMap_Table" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c5f66ccf-f2c9-447c-b9c3-2578570d6c91" absoluteBounds="0.765, 14.46, 1.9700000000000002, 1.5628255208333335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="fe46a486-955f-4a88-ba9c-845dadc70c11" absoluteBounds="20.75, 1.375, 2, 1.6169661458333331">
+      <DataClassMoniker Name="/PMSCenterDataContext/NetSCADA_SMS_RT_Table" />
+      <nestedChildShapes>
+        <elementListCompartment Id="540770a9-a816-4d94-9449-8aaace3b961f" absoluteBounds="20.765, 1.835, 1.9700000000000002, 1.0569661458333333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="026a1265-dd7f-4fd3-9738-ce7e19d66657" absoluteBounds="8.75, 0.75, 2, 1.2797265625">
+      <DataClassMoniker Name="/PMSCenterDataContext/NetSCADA_SMS_SMGroup_Table" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1d977b09-0264-4be2-9eda-f39bc4899464" absoluteBounds="8.765, 1.21, 1.9700000000000002, 0.7197265625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6f6df7c3-c8a4-4c22-9049-94b3ef159471" absoluteBounds="11.5, 10.875, 2, 1.1111067708333344">
+      <DataClassMoniker Name="/PMSCenterDataContext/NetSCADA_SMS_SMGroup_Table_NetSCADA_SMS_OrgMap_Table_Relation" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0a6035af-1ad2-42b4-8287-721a82298c7f" absoluteBounds="11.515, 11.335, 1.9700000000000002, 0.55110677083333326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2fab6319-3b09-4f98-80cb-5b5529d769b1" absoluteBounds="11.125, 6.125, 2, 1.1111067708333344">
+      <DataClassMoniker Name="/PMSCenterDataContext/NetSCADA_SMS_SMGroupUser_Table" />
+      <nestedChildShapes>
+        <elementListCompartment Id="deecaff2-fd72-4f60-87bb-1f3a20563c60" absoluteBounds="11.14, 6.585, 1.9700000000000002, 0.55110677083333326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="cacb08ba-7732-4a47-b289-1e447cd9fbec" absoluteBounds="0.75, 11.25, 2, 1.6169661458333344">
+      <DataClassMoniker Name="/PMSCenterDataContext/NetSCADA_SMS_User_Table" />
+      <nestedChildShapes>
+        <elementListCompartment Id="83783acc-d87a-4793-8e4e-17abc1cbf14e" absoluteBounds="0.765, 11.71, 1.9700000000000002, 1.0569661458333333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="55ef1b45-a782-48c7-9ed4-c6d1147d1e99" absoluteBounds="3.5, 14.5, 2, 1.1111067708333344">
+      <DataClassMoniker Name="/PMSCenterDataContext/NetSCADA_SMS_User_Table_NetSCADA_SMS_OrgMap_Table_Relation" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2f037319-c1e7-48bc-a91e-509b3ebab4c4" absoluteBounds="3.515, 14.96, 1.9700000000000002, 0.55110677083333326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e7e64d95-f3ff-43d8-9f1b-69e3649fa790" absoluteBounds="17.75, 19.75, 2, 1.7855859375000023">
+      <DataClassMoniker Name="/PMSCenterDataContext/NetSCADAPMSDeviceInfo" />
+      <nestedChildShapes>
+        <elementListCompartment Id="63cee782-7e58-49c8-82fe-f451af9540bd" absoluteBounds="17.765, 20.21, 1.9700000000000002, 1.2255859375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d1ca0c2a-4e67-4d15-9dbe-f8df143aef49" absoluteBounds="20.5, 17.125, 2, 1.1111067708333309">
+      <DataClassMoniker Name="/PMSCenterDataContext/NetSCADAPMSDeviceInfo_NetSCADATyreOrgMap_Relation" />
+      <nestedChildShapes>
+        <elementListCompartment Id="cc1f337b-624c-47c2-b4c6-d3edf1eedf92" absoluteBounds="20.515, 17.585, 1.9700000000000002, 0.55110677083333326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="db387638-963a-486c-a633-623a598e7dfc" absoluteBounds="20.5, 19.875, 2, 1.6169661458333309">
+      <DataClassMoniker Name="/PMSCenterDataContext/NetSCADAPMSDeviceStopInform" />
+      <nestedChildShapes>
+        <elementListCompartment Id="25da2ddc-f1f9-4269-8cc7-232623fd21fb" absoluteBounds="20.515, 20.335, 1.9700000000000002, 1.0569661458333333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="06752791-3d5e-4fc0-8b6d-b073111e1d1b" absoluteBounds="6.75, 25.875, 2, 1.9542057291666666">
+      <DataClassMoniker Name="/PMSCenterDataContext/NetSCADAPMSDisfigurementInform" />
+      <nestedChildShapes>
+        <elementListCompartment Id="72ed2d77-60f5-44c6-bb9c-deb9322134b9" absoluteBounds="6.765, 26.335, 1.9700000000000002, 1.3942057291666665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6c577459-8dbf-4eb1-a06f-9c088045e2d0" absoluteBounds="9.5, 21.125, 2, 1.6169661458333309">
+      <DataClassMoniker Name="/PMSCenterDataContext/NetSCADAPMSProductDefect" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0ad856bf-1bd3-4253-8e43-b2350f75fcff" absoluteBounds="9.515, 21.585, 1.9700000000000002, 1.0569661458333333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="faf04b76-d8f7-4fe9-b8ab-6ddc0e3c9477" absoluteBounds="6.75, 22.875, 2, 1.9542057291666666">
+      <DataClassMoniker Name="/PMSCenterDataContext/NetSCADAPMSProductInform" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1386c384-9b0a-447f-9666-ab27f7d3a945" absoluteBounds="6.765, 23.335, 1.9700000000000002, 1.3942057291666665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="645e49d1-4b3c-4a39-aa9d-3c43581fd9ad" absoluteBounds="9.5, 24.375, 2, 3.8090234375000023">
+      <DataClassMoniker Name="/PMSCenterDataContext/NetSCADAPMSQuality" />
+      <nestedChildShapes>
+        <elementListCompartment Id="75d30e0b-d7e5-4d28-ac32-aee4a2ed2cb3" absoluteBounds="9.515, 24.835, 1.9700000000000002, 3.2490234375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="712a591b-a98f-492b-9b8a-5b4d52656374" absoluteBounds="17.75, 16.625, 2, 2.1228255208333309">
+      <DataClassMoniker Name="/PMSCenterDataContext/NetSCADATyreOrgMap" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a7224e94-ea8a-47f0-aa5f-11447d100f30" absoluteBounds="17.765, 17.085, 1.9700000000000002, 1.5628255208333335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4d899757-bfe4-4247-8ae2-0e579b1fbdc8" absoluteBounds="20.5, 9.625, 2, 1.1111067708333344">
+      <DataClassMoniker Name="/PMSCenterDataContext/PMSSys_ActionAffirmPowerGroupInfo" />
+      <nestedChildShapes>
+        <elementListCompartment Id="af0f38de-5287-44d9-abe1-a39df801ee3a" absoluteBounds="20.515, 10.085, 1.9700000000000002, 0.55110677083333326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="31aa4362-0349-41fe-be9a-7d08709ad4f0" absoluteBounds="17.75, 6.125, 2, 1.9542057291666657">
+      <DataClassMoniker Name="/PMSCenterDataContext/PMSSys_ActionInfo" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d66bba4d-801c-4c67-8b54-6f19586da519" absoluteBounds="17.765, 6.585, 1.9700000000000002, 1.3942057291666665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a2a639d9-29c6-4d2d-9a41-9ad20af094f1" absoluteBounds="20.5, 11.625, 2, 1.1111067708333344">
+      <DataClassMoniker Name="/PMSCenterDataContext/PMSSys_ActionPowerGroupInfo" />
+      <nestedChildShapes>
+        <elementListCompartment Id="262431a2-f204-45a6-b943-552d104cbf56" absoluteBounds="20.515, 12.085, 1.9700000000000002, 0.55110677083333326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="386e20f6-2dea-46d1-8611-e3366f865730" absoluteBounds="20.5, 7.625, 2, 1.1111067708333335">
+      <DataClassMoniker Name="/PMSCenterDataContext/PMSSys_ActionValidatePowerGroupInfo" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f35b51da-40f7-4559-b865-2859be27b60a" absoluteBounds="20.515, 8.085, 1.9700000000000002, 0.55110677083333326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7e686cfe-8723-4874-9ea1-ebfb1bb28e01" absoluteBounds="20.75, 4.375, 2, 1.6169661458333327">
+      <DataClassMoniker Name="/PMSCenterDataContext/PMSSys_Administrator" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5fbdc886-6b4f-4548-9686-c9f61dfbde8f" absoluteBounds="20.765, 4.835, 1.9700000000000002, 1.0569661458333333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f85d9baf-ae21-4cec-8228-11aafe63d6fe" absoluteBounds="14.75, 9.25, 2, 2.7973046874999987">
+      <DataClassMoniker Name="/PMSCenterDataContext/PMSSys_ConfigFileInfo" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8681532f-f138-4374-87ea-60d1534ea42d" absoluteBounds="14.765, 9.71, 1.9700000000000002, 2.2373046875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="45515140-a0fc-4afe-8429-2f51582fb66f" absoluteBounds="17.5, 2.125, 2, 1.1111067708333335">
+      <DataClassMoniker Name="/PMSCenterDataContext/PMSSys_ConfigFileInfo_PMSSys_ConfigFileInfoMap_Relation" />
+      <nestedChildShapes>
+        <elementListCompartment Id="30e9a90a-8f88-4881-a834-3a3c9b4ba65c" absoluteBounds="17.515, 2.585, 1.9700000000000002, 0.55110677083333326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9a8c7c92-33b5-4f7f-8146-a11ff092eb37" absoluteBounds="3.75, 21.375, 2, 2.6286848958333309">
+      <DataClassMoniker Name="/PMSCenterDataContext/PMSSys_ConfigFileTemplateInfo" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5aa08812-2ab6-4d55-a356-6dedaef988a6" absoluteBounds="3.765, 21.835, 1.9700000000000002, 2.068684895833333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="dddc2372-207d-457e-87fb-2ecc7408680a" absoluteBounds="6.5, 18.125, 2, 1.1111067708333309">
+      <DataClassMoniker Name="/PMSCenterDataContext/PMSSys_ConfigFileTemplateInfo_PMSSys_ConfigFileTemplateMap_Relation" />
+      <nestedChildShapes>
+        <elementListCompartment Id="53b86ef2-4866-4578-992e-8c7b848e8ff7" absoluteBounds="6.515, 18.585, 1.9700000000000002, 0.55110677083333326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="65e5d71e-beae-4011-ab51-30c1ada01e58" absoluteBounds="3.75, 17.625, 2, 2.1228255208333309">
+      <DataClassMoniker Name="/PMSCenterDataContext/PMSSys_ConfigFileTemplateMap" />
+      <nestedChildShapes>
+        <elementListCompartment Id="636e133d-5cfd-4643-95de-f9623297e1b4" absoluteBounds="3.765, 18.085, 1.9700000000000002, 1.5628255208333335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="85570659-00a7-4db8-a240-8144f6debd2d" absoluteBounds="8.75, 3.5, 2, 1.7855859375000005">
+      <DataClassMoniker Name="/PMSCenterDataContext/PMSSys_DeviceInfo" />
+      <nestedChildShapes>
+        <elementListCompartment Id="beb443d5-6c6d-4a1b-bd5a-89a730df29ff" absoluteBounds="8.765, 3.96, 1.9700000000000002, 1.2255859375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1ab83d4c-ebab-469d-8b39-925fe77ccd37" absoluteBounds="14.5, 17, 2, 1.1111067708333309">
+      <DataClassMoniker Name="/PMSCenterDataContext/PMSSys_DeviceInfo_PMSSys_DeviceMap_Relation" />
+      <nestedChildShapes>
+        <elementListCompartment Id="724cfccd-786c-4bad-aa4a-aff20d47087b" absoluteBounds="14.515, 17.46, 1.9700000000000002, 0.55110677083333326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="71f31964-4280-44e0-8ef7-cf39eb5a3e6d" absoluteBounds="0.75, 17.625, 2, 2.1228255208333309">
+      <DataClassMoniker Name="/PMSCenterDataContext/PMSSys_DeviceMap" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f975b098-31ef-43e5-81ed-c6c42833cc35" absoluteBounds="0.765, 18.085, 1.9700000000000002, 1.5628255208333335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1b0211bd-7f0c-479e-b217-53b82431776b" absoluteBounds="11.5, 4.875, 2, 1.1111067708333344">
+      <DataClassMoniker Name="/PMSCenterDataContext/PMSSys_DeviceUserInfo" />
+      <nestedChildShapes>
+        <elementListCompartment Id="98cbbcaf-1a69-4c3c-b80e-60ab97859b92" absoluteBounds="11.515, 5.335, 1.9700000000000002, 0.55110677083333326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="cbb23fc1-c3fc-44ec-9fb8-1543651b4148" absoluteBounds="17.5, 11.125, 2, 1.1111067708333344">
+      <DataClassMoniker Name="/PMSCenterDataContext/PMSSys_FilePowerGroupInform" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ac3e13f7-56d8-4edd-ba97-cd07206978e0" absoluteBounds="17.515, 11.585, 1.9700000000000002, 0.55110677083333326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d784d63b-d19c-4cff-adda-2928a81b1bdd" absoluteBounds="9.75, 17.375, 2, 2.1228255208333309">
+      <DataClassMoniker Name="/PMSCenterDataContext/PMSSys_HeadShip" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f565432d-b5f7-4c1b-a974-3a5bfe0d99ab" absoluteBounds="9.765, 17.835, 1.9700000000000002, 1.5628255208333335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="db4b9ad9-128a-4db5-841f-c7489e2578ce" absoluteBounds="11.5, 13.125, 2, 3.3031640625000023">
+      <DataClassMoniker Name="/PMSCenterDataContext/PMSSys_LogInfo" />
+      <nestedChildShapes>
+        <elementListCompartment Id="95e8d476-3db1-44f4-9538-19e8156842e5" absoluteBounds="11.515, 13.585, 1.9700000000000002, 2.7431640625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="5e92500c-6bc0-4e0d-b45e-ebac13078cf2" absoluteBounds="6.75, 15.375, 2, 1.1111067708333344">
+      <DataClassMoniker Name="/PMSCenterDataContext/PMSSys_OrgnizeStructModelFile" />
+      <nestedChildShapes>
+        <elementListCompartment Id="77796380-c76c-4e51-bc8b-c4286aecfc90" absoluteBounds="6.765, 15.835, 1.9700000000000002, 0.55110677083333326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3a18964a-cf5b-4e60-ba9c-89662174be61" absoluteBounds="8.75, 12.625, 2, 1.4483463541666666">
+      <DataClassMoniker Name="/PMSCenterDataContext/PMSSys_PowerGroupInfo" />
+      <nestedChildShapes>
+        <elementListCompartment Id="aefef8d0-9e9e-46f4-ac89-b0a6b7008a7a" absoluteBounds="8.765, 13.085, 1.9700000000000002, 0.88834635416666674" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="88d36599-95cc-4858-b53c-6e33bcf41fc8" absoluteBounds="17.5, 13.625, 2, 1.1111067708333344">
+      <DataClassMoniker Name="/PMSCenterDataContext/PMSSys_PowerGroupInfo_PMSSys_PowerGroupMap_Relation" />
+      <nestedChildShapes>
+        <elementListCompartment Id="79fdb424-0b92-4b1a-a8df-94625c9b2a00" absoluteBounds="17.515, 14.085, 1.9700000000000002, 0.55110677083333326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3dc134a0-7868-42a9-ac46-6fb8703d90c3" absoluteBounds="14.75, 13.625, 2, 2.1228255208333344">
+      <DataClassMoniker Name="/PMSCenterDataContext/PMSSys_PowerGroupMap" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8a751ae6-3934-421e-91d0-2871e7eb6b6a" absoluteBounds="14.765, 14.085, 1.9700000000000002, 1.5628255208333335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="063a8e03-b59f-4a88-8898-32efd42472ed" absoluteBounds="11.5, 8.875, 2, 1.1111067708333344">
+      <DataClassMoniker Name="/PMSCenterDataContext/PMSSys_PowerGroupUserInfo" />
+      <nestedChildShapes>
+        <elementListCompartment Id="68fc568f-766e-457e-aa87-139bf61a9839" absoluteBounds="11.515, 9.335, 1.9700000000000002, 0.55110677083333326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="70014e02-ea66-42f5-8c49-c86adc8a9fd8" absoluteBounds="6.25, 9.625, 2, 1.4483463541666666">
+      <DataClassMoniker Name="/PMSCenterDataContext/PMSSys_TableFieldProperty" />
+      <nestedChildShapes>
+        <elementListCompartment Id="11af5211-499d-44f5-945a-5133517a5677" absoluteBounds="6.265, 10.085, 1.9700000000000002, 0.88834635416666674" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3c3bafd2-32b0-431a-a4a8-27f984bc6fa3" absoluteBounds="0.75, 6.25, 2, 1.1111067708333344">
+      <DataClassMoniker Name="/PMSCenterDataContext/PMSSys_TableInfo" />
+      <nestedChildShapes>
+        <elementListCompartment Id="572ddaa4-075f-45e1-94ef-ee0205d0bc8c" absoluteBounds="0.765, 6.71, 1.9700000000000002, 0.55110677083333326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="972e656d-b390-4477-abd6-ce45268c4bf7" absoluteBounds="3.5, 2, 2, 1.4483463541666668">
+      <DataClassMoniker Name="/PMSCenterDataContext/PMSSys_TableProperty" />
+      <nestedChildShapes>
+        <elementListCompartment Id="167096c9-ed7a-406e-91b9-82cbf2362aa9" absoluteBounds="3.515, 2.46, 1.9700000000000002, 0.88834635416666674" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b79c219e-1a49-436a-82f4-8d710d2b1987" absoluteBounds="8.75, 6.375, 2, 1.9542057291666657">
+      <DataClassMoniker Name="/PMSCenterDataContext/PMSSys_UserInfo" />
+      <nestedChildShapes>
+        <elementListCompartment Id="66c4dcd8-b484-480f-842e-4e038a495d10" absoluteBounds="8.765, 6.835, 1.9700000000000002, 1.3942057291666665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="88ec6db8-8be1-444e-b64a-fde485b75cc9" absoluteBounds="14.5, 6.875, 2, 1.1111067708333344">
+      <DataClassMoniker Name="/PMSCenterDataContext/PMSSys_UserInfo_PMSSys_UserMap_Relation" />
+      <nestedChildShapes>
+        <elementListCompartment Id="fd1f31a0-e662-4289-aa53-5ed70e00b8ba" absoluteBounds="14.515, 7.335, 1.9700000000000002, 0.55110677083333326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d156c68f-4cfb-452f-8622-2c08709b06b5" absoluteBounds="12.75, 22.375, 2, 1.1111067708333309">
+      <DataClassMoniker Name="/PMSCenterDataContext/View_GetInfoTable" />
+      <nestedChildShapes>
+        <elementListCompartment Id="36b86521-f489-4545-9dd5-b6c3271523fe" absoluteBounds="12.765, 22.835, 1.9700000000000002, 0.55110677083333326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="60550d2b-41a2-41a9-8bd5-4573fedfea96" absoluteBounds="15.75, 22.375, 2, 1.1111067708333309">
+      <DataClassMoniker Name="/PMSCenterDataContext/View_GetMapTable" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f0c27a5d-9d5c-44e0-a8ab-9d09c1f4adb8" absoluteBounds="15.765, 22.835, 1.9700000000000002, 0.55110677083333326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3bb140be-9127-4366-afc9-bd1f2317a307" absoluteBounds="21.75, 22.375, 2, 1.4483463541666666">
+      <DataClassMoniker Name="/PMSCenterDataContext/View_GetTableFieldProp" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e6ad0809-5945-4eac-b523-acc6e9fd0be7" absoluteBounds="21.765, 22.835, 1.9700000000000002, 0.88834635416666674" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="97082824-4cc5-4d8f-a40f-f4c455e59746" absoluteBounds="23.75, 1.375, 2, 1.4483463541666668">
+      <DataClassMoniker Name="/PMSCenterDataContext/PMSSys_FlagTable" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c65e7b6c-227a-4ff3-9e9a-614bafcfec14" absoluteBounds="23.765, 1.835, 1.9700000000000002, 0.88834635416666674" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="26add8be-16b7-4a99-93a4-8ef8421ef3e9" absoluteBounds="14.75, 1.625, 2, 2.2914453125000005">
+      <DataClassMoniker Name="/PMSCenterDataContext/PMSSys_ConfigFileInfoMap" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7c33a796-8cc9-4a12-972d-200fab69c972" absoluteBounds="14.765, 2.085, 1.9700000000000002, 1.7314453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f74d5d6f-9669-455d-87e0-69e96d15791e" absoluteBounds="23.75, 4.375, 2, 1.2797265625000005">
+      <DataClassMoniker Name="/PMSCenterDataContext/PMSSys_SysCustomizeViewFile" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e0bd1332-c06d-4d5e-890c-b28f8f42516c" absoluteBounds="23.765, 4.835, 1.9700000000000002, 0.7197265625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="53c678b2-4e2b-4296-a0d3-58b213b869d0" absoluteBounds="23.75, 7.375, 2, 1.1111067708333335">
+      <DataClassMoniker Name="/PMSCenterDataContext/View_GetMapAndInfoTable" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b177f2ff-af92-448a-a78e-a7f841606660" absoluteBounds="23.765, 7.835, 1.9700000000000002, 0.55110677083333326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="80f1b5cd-f12c-47d0-ad57-a5ad52afb69a" absoluteBounds="3.5, 4.125, 2, 1.6169661458333327">
+      <DataClassMoniker Name="/PMSCenterDataContext/PMSSys_IITableRelationInfo" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b3c33890-2bc1-4dda-9a7f-99903fe9f3c8" absoluteBounds="3.515, 4.585, 1.9700000000000002, 1.0569661458333333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="59bf27b4-550f-4d16-8fb5-591beb1ae5db" absoluteBounds="3.5, 6.5, 2, 1.6169661458333318">
+      <DataClassMoniker Name="/PMSCenterDataContext/PMSSys_MITableRelationInfo" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9f4dafee-3021-4ff6-b94f-128c07f2b60e" absoluteBounds="3.515, 6.96, 1.9700000000000002, 1.0569661458333333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6c0811b5-9dd3-42f4-87cd-203b33da3b97" absoluteBounds="3.5, 8.875, 2, 2.7973046874999987">
+      <DataClassMoniker Name="/PMSCenterDataContext/PMSSys_TableFieldInfo" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6d5a40cc-3579-4c54-a206-15816fe9e03a" absoluteBounds="3.515, 9.335, 1.9700000000000002, 2.2373046875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="14346ce6-944f-4bf6-bdba-3ae7e0111da5" absoluteBounds="23.75, 9.375, 2, 2.6286848958333344">
+      <DataClassMoniker Name="/PMSCenterDataContext/View_GetTableFieldInfo" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7c62f1ce-6b34-42df-b4b3-e25d34cf8e38" absoluteBounds="23.765, 9.835, 1.9700000000000002, 2.068684895833333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0e4e4458-63eb-4895-8721-48417ec65558" absoluteBounds="23.75, 13.375, 2, 1.2797265624999987">
+      <DataClassMoniker Name="/PMSCenterDataContext/View_GetTableProp" />
+      <nestedChildShapes>
+        <elementListCompartment Id="fb4a359e-ccad-4af1-b635-c6739ac2b5ec" absoluteBounds="23.765, 13.835, 1.9700000000000002, 0.7197265625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(12.4592307692308 : 3.49782552083333); (12.4592307692308 : 3.74782552083333); (13.0546153846154 : 3.74782552083333); (13.0546153846154 : 3.49782552083333)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/PMSCenterDataContext/PMSSys_UserMap/PMSSys_UserMap_PMSSys_UserMap" />
+      <nodes>
+        <classShapeMoniker Id="e0181b0d-a83d-4e77-a036-c390a376f9dd" />
+        <classShapeMoniker Id="e0181b0d-a83d-4e77-a036-c390a376f9dd" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.45923076923077 : 16.1228255208333); (1.45923076923077 : 16.3728255208333); (2.05461538461538 : 16.3728255208333); (2.05461538461538 : 16.1228255208333)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/PMSCenterDataContext/NetSCADA_SMS_OrgMap_Table/NetSCADA_SMS_OrgMap_Table_NetSCADA_SMS_OrgMap_Table" />
+      <nodes>
+        <classShapeMoniker Id="efd2bc24-0bbd-419b-98fa-f40432164222" />
+        <classShapeMoniker Id="efd2bc24-0bbd-419b-98fa-f40432164222" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 14.0015374615385); (3.125 : 13.6265374615385); (3.125 : 12.3611067708333); (11.125 : 12.3611067708333); (11.5 : 11.9861067708333)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/PMSCenterDataContext/NetSCADA_SMS_OrgMap_Table/NetSCADA_SMS_OrgMap_Table_NetSCADA_SMS_SMGroup_Table_NetSCADA_SMS_OrgMap_Table_Relation" />
+      <nodes>
+        <classShapeMoniker Id="efd2bc24-0bbd-419b-98fa-f40432164222" />
+        <classShapeMoniker Id="6f6df7c3-c8a4-4c22-9049-94b3ef159471" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(9.75 : 2.0297265625); (9.75 : 3.25); (11 : 3.25); (11 : 5.875); (10.875 : 5.875); (10.875 : 6.125); (11 : 6.125); (11 : 11.3993013854167); (11.0416666666667 : 11.3993013854167 : JumpStart); (11.4270833333333 : 11.3993013854167 : JumpEnd); (11.5 : 11.3993013854167)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/PMSCenterDataContext/NetSCADA_SMS_SMGroup_Table/NetSCADA_SMS_SMGroup_Table_NetSCADA_SMS_SMGroup_Table_NetSCADA_SMS_OrgMap_Table_Relation" />
+      <nodes>
+        <classShapeMoniker Id="026a1265-dd7f-4fd3-9738-ce7e19d66657" />
+        <classShapeMoniker Id="6f6df7c3-c8a4-4c22-9049-94b3ef159471" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(10.75 : 1.03125); (11.28125 : 1.03125); (11.28125 : 6.125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/PMSCenterDataContext/NetSCADA_SMS_SMGroup_Table/NetSCADA_SMS_SMGroup_Table_NetSCADA_SMS_SMGroupUser_Table" />
+      <nodes>
+        <classShapeMoniker Id="026a1265-dd7f-4fd3-9738-ce7e19d66657" />
+        <classShapeMoniker Id="2fab6319-3b09-4f98-80cb-5b5529d769b1" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(10.75 : 6.80555338541667); (10.8541666666667 : 6.80555338541667 : JumpStart); (11.0208333333333 : 6.80555338541667 : JumpEnd); (11.125 : 6.80555338541667)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/PMSCenterDataContext/PMSSys_UserInfo/PMSSys_UserInfo_NetSCADA_SMS_SMGroupUser_Table" />
+      <nodes>
+        <classShapeMoniker Id="b79c219e-1a49-436a-82f4-8d710d2b1987" />
+        <classShapeMoniker Id="2fab6319-3b09-4f98-80cb-5b5529d769b1" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 15.0555533854167); (3.5 : 15.0555533854167)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/PMSCenterDataContext/NetSCADA_SMS_OrgMap_Table/NetSCADA_SMS_OrgMap_Table_NetSCADA_SMS_User_Table_NetSCADA_SMS_OrgMap_Table_Relation" />
+      <nodes>
+        <classShapeMoniker Id="efd2bc24-0bbd-419b-98fa-f40432164222" />
+        <classShapeMoniker Id="55ef1b45-a782-48c7-9ed4-c6d1147d1e99" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 12.8035303201122); (3.06607443490112 : 13.1196047550133 : JumpStart); (3.18392556509888 : 13.2374558852111 : JumpEnd); (3.3125 : 13.3660303201122); (3.3125 : 14.7465246927083); (3.5 : 14.7465246927083)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/PMSCenterDataContext/NetSCADA_SMS_User_Table/NetSCADA_SMS_User_Table_NetSCADA_SMS_User_Table_NetSCADA_SMS_OrgMap_Table_Relation" />
+      <nodes>
+        <classShapeMoniker Id="cacb08ba-7732-4a47-b289-1e447cd9fbec" />
+        <classShapeMoniker Id="55ef1b45-a782-48c7-9ed4-c6d1147d1e99" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(19.75 : 19.75); (20.125 : 19.375); (20.125 : 17.6805533854167); (20.5 : 17.6805533854167)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/PMSCenterDataContext/NetSCADAPMSDeviceInfo/NetSCADAPMSDeviceInfo_NetSCADAPMSDeviceInfo_NetSCADATyreOrgMap_Relation" />
+      <nodes>
+        <classShapeMoniker Id="e7e64d95-f3ff-43d8-9f1b-69e3649fa790" />
+        <classShapeMoniker Id="d1ca0c2a-4e67-4d15-9dbe-f8df143aef49" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(19.75 : 17.3402766927083); (20.5 : 17.3402766927083)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/PMSCenterDataContext/NetSCADATyreOrgMap/NetSCADATyreOrgMap_NetSCADAPMSDeviceInfo_NetSCADATyreOrgMap_Relation" />
+      <nodes>
+        <classShapeMoniker Id="712a591b-a98f-492b-9b8a-5b4d52656374" />
+        <classShapeMoniker Id="d1ca0c2a-4e67-4d15-9dbe-f8df143aef49" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(19.75 : 20.6834830729167); (20.5 : 20.6834830729167)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/PMSCenterDataContext/NetSCADAPMSDeviceInfo/NetSCADAPMSDeviceInfo_NetSCADAPMSDeviceStopInform" />
+      <nodes>
+        <classShapeMoniker Id="e7e64d95-f3ff-43d8-9f1b-69e3649fa790" />
+        <classShapeMoniker Id="db387638-963a-486c-a633-623a598e7dfc" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.75 : 25.875); (9.125 : 25.5); (9.125 : 21.9334830729167); (9.5 : 21.9334830729167)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/PMSCenterDataContext/NetSCADAPMSDisfigurementInform/NetSCADAPMSDisfigurementInform_NetSCADAPMSProductDefect" />
+      <nodes>
+        <classShapeMoniker Id="06752791-3d5e-4fc0-8b6d-b073111e1d1b" />
+        <classShapeMoniker Id="6c577459-8dbf-4eb1-a06f-9c088045e2d0" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(7.75 : 22.875); (7.75 : 22.368977109375); (9.04166666666667 : 22.368977109375 : JumpStart); (9.20833333333333 : 22.368977109375 : JumpEnd); (9.5 : 22.368977109375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/PMSCenterDataContext/NetSCADAPMSProductInform/NetSCADAPMSProductInform_NetSCADAPMSProductDefect" />
+      <nodes>
+        <classShapeMoniker Id="faf04b76-d8f7-4fe9-b8ab-6ddc0e3c9477" />
+        <classShapeMoniker Id="6c577459-8dbf-4eb1-a06f-9c088045e2d0" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.75 : 24.6021028645833); (9.04166666666667 : 24.6021028645833 : JumpStart); (9.20833333333333 : 24.6021028645833 : JumpEnd); (9.5 : 24.6021028645833)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/PMSCenterDataContext/NetSCADAPMSProductInform/NetSCADAPMSProductInform_NetSCADAPMSQuality" />
+      <nodes>
+        <classShapeMoniker Id="faf04b76-d8f7-4fe9-b8ab-6ddc0e3c9477" />
+        <classShapeMoniker Id="645e49d1-4b3c-4a39-aa9d-3c43581fd9ad" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(18.4592307692308 : 18.7478255208333); (18.4592307692308 : 18.9978255208333); (19.0546153846154 : 18.9978255208333); (19.0546153846154 : 18.7478255208333)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/PMSCenterDataContext/NetSCADATyreOrgMap/NetSCADATyreOrgMap_NetSCADATyreOrgMap" />
+      <nodes>
+        <classShapeMoniker Id="712a591b-a98f-492b-9b8a-5b4d52656374" />
+        <classShapeMoniker Id="712a591b-a98f-492b-9b8a-5b4d52656374" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(18.75 : 8.07920572916667); (18.75 : 10.1805533854167); (20.5 : 10.1805533854167)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/PMSCenterDataContext/PMSSys_ActionInfo/PMSSys_ActionInfo_PMSSys_ActionAffirmPowerGroupInfo" />
+      <nodes>
+        <classShapeMoniker Id="31aa4362-0349-41fe-be9a-7d08709ad4f0" />
+        <classShapeMoniker Id="4d899757-bfe4-4247-8ae2-0e579b1fbdc8" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(10.75 : 13.3491731770833); (11 : 13.3491731770833); (11 : 12.875); (11.0416666666667 : 12.875 : JumpStart); (11.2708333333333 : 12.875 : JumpEnd); (20.25 : 12.875); (20.25 : 11.375); (21.5 : 11.375); (21.5 : 10.7361067708333)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/PMSCenterDataContext/PMSSys_PowerGroupInfo/PMSSys_PowerGroupInfo_PMSSys_ActionAffirmPowerGroupInfo" />
+      <nodes>
+        <classShapeMoniker Id="3a18964a-cf5b-4e60-ba9c-89662174be61" />
+        <classShapeMoniker Id="4d899757-bfe4-4247-8ae2-0e579b1fbdc8" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(19.65625 : 8.07920572916667); (19.65625 : 12.5173567708333); (19.9166666666667 : 12.5173567708333 : JumpStart); (20.0833333333333 : 12.5173567708333 : JumpEnd); (20.1666666666667 : 12.5173567708333 : JumpStart); (20.3333333333333 : 12.5173567708333 : JumpEnd); (20.5 : 12.5173567708333)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/PMSCenterDataContext/PMSSys_ActionInfo/PMSSys_ActionInfo_PMSSys_ActionPowerGroupInfo" />
+      <nodes>
+        <classShapeMoniker Id="31aa4362-0349-41fe-be9a-7d08709ad4f0" />
+        <classShapeMoniker Id="a2a639d9-29c6-4d2d-9a41-9ad20af094f1" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(9.75 : 12.625); (9.75 : 12.3298567708333); (10.1979191666667 : 12.3298567708333 : JumpStart); (10.3645858333333 : 12.3298567708333 : JumpEnd); (11.0416666666667 : 12.3298567708333 : JumpStart); (11.2083333333333 : 12.3298567708333 : JumpEnd); (20.5 : 12.3298567708333)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/PMSCenterDataContext/PMSSys_PowerGroupInfo/PMSSys_PowerGroupInfo_PMSSys_ActionPowerGroupInfo" />
+      <nodes>
+        <classShapeMoniker Id="3a18964a-cf5b-4e60-ba9c-89662174be61" />
+        <classShapeMoniker Id="a2a639d9-29c6-4d2d-9a41-9ad20af094f1" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(19.75 : 7.85210286458333); (20.5 : 7.85210286458333)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/PMSCenterDataContext/PMSSys_ActionInfo/PMSSys_ActionInfo_PMSSys_ActionValidatePowerGroupInfo" />
+      <nodes>
+        <classShapeMoniker Id="31aa4362-0349-41fe-be9a-7d08709ad4f0" />
+        <classShapeMoniker Id="386e20f6-2dea-46d1-8611-e3366f865730" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(10.75 : 12.9558345885417); (10.875 : 12.9558345885417); (10.875 : 12.875); (11.0416666666667 : 12.875 : JumpStart); (11.2708333333333 : 12.875 : JumpEnd); (20 : 12.875); (20 : 9.11110677083333); (21.5 : 9.11110677083333); (21.5 : 8.73610677083333)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/PMSCenterDataContext/PMSSys_PowerGroupInfo/PMSSys_PowerGroupInfo_PMSSys_ActionValidatePowerGroupInfo" />
+      <nodes>
+        <classShapeMoniker Id="3a18964a-cf5b-4e60-ba9c-89662174be61" />
+        <classShapeMoniker Id="386e20f6-2dea-46d1-8611-e3366f865730" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(16.75 : 9.25153746153846); (17.125 : 8.87653746153846); (17.125 : 2.68055338541667); (17.5 : 2.68055338541667)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/PMSCenterDataContext/PMSSys_ConfigFileInfo/PMSSys_ConfigFileInfo_PMSSys_ConfigFileInfo_PMSSys_ConfigFileInfoMap_Relation" />
+      <nodes>
+        <classShapeMoniker Id="f85d9baf-ae21-4cec-8228-11aafe63d6fe" />
+        <classShapeMoniker Id="45515140-a0fc-4afe-8429-2f51582fb66f" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(16.75 : 2.34027669270833); (17.5 : 2.34027669270833)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/PMSCenterDataContext/PMSSys_ConfigFileInfoMap/PMSSys_ConfigFileInfoMap_PMSSys_ConfigFileInfo_PMSSys_ConfigFileInfoMap_Relation" />
+      <nodes>
+        <classShapeMoniker Id="26add8be-16b7-4a99-93a4-8ef8421ef3e9" />
+        <classShapeMoniker Id="45515140-a0fc-4afe-8429-2f51582fb66f" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.75 : 21.8719885546875); (6.59375 : 21.8719885546875); (6.59375 : 19.2361067708333)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/PMSCenterDataContext/PMSSys_ConfigFileTemplateInfo/PMSSys_ConfigFileTemplateInfo_PMSSys_ConfigFileTemplateInfo_PMSSys_ConfigFileTemplateMap_Relation" />
+      <nodes>
+        <classShapeMoniker Id="9a8c7c92-33b5-4f7f-8146-a11ff092eb37" />
+        <classShapeMoniker Id="dddc2372-207d-457e-87fb-2ecc7408680a" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.75 : 18.6805533854167); (6.5 : 18.6805533854167)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/PMSCenterDataContext/PMSSys_ConfigFileTemplateMap/PMSSys_ConfigFileTemplateMap_PMSSys_ConfigFileTemplateInfo_PMSSys_ConfigFileTemplateMap_Relation" />
+      <nodes>
+        <classShapeMoniker Id="65e5d71e-beae-4011-ab51-30c1ada01e58" />
+        <classShapeMoniker Id="dddc2372-207d-457e-87fb-2ecc7408680a" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(4.45923076923077 : 19.7478255208333); (4.45923076923077 : 19.9978255208333); (5.05461538461539 : 19.9978255208333); (5.05461538461539 : 19.7478255208333)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/PMSCenterDataContext/PMSSys_ConfigFileTemplateMap/PMSSys_ConfigFileTemplateMap_PMSSys_ConfigFileTemplateMap" />
+      <nodes>
+        <classShapeMoniker Id="65e5d71e-beae-4011-ab51-30c1ada01e58" />
+        <classShapeMoniker Id="65e5d71e-beae-4011-ab51-30c1ada01e58" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(9.75 : 5.2855859375); (9.75 : 6.25); (10.9375 : 6.25); (10.9375 : 7.48610677083333); (11.125 : 7.48610677083333); (11.125 : 17.125); (12 : 17.125); (12 : 17.5555533854167); (14.5 : 17.5555533854167)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/PMSCenterDataContext/PMSSys_DeviceInfo/PMSSys_DeviceInfo_PMSSys_DeviceInfo_PMSSys_DeviceMap_Relation" />
+      <nodes>
+        <classShapeMoniker Id="85570659-00a7-4db8-a240-8144f6debd2d" />
+        <classShapeMoniker Id="1ab83d4c-ebab-469d-8b39-925fe77ccd37" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.75 : 17.625); (1.75 : 17.21875); (11.9166666666667 : 17.21875 : JumpStart); (12.0833333333333 : 17.21875 : JumpEnd); (14.5 : 17.21875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/PMSCenterDataContext/PMSSys_DeviceMap/PMSSys_DeviceMap_PMSSys_DeviceInfo_PMSSys_DeviceMap_Relation" />
+      <nodes>
+        <classShapeMoniker Id="71f31964-4280-44e0-8ef7-cf39eb5a3e6d" />
+        <classShapeMoniker Id="1ab83d4c-ebab-469d-8b39-925fe77ccd37" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.45923076923077 : 19.7478255208333); (1.45923076923077 : 19.9978255208333); (2.05461538461538 : 19.9978255208333); (2.05461538461538 : 19.7478255208333)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/PMSCenterDataContext/PMSSys_DeviceMap/PMSSys_DeviceMap_PMSSys_DeviceMap" />
+      <nodes>
+        <classShapeMoniker Id="71f31964-4280-44e0-8ef7-cf39eb5a3e6d" />
+        <classShapeMoniker Id="71f31964-4280-44e0-8ef7-cf39eb5a3e6d" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(10.75 : 5.08029296875); (11.1979166666667 : 5.08029296875 : JumpStart); (11.3645833333333 : 5.08029296875 : JumpEnd); (11.5 : 5.08029296875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/PMSCenterDataContext/PMSSys_DeviceInfo/PMSSys_DeviceInfo_PMSSys_DeviceUserInfo" />
+      <nodes>
+        <classShapeMoniker Id="85570659-00a7-4db8-a240-8144f6debd2d" />
+        <classShapeMoniker Id="1b0211bd-7f0c-479e-b217-53b82431776b" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(10.75 : 7.90765625); (10.9166666666667 : 7.90765625 : JumpStart); (11.2083333333333 : 7.90765625 : JumpEnd); (13.34375 : 7.90765625); (13.34375 : 5.98610677083333)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/PMSCenterDataContext/PMSSys_UserInfo/PMSSys_UserInfo_PMSSys_DeviceUserInfo" />
+      <nodes>
+        <classShapeMoniker Id="b79c219e-1a49-436a-82f4-8d710d2b1987" />
+        <classShapeMoniker Id="1b0211bd-7f0c-479e-b217-53b82431776b" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(16.75 : 11.58615234375); (17.5 : 11.58615234375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/PMSCenterDataContext/PMSSys_ConfigFileInfo/PMSSys_ConfigFileInfo_PMSSys_FilePowerGroupInform" />
+      <nodes>
+        <classShapeMoniker Id="f85d9baf-ae21-4cec-8228-11aafe63d6fe" />
+        <classShapeMoniker Id="cbb23fc1-c3fc-44ec-9fb8-1543651b4148" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(10.2812525 : 12.625); (10.2812525 : 12.1729557291667); (11.0416666666667 : 12.1729557291667 : JumpStart); (11.2083333333333 : 12.1729557291667 : JumpEnd); (11.2298177083333 : 12.1729557291667 : JumpStart); (11.3964843749999 : 12.1729557291667 : JumpEnd); (17.5 : 12.1729557291667)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/PMSCenterDataContext/PMSSys_PowerGroupInfo/PMSSys_PowerGroupInfo_PMSSys_FilePowerGroupInform" />
+      <nodes>
+        <classShapeMoniker Id="3a18964a-cf5b-4e60-ba9c-89662174be61" />
+        <classShapeMoniker Id="cbb23fc1-c3fc-44ec-9fb8-1543651b4148" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(10.4592307692308 : 19.4978255208333); (10.4592307692308 : 19.7478255208333); (11.0546153846154 : 19.7478255208333); (11.0546153846154 : 19.4978255208333)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/PMSCenterDataContext/PMSSys_HeadShip/PMSSys_HeadShip_PMSSys_HeadShip" />
+      <nodes>
+        <classShapeMoniker Id="d784d63b-d19c-4cff-adda-2928a81b1bdd" />
+        <classShapeMoniker Id="d784d63b-d19c-4cff-adda-2928a81b1bdd" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(10.75 : 8.28110120352564); (10.9410744349011 : 8.47217563842676 : JumpStart); (11.0589255650989 : 8.59002676862452 : JumpEnd); (11.0660744349011 : 8.59717563842676 : JumpStart); (11.1839255650989 : 8.71502676862452 : JumpEnd); (11.40625 : 8.93735120352564); (11.40625 : 14.8886681197917); (11.5 : 14.8886681197917)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/PMSCenterDataContext/PMSSys_UserInfo/PMSSys_UserInfo_PMSSys_LogInfo" />
+      <nodes>
+        <classShapeMoniker Id="b79c219e-1a49-436a-82f4-8d710d2b1987" />
+        <classShapeMoniker Id="db4b9ad9-128a-4db5-841f-c7489e2578ce" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(10.75 : 8.32920572916667); (11.0660744349011 : 8.64528016406779 : JumpStart); (11.1839255650989 : 8.76313129426555 : JumpEnd); (11.1875 : 8.76670572916667); (11.1875 : 14.8886681197917); (11.5 : 14.8886681197917)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/PMSCenterDataContext/PMSSys_UserInfo/PMSSys_UserInfo_PMSSys_LogInfo1" />
+      <nodes>
+        <classShapeMoniker Id="b79c219e-1a49-436a-82f4-8d710d2b1987" />
+        <classShapeMoniker Id="db4b9ad9-128a-4db5-841f-c7489e2578ce" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(10.7319611778846 : 8.32920572916667); (11.0660744349011 : 8.66331898618318 : JumpStart); (11.1839255650989 : 8.78117011638094 : JumpEnd); (11.34375 : 8.94099455128205); (11.34375 : 14.8886681197917); (11.5 : 14.8886681197917)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/PMSCenterDataContext/PMSSys_UserInfo/PMSSys_UserInfo_PMSSys_LogInfo2" />
+      <nodes>
+        <classShapeMoniker Id="b79c219e-1a49-436a-82f4-8d710d2b1987" />
+        <classShapeMoniker Id="db4b9ad9-128a-4db5-841f-c7489e2578ce" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(10.75 : 13.0283087540064); (10.9166666666667 : 13.0283087540064 : JumpStart); (11.2708333333333 : 13.0283087540064 : JumpEnd); (18.5 : 13.0283087540064); (18.5 : 13.625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/PMSCenterDataContext/PMSSys_PowerGroupInfo/PMSSys_PowerGroupInfo_PMSSys_PowerGroupInfo_PMSSys_PowerGroupMap_Relation" />
+      <nodes>
+        <classShapeMoniker Id="3a18964a-cf5b-4e60-ba9c-89662174be61" />
+        <classShapeMoniker Id="88d36599-95cc-4858-b53c-6e33bcf41fc8" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(16.75 : 14.1805533854167); (17.5 : 14.1805533854167)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/PMSCenterDataContext/PMSSys_PowerGroupMap/PMSSys_PowerGroupMap_PMSSys_PowerGroupInfo_PMSSys_PowerGroupMap_Relation" />
+      <nodes>
+        <classShapeMoniker Id="3dc134a0-7868-42a9-ac46-6fb8703d90c3" />
+        <classShapeMoniker Id="88d36599-95cc-4858-b53c-6e33bcf41fc8" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(15.4592307692308 : 15.7478255208333); (15.4592307692308 : 15.9978255208333); (16.0546153846154 : 15.9978255208333); (16.0546153846154 : 15.7478255208333)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/PMSCenterDataContext/PMSSys_PowerGroupMap/PMSSys_PowerGroupMap_PMSSys_PowerGroupMap" />
+      <nodes>
+        <classShapeMoniker Id="3dc134a0-7868-42a9-ac46-6fb8703d90c3" />
+        <classShapeMoniker Id="3dc134a0-7868-42a9-ac46-6fb8703d90c3" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(9.2187475 : 12.625); (9.2187475 : 9.43055338541667); (11.0416666666667 : 9.43055338541667 : JumpStart); (11.4270833333333 : 9.43055338541667 : JumpEnd); (11.5 : 9.43055338541667)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/PMSCenterDataContext/PMSSys_PowerGroupInfo/PMSSys_PowerGroupInfo_PMSSys_PowerGroupUserInfo" />
+      <nodes>
+        <classShapeMoniker Id="3a18964a-cf5b-4e60-ba9c-89662174be61" />
+        <classShapeMoniker Id="063a8e03-b59f-4a88-8898-32efd42472ed" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(10.75 : 7.66562901041667); (11.0416666666667 : 7.66562901041667 : JumpStart); (11.2083333333333 : 7.66562901041667 : JumpEnd); (13.265625 : 7.66562901041667); (13.265625 : 8.875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/PMSCenterDataContext/PMSSys_UserInfo/PMSSys_UserInfo_PMSSys_PowerGroupUserInfo" />
+      <nodes>
+        <classShapeMoniker Id="b79c219e-1a49-436a-82f4-8d710d2b1987" />
+        <classShapeMoniker Id="063a8e03-b59f-4a88-8898-32efd42472ed" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 10.3491731770833); (6.25 : 10.3491731770833)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/PMSCenterDataContext/PMSSys_TableFieldInfo/PMSSys_TableFieldInfo_PMSSys_TableFieldProperty" />
+      <nodes>
+        <classShapeMoniker Id="6c0811b5-9dd3-42f4-87cd-203b33da3b97" />
+        <classShapeMoniker Id="70014e02-ea66-42f5-8c49-c86adc8a9fd8" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 6.25); (3.125 : 5.875); (3.125 : 2.72417317708333); (3.5 : 2.72417317708333)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/PMSCenterDataContext/PMSSys_TableInfo/PMSSys_TableInfo_PMSSys_TableProperty" />
+      <nodes>
+        <classShapeMoniker Id="3c3bafd2-32b0-431a-a4a8-27f984bc6fa3" />
+        <classShapeMoniker Id="972e656d-b390-4477-abd6-ce45268c4bf7" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(10.75 : 7.32985677083333); (10.8541666666667 : 7.32985677083333 : JumpStart); (11.0833333333333 : 7.32985677083333 : JumpEnd); (13.2604166666667 : 7.32985677083333 : JumpStart); (13.4270833333333 : 7.32985677083333 : JumpEnd); (13.5729166666667 : 7.32985677083333 : JumpStart); (13.7395833333333 : 7.32985677083333 : JumpEnd); (14.5 : 7.32985677083333)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/PMSCenterDataContext/PMSSys_UserInfo/PMSSys_UserInfo_PMSSys_UserInfo_PMSSys_UserMap_Relation" />
+      <nodes>
+        <classShapeMoniker Id="b79c219e-1a49-436a-82f4-8d710d2b1987" />
+        <classShapeMoniker Id="88ec6db8-8be1-444e-b64a-fde485b75cc9" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(13.65625 : 3.49782552083333); (13.65625 : 7.528995390625); (14.5 : 7.528995390625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/PMSCenterDataContext/PMSSys_UserMap/PMSSys_UserMap_PMSSys_UserInfo_PMSSys_UserMap_Relation" />
+      <nodes>
+        <classShapeMoniker Id="e0181b0d-a83d-4e77-a036-c390a376f9dd" />
+        <classShapeMoniker Id="88ec6db8-8be1-444e-b64a-fde485b75cc9" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(15.4592307692308 : 3.9164453125); (15.4592307692308 : 4.1664453125); (16.0546153846154 : 4.1664453125); (16.0546153846154 : 3.9164453125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/PMSCenterDataContext/PMSSys_ConfigFileInfoMap/PMSSys_ConfigFileInfoMap_PMSSys_ConfigFileInfoMap" />
+      <nodes>
+        <classShapeMoniker Id="26add8be-16b7-4a99-93a4-8ef8421ef3e9" />
+        <classShapeMoniker Id="26add8be-16b7-4a99-93a4-8ef8421ef3e9" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.2812525 : 6.25); (2.2812525 : 4.93348307291667); (2.46354541666667 : 4.93348307291667 : JumpStart); (2.63021208333333 : 4.93348307291667 : JumpEnd); (3.04166666666667 : 4.93348307291667 : JumpStart); (3.20833333333333 : 4.93348307291667 : JumpEnd); (3.5 : 4.93348307291667)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/PMSCenterDataContext/PMSSys_TableInfo/PMSSys_TableInfo_PMSSys_IITableRelationInfo" />
+      <nodes>
+        <classShapeMoniker Id="3c3bafd2-32b0-431a-a4a8-27f984bc6fa3" />
+        <classShapeMoniker Id="80f1b5cd-f12c-47d0-ad57-a5ad52afb69a" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.2187475 : 6.25); (1.2187475 : 5.368977109375); (2.19791916666667 : 5.368977109375 : JumpStart); (2.36458583333333 : 5.368977109375 : JumpEnd); (2.46354541666667 : 5.368977109375 : JumpStart); (2.63021208333333 : 5.368977109375 : JumpEnd); (3.04166666666667 : 5.368977109375 : JumpStart); (3.20833333333333 : 5.368977109375 : JumpEnd); (3.5 : 5.368977109375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/PMSCenterDataContext/PMSSys_TableInfo/PMSSys_TableInfo_PMSSys_IITableRelationInfo1" />
+      <nodes>
+        <classShapeMoniker Id="3c3bafd2-32b0-431a-a4a8-27f984bc6fa3" />
+        <classShapeMoniker Id="80f1b5cd-f12c-47d0-ad57-a5ad52afb69a" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.54687875 : 6.25); (2.54687875 : 4.49798903645833); (3.04166666666667 : 4.49798903645833 : JumpStart); (3.20833333333333 : 4.49798903645833 : JumpEnd); (3.5 : 4.49798903645833)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/PMSCenterDataContext/PMSSys_TableInfo/PMSSys_TableInfo_PMSSys_IITableRelationInfo2" />
+      <nodes>
+        <classShapeMoniker Id="3c3bafd2-32b0-431a-a4a8-27f984bc6fa3" />
+        <classShapeMoniker Id="80f1b5cd-f12c-47d0-ad57-a5ad52afb69a" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 6.93055338541667); (3.5 : 6.93055338541667)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/PMSCenterDataContext/PMSSys_TableInfo/PMSSys_TableInfo_PMSSys_MITableRelationInfo" />
+      <nodes>
+        <classShapeMoniker Id="3c3bafd2-32b0-431a-a4a8-27f984bc6fa3" />
+        <classShapeMoniker Id="59bf27b4-550f-4d16-8fb5-591beb1ae5db" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 6.65277669270833); (3.5 : 6.65277669270833)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/PMSCenterDataContext/PMSSys_TableInfo/PMSSys_TableInfo_PMSSys_MITableRelationInfo1" />
+      <nodes>
+        <classShapeMoniker Id="3c3bafd2-32b0-431a-a4a8-27f984bc6fa3" />
+        <classShapeMoniker Id="59bf27b4-550f-4d16-8fb5-591beb1ae5db" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 7.208330078125); (3.5 : 7.208330078125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/PMSCenterDataContext/PMSSys_TableInfo/PMSSys_TableInfo_PMSSys_MITableRelationInfo2" />
+      <nodes>
+        <classShapeMoniker Id="3c3bafd2-32b0-431a-a4a8-27f984bc6fa3" />
+        <classShapeMoniker Id="59bf27b4-550f-4d16-8fb5-591beb1ae5db" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(4.20923076923077 : 11.6723046875); (4.20923076923077 : 11.9223046875); (4.80461538461539 : 11.9223046875); (4.80461538461539 : 11.6723046875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/PMSCenterDataContext/PMSSys_TableFieldInfo/PMSSys_TableFieldInfo_PMSSys_TableFieldInfo" />
+      <nodes>
+        <classShapeMoniker Id="6c0811b5-9dd3-42f4-87cd-203b33da3b97" />
+        <classShapeMoniker Id="6c0811b5-9dd3-42f4-87cd-203b33da3b97" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 7.36110677083333); (3.125 : 7.73610677083333); (3.125 : 10.27365234375); (3.5 : 10.27365234375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/PMSCenterDataContext/PMSSys_TableInfo/PMSSys_TableInfo_PMSSys_TableFieldInfo" />
+      <nodes>
+        <classShapeMoniker Id="3c3bafd2-32b0-431a-a4a8-27f984bc6fa3" />
+        <classShapeMoniker Id="6c0811b5-9dd3-42f4-87cd-203b33da3b97" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="4563bc88-adf8-4043-a06c-5ecab1a392f9" absoluteBounds="20.625, 13.75, 2, 1.6169661458333331">
+      <DataClassMoniker Name="/PMSCenterDataContext/View_GetIITableRelation" />
+      <nestedChildShapes>
+        <elementListCompartment Id="140ba0ca-2166-47d9-aa81-585aef177a93" absoluteBounds="20.64, 14.21, 1.9700000000000002, 1.0569661458333333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="db9826d8-296f-4381-b2e6-0bf35c5b087b" absoluteBounds="18.5, 22.5, 2, 1.6169661458333331">
+      <DataClassMoniker Name="/PMSCenterDataContext/View_GetMITableRelation" />
+      <nestedChildShapes>
+        <elementListCompartment Id="04d6763a-c7b9-40e4-be8e-2fa89b173a50" absoluteBounds="18.515, 22.96, 1.9700000000000002, 1.0569661458333333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ef326ee4-6717-41ad-b57e-6fba8c5f78ac" absoluteBounds="15.75, 24.25, 2, 1.1111067708333333">
+      <DataClassMoniker Name="/PMSCenterDataContext/View_GetGeneralTable" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9d2f9a45-cca7-47bb-ab9d-28417ba01fda" absoluteBounds="15.765, 24.71, 1.9700000000000002, 0.55110677083333326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7af65f78-ca3d-4f5f-853e-3b622e6110f8" absoluteBounds="0.75, 0.625, 2, 2.6286848958333331">
+      <DataClassMoniker Name="/PMSCenterDataContext/PMSSys_DBSourceDefine" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9609b306-00be-4a5b-91ec-321e90d6a5c1" absoluteBounds="0.76500000000000012, 1.085, 1.9700000000000002, 2.068684895833333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

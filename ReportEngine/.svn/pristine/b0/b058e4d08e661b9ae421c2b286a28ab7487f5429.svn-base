@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DBRefConfigSetting" targetNamespace="http://tempuri.org/DBRefConfigSetting.xsd" xmlns:mstns="http://tempuri.org/DBRefConfigSetting.xsd" xmlns="http://tempuri.org/DBRefConfigSetting.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DBRefConfigSetting" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DBRefConfigSetting" msprop:Generator_UserDSName="DBRefConfigSetting">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="MSSQLServer" msprop:Generator_UserTableName="MSSQLServer" msprop:Generator_RowEvArgName="MSSQLServerRowChangeEvent" msprop:Generator_TableVarName="tableMSSQLServer" msprop:Generator_TablePropName="MSSQLServer" msprop:Generator_RowDeletingName="MSSQLServerRowDeleting" msprop:Generator_RowChangingName="MSSQLServerRowChanging" msprop:Generator_RowDeletedName="MSSQLServerRowDeleted" msprop:Generator_RowEvHandlerName="MSSQLServerRowChangeEventHandler" msprop:Generator_TableClassName="MSSQLServerDataTable" msprop:Generator_RowChangedName="MSSQLServerRowChanged" msprop:Generator_RowClassName="MSSQLServerRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ServerName" msprop:Generator_ColumnVarNameInTable="columnServerName" msprop:Generator_ColumnPropNameInRow="ServerName" msprop:Generator_ColumnPropNameInTable="ServerNameColumn" msprop:Generator_UserColumnName="ServerName" type="xs:string" minOccurs="0" />
+              <xs:element name="DBName" msprop:Generator_ColumnVarNameInTable="columnDBName" msprop:Generator_ColumnPropNameInRow="DBName" msprop:Generator_ColumnPropNameInTable="DBNameColumn" msprop:Generator_UserColumnName="DBName" type="xs:string" minOccurs="0" />
+              <xs:element name="UserID" msprop:Generator_ColumnVarNameInTable="columnUserID" msprop:Generator_ColumnPropNameInRow="UserID" msprop:Generator_ColumnPropNameInTable="UserIDColumn" msprop:Generator_UserColumnName="UserID" type="xs:string" minOccurs="0" />
+              <xs:element name="PassWord" msprop:Generator_ColumnVarNameInTable="columnPassWord" msprop:Generator_ColumnPropNameInRow="PassWord" msprop:Generator_ColumnPropNameInTable="PassWordColumn" msprop:Generator_UserColumnName="PassWord" type="xs:string" minOccurs="0" />
+              <xs:element name="ConnectType" msprop:Generator_ColumnVarNameInTable="columnConnectType" msprop:Generator_ColumnPropNameInRow="ConnectType" msprop:Generator_ColumnPropNameInTable="ConnectTypeColumn" msprop:Generator_UserColumnName="ConnectType" type="xs:int" minOccurs="0" />
+              <xs:element name="PortID" msprop:Generator_ColumnVarNameInTable="columnPortID" msprop:Generator_ColumnPropNameInRow="PortID" msprop:Generator_ColumnPropNameInTable="PortIDColumn" msprop:Generator_UserColumnName="PortID" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="MSAccess" msprop:Generator_UserTableName="MSAccess" msprop:Generator_RowEvArgName="MSAccessRowChangeEvent" msprop:Generator_TableVarName="tableMSAccess" msprop:Generator_TablePropName="MSAccess" msprop:Generator_RowDeletingName="MSAccessRowDeleting" msprop:Generator_RowChangingName="MSAccessRowChanging" msprop:Generator_RowDeletedName="MSAccessRowDeleted" msprop:Generator_RowEvHandlerName="MSAccessRowChangeEventHandler" msprop:Generator_TableClassName="MSAccessDataTable" msprop:Generator_RowChangedName="MSAccessRowChanged" msprop:Generator_RowClassName="MSAccessRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="DBPath" msprop:Generator_ColumnVarNameInTable="columnDBPath" msprop:Generator_ColumnPropNameInRow="DBPath" msprop:Generator_ColumnPropNameInTable="DBPathColumn" msprop:Generator_UserColumnName="DBPath" type="xs:string" minOccurs="0" />
+              <xs:element name="UserID" msprop:Generator_ColumnVarNameInTable="columnUserID" msprop:Generator_ColumnPropNameInRow="UserID" msprop:Generator_ColumnPropNameInTable="UserIDColumn" msprop:Generator_UserColumnName="UserID" type="xs:string" minOccurs="0" />
+              <xs:element name="PassWord" msprop:Generator_ColumnVarNameInTable="columnPassWord" msprop:Generator_ColumnPropNameInRow="PassWord" msprop:Generator_ColumnPropNameInTable="PassWordColumn" msprop:Generator_UserColumnName="PassWord" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="OleDB" msprop:Generator_UserTableName="OleDB" msprop:Generator_RowEvArgName="OleDBRowChangeEvent" msprop:Generator_TableVarName="tableOleDB" msprop:Generator_TablePropName="OleDB" msprop:Generator_RowDeletingName="OleDBRowDeleting" msprop:Generator_RowChangingName="OleDBRowChanging" msprop:Generator_RowDeletedName="OleDBRowDeleted" msprop:Generator_RowEvHandlerName="OleDBRowChangeEventHandler" msprop:Generator_TableClassName="OleDBDataTable" msprop:Generator_RowChangedName="OleDBRowChanged" msprop:Generator_RowClassName="OleDBRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ConnectString" msprop:Generator_ColumnVarNameInTable="columnConnectString" msprop:Generator_ColumnPropNameInRow="ConnectString" msprop:Generator_ColumnPropNameInTable="ConnectStringColumn" msprop:Generator_UserColumnName="ConnectString" type="xs:string" minOccurs="0" />
+              <xs:element name="Selected" msprop:Generator_ColumnVarNameInTable="columnSelected" msprop:Generator_ColumnPropNameInRow="Selected" msprop:Generator_ColumnPropNameInTable="SelectedColumn" msprop:Generator_UserColumnName="Selected" type="xs:int" default="0" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Oracle" msprop:Generator_TableClassName="OracleDataTable" msprop:Generator_TableVarName="tableOracle" msprop:Generator_RowChangedName="OracleRowChanged" msprop:Generator_TablePropName="Oracle" msprop:Generator_RowDeletingName="OracleRowDeleting" msprop:Generator_RowChangingName="OracleRowChanging" msprop:Generator_RowEvHandlerName="OracleRowChangeEventHandler" msprop:Generator_RowDeletedName="OracleRowDeleted" msprop:Generator_RowClassName="OracleRow" msprop:Generator_UserTableName="Oracle" msprop:Generator_RowEvArgName="OracleRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ServerName" msprop:Generator_ColumnVarNameInTable="columnServerName" msprop:Generator_ColumnPropNameInRow="ServerName" msprop:Generator_ColumnPropNameInTable="ServerNameColumn" msprop:Generator_UserColumnName="ServerName" type="xs:string" minOccurs="0" />
+              <xs:element name="UserID" msprop:Generator_ColumnVarNameInTable="columnUserID" msprop:Generator_ColumnPropNameInRow="UserID" msprop:Generator_ColumnPropNameInTable="UserIDColumn" msprop:Generator_UserColumnName="UserID" type="xs:string" minOccurs="0" />
+              <xs:element name="PassWord" msprop:Generator_ColumnVarNameInTable="columnPassWord" msprop:Generator_ColumnPropNameInRow="PassWord" msprop:Generator_ColumnPropNameInTable="PassWordColumn" msprop:Generator_UserColumnName="PassWord" type="xs:string" minOccurs="0" />
+              <xs:element name="ConnectAs" msprop:Generator_ColumnVarNameInTable="columnConnectAs" msprop:Generator_ColumnPropNameInRow="ConnectAs" msprop:Generator_ColumnPropNameInTable="ConnectAsColumn" msprop:Generator_UserColumnName="ConnectAs" type="xs:string" minOccurs="0" />
+              <xs:element name="Home" msprop:Generator_ColumnVarNameInTable="columnHome" msprop:Generator_ColumnPropNameInRow="Home" msprop:Generator_ColumnPropNameInTable="HomeColumn" msprop:Generator_UserColumnName="Home" type="xs:string" minOccurs="0" />
+              <xs:element name="Direct" msprop:Generator_ColumnVarNameInTable="columnDirect" msprop:Generator_ColumnPropNameInRow="Direct" msprop:Generator_ColumnPropNameInTable="DirectColumn" msprop:Generator_UserColumnName="Direct" type="xs:boolean" minOccurs="0" />
+              <xs:element name="SID" msprop:Generator_ColumnVarNameInTable="columnSID" msprop:Generator_ColumnPropNameInRow="SID" msprop:Generator_ColumnPropNameInTable="SIDColumn" msprop:Generator_UserColumnName="SID" type="xs:string" minOccurs="0" />
+              <xs:element name="PortID" msprop:Generator_ColumnVarNameInTable="columnPortID" msprop:Generator_ColumnPropNameInRow="PortID" msprop:Generator_ColumnPropNameInTable="PortIDColumn" msprop:Generator_UserColumnName="PortID" type="xs:string" minOccurs="0" />
+              <xs:element name="Owner" msprop:Generator_ColumnVarNameInTable="columnOwner" msprop:Generator_ColumnPropNameInRow="Owner" msprop:Generator_ColumnPropNameInTable="OwnerColumn" msprop:Generator_UserColumnName="Owner" type="xs:string" minOccurs="0" />
+              <xs:element name="ConnectMode" msprop:Generator_ColumnVarNameInTable="columnConnectMode" msprop:Generator_ColumnPropNameInRow="ConnectMode" msprop:Generator_ColumnPropNameInTable="ConnectModeColumn" msprop:Generator_UserColumnName="ConnectMode" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="MESRefDBType" msprop:Generator_TableClassName="MESRefDBTypeDataTable" msprop:Generator_TableVarName="tableMESRefDBType" msprop:Generator_RowChangedName="MESRefDBTypeRowChanged" msprop:Generator_TablePropName="MESRefDBType" msprop:Generator_RowDeletingName="MESRefDBTypeRowDeleting" msprop:Generator_RowChangingName="MESRefDBTypeRowChanging" msprop:Generator_RowEvHandlerName="MESRefDBTypeRowChangeEventHandler" msprop:Generator_RowDeletedName="MESRefDBTypeRowDeleted" msprop:Generator_RowClassName="MESRefDBTypeRow" msprop:Generator_UserTableName="MESRefDBType" msprop:Generator_RowEvArgName="MESRefDBTypeRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Type" msprop:Generator_ColumnVarNameInTable="columnType" msprop:Generator_ColumnPropNameInRow="Type" msprop:Generator_ColumnPropNameInTable="TypeColumn" msprop:Generator_UserColumnName="Type" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

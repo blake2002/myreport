@@ -1,0 +1,647 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8F24501F-FB47-4616-ADCB-4E65F50523F0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PMS.Libraries.ToolControls.PMSChart</RootNamespace>
+    <AssemblyName>PMS.PMSChart</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <PublishUrl>http://localhost/PMS.PMSChart/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>PMSKey.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSHARP.Targets" />
+  <ItemGroup>
+    <Reference Include="DesignerLib">
+      <HintPath>..\bin\%24%28Configuration%29\DesignerLib.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework">
+      <HintPath>..\bin\%24%28Configuration%29\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.Excel">
+      <HintPath>..\bin\%24%28Configuration%29\Interop.Excel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="MES.ExpressionEditor">
+      <HintPath>..\bin\%24%28Configuration%29\MES.ExpressionEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="MES.ExpressionEngine">
+      <HintPath>..\bin\%24%28Configuration%29\MES.ExpressionEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="MES.MESEntity">
+      <HintPath>..\bin\%24%28Configuration%29\MES.MESEntity.dll</HintPath>
+    </Reference>
+    <Reference Include="MES.ReportExpressionEditor">
+      <HintPath>..\bin\%24%28Configuration%29\MES.ReportExpressionEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="MES.ReportExpressionEngine">
+      <HintPath>..\bin\%24%28Configuration%29\MES.ReportExpressionEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="PMS.ForeignKeyCtrl">
+      <HintPath>..\bin\%24%28Configuration%29\PMS.ForeignKeyCtrl.dll</HintPath>
+    </Reference>
+    <Reference Include="PMS.GridViewPrint">
+      <HintPath>..\bin\%24%28Configuration%29\PMS.GridViewPrint.dll</HintPath>
+    </Reference>
+    <Reference Include="PMS.PMSEncrypt">
+      <HintPath>..\bin\%24%28Configuration%29\PMS.PMSEncrypt.dll</HintPath>
+    </Reference>
+    <Reference Include="PMS.PmsPowerGroupCheck">
+      <HintPath>..\bin\%24%28Configuration%29\PMS.PmsPowerGroupCheck.dll</HintPath>
+    </Reference>
+    <Reference Include="PMS.PmsPublicData">
+      <HintPath>..\bin\%24%28Configuration%29\PMS.PmsPublicData.dll</HintPath>
+    </Reference>
+    <Reference Include="PMS.PMSPublicInfo">
+      <HintPath>..\bin\%24%28Configuration%29\PMS.PMSPublicInfo.dll</HintPath>
+    </Reference>
+    <Reference Include="PMS.PMSReport">
+      <HintPath>..\bin\%24%28Configuration%29\PMS.PMSReport.dll</HintPath>
+    </Reference>
+    <Reference Include="PMS.PmsSheet">
+      <HintPath>..\bin\%24%28Configuration%29\PMS.PmsSheet.dll</HintPath>
+    </Reference>
+    <Reference Include="PMS.PropertyTree">
+      <HintPath>..\bin\%24%28Configuration%29\PMS.PropertyTree.dll</HintPath>
+    </Reference>
+    <Reference Include="PMS.ReportControls">
+      <HintPath>..\bin\%24%28Configuration%29\PMS.ReportControls.dll</HintPath>
+    </Reference>
+    <Reference Include="PMS.TreeListView">
+      <HintPath>..\bin\%24%28Configuration%29\PMS.TreeListView.dll</HintPath>
+    </Reference>
+    <Reference Include="PMS.WhereLibrary">
+      <HintPath>..\bin\%24%28Configuration%29\PMS.WhereLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="ColorComBoBox">
+      <HintPath>..\bin\%24%28Configuration%29\ColorComBoBox.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.ConnectionInfo">
+      <HintPath>..\bin\%24%28Configuration%29\Microsoft.SqlServer.ConnectionInfo.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Management.Sdk.Sfc">
+      <HintPath>..\bin\%24%28Configuration%29\Microsoft.SqlServer.Management.Sdk.Sfc.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Smo">
+      <HintPath>..\bin\%24%28Configuration%29\Microsoft.SqlServer.Smo.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms.DataVisualization">
+      <HintPath>..\bin\%24%28Configuration%29\System.Windows.Forms.DataVisualization.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ChartAppearance.cs" />
+    <Compile Include="DeriveClass\BarChart\YAxisArea.cs" />
+    <Compile Include="DeriveClass\Base\ChartSerializerClass.cs" />
+    <Compile Include="ChartRadarSerializerClass.cs" />
+    <Compile Include="DeriveClass\BarChart\BarApperenceEditor.cs" />
+    <Compile Include="DeriveClass\BarChart\BarApperenceFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeriveClass\BarChart\BarApperenceFrm.Designer.cs">
+      <DependentUpon>BarApperenceFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeriveClass\BarChart\BarChart.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DeriveClass\BarChart\BarChart.Designer.cs">
+      <DependentUpon>BarChart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeriveClass\Base\ChartBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DeriveClass\Base\ComboxItem.cs" />
+    <Compile Include="DeriveClass\Base\DataSetHelper.cs" />
+    <Compile Include="DeriveClass\Base\GroupSource.cs" />
+    <Compile Include="DeriveClass\Base\BindingEditor.cs" />
+    <Compile Include="DeriveClass\Base\KeywordsStringEditor\KeywordEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeriveClass\Base\KeywordsStringEditor\KeywordInfo.cs" />
+    <Compile Include="DeriveClass\Base\KeywordsStringEditor\KeywordsRegistry.cs" />
+    <Compile Include="DeriveClass\Base\KeywordsStringEditor\KeywordsStringEditorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeriveClass\CurveApperence.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeriveClass\CurveApperence.Designer.cs">
+      <DependentUpon>CurveApperence.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeriveClass\CurveSeries.cs" />
+    <Compile Include="DeriveClass\CurveX.cs" />
+    <Compile Include="DeriveClass\CurveY.cs" />
+    <Compile Include="DeriveClass\IChartProperty.cs" />
+    <Compile Include="ClassTableRelation.cs" />
+    <Compile Include="DeriveClass\ITrendCurve.cs" />
+    <Compile Include="DeriveClass\MESLegend.cs" />
+    <Compile Include="DeriveClass\MESSeries.cs" />
+    <Compile Include="DeriveClass\PieChart\PieApperenceEditor.cs" />
+    <Compile Include="DeriveClass\PieChart\PieApperenceFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeriveClass\PieChart\PieApperenceFrm.Designer.cs">
+      <DependentUpon>PieApperenceFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeriveClass\PieChart\PieChart.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DeriveClass\PieChart\PieChart.Designer.cs">
+      <DependentUpon>PieChart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeriveClass\RadarAlertApp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeriveClass\RadarAlertChart.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DeriveClass\RadarApperence.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeriveClass\RadarApperence.Designer.cs">
+      <DependentUpon>RadarApperence.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeriveClass\RadarChart.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DeriveClass\RadarChart.Designer.cs">
+      <DependentUpon>RadarChart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeriveClass\RadarChart\RadarClassify.cs" />
+    <Compile Include="DeriveClass\RadarChart\RadarSeriesColor.cs" />
+    <Compile Include="DeriveClass\RadarSeries.cs" />
+    <Compile Include="DeriveClass\SectionApperence.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeriveClass\SectionApperence.Designer.cs">
+      <DependentUpon>SectionApperence.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeriveClass\SectionChart.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DeriveClass\SectionChart.Designer.cs">
+      <DependentUpon>SectionChart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeriveClass\SectionChartProperties.cs" />
+    <Compile Include="DeriveClass\StatisticalApperence.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeriveClass\StatisticalApperence.Designer.cs">
+      <DependentUpon>StatisticalApperence.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeriveClass\TrendCurve.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DeriveClass\TrendCurveApperence.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeriveClass\TrendCurveApperence.Designer.cs">
+      <DependentUpon>TrendCurveApperence.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeriveClass\XGroup.cs" />
+    <Compile Include="DeriveClass\YaxisChoose.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DeriveClass\YaxisChoose.Designer.cs">
+      <DependentUpon>YaxisChoose.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeriveClass\Base\BorderAndBackEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeriveClass\Base\BorderAndBackEditor.designer.cs">
+      <DependentUpon>BorderAndBackEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeriveClass\RadarChart\RadarApperenceEditor.cs" />
+    <Compile Include="DeriveClass\RadarChart\RadarApperenceFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeriveClass\RadarChart\RadarApperenceFrm.Designer.cs">
+      <DependentUpon>RadarApperenceFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeriveClass\RadarChart\NewRadarChart.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DeriveClass\RadarChart\NewRadarChart.Designer.cs">
+      <DependentUpon>NewRadarChart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="designDialog\FormSectionApperence.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="designDialog\FormSectionApperence.Designer.cs">
+      <DependentUpon>FormSectionApperence.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCustomLabelCollection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCustomLabelCollection.Designer.cs">
+      <DependentUpon>FormCustomLabelCollection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormStripLineCollection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormStripLineCollection.Designer.cs">
+      <DependentUpon>FormStripLineCollection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLegendCellColumnCollection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLegendCellColumnCollection.Designer.cs">
+      <DependentUpon>FormLegendCellColumnCollection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLegendItemCollection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLegendItemCollection.Designer.cs">
+      <DependentUpon>FormLegendItemCollection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLegendCellCollection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLegendCellCollection.Designer.cs">
+      <DependentUpon>FormLegendCellCollection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="designDialog\FormAppearance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="designDialog\FormAppearance.Designer.cs">
+      <DependentUpon>FormAppearance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="designDialog\FormHaving.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="designDialog\FormHaving.Designer.cs">
+      <DependentUpon>FormHaving.cs</DependentUpon>
+    </Compile>
+    <Compile Include="designDialog\FormQueryFormula.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="designDialog\FormQueryFormula.Designer.cs">
+      <DependentUpon>FormQueryFormula.cs</DependentUpon>
+    </Compile>
+    <Compile Include="designDialog\FormSort.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="designDialog\FormSort.Designer.cs">
+      <DependentUpon>FormSort.cs</DependentUpon>
+    </Compile>
+    <Compile Include="designDialog\FormSql.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="designDialog\FormSql.Designer.cs">
+      <DependentUpon>FormSql.cs</DependentUpon>
+    </Compile>
+    <Compile Include="designDialog\FormTableRelation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="designDialog\FormTableRelation.Designer.cs">
+      <DependentUpon>FormTableRelation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAixs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAixs.Designer.cs">
+      <DependentUpon>FormAixs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCollection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCollection.Designer.cs">
+      <DependentUpon>FormCollection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeriveClass\CurveChart.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LabelFit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LabelFit.Designer.cs">
+      <DependentUpon>LabelFit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeriveClass\Base\LineStyleComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PMSChartCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PMSChartCtrl.Designer.cs">
+      <DependentUpon>PMSChartCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="PublicFunctionClass.cs" />
+    <Compile Include="runDialog\FormAreaFeature.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="runDialog\FormAreaFeature.Designer.cs">
+      <DependentUpon>FormAreaFeature.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SectionSerializerClass.cs" />
+    <Compile Include="SqlParse.cs" />
+    <Compile Include="DeriveClass\StatisticalChart.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DeriveClass\RadarAlertApp.Designer.cs">
+      <DependentUpon>RadarAlertApp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeriveClass\RadarAlertChart.Designer.cs">
+      <DependentUpon>RadarAlertChart.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DeriveClass\BarChart\BarApperenceFrm.resx">
+      <DependentUpon>BarApperenceFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeriveClass\BarChart\BarChart.resx">
+      <DependentUpon>BarChart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeriveClass\Base\ChartBase.resx">
+      <DependentUpon>ChartBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeriveClass\Base\KeywordsStringEditor\KeywordEditor.resx">
+      <DependentUpon>KeywordEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeriveClass\Base\KeywordsStringEditor\KeywordsStringEditorForm.resx">
+      <DependentUpon>KeywordsStringEditorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeriveClass\CurveApperence.resx">
+      <DependentUpon>CurveApperence.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeriveClass\PieChart\PieApperenceFrm.resx">
+      <DependentUpon>PieApperenceFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeriveClass\PieChart\PieChart.resx">
+      <DependentUpon>PieChart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeriveClass\RadarAlertApp.resx">
+      <DependentUpon>RadarAlertApp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeriveClass\RadarAlertChart.resx">
+      <DependentUpon>RadarAlertChart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeriveClass\RadarApperence.resx">
+      <DependentUpon>RadarApperence.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeriveClass\RadarChart.resx">
+      <DependentUpon>RadarChart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeriveClass\SectionApperence.resx">
+      <DependentUpon>SectionApperence.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeriveClass\SectionChart.resx">
+      <DependentUpon>SectionChart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeriveClass\StatisticalApperence.resx">
+      <DependentUpon>StatisticalApperence.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeriveClass\TrendCurveApperence.resx">
+      <DependentUpon>TrendCurveApperence.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeriveClass\YaxisChoose.resx">
+      <DependentUpon>YaxisChoose.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeriveClass\Base\BorderAndBackEditor.resx">
+      <DependentUpon>BorderAndBackEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeriveClass\RadarChart\RadarApperenceFrm.resx">
+      <DependentUpon>RadarApperenceFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeriveClass\RadarChart\NewRadarChart.resx">
+      <DependentUpon>NewRadarChart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="designDialog\FormSectionApperence.resx">
+      <DependentUpon>FormSectionApperence.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCustomLabelCollection.resx">
+      <DependentUpon>FormCustomLabelCollection.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormStripLineCollection.resx">
+      <DependentUpon>FormStripLineCollection.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLegendCellColumnCollection.resx">
+      <DependentUpon>FormLegendCellColumnCollection.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLegendItemCollection.resx">
+      <DependentUpon>FormLegendItemCollection.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLegendCellCollection.resx">
+      <DependentUpon>FormLegendCellCollection.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="designDialog\FormAppearance.resx">
+      <DependentUpon>FormAppearance.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="designDialog\FormHaving.resx">
+      <DependentUpon>FormHaving.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="designDialog\FormQueryFormula.resx">
+      <DependentUpon>FormQueryFormula.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="designDialog\FormSort.resx">
+      <DependentUpon>FormSort.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="designDialog\FormSql.resx">
+      <DependentUpon>FormSql.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="designDialog\FormTableRelation.resx">
+      <DependentUpon>FormTableRelation.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAixs.resx">
+      <DependentUpon>FormAixs.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCollection.resx">
+      <DependentUpon>FormCollection.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LabelFit.resx">
+      <DependentUpon>LabelFit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PMSChartCtrl.resx">
+      <DependentUpon>PMSChartCtrl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="runDialog\FormAreaFeature.resx">
+      <DependentUpon>FormAreaFeature.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="PMSKey.snk" />
+    <None Include="Resources\%2812,01%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\%2813,01%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\%2800,05%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\%2801,00%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\%2840,37%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\%2841,22%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\%2818,39%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\%2802,00%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\%2800,12%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\PMSChartCtrl.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\StatisticalChart.png" />
+    <EmbeddedResource Include="Resources\CurveChart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Data.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OPEN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\RadarAlertChart.png" />
+    <EmbeddedResource Include="Resources\RadarChart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\SectionChart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flipvertical.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\PieChart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\BarChart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\chart-type-bar-percent.png" />
+    <EmbeddedResource Include="Resources\chart-type-bar-stack.png" />
+    <EmbeddedResource Include="Resources\chart-type-bar.png" />
+    <EmbeddedResource Include="Resources\chart-type-column-percent.png" />
+    <EmbeddedResource Include="Resources\chart-type-column-stack.png" />
+    <EmbeddedResource Include="Resources\chart-type-column.png" />
+    <EmbeddedResource Include="Resources\chart-type-donut.png" />
+    <EmbeddedResource Include="Resources\chart-type-pie.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chart-type-radar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chart-type-polar.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>python $(SolutionDir)copy.py $(TargetPath)  $(SolutionDir)bin\$(ConfigurationName) $(TargetDir)$(TargetName)  $(SolutionDir)bin\$(ConfigurationName)\pdb\ $(TargetPath) $(SolutionDir)bin\</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

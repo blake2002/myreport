@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DE2488A3-732E-4CFD-95FD-74E862260044}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>test</RootNamespace>
+    <AssemblyName>test</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Externalconsole>true</Externalconsole>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\bin\Debug\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="HtmlTags">
+      <HintPath>..\..\bin\Debug\HtmlTags.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="MES.NetSCADACurve">
+      <HintPath>..\..\bin\Debug\MES.NetSCADACurve.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="test.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <ProjectReference Include="..\..\MESReportRun\MESReportRun.csproj">
+      <Project>{F8158BA8-F643-4E41-A55C-38C1882B0CDC}</Project>
+      <Name>MESReportRun</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\MESReportViewer\MESReportViewer.csproj">
+      <Project>{0CDFEEA8-950E-43FF-8AD0-D8A27FE2FBCE}</Project>
+      <Name>MESReportViewer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\SvgNet\SVG.csproj">
+      <Project>{1EC424EA-0191-4360-8DF2-63B4D176CDEC}</Project>
+      <Name>SVG</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ECharts\ECharts.csproj">
+      <Project>{653DE17A-F178-46F8-8E47-2D7586883E32}</Project>
+      <Name>ECharts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Loader\Loader.csproj">
+      <Project>{35446B57-9AC5-4DDB-9D65-16D6DFF39C04}</Project>
+      <Name>Loader</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\PMSPublicInfo\PMSPublicInfo.csproj">
+      <Project>{A63C94FE-0F3D-4580-BC15-E78D8A790F32}</Project>
+      <Name>PMSPublicInfo</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,77 @@
+/*
+Navicat MySQL Data Transfer
+
+Source Server         : mysql
+Source Server Version : 50547
+Source Host           : localhost:3306
+Source Database       : rptdb
+
+Target Server Type    : MYSQL
+Target Server Version : 50547
+File Encoding         : 65001
+
+Date: 2017-03-02 12:51:00
+*/
+DROP DATABASE  IF EXISTS `rptdb`;
+CREATE DATABASE `rptdb` CHARACTER SET utf8 COLLATE utf8_general_ci;
+
+/*
+	设置mysql不限制ip
+*/
+grant all PRIVILEGES on rptdb.* to root@'%'  identified by 'root';
+
+SET FOREIGN_KEY_CHECKS=0;
+
+USE rptdb;
+-- ----------------------------
+-- Table structure for directory
+-- ----------------------------
+DROP TABLE IF EXISTS `directory`;
+CREATE TABLE `directory` (
+  `Id` varchar(40) NOT NULL,
+  `DirName` varchar(80) NOT NULL,
+  `DirPath` varchar(300) NOT NULL,
+  `CreateTime` varchar(20) NOT NULL,
+  `LastModifyTime` varchar(20) DEFAULT NULL,
+  `LastModifyUser` varchar(80) DEFAULT NULL,
+  PRIMARY KEY (`Id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of directory
+-- ----------------------------
+
+-- ----------------------------
+-- Table structure for rpt_design
+-- ----------------------------
+DROP TABLE IF EXISTS `rpt_design`;
+CREATE TABLE `rpt_design` (
+  `Id` varchar(40) NOT NULL,
+  `RptName` varchar(80) NOT NULL,
+  `UploadPerson` varchar(80) DEFAULT NULL,
+  `UploadTime` varchar(20) DEFAULT NULL,
+  `DirId` varchar(40) DEFAULT NULL,
+  PRIMARY KEY (`Id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of rpt_design
+-- ----------------------------
+
+-- ----------------------------
+-- Table structure for rpt_runtime
+-- ----------------------------
+DROP TABLE IF EXISTS `rpt_runtime`;
+CREATE TABLE `rpt_runtime` (
+  `Id` varchar(40) NOT NULL,
+  `QueryCount` int(11) DEFAULT NULL,
+  `ExportCount` int(11) DEFAULT NULL,
+  `LastQeuryPerson` varchar(80) DEFAULT NULL,
+  `LastQueryTime` varchar(20) DEFAULT NULL,
+  `RptId` varchar(40) NOT NULL,
+  PRIMARY KEY (`Id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of rpt_runtime
+-- ----------------------------

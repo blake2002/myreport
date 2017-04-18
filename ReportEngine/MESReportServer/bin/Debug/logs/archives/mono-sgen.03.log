@@ -1,0 +1,130 @@
+2017-03-24 11:02:24.7513 Info JF8MUH652VSBDH mono-sgen 17099 1  NetSCADA.MESReportServer.NLogLogWriter.InfoFormat Configuration Result:
+[Success] Name MESReportServer
+[Success] Description MESReportServerService
+[Success] ServiceName MESReportServer
+2017-03-24 11:02:24.7660 Info JF8MUH652VSBDH mono-sgen 17099 1  NetSCADA.MESReportServer.NLogLogWriter.InfoFormat Topshelf v4.0.0.0, .NET Framework v4.0.30319.42000
+2017-03-24 11:02:24.7945 Info JF8MUH652VSBDH mono-sgen 17099 1  NetSCADA.MESReportServer.NLogLogWriter.Info MESReportServer is started
+2017-03-24 11:02:24.7987 Info JF8MUH652VSBDH mono-sgen 17099 1  NetSCADA.MESReportServer.NLogLogWriter.Info [Topshelf.Nancy] Starting NancyHost
+2017-03-24 11:02:35.6122 Info JF8MUH652VSBDH mono-sgen 17099 6 Threadpool worker NetSCADA.MESReportServer.NLogLogWriter.Info DealWithDirs Ok..
+2017-03-24 11:02:52.4600 Info JF8MUH652VSBDH mono-sgen 17099 1  NetSCADA.MESReportServer.NLogLogWriter.Info [Topshelf.Nancy] NancyHost started
+2017-03-24 11:02:52.4600 Info JF8MUH652VSBDH mono-sgen 17099 1  NetSCADA.MESReportServer.NLogLogWriter.InfoFormat The MESReportServer service is now running, press Control+C to exit.
+2017-03-24 11:03:28.9469 Info JF8MUH652VSBDH mono-sgen 17099 8 Threadpool worker NetSCADA.MESReportServer.NLogLogWriter.InfoFormat /upload--request:Form-user:77777777,path:$,dirId:f03f024d379d4dfd81cda57b4881985f
+2017-03-24 11:04:23.0472 Info JF8MUH652VSBDH mono-sgen 17099 8 Threadpool worker NetSCADA.MESReportServer.NLogLogWriter.InfoFormat response:{"code":0,"data":"上传成功"}
+2017-03-24 11:06:30.0368 Info JF8MUH652VSBDH mono-sgen 17099 15 Threadpool worker NetSCADA.MESReportServer.NLogLogWriter.InfoFormat /upload--request:Form-user:,path:,dirId:
+2017-03-24 11:06:31.2310 Info JF8MUH652VSBDH mono-sgen 17099 15 Threadpool worker NetSCADA.MESReportServer.NLogLogWriter.InfoFormat response:{"code":1,"data":"文件夹Id为空"}
+2017-03-24 11:14:43.8862 Info JF8MUH652VSBDH mono-sgen 17514 1  NetSCADA.MESReportServer.NLogLogWriter.InfoFormat Configuration Result:
+[Success] Name MESReportServer
+[Success] Description MESReportServerService
+[Success] ServiceName MESReportServer
+2017-03-24 11:14:43.8999 Info JF8MUH652VSBDH mono-sgen 17514 1  NetSCADA.MESReportServer.NLogLogWriter.InfoFormat Topshelf v4.0.0.0, .NET Framework v4.0.30319.42000
+2017-03-24 11:14:43.9288 Info JF8MUH652VSBDH mono-sgen 17514 1  NetSCADA.MESReportServer.NLogLogWriter.Info MESReportServer is started
+2017-03-24 11:14:43.9335 Info JF8MUH652VSBDH mono-sgen 17514 1  NetSCADA.MESReportServer.NLogLogWriter.Info [Topshelf.Nancy] Starting NancyHost
+2017-03-24 11:14:54.4564 Info JF8MUH652VSBDH mono-sgen 17514 6 Threadpool worker NetSCADA.MESReportServer.NLogLogWriter.Info DealWithDirs Ok..
+2017-03-24 11:15:10.4355 Info JF8MUH652VSBDH mono-sgen 17514 1  NetSCADA.MESReportServer.NLogLogWriter.Info [Topshelf.Nancy] NancyHost started
+2017-03-24 11:15:10.4355 Info JF8MUH652VSBDH mono-sgen 17514 1  NetSCADA.MESReportServer.NLogLogWriter.InfoFormat The MESReportServer service is now running, press Control+C to exit.
+2017-03-24 11:15:38.7428 Info JF8MUH652VSBDH mono-sgen 17514 7 Threadpool worker NetSCADA.MESReportServer.NLogLogWriter.InfoFormat /upload--request:Form-user:77777777,path:$,dirId:f03f024d379d4dfd81cda57b4881985f
+2017-03-24 11:15:56.3272 Info JF8MUH652VSBDH mono-sgen 17514 7 Threadpool worker NetSCADA.MESReportServer.NLogLogWriter.InfoFormat response:{"code":0,"data":"上传成功"}
+2017-03-24 11:29:52.6415 Info JF8MUH652VSBDH mono-sgen 17514 14 Threadpool worker NetSCADA.MESReportServer.NLogLogWriter.InfoFormat /upload--request:Form-user:77777777,path:$,dirId:f03f024d379d4dfd81cda57b4881985f
+2017-03-24 11:30:19.5724 Info JF8MUH652VSBDH mono-sgen 17514 14 Threadpool worker NetSCADA.MESReportServer.NLogLogWriter.InfoFormat response:{"code":1,"data":{"msg":"上传失败：要上传的文件在服务器上已经有同名文件，请修改后再上传","list":["preprt1.rpt"]}}
+2017-03-24 11:30:51.8468 Info JF8MUH652VSBDH mono-sgen 17514 19 Threadpool worker NetSCADA.MESReportServer.NLogLogWriter.InfoFormat /upload--request:Form-user:77777777,path:$,dirId:f03f024d379d4dfd81cda57b4881985f
+2017-03-24 11:31:05.8419 Info JF8MUH652VSBDH mono-sgen 17904 1  NetSCADA.MESReportServer.NLogLogWriter.InfoFormat Configuration Result:
+[Success] Name MESReportServer
+[Success] Description MESReportServerService
+[Success] ServiceName MESReportServer
+2017-03-24 11:31:05.8567 Info JF8MUH652VSBDH mono-sgen 17904 1  NetSCADA.MESReportServer.NLogLogWriter.InfoFormat Topshelf v4.0.0.0, .NET Framework v4.0.30319.42000
+2017-03-24 11:31:05.8881 Info JF8MUH652VSBDH mono-sgen 17904 1  NetSCADA.MESReportServer.NLogLogWriter.Info MESReportServer is started
+2017-03-24 11:31:05.8922 Info JF8MUH652VSBDH mono-sgen 17904 1  NetSCADA.MESReportServer.NLogLogWriter.Info [Topshelf.Nancy] Starting NancyHost
+2017-03-24 11:31:16.4145 Info JF8MUH652VSBDH mono-sgen 17904 9 Threadpool worker NetSCADA.MESReportServer.NLogLogWriter.Info DealWithDirs Ok..
+2017-03-24 11:31:32.1916 Info JF8MUH652VSBDH mono-sgen 17904 1  NetSCADA.MESReportServer.NLogLogWriter.Info [Topshelf.Nancy] NancyHost started
+2017-03-24 11:31:32.1916 Info JF8MUH652VSBDH mono-sgen 17904 1  NetSCADA.MESReportServer.NLogLogWriter.InfoFormat The MESReportServer service is now running, press Control+C to exit.
+2017-03-24 11:31:36.5918 Info JF8MUH652VSBDH mono-sgen 17904 7 Threadpool worker NetSCADA.MESReportServer.NLogLogWriter.InfoFormat /upload--request:Form-user:77777777,path:$,dirId:f03f024d379d4dfd81cda57b4881985f
+2017-03-24 11:32:38.4678 Info JF8MUH652VSBDH mono-sgen 17904 7 Threadpool worker NetSCADA.MESReportServer.NLogLogWriter.InfoFormat response:{"code":1,"data":{"msg":"上传失败：要上传的文件在服务器上已经有同名文件，请修改后再上传","list":["preprt1.rpt"]}}
+2017-03-24 11:32:44.1117 Info JF8MUH652VSBDH mono-sgen 17904 16 Threadpool worker NetSCADA.MESReportServer.NLogLogWriter.InfoFormat /upload--request:Form-user:77777777,path:$,dirId:f03f024d379d4dfd81cda57b4881985f
+2017-03-24 13:03:46.7609 Info JF8MUH652VSBDH mono-sgen 19132 1  NetSCADA.MESReportServer.NLogLogWriter.InfoFormat Configuration Result:
+[Success] Name MESReportServer
+[Success] Description MESReportServerService
+[Success] ServiceName MESReportServer
+2017-03-24 13:03:46.7753 Info JF8MUH652VSBDH mono-sgen 19132 1  NetSCADA.MESReportServer.NLogLogWriter.InfoFormat Topshelf v4.0.0.0, .NET Framework v4.0.30319.42000
+2017-03-24 13:03:46.8066 Info JF8MUH652VSBDH mono-sgen 19132 1  NetSCADA.MESReportServer.NLogLogWriter.Info MESReportServer is started
+2017-03-24 13:03:46.8112 Info JF8MUH652VSBDH mono-sgen 19132 1  NetSCADA.MESReportServer.NLogLogWriter.Info [Topshelf.Nancy] Starting NancyHost
+2017-03-24 13:03:57.3974 Info JF8MUH652VSBDH mono-sgen 19132 6 Threadpool worker NetSCADA.MESReportServer.NLogLogWriter.Info DealWithDirs Ok..
+2017-03-24 13:04:13.2968 Error JF8MUH652VSBDH mono-sgen 19132 1  NetSCADA.MESReportServer.NLogLogWriter.Error Address already in use
+2017-03-24 13:04:29.6184 Info JF8MUH652VSBDH mono-sgen 19203 1  NetSCADA.MESReportServer.NLogLogWriter.InfoFormat Configuration Result:
+[Success] Name MESReportServer
+[Success] Description MESReportServerService
+[Success] ServiceName MESReportServer
+2017-03-24 13:04:29.6328 Info JF8MUH652VSBDH mono-sgen 19203 1  NetSCADA.MESReportServer.NLogLogWriter.InfoFormat Topshelf v4.0.0.0, .NET Framework v4.0.30319.42000
+2017-03-24 13:04:29.6663 Info JF8MUH652VSBDH mono-sgen 19203 1  NetSCADA.MESReportServer.NLogLogWriter.Info MESReportServer is started
+2017-03-24 13:04:29.6714 Info JF8MUH652VSBDH mono-sgen 19203 1  NetSCADA.MESReportServer.NLogLogWriter.Info [Topshelf.Nancy] Starting NancyHost
+2017-03-24 13:04:30.8173 Error JF8MUH652VSBDH mono-sgen 19203 1  NetSCADA.MESReportServer.NLogLogWriter.Error Address already in use
+2017-03-24 13:04:36.9279 Info JF8MUH652VSBDH mono-sgen 19220 1  NetSCADA.MESReportServer.NLogLogWriter.InfoFormat Configuration Result:
+[Success] Name MESReportServer
+[Success] Description MESReportServerService
+[Success] ServiceName MESReportServer
+2017-03-24 13:04:36.9422 Info JF8MUH652VSBDH mono-sgen 19220 1  NetSCADA.MESReportServer.NLogLogWriter.InfoFormat Topshelf v4.0.0.0, .NET Framework v4.0.30319.42000
+2017-03-24 13:04:36.9742 Info JF8MUH652VSBDH mono-sgen 19220 1  NetSCADA.MESReportServer.NLogLogWriter.Info MESReportServer is started
+2017-03-24 13:04:36.9782 Info JF8MUH652VSBDH mono-sgen 19220 1  NetSCADA.MESReportServer.NLogLogWriter.Info [Topshelf.Nancy] Starting NancyHost
+2017-03-24 13:04:38.1306 Error JF8MUH652VSBDH mono-sgen 19220 1  NetSCADA.MESReportServer.NLogLogWriter.Error Address already in use
+2017-03-24 13:05:10.7332 Info JF8MUH652VSBDH mono-sgen 19276 1  NetSCADA.MESReportServer.NLogLogWriter.InfoFormat Configuration Result:
+[Success] Name MESReportServer
+[Success] Description MESReportServerService
+[Success] ServiceName MESReportServer
+2017-03-24 13:05:10.7475 Info JF8MUH652VSBDH mono-sgen 19276 1  NetSCADA.MESReportServer.NLogLogWriter.InfoFormat Topshelf v4.0.0.0, .NET Framework v4.0.30319.42000
+2017-03-24 13:05:10.7784 Info JF8MUH652VSBDH mono-sgen 19276 1  NetSCADA.MESReportServer.NLogLogWriter.Info MESReportServer is started
+2017-03-24 13:05:10.7829 Info JF8MUH652VSBDH mono-sgen 19276 1  NetSCADA.MESReportServer.NLogLogWriter.Info [Topshelf.Nancy] Starting NancyHost
+2017-03-24 13:05:21.2798 Info JF8MUH652VSBDH mono-sgen 19276 6 Threadpool worker NetSCADA.MESReportServer.NLogLogWriter.Info DealWithDirs Ok..
+2017-03-24 13:05:37.4388 Info JF8MUH652VSBDH mono-sgen 19276 1  NetSCADA.MESReportServer.NLogLogWriter.Info [Topshelf.Nancy] NancyHost started
+2017-03-24 13:05:37.4388 Info JF8MUH652VSBDH mono-sgen 19276 1  NetSCADA.MESReportServer.NLogLogWriter.InfoFormat The MESReportServer service is now running, press Control+C to exit.
+2017-03-24 13:05:43.5487 Info JF8MUH652VSBDH mono-sgen 19276 6 Threadpool worker NetSCADA.MESReportServer.NLogLogWriter.InfoFormat /upload--request:Form-user:77777777,path:$,dirId:f03f024d379d4dfd81cda57b4881985f
+2017-03-24 13:07:13.6968 Info JF8MUH652VSBDH mono-sgen 19276 6 Threadpool worker NetSCADA.MESReportServer.NLogLogWriter.InfoFormat response:{"code":1,"data":{"msg":"上传失败：要上传的文件在服务器上已经有同名文件，请修改后再上传","list":["preprt1.rpt"]}}
+2017-03-24 13:07:40.3152 Info JF8MUH652VSBDH mono-sgen 19276 8 Threadpool worker NetSCADA.MESReportServer.NLogLogWriter.InfoFormat /upload--request:Form-user:77777777,path:$,dirId:f03f024d379d4dfd81cda57b4881985f
+2017-03-24 13:08:39.9444 Info JF8MUH652VSBDH mono-sgen 19276 8 Threadpool worker NetSCADA.MESReportServer.NLogLogWriter.InfoFormat response:{"code":0,"data":"上传成功"}
+2017-03-24 13:09:14.5640 Info JF8MUH652VSBDH mono-sgen 19276 10 Threadpool worker NetSCADA.MESReportServer.NLogLogWriter.InfoFormat /upload--request:Form-user:77777777,path:$,dirId:f03f024d379d4dfd81cda57b4881985f
+2017-03-24 13:09:35.4724 Info JF8MUH652VSBDH mono-sgen 19276 10 Threadpool worker NetSCADA.MESReportServer.NLogLogWriter.InfoFormat response:{"code":0,"data":"上传成功"}
+2017-03-24 13:12:23.4976 Info JF8MUH652VSBDH mono-sgen 19276 24 Threadpool worker NetSCADA.MESReportServer.NLogLogWriter.InfoFormat /upload--request:Form-user:77777777,path:$,dirId:f03f024d379d4dfd81cda57b4881985f
+2017-03-24 13:12:42.2954 Info JF8MUH652VSBDH mono-sgen 19276 24 Threadpool worker NetSCADA.MESReportServer.NLogLogWriter.InfoFormat response:{"code":0,"data":"上传成功"}
+2017-03-24 13:16:16.6122 Info JF8MUH652VSBDH mono-sgen 19276 29 Threadpool worker NetSCADA.MESReportServer.NLogLogWriter.InfoFormat /upload--request:Form-user:77777777,path:$,dirId:f03f024d379d4dfd81cda57b4881985f
+2017-03-24 13:16:39.7892 Info JF8MUH652VSBDH mono-sgen 19276 29 Threadpool worker NetSCADA.MESReportServer.NLogLogWriter.InfoFormat response:{"code":0,"data":"上传成功"}
+2017-03-24 13:18:49.1004 Info JF8MUH652VSBDH mono-sgen 19276 27 Threadpool worker NetSCADA.MESReportServer.NLogLogWriter.InfoFormat /upload--request:Form-user:77777777,path:$,dirId:f03f024d379d4dfd81cda57b4881985f
+2017-03-24 13:19:44.1934 Info JF8MUH652VSBDH mono-sgen 19276 27 Threadpool worker NetSCADA.MESReportServer.NLogLogWriter.InfoFormat response:{"code":0,"data":"上传成功"}
+2017-03-24 13:20:24.5309 Info JF8MUH652VSBDH mono-sgen 19276 38 Threadpool worker NetSCADA.MESReportServer.NLogLogWriter.InfoFormat /upload--request:Form-user:77777777,path:$,dirId:f03f024d379d4dfd81cda57b4881985f
+2017-03-24 13:21:05.9905 Info JF8MUH652VSBDH mono-sgen 19276 38 Threadpool worker NetSCADA.MESReportServer.NLogLogWriter.InfoFormat response:{"code":0,"data":"上传成功"}
+2017-03-24 13:22:20.5347 Info JF8MUH652VSBDH mono-sgen 19276 35 Threadpool worker NetSCADA.MESReportServer.NLogLogWriter.InfoFormat /upload--request:Form-user:77777777,path:$,dirId:f03f024d379d4dfd81cda57b4881985f
+2017-03-24 13:22:20.5357 Info JF8MUH652VSBDH mono-sgen 19276 35 Threadpool worker NetSCADA.MESReportServer.NLogLogWriter.InfoFormat response:{"code":0,"data":"上传成功"}
+2017-03-24 13:24:17.5963 Info JF8MUH652VSBDH mono-sgen 20029 1  NetSCADA.MESReportServer.NLogLogWriter.InfoFormat Configuration Result:
+[Success] Name MESReportServer
+[Success] Description MESReportServerService
+[Success] ServiceName MESReportServer
+2017-03-24 13:24:17.6112 Info JF8MUH652VSBDH mono-sgen 20029 1  NetSCADA.MESReportServer.NLogLogWriter.InfoFormat Topshelf v4.0.0.0, .NET Framework v4.0.30319.42000
+2017-03-24 13:24:17.6408 Info JF8MUH652VSBDH mono-sgen 20029 1  NetSCADA.MESReportServer.NLogLogWriter.Info MESReportServer is started
+2017-03-24 13:24:17.6440 Info JF8MUH652VSBDH mono-sgen 20029 1  NetSCADA.MESReportServer.NLogLogWriter.Info [Topshelf.Nancy] Starting NancyHost
+2017-03-24 13:24:28.1518 Info JF8MUH652VSBDH mono-sgen 20029 9 Threadpool worker NetSCADA.MESReportServer.NLogLogWriter.Info DealWithDirs Ok..
+2017-03-24 13:24:45.4010 Info JF8MUH652VSBDH mono-sgen 20029 1  NetSCADA.MESReportServer.NLogLogWriter.Info [Topshelf.Nancy] NancyHost started
+2017-03-24 13:24:45.4010 Info JF8MUH652VSBDH mono-sgen 20029 1  NetSCADA.MESReportServer.NLogLogWriter.InfoFormat The MESReportServer service is now running, press Control+C to exit.
+2017-03-24 13:25:32.7457 Info JF8MUH652VSBDH mono-sgen 20029 6 Threadpool worker NetSCADA.MESReportServer.NLogLogWriter.InfoFormat /upload--request:Form-user:77777777,path:$,dirId:f03f024d379d4dfd81cda57b4881985f
+2017-03-24 13:25:45.2719 Info JF8MUH652VSBDH mono-sgen 20029 6 Threadpool worker NetSCADA.MESReportServer.NLogLogWriter.InfoFormat response:{"code":0,"data":"上传成功"}
+2017-03-24 14:03:21.4794 Info JF8MUH652VSBDH mono-sgen 20029 6 Threadpool worker NetSCADA.MESReportServer.NLogLogWriter.InfoFormat /upload--request:Form-user:77777777,path:$,dirId:f03f024d379d4dfd81cda57b4881985f
+2017-03-24 14:03:32.3342 Info JF8MUH652VSBDH mono-sgen 20029 6 Threadpool worker NetSCADA.MESReportServer.NLogLogWriter.InfoFormat response:{"code":0,"data":"上传成功"}
+2017-03-24 14:40:01.4496 Info JF8MUH652VSBDH mono-sgen 20029 20 ManagedPoolThread #0 PMS.Libraries.ToolControls.PMSPublicInfo.Message.LogMsg user:,msg:Start to stop analyse report
+2017-03-24 14:40:01.4519 Info JF8MUH652VSBDH mono-sgen 20029 20 ManagedPoolThread #0 PMS.Libraries.ToolControls.PMSPublicInfo.Message.LogMsg user:,msg:Start to set parameter
+2017-03-24 14:40:01.4522 Info JF8MUH652VSBDH mono-sgen 20029 20 ManagedPoolThread #0 PMS.Libraries.ToolControls.PMSPublicInfo.Message.LogMsg user:,msg:Finished to set parameter
+2017-03-24 14:40:01.4532 Info JF8MUH652VSBDH mono-sgen 20029 20 ManagedPoolThread #0 PMS.Libraries.ToolControls.PMSPublicInfo.Message.LogMsg user:,msg:Start to get data from database
+2017-03-24 14:40:01.7182 Info JF8MUH652VSBDH mono-sgen 20029 20 ManagedPoolThread #0 PMS.Libraries.ToolControls.PMSPublicInfo.Message.LogMsg user:,msg:Finished to get data from database
+2017-03-24 14:40:01.7182 Info JF8MUH652VSBDH mono-sgen 20029 20 ManagedPoolThread #0 PMS.Libraries.ToolControls.PMSPublicInfo.Message.LogMsg user:,msg:Start to analyse report
+2017-03-24 14:40:01.7191 Info JF8MUH652VSBDH mono-sgen 20029 20 ManagedPoolThread #0 PMS.Libraries.ToolControls.PMSPublicInfo.Message.LogMsg user:,msg:Start to analyse report's header
+2017-03-24 14:40:01.7954 Info JF8MUH652VSBDH mono-sgen 20029 20 ManagedPoolThread #0 PMS.Libraries.ToolControls.PMSPublicInfo.Message.LogMsg user:,msg:Finished to analyse report's header
+2017-03-24 14:40:01.7954 Info JF8MUH652VSBDH mono-sgen 20029 20 ManagedPoolThread #0 PMS.Libraries.ToolControls.PMSPublicInfo.Message.LogMsg user:,msg:Start to analyse page's header
+2017-03-24 14:40:01.7963 Info JF8MUH652VSBDH mono-sgen 20029 20 ManagedPoolThread #0 PMS.Libraries.ToolControls.PMSPublicInfo.Message.LogMsg user:,msg:Finished to analyse page's header
+2017-03-24 14:40:01.7963 Info JF8MUH652VSBDH mono-sgen 20029 20 ManagedPoolThread #0 PMS.Libraries.ToolControls.PMSPublicInfo.Message.LogMsg user:,msg:Start to analyse report's data
+2017-03-24 14:40:02.0184 Info JF8MUH652VSBDH mono-sgen 20029 20 ManagedPoolThread #0 PMS.Libraries.ToolControls.PMSPublicInfo.Message.LogMsg user:,msg:Finished to analyse report's data
+2017-03-24 14:40:02.0184 Info JF8MUH652VSBDH mono-sgen 20029 20 ManagedPoolThread #0 PMS.Libraries.ToolControls.PMSPublicInfo.Message.LogMsg user:,msg:Start to analyse page's footer
+2017-03-24 14:40:02.0193 Info JF8MUH652VSBDH mono-sgen 20029 20 ManagedPoolThread #0 PMS.Libraries.ToolControls.PMSPublicInfo.Message.LogMsg user:,msg:Finished to analyse page's footer
+2017-03-24 14:40:02.0193 Info JF8MUH652VSBDH mono-sgen 20029 20 ManagedPoolThread #0 PMS.Libraries.ToolControls.PMSPublicInfo.Message.LogMsg user:,msg:Start to analyse report's footer
+2017-03-24 14:40:02.0203 Info JF8MUH652VSBDH mono-sgen 20029 20 ManagedPoolThread #0 PMS.Libraries.ToolControls.PMSPublicInfo.Message.LogMsg user:,msg:Finished to analyse report's footer
+2017-03-24 14:40:02.0203 Info JF8MUH652VSBDH mono-sgen 20029 20 ManagedPoolThread #0 PMS.Libraries.ToolControls.PMSPublicInfo.Message.LogMsg user:,msg:Finished to analyse report
+2017-03-24 14:40:02.0331 Info JF8MUH652VSBDH mono-sgen 20029 20 ManagedPoolThread #0 PMS.Libraries.ToolControls.PMSPublicInfo.Message.LogMsg user:,msg:Start to stop export report
+2017-03-24 14:40:02.0541 Info JF8MUH652VSBDH mono-sgen 20029 25 ManagedPoolThread #5 PMS.Libraries.ToolControls.PMSPublicInfo.Message.LogMsg user:,msg:Start to export report
+2017-03-24 14:40:03.1851 Info JF8MUH652VSBDH mono-sgen 20029 25 ManagedPoolThread #5 PMS.Libraries.ToolControls.PMSPublicInfo.Message.LogMsg user:,msg:Finished to export report
+2017-03-24 14:40:03.1982 Info JF8MUH652VSBDH mono-sgen 20029 25 ManagedPoolThread #5 PMS.Libraries.ToolControls.PMSPublicInfo.Message.LogMsg user:,msg:OnExportComplete,queryid:0a393c8dbc5c4aa89414edd45a53ba53
+2017-03-24 14:40:03.1982 Info JF8MUH652VSBDH mono-sgen 20029 25 ManagedPoolThread #5 PMS.Libraries.ToolControls.PMSPublicInfo.Message.LogMsg user:,msg:OnExportComplete,queryid:0a393c8dbc5c4aa89414edd45a53ba53,IsCompleted=1
+2017-03-24 14:40:03.1992 Info JF8MUH652VSBDH mono-sgen 20029 25 ManagedPoolThread #5 PMS.Libraries.ToolControls.PMSPublicInfo.Message.LogMsg user:,msg:Finished to export report

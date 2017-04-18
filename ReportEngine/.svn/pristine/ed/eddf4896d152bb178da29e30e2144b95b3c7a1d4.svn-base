@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<configuration>
+  <startup>
+    <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.0"/>
+  </startup>
+  <!--<runtime>
+    <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
+      --><!--<probing privatePath="bin;bin2\subbin;bin3"/>--><!--
+      <dependentAssembly>
+        <assemblyIdentity name="MES.MESReportViewer"/>
+        <codeBase href="file://D://Project//MESSolution//bin//Debug//MES.MESReportViewer.dll" mce_href="file://D://Project//MESSolution//bin//Debug//MES.MESReportViewer.dll"/>
+      </dependentAssembly>
+    </assemblyBinding>
+  </runtime>-->
+</configuration>

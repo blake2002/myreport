@@ -1,0 +1,10 @@
+/home/administrator/svn/ReportEngine/PMSPublicInfo/obj/Release/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/home/administrator/svn/ReportEngine/PMSPublicInfo/obj/Release/PMS.Libraries.ToolControls.PMSPublicInfo.PMSPublicResource.resources
+/home/administrator/svn/ReportEngine/PMSPublicInfo/obj/Release/PMS.Libraries.ToolControls.PMSPublicInfo.PMSPublicResource.en.resources
+/home/administrator/svn/ReportEngine/PMSPublicInfo/obj/Release/en/PMS.PMSPublicInfo.resources.dll
+/home/administrator/svn/ReportEngine/bin/Debug/PMS.PMSPublicInfo.dll.config
+/home/administrator/svn/ReportEngine/bin/Debug/PMS.PMSPublicInfo.dll.mdb
+/home/administrator/svn/ReportEngine/bin/Debug/PMS.PMSPublicInfo.dll
+/home/administrator/svn/ReportEngine/bin/Debug/en/PMS.PMSPublicInfo.resources.dll
+/home/administrator/svn/ReportEngine/PMSPublicInfo/obj/Release/PMS.PMSPublicInfo.dll
+/home/administrator/svn/ReportEngine/PMSPublicInfo/obj/Release/PMS.PMSPublicInfo.dll.mdb

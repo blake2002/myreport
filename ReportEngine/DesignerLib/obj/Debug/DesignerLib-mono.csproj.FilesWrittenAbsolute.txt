@@ -1,0 +1,6 @@
+/home/administrator/svn/ReportEngine/DesignerLib/obj/Debug/.NETFramework,Version=v4.6.1.AssemblyAttribute.cs
+/home/administrator/svn/ReportEngine/DesignerLib/obj/Debug/DesignerLib.Properties.Resources.resources
+/home/administrator/svn/ReportEngine/DesignerLib/bin/Debug/DesignerLib.dll.mdb
+/home/administrator/svn/ReportEngine/DesignerLib/bin/Debug/DesignerLib.dll
+/home/administrator/svn/ReportEngine/DesignerLib/obj/Debug/DesignerLib.dll
+/home/administrator/svn/ReportEngine/DesignerLib/obj/Debug/DesignerLib.dll.mdb

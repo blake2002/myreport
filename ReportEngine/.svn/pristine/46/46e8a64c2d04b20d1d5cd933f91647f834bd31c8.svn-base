@@ -1,0 +1,15 @@
+﻿
+<#@ template language="C#v3.5" #>
+
+<#@ include file="..\..\..\CodeGen\LinqToTreeCodeGen.tt" #>
+
+using System.Windows.Forms;
+
+<#
+
+string typeName = "Control";
+string adapterType = "WindowsFormsTreeAdapter";
+string targetNamespace = "PMS.Libraries.ToolControls.ToolBox.LinqToWindowsForms";
+
+GenerateLinqMethods(typeName, adapterType, targetNamespace);
+#>

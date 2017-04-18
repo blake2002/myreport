@@ -1,0 +1,6 @@
+/home/administrator/svn/ReportEngine/HtmlTags/obj/Debug/.NETFramework,Version=v4.6.1.AssemblyAttribute.cs
+/home/administrator/svn/ReportEngine/HtmlTags/bin/Debug/HtmlTags.dll.mdb
+/home/administrator/svn/ReportEngine/HtmlTags/bin/Debug/HtmlTags.dll
+/home/administrator/svn/ReportEngine/HtmlTags/obj/Debug/HtmlTags.dll
+/home/administrator/svn/ReportEngine/HtmlTags/obj/Debug/HtmlTags.dll.mdb
+/home/administrator/svn/ReportEngine/HtmlTags/bin/Debug/Newtonsoft.Json.dll

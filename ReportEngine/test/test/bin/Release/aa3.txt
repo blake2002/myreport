@@ -1,0 +1,349 @@
+
+Mono log profiler data
+	Profiler version: 0.4
+	Data version: 11
+	Mean timer overhead: 53 nanoseconds
+	Program startup: Fri Dec 16 16:35:16 2016
+	Program ID: 16662
+
+JIT summary
+	Compiled methods: 15179
+	Generated code size: 4164041
+	JIT helpers: 23511
+	JIT helpers code size: 3538878
+
+GC summary
+	GC resizes: 0
+	Max heap size: 0
+	Object moves: 602651
+	Gen0 collections: 40, max time: 7904us, total time: 151647us, average: 3791us
+	Gen1 collections: 8, max time: 12307us, total time: 62757us, average: 7844us
+	GC handles weak: created: 11473, destroyed: 11464, max: 11473
+	GC handles normal: created: 44, destroyed: 44, max: 18446744073709551615
+
+Metadata summary
+	Loaded images: 53
+	Loaded assemblies: 53
+
+Exception summary
+	Throws: 529
+	Executed catch clauses: 529
+
+Monitor lock summary
+	Lock object 0x7f8f4b29eb28: 1 contentions
+		0.000071 secs total wait time, 0.000071 max, 0.000071 average
+	Lock object 0x7f8f4b3e8ed0: 1 contentions
+		0.000028 secs total wait time, 0.000028 max, 0.000028 average
+	Lock object 0x7f8f4b3379f8: 1 contentions
+		0.000018 secs total wait time, 0.000018 max, 0.000018 average
+	Lock object 0x7f8f4b2315d0: 1 contentions
+		0.000015 secs total wait time, 0.000015 max, 0.000015 average
+	Lock object 0x7f8f4b2e3e48: 1 contentions
+		0.000015 secs total wait time, 0.000015 max, 0.000015 average
+	Lock object 0x7f8f4b1815d8: 1 contentions
+		0.000012 secs total wait time, 0.000012 max, 0.000012 average
+	Lock object 0x7f8f4b339390: 1 contentions
+		0.000011 secs total wait time, 0.000011 max, 0.000011 average
+	Lock object 0x7f8f4b34e9f8: 1 contentions
+		0.000011 secs total wait time, 0.000011 max, 0.000011 average
+	Lock contentions: 8
+	Lock acquired: 8
+	Lock failures: 0
+
+Thread summary
+	Thread: 0x7f8f35e44700, name: "Threadpool worker"
+	Thread: 0x7f8f36045700, name: "Threadpool worker"
+	Thread: 0x7f8f34769700, name: ""
+	Thread: 0x7f8f1ddff700, name: ""
+	Thread: 0x7f8f36086700, name: ""
+	Thread: 0x7f8f3456d700, name: ""
+	Thread: 0x7f8f34fb1700, name: ""
+	Thread: 0x7f8f351c2700, name: "Threadpool worker"
+	Thread: 0x7f8f43fff700, name: ""
+	Thread: 0x7f8f48518700, name: "Finalizer"
+	Thread: 0x7f8f4c77f780, name: ""
+	Thread: (nil), name: "Main"
+
+Heap shot summary
+
+	Heap shot 0 at 29.745 secs: size: 5659040, object count: 54166, class count: 998, roots: 0
+	     Bytes      Count  Average Class name
+	   1947880      12102      160 System.String
+	    307328       2401      128 System.EventHandler
+	    220984        117     1888 System.Char[]
+	    153760       3844       40 System.Reflection.MonoMethod
+	    145304        200      726 System.Collections.Hashtable.bucket[]
+	    135120       3378       40 System.ComponentModel.EventHandlerList.ListEntry
+	    125272         50     2505 System.Byte[]
+	    119040       2976       40 System.MonoType
+	    105856        516      205 System.Object[]
+	    101888        796      128 System.Windows.Forms.MouseEventHandler
+	     99968       1562       64 System.Reflection.MonoParameterInfo
+	     86984        131      664 System.Windows.Forms.ImplicitHScrollBar
+	     86984        131      664 System.Windows.Forms.ImplicitVScrollBar
+	     86320        130      664 System.Windows.Forms.SizeGrip
+	     81840       1023       80 System.Windows.Forms.DataVisualization.Charting.Utilities.CustomPropertyInfo
+	     70144        274      256 Newtonsoft.Json.Serialization.JsonProperty
+	     64720       1618       40 System.Reflection.MonoGenericMethod
+	     56832        592       96 System.Reflection.MonoProperty
+	     55040        215      256 System.ComponentModel.ReflectPropertyDescriptor
+	     53760        960       56 System.Reflection.MonoField
+	     50664       1192       42 System.Reflection.MonoParameterInfo[]
+	     49984          2    24992 System.Windows.Forms.XEvent[]
+	     39200        245      160 System.Reflection.Emit.DynamicMethod
+	     33664        263      128 System.Windows.Forms.KeyEventHandler
+	     33560        839       40 System.Collections.ArrayList
+	     33280        260      128 System.Windows.Forms.ScrollEventHandler
+	     30624        319       96 System.Windows.Forms.Timer
+	     28176        587       48 System.Windows.Forms.Control.ControlCollection
+	     28160         55      512 System.Windows.Forms.TreeNode[]
+	     25232         38      664 System.Windows.Forms.SplitterPanel
+
+	Heap shot 1 at 70.107 secs: size: 7528456, object count: 60785, class count: 1002, roots: 0
+	     Bytes      Count  Average Class name
+	   3025976      12473      242 System.String (bytes: +1078096, count: +371)
+	    375552       2934      128 System.EventHandler (bytes: +68224, count: +533)
+	    346128        119     2908 System.Char[] (bytes: +125144, count: +2)
+	    218472         92     2374 System.Byte[] (bytes: +93200, count: +42)
+	    167480       4187       40 System.ComponentModel.EventHandlerList.ListEntry (bytes: +32360, count: +809)
+	    159912        237      674 System.Collections.Hashtable.bucket[] (bytes: +14608, count: +37)
+	    153760       3844       40 System.Reflection.MonoMethod (bytes: +0, count: +0)
+	    133920       1674       80 System.Windows.Forms.DataVisualization.Charting.Utilities.CustomPropertyInfo (bytes: +52080, count: +651)
+	    126464        988      128 System.Windows.Forms.MouseEventHandler (bytes: +24576, count: +192)
+	    119040       2976       40 System.MonoType (bytes: +0, count: +0)
+	    116048        551      210 System.Object[] (bytes: +10192, count: +35)
+	    108232        163      664 System.Windows.Forms.ImplicitHScrollBar (bytes: +21248, count: +32)
+	    108232        163      664 System.Windows.Forms.ImplicitVScrollBar (bytes: +21248, count: +32)
+	    107568        162      664 System.Windows.Forms.SizeGrip (bytes: +21248, count: +32)
+	     99968       1562       64 System.Reflection.MonoParameterInfo (bytes: +0, count: +0)
+	     70144        274      256 Newtonsoft.Json.Serialization.JsonProperty (bytes: +0, count: +0)
+	     64720       1618       40 System.Reflection.MonoGenericMethod (bytes: +0, count: +0)
+	     56832        592       96 System.Reflection.MonoProperty (bytes: +0, count: +0)
+	     55040        215      256 System.ComponentModel.ReflectPropertyDescriptor (bytes: +0, count: +0)
+	     53760        960       56 System.Reflection.MonoField (bytes: +0, count: +0)
+	     51200        100      512 System.Windows.Forms.TreeNode[] (bytes: +23040, count: +45)
+	     50664       1192       42 System.Reflection.MonoParameterInfo[] (bytes: +0, count: +0)
+	     49984          2    24992 System.Windows.Forms.XEvent[] (bytes: +0, count: +0)
+	     41856        327      128 System.Windows.Forms.KeyEventHandler (bytes: +8192, count: +64)
+	     41568        433       96 System.Windows.Forms.Timer (bytes: +10944, count: +114)
+	     41472        324      128 System.Windows.Forms.ScrollEventHandler (bytes: +8192, count: +64)
+	     40480       1012       40 System.Collections.ArrayList (bytes: +6920, count: +173)
+	     39200        245      160 System.Reflection.Emit.DynamicMethod (bytes: +0, count: +0)
+	     35088        731       48 System.Windows.Forms.Control.ControlCollection (bytes: +6912, count: +144)
+	     32384        253      128 System.Drawing.Font (bytes: +15360, count: +120)
+
+	Heap shot 2 at 105.454 secs: size: 6648568, object count: 57927, class count: 971, roots: 0
+	     Bytes      Count  Average Class name
+	   2334672      11920      195 System.String (bytes: -691304, count: -553)
+	    406272       3174      128 System.EventHandler (bytes: +30720, count: +240)
+	    384528        117     3286 System.Char[] (bytes: +38400, count: -2)
+	    178800       4470       40 System.ComponentModel.EventHandlerList.ListEntry (bytes: +11320, count: +283)
+	    155904        222      702 System.Collections.Hashtable.bucket[] (bytes: -4008, count: -15)
+	    153760       3844       40 System.Reflection.MonoMethod (bytes: +0, count: +0)
+	    134144       1048      128 System.Windows.Forms.MouseEventHandler (bytes: +7680, count: +60)
+	    119040       2976       40 System.MonoType (bytes: +0, count: +0)
+	    114872        173      664 System.Windows.Forms.ImplicitHScrollBar (bytes: +6640, count: +10)
+	    114872        173      664 System.Windows.Forms.ImplicitVScrollBar (bytes: +6640, count: +10)
+	    114208        172      664 System.Windows.Forms.SizeGrip (bytes: +6640, count: +10)
+	    109432        535      204 System.Object[] (bytes: -6616, count: -16)
+	    109032         48     2271 System.Byte[] (bytes: -109440, count: -44)
+	     99968       1562       64 System.Reflection.MonoParameterInfo (bytes: +0, count: +0)
+	     96720       1209       80 System.Windows.Forms.DataVisualization.Charting.Utilities.CustomPropertyInfo (bytes: -37200, count: -465)
+	     70144        274      256 Newtonsoft.Json.Serialization.JsonProperty (bytes: +0, count: +0)
+	     64720       1618       40 System.Reflection.MonoGenericMethod (bytes: +0, count: +0)
+	     56832        592       96 System.Reflection.MonoProperty (bytes: +0, count: +0)
+	     55040        215      256 System.ComponentModel.ReflectPropertyDescriptor (bytes: +0, count: +0)
+	     53760        960       56 System.Reflection.MonoField (bytes: +0, count: +0)
+	     50664       1192       42 System.Reflection.MonoParameterInfo[] (bytes: +0, count: +0)
+	     49984          2    24992 System.Windows.Forms.XEvent[] (bytes: +0, count: +0)
+	     44416        347      128 System.Windows.Forms.KeyEventHandler (bytes: +2560, count: +20)
+	     44032        344      128 System.Windows.Forms.ScrollEventHandler (bytes: +2560, count: +20)
+	     43872        457       96 System.Windows.Forms.Timer (bytes: +2304, count: +24)
+	     43520         85      512 System.Windows.Forms.TreeNode[] (bytes: -7680, count: -15)
+	     41680       1042       40 System.Collections.ArrayList (bytes: +1200, count: +30)
+	     39200        245      160 System.Reflection.Emit.DynamicMethod (bytes: +0, count: +0)
+	     37248        776       48 System.Windows.Forms.Control.ControlCollection (bytes: +2160, count: +45)
+	     35856         54      664 System.Windows.Forms.SplitterPanel (bytes: +9296, count: +14)
+
+	Heap shot 3 at 140.909 secs: size: 7154952, object count: 63326, class count: 998, roots: 0
+	     Bytes      Count  Average Class name
+	   2494536      12179      204 System.String (bytes: +159864, count: +259)
+	    483968       3781      128 System.EventHandler (bytes: +77696, count: +607)
+	    220656        116     1902 System.Char[] (bytes: -163872, count: -1)
+	    212560       5314       40 System.ComponentModel.EventHandlerList.ListEntry (bytes: +33760, count: +844)
+	    191032         80     2387 System.Byte[] (bytes: +82000, count: +32)
+	    165920        243      682 System.Collections.Hashtable.bucket[] (bytes: +10016, count: +21)
+	    159488       1246      128 System.Windows.Forms.MouseEventHandler (bytes: +25344, count: +198)
+	    153760       3844       40 System.Reflection.MonoMethod (bytes: +0, count: +0)
+	    136784        206      664 System.Windows.Forms.ImplicitHScrollBar (bytes: +21912, count: +33)
+	    136784        206      664 System.Windows.Forms.ImplicitVScrollBar (bytes: +21912, count: +33)
+	    136120        205      664 System.Windows.Forms.SizeGrip (bytes: +21912, count: +33)
+	    119040       2976       40 System.MonoType (bytes: +0, count: +0)
+	    107336        546      196 System.Object[] (bytes: -2096, count: +11)
+	    104160       1302       80 System.Windows.Forms.DataVisualization.Charting.Utilities.CustomPropertyInfo (bytes: +7440, count: +93)
+	     99968       1562       64 System.Reflection.MonoParameterInfo (bytes: +0, count: +0)
+	     70144        274      256 Newtonsoft.Json.Serialization.JsonProperty (bytes: +0, count: +0)
+	     64720       1618       40 System.Reflection.MonoGenericMethod (bytes: +0, count: +0)
+	     56832        592       96 System.Reflection.MonoProperty (bytes: +0, count: +0)
+	     55040        215      256 System.ComponentModel.ReflectPropertyDescriptor (bytes: +0, count: +0)
+	     53760        960       56 System.Reflection.MonoField (bytes: +0, count: +0)
+	     52864        413      128 System.Windows.Forms.KeyEventHandler (bytes: +8448, count: +66)
+	     52480        410      128 System.Windows.Forms.ScrollEventHandler (bytes: +8448, count: +66)
+	     50664       1192       42 System.Reflection.MonoParameterInfo[] (bytes: +0, count: +0)
+	     49984          2    24992 System.Windows.Forms.XEvent[] (bytes: +0, count: +0)
+	     49824        519       96 System.Windows.Forms.Timer (bytes: +5952, count: +62)
+	     48880       1222       40 System.Collections.ArrayList (bytes: +7200, count: +180)
+	     46080         90      512 System.Windows.Forms.TreeNode[] (bytes: +2560, count: +5)
+	     44256        922       48 System.Windows.Forms.Control.ControlCollection (bytes: +7008, count: +146)
+	     42496         64      664 System.Windows.Forms.SplitterPanel (bytes: +6640, count: +10)
+	     42496         64      664 System.Windows.Forms.PictureBox (bytes: +6640, count: +10)
+
+	Heap shot 4 at 181.259 secs: size: 6339592, object count: 54389, class count: 963, roots: 0
+	     Bytes      Count  Average Class name
+	   2504536      11685      214 System.String (bytes: +10000, count: -494)
+	    301568       2356      128 System.EventHandler (bytes: -182400, count: -1425)
+	    204448        115     1777 System.Char[] (bytes: -16208, count: -1)
+	    163800         71     2307 System.Byte[] (bytes: -27232, count: -9)
+	    159296        229      695 System.Collections.Hashtable.bucket[] (bytes: -6624, count: -14)
+	    153760       3844       40 System.Reflection.MonoMethod (bytes: +0, count: +0)
+	    134920       3373       40 System.ComponentModel.EventHandlerList.ListEntry (bytes: -77640, count: -1941)
+	    126480       1581       80 System.Windows.Forms.DataVisualization.Charting.Utilities.CustomPropertyInfo (bytes: +22320, count: +279)
+	    119040       2976       40 System.MonoType (bytes: +0, count: +0)
+	    106344        499      213 System.Object[] (bytes: -992, count: -47)
+	    101888        796      128 System.Windows.Forms.MouseEventHandler (bytes: -57600, count: -450)
+	     99968       1562       64 System.Reflection.MonoParameterInfo (bytes: +0, count: +0)
+	     86984        131      664 System.Windows.Forms.ImplicitHScrollBar (bytes: -49800, count: -75)
+	     86984        131      664 System.Windows.Forms.ImplicitVScrollBar (bytes: -49800, count: -75)
+	     86320        130      664 System.Windows.Forms.SizeGrip (bytes: -49800, count: -75)
+	     70144        274      256 Newtonsoft.Json.Serialization.JsonProperty (bytes: +0, count: +0)
+	     64720       1618       40 System.Reflection.MonoGenericMethod (bytes: +0, count: +0)
+	     56832        592       96 System.Reflection.MonoProperty (bytes: +0, count: +0)
+	     55040        215      256 System.ComponentModel.ReflectPropertyDescriptor (bytes: +0, count: +0)
+	     53760        960       56 System.Reflection.MonoField (bytes: +0, count: +0)
+	     50664       1192       42 System.Reflection.MonoParameterInfo[] (bytes: +0, count: +0)
+	     49984          2    24992 System.Windows.Forms.XEvent[] (bytes: +0, count: +0)
+	     43520         85      512 System.Windows.Forms.TreeNode[] (bytes: -2560, count: -5)
+	     39200        245      160 System.Reflection.Emit.DynamicMethod (bytes: +0, count: +0)
+	     34272        357       96 System.Windows.Forms.Timer (bytes: -15552, count: -162)
+	     33880        847       40 System.Collections.ArrayList (bytes: -15000, count: -375)
+	     33664        263      128 System.Windows.Forms.KeyEventHandler (bytes: -19200, count: -150)
+	     33280        260      128 System.Windows.Forms.ScrollEventHandler (bytes: -19200, count: -150)
+	     28320        590       48 System.Windows.Forms.Control.ControlCollection (bytes: -15936, count: -332)
+	     28160        220      128 System.Drawing.Font (bytes: +640, count: +5)
+
+	Heap shot 5 at 216.633 secs: size: 6709912, object count: 58544, class count: 995, roots: 0
+	     Bytes      Count  Average Class name
+	   2534944      12308      205 System.String (bytes: +30408, count: +623)
+	    391936       3062      128 System.EventHandler (bytes: +90368, count: +706)
+	    282656        125     2261 System.Char[] (bytes: +78208, count: +10)
+	    172480       4312       40 System.ComponentModel.EventHandlerList.ListEntry (bytes: +37560, count: +939)
+	    153760       3844       40 System.Reflection.MonoMethod (bytes: +0, count: +0)
+	    153664        216      711 System.Collections.Hashtable.bucket[] (bytes: -5632, count: -13)
+	    129536       1012      128 System.Windows.Forms.MouseEventHandler (bytes: +27648, count: +216)
+	    119040       2976       40 System.MonoType (bytes: +0, count: +0)
+	    110888        167      664 System.Windows.Forms.ImplicitHScrollBar (bytes: +23904, count: +36)
+	    110888        167      664 System.Windows.Forms.ImplicitVScrollBar (bytes: +23904, count: +36)
+	    110224        166      664 System.Windows.Forms.SizeGrip (bytes: +23904, count: +36)
+	    109032         48     2271 System.Byte[] (bytes: -54768, count: -23)
+	    108288        535      202 System.Object[] (bytes: +1944, count: +36)
+	     99968       1562       64 System.Reflection.MonoParameterInfo (bytes: +0, count: +0)
+	     89280       1116       80 System.Windows.Forms.DataVisualization.Charting.Utilities.CustomPropertyInfo (bytes: -37200, count: -465)
+	     70144        274      256 Newtonsoft.Json.Serialization.JsonProperty (bytes: +0, count: +0)
+	     64720       1618       40 System.Reflection.MonoGenericMethod (bytes: +0, count: +0)
+	     56832        592       96 System.Reflection.MonoProperty (bytes: +0, count: +0)
+	     55040        215      256 System.ComponentModel.ReflectPropertyDescriptor (bytes: +0, count: +0)
+	     53760        960       56 System.Reflection.MonoField (bytes: +0, count: +0)
+	     50664       1192       42 System.Reflection.MonoParameterInfo[] (bytes: +0, count: +0)
+	     49984          2    24992 System.Windows.Forms.XEvent[] (bytes: +0, count: +0)
+	     42880        335      128 System.Windows.Forms.KeyEventHandler (bytes: +9216, count: +72)
+	     42496        332      128 System.Windows.Forms.ScrollEventHandler (bytes: +9216, count: +72)
+	     42432        442       96 System.Windows.Forms.Timer (bytes: +8160, count: +85)
+	     40960         80      512 System.Windows.Forms.TreeNode[] (bytes: -2560, count: -5)
+	     40640       1016       40 System.Collections.ArrayList (bytes: +6760, count: +169)
+	     39200        245      160 System.Reflection.Emit.DynamicMethod (bytes: +0, count: +0)
+	     35904        748       48 System.Windows.Forms.Control.ControlCollection (bytes: +7584, count: +158)
+	     34528         52      664 System.Windows.Forms.SplitterPanel (bytes: +15936, count: +24)
+
+	Heap shot 6 at 230.412 secs: size: 4023448, object count: 42935, class count: 928, roots: 0
+	     Bytes      Count  Average Class name
+	   1381320      11198      123 System.String (bytes: -1153624, count: -1110)
+	    163352         64     2552 System.Byte[] (bytes: +54320, count: +16)
+	    153984       1203      128 System.EventHandler (bytes: -237952, count: -1859)
+	    153880       3847       40 System.Reflection.MonoMethod (bytes: +120, count: +3)
+	    130368        166      785 System.Collections.Hashtable.bucket[] (bytes: -23296, count: -50)
+	    119120       2978       40 System.MonoType (bytes: +80, count: +2)
+	     99968       1562       64 System.Reflection.MonoParameterInfo (bytes: +0, count: +0)
+	     88840        415      214 System.Object[] (bytes: -19448, count: -120)
+	     70144        274      256 Newtonsoft.Json.Serialization.JsonProperty (bytes: +0, count: +0)
+	     67920       1698       40 System.ComponentModel.EventHandlerList.ListEntry (bytes: -104560, count: -2614)
+	     64720       1618       40 System.Reflection.MonoGenericMethod (bytes: +0, count: +0)
+	     56832        592       96 System.Reflection.MonoProperty (bytes: +0, count: +0)
+	     55040        215      256 System.ComponentModel.ReflectPropertyDescriptor (bytes: +0, count: +0)
+	     53760        960       56 System.Reflection.MonoField (bytes: +0, count: +0)
+	     52080        651       80 System.Windows.Forms.DataVisualization.Charting.Utilities.CustomPropertyInfo (bytes: -37200, count: -465)
+	     51200        400      128 System.Windows.Forms.MouseEventHandler (bytes: -78336, count: -612)
+	     50664       1192       42 System.Reflection.MonoParameterInfo[] (bytes: +0, count: +0)
+	     49984          2    24992 System.Windows.Forms.XEvent[] (bytes: +0, count: +0)
+	     43160         65      664 System.Windows.Forms.ImplicitHScrollBar (bytes: -67728, count: -102)
+	     43160         65      664 System.Windows.Forms.ImplicitVScrollBar (bytes: -67728, count: -102)
+	     42496         64      664 System.Windows.Forms.SizeGrip (bytes: -67728, count: -102)
+	     39200        245      160 System.Reflection.Emit.DynamicMethod (bytes: +0, count: +0)
+	     24448        191      128 System.Func<System.Object,System.Object> (bytes: +0, count: +0)
+	     24360        113      215 System.Char[] (bytes: -258296, count: -12)
+	     23144        120      192 System.Int32[] (bytes: -560, count: -5)
+	     19600        490       40 System.Collections.ArrayList (bytes: -21040, count: -526)
+	     19104        199       96 System.Windows.Forms.Timer (bytes: -23328, count: -243)
+	     17256        719       24 System.Int32 (bytes: -4152, count: -173)
+	     16768        131      128 System.Windows.Forms.KeyEventHandler (bytes: -26112, count: -204)
+	     16384        128      128 System.Windows.Forms.ScrollEventHandler (bytes: -26112, count: -204)
+
+	Heap shot 7 at 230.427 secs: size: 2708560, object count: 33200, class count: 800, roots: 0
+	     Bytes      Count  Average Class name
+	    997320      10887       91 System.String (bytes: -384000, count: -311)
+	    153880       3847       40 System.Reflection.MonoMethod (bytes: +0, count: +0)
+	    119200       2980       40 System.MonoType (bytes: +80, count: +2)
+	    108488         39     2781 System.Byte[] (bytes: -54864, count: -25)
+	    104336        112      931 System.Collections.Hashtable.bucket[] (bytes: -26032, count: -54)
+	     99968       1562       64 System.Reflection.MonoParameterInfo (bytes: +0, count: +0)
+	     75624        352      214 System.Object[] (bytes: -13216, count: -63)
+	     70144        274      256 Newtonsoft.Json.Serialization.JsonProperty (bytes: +0, count: +0)
+	     64720       1618       40 System.Reflection.MonoGenericMethod (bytes: +0, count: +0)
+	     56832        592       96 System.Reflection.MonoProperty (bytes: +0, count: +0)
+	     55040        215      256 System.ComponentModel.ReflectPropertyDescriptor (bytes: +0, count: +0)
+	     53760        960       56 System.Reflection.MonoField (bytes: +0, count: +0)
+	     50664       1192       42 System.Reflection.MonoParameterInfo[] (bytes: +0, count: +0)
+	     49984          2    24992 System.Windows.Forms.XEvent[] (bytes: +0, count: +0)
+	     39200        245      160 System.Reflection.Emit.DynamicMethod (bytes: +0, count: +0)
+	     24448        191      128 System.Func<System.Object,System.Object> (bytes: +0, count: +0)
+	     24000        109      220 System.Char[] (bytes: -360, count: -4)
+	     22248        112      198 System.Int32[] (bytes: -896, count: -8)
+	     16200        324       50 System.Attribute[] (bytes: +0, count: +0)
+	     14056         27      520 System.Collections.Generic.Dictionary.Entry<System.String,Newtonsoft.Json.Serialization.JsonProperty>[] (bytes: +0, count: +0)
+	     13600        170       80 System.Configuration.SectionInfo (bytes: +0, count: +0)
+	     13264         97      136 System.String[] (bytes: -256, count: -7)
+	     12032         94      128 System.ComponentModel.AttributeCollection.AttributeEntry[] (bytes: +0, count: +0)
+	     11520        480       24 System.Int32 (bytes: -5736, count: -239)
+	     10880        272       40 Newtonsoft.Json.Serialization.DynamicValueProvider (bytes: +0, count: +0)
+	     10656        666       16 System.Object (bytes: -384, count: -24)
+	     10080        315       32 System.Collections.Specialized.NameObjectCollectionBase.NameObjectEntry (bytes: +0, count: +0)
+	      9920        248       40 System.DelegateData (bytes: +0, count: +0)
+	      9624        206       46 System.Type[] (bytes: +0, count: +0)
+	      8880        111       80 System.Collections.Hashtable (bytes: -4320, count: -54)
+
+Counters:
+	Mono System:
+		User Time                      : 234010.000ms
+		System Time                    : 2170.000ms
+		Total Time                     : 468020.000ms
+		Working Set                    : 104574976
+		Private Bytes                  : 699899904
+		Virtual Bytes                  : 926494720
+		Page Faults                    : 61486
+		CPU Load Average - 1min        : 1.760000
+		CPU Load Average - 5min        : 1.370000
+		CPU Load Average - 15min       : 1.220000
+	Mono JIT:
+		Methods from AOT               : 1886
+		Methods JITted using mono JIT  : 12712
+		Methods JITted using LLVM      : 0
+		Total time spent JITting (sec) : 1.426368

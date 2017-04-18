@@ -1,0 +1,12 @@
+/home/administrator/svn/ReportEngine/Host/obj/Release/.NETFramework,Version=v4.6.1.AssemblyAttribute.cs
+/home/administrator/svn/ReportEngine/Host/obj/Release/Host.DesignerControl.resources
+/home/administrator/svn/ReportEngine/Host/obj/Release/Host.HostControl.resources
+/home/administrator/svn/ReportEngine/Host/obj/Release/Host.Properties.Resources.resources
+/home/administrator/svn/ReportEngine/Host/obj/Release/Host.dll
+/home/administrator/svn/ReportEngine/Host/Release/Host.dll
+/home/administrator/svn/ReportEngine/Host/Release/PMS.ToolBox.dll
+/home/administrator/svn/ReportEngine/Host/Release/Toolbox.dll
+/home/administrator/svn/ReportEngine/Host/Release/ToolWindows.dll
+/home/administrator/svn/ReportEngine/Host/Release/PMS.ProgressControls.dll
+/home/administrator/svn/ReportEngine/Host/Release/PMS.PmsPowerGroupCheck.dll
+/home/administrator/svn/ReportEngine/Host/Release/PMS.PMSEncrypt.dll

@@ -1,0 +1,13 @@
+/home/administrator/svn/ReportEngine/PMSToolControls/ReportEngine/ReportEngine/obj/Release/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/home/administrator/svn/ReportEngine/PMSToolControls/ReportEngine/ReportEngine/obj/Release/NetSCADA.ReportEngine.LogMessageForm.resources
+/home/administrator/svn/ReportEngine/PMSToolControls/ReportEngine/ReportEngine/obj/Release/NetSCADA.ReportEngine.ReportViewer.resources
+/home/administrator/svn/ReportEngine/PMSToolControls/ReportEngine/ReportEngine/obj/Release/NetSCADA.ReportEngine.ExportPageArgs.resources
+/home/administrator/svn/ReportEngine/PMSToolControls/ReportEngine/ReportEngine/obj/Release/NetSCADA.ReportEngine.ProcessForm.resources
+/home/administrator/svn/ReportEngine/PMSToolControls/ReportEngine/ReportEngine/obj/Release/NetSCADA.ReportEngine.Properties.Resources.resources
+/home/administrator/svn/ReportEngine/PMSToolControls/ReportEngine/ReportEngine/obj/Release/NetSCADA.ReportEngine.ReportViewer.en.resources
+/home/administrator/svn/ReportEngine/PMSToolControls/ReportEngine/ReportEngine/obj/Release/en/NetSCADA.ReportEngine.resources.dll
+/home/administrator/svn/ReportEngine/bin/Debug/NetSCADA.ReportEngine.dll.mdb
+/home/administrator/svn/ReportEngine/bin/Debug/NetSCADA.ReportEngine.dll
+/home/administrator/svn/ReportEngine/bin/Debug/en/NetSCADA.ReportEngine.resources.dll
+/home/administrator/svn/ReportEngine/PMSToolControls/ReportEngine/ReportEngine/obj/Release/NetSCADA.ReportEngine.dll
+/home/administrator/svn/ReportEngine/PMSToolControls/ReportEngine/ReportEngine/obj/Release/NetSCADA.ReportEngine.dll.mdb

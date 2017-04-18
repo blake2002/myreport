@@ -1,0 +1,25 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+
+        {
+            "name": "Launch",
+            "type": "mono",
+            "request": "launch",
+            "program": "${workspaceRoot}/MESReportServer/bin/Debug/MESReportServer.exe",
+            "args": [],
+            "cwd": "${workspaceRoot}/MESReportServer/bin/Debug/",
+            "preLaunchTask": "",
+            "runtimeExecutable": null,
+            "env": {},
+            "externalConsole": false
+        },
+        {
+            "name": "Attach",
+            "type": "mono",
+            "request": "launch",
+            "address": "localhost",
+            "port": 55555
+        }
+    ]
+}

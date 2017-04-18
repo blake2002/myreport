@@ -1,0 +1,287 @@
+2017-03-07 09:19:55.7690 Info JF8MUH652VSBDH mono-sgen 18086 1  NetSCADA.MESReportServer.NLogLogWriter.InfoFormat Configuration Result:
+[Success] Name MESReportServer
+[Success] Description MESReportServerService
+[Success] ServiceName MESReportServer
+2017-03-07 09:19:55.7863 Info JF8MUH652VSBDH mono-sgen 18086 1  NetSCADA.MESReportServer.NLogLogWriter.InfoFormat Topshelf v4.0.0.0, .NET Framework v4.0.30319.42000
+2017-03-07 09:19:55.8202 Info JF8MUH652VSBDH mono-sgen 18086 1  NetSCADA.MESReportServer.NLogLogWriter.Info MESReportServer is started
+2017-03-07 09:19:55.8240 Info JF8MUH652VSBDH mono-sgen 18086 1  NetSCADA.MESReportServer.NLogLogWriter.Info [Topshelf.Nancy] Starting NancyHost
+2017-03-07 09:20:26.7757 Info JF8MUH652VSBDH mono-sgen 18086 1  NetSCADA.MESReportServer.NLogLogWriter.Info [Topshelf.Nancy] NancyHost started
+2017-03-07 09:20:26.7760 Info JF8MUH652VSBDH mono-sgen 18086 1  NetSCADA.MESReportServer.NLogLogWriter.InfoFormat The MESReportServer service is now running, press Control+C to exit.
+2017-03-07 09:22:43.1969 Info JF8MUH652VSBDH mono-sgen 18251 1  NetSCADA.MESReportServer.NLogLogWriter.InfoFormat Configuration Result:
+[Success] Name MESReportServer
+[Success] Description MESReportServerService
+[Success] ServiceName MESReportServer
+2017-03-07 09:22:43.2121 Info JF8MUH652VSBDH mono-sgen 18251 1  NetSCADA.MESReportServer.NLogLogWriter.InfoFormat Topshelf v4.0.0.0, .NET Framework v4.0.30319.42000
+2017-03-07 09:22:43.2476 Info JF8MUH652VSBDH mono-sgen 18251 1  NetSCADA.MESReportServer.NLogLogWriter.Info MESReportServer is started
+2017-03-07 09:22:43.2514 Info JF8MUH652VSBDH mono-sgen 18251 1  NetSCADA.MESReportServer.NLogLogWriter.Info [Topshelf.Nancy] Starting NancyHost
+2017-03-07 09:23:18.2873 Info JF8MUH652VSBDH mono-sgen 18251 1  NetSCADA.MESReportServer.NLogLogWriter.Info [Topshelf.Nancy] NancyHost started
+2017-03-07 09:23:18.2873 Info JF8MUH652VSBDH mono-sgen 18251 1  NetSCADA.MESReportServer.NLogLogWriter.InfoFormat The MESReportServer service is now running, press Control+C to exit.
+2017-03-07 09:30:29.1017 Info JF8MUH652VSBDH mono-sgen 18433 1  NetSCADA.MESReportServer.NLogLogWriter.InfoFormat Configuration Result:
+[Success] Name MESReportServer
+[Success] Description MESReportServerService
+[Success] ServiceName MESReportServer
+2017-03-07 09:30:29.1178 Info JF8MUH652VSBDH mono-sgen 18433 1  NetSCADA.MESReportServer.NLogLogWriter.InfoFormat Topshelf v4.0.0.0, .NET Framework v4.0.30319.42000
+2017-03-07 09:30:29.1482 Info JF8MUH652VSBDH mono-sgen 18433 1  NetSCADA.MESReportServer.NLogLogWriter.Info MESReportServer is started
+2017-03-07 09:30:29.1520 Info JF8MUH652VSBDH mono-sgen 18433 1  NetSCADA.MESReportServer.NLogLogWriter.Info [Topshelf.Nancy] Starting NancyHost
+2017-03-07 09:31:00.1041 Info JF8MUH652VSBDH mono-sgen 18433 1  NetSCADA.MESReportServer.NLogLogWriter.Info [Topshelf.Nancy] NancyHost started
+2017-03-07 09:31:00.1045 Info JF8MUH652VSBDH mono-sgen 18433 1  NetSCADA.MESReportServer.NLogLogWriter.InfoFormat The MESReportServer service is now running, press Control+C to exit.
+2017-03-07 09:32:21.2470 Info JF8MUH652VSBDH mono-sgen 18535 1  NetSCADA.MESReportServer.NLogLogWriter.InfoFormat Configuration Result:
+[Success] Name MESReportServer
+[Success] Description MESReportServerService
+[Success] ServiceName MESReportServer
+2017-03-07 09:32:21.2606 Info JF8MUH652VSBDH mono-sgen 18535 1  NetSCADA.MESReportServer.NLogLogWriter.InfoFormat Topshelf v4.0.0.0, .NET Framework v4.0.30319.42000
+2017-03-07 09:32:21.2905 Info JF8MUH652VSBDH mono-sgen 18535 1  NetSCADA.MESReportServer.NLogLogWriter.Info MESReportServer is started
+2017-03-07 09:32:21.2947 Info JF8MUH652VSBDH mono-sgen 18535 1  NetSCADA.MESReportServer.NLogLogWriter.Info [Topshelf.Nancy] Starting NancyHost
+2017-03-07 09:32:52.7222 Info JF8MUH652VSBDH mono-sgen 18535 1  NetSCADA.MESReportServer.NLogLogWriter.Info [Topshelf.Nancy] NancyHost started
+2017-03-07 09:32:52.7222 Info JF8MUH652VSBDH mono-sgen 18535 1  NetSCADA.MESReportServer.NLogLogWriter.InfoFormat The MESReportServer service is now running, press Control+C to exit.
+2017-03-07 09:33:34.2760 Error JF8MUH652VSBDH mono-sgen 18535 6 Threadpool worker NetSCADA.MESReportServer.NLogLogWriter.Error message:The connection is not open.,StackTrace:  at MySql.Data.MySqlClient.MySqlConnection.Throw (System.Exception ex) [0x00008] in <0a135c8e4d604d948724bf6960583b7f>:0 
+  at MySql.Data.MySqlClient.MySqlConnection.BeginTransaction (System.Data.IsolationLevel iso) [0x00014] in <0a135c8e4d604d948724bf6960583b7f>:0 
+  at MySql.Data.MySqlClient.MySqlConnection.BeginTransaction () [0x00000] in <0a135c8e4d604d948724bf6960583b7f>:0 
+  at (wrapper remoting-invoke-with-check) MySql.Data.MySqlClient.MySqlConnection:BeginTransaction ()
+  at NetSCADA.MESReportServer.RptDb.DeleteRptDirectory (NetSCADA.MESReportServer.RptDirectory dir) [0x0002e] in /home/administrator/svn/ReportEngine/MESReportServer/RptDbManage/RptDb.cs:189 
+2017-03-07 09:35:20.5499 Error JF8MUH652VSBDH mono-sgen 18535 7 Threadpool worker NetSCADA.MESReportServer.NLogLogWriter.Error message:The connection is not open.,StackTrace:  at MySql.Data.MySqlClient.MySqlConnection.Throw (System.Exception ex) [0x00008] in <0a135c8e4d604d948724bf6960583b7f>:0 
+  at MySql.Data.MySqlClient.MySqlConnection.BeginTransaction (System.Data.IsolationLevel iso) [0x00014] in <0a135c8e4d604d948724bf6960583b7f>:0 
+  at MySql.Data.MySqlClient.MySqlConnection.BeginTransaction () [0x00000] in <0a135c8e4d604d948724bf6960583b7f>:0 
+  at (wrapper remoting-invoke-with-check) MySql.Data.MySqlClient.MySqlConnection:BeginTransaction ()
+  at NetSCADA.MESReportServer.RptDb.DeleteRptDirectory (NetSCADA.MESReportServer.RptDirectory dir) [0x0002e] in /home/administrator/svn/ReportEngine/MESReportServer/RptDbManage/RptDb.cs:189 
+2017-03-07 09:37:13.6495 Info JF8MUH652VSBDH mono-sgen 18843 1  NetSCADA.MESReportServer.NLogLogWriter.InfoFormat Configuration Result:
+[Success] Name MESReportServer
+[Success] Description MESReportServerService
+[Success] ServiceName MESReportServer
+2017-03-07 09:37:13.6649 Info JF8MUH652VSBDH mono-sgen 18843 1  NetSCADA.MESReportServer.NLogLogWriter.InfoFormat Topshelf v4.0.0.0, .NET Framework v4.0.30319.42000
+2017-03-07 09:37:13.6946 Info JF8MUH652VSBDH mono-sgen 18843 1  NetSCADA.MESReportServer.NLogLogWriter.Info MESReportServer is started
+2017-03-07 09:37:13.6987 Info JF8MUH652VSBDH mono-sgen 18843 1  NetSCADA.MESReportServer.NLogLogWriter.Info [Topshelf.Nancy] Starting NancyHost
+2017-03-07 09:37:46.8932 Info JF8MUH652VSBDH mono-sgen 18843 1  NetSCADA.MESReportServer.NLogLogWriter.Info [Topshelf.Nancy] NancyHost started
+2017-03-07 09:37:46.8932 Info JF8MUH652VSBDH mono-sgen 18843 1  NetSCADA.MESReportServer.NLogLogWriter.InfoFormat The MESReportServer service is now running, press Control+C to exit.
+2017-03-07 09:47:50.2504 Info JF8MUH652VSBDH mono-sgen 18843 15 Threadpool worker NetSCADA.MESReportServer.NLogLogWriter.InfoFormat dirs-dirName:,isDir:
+2017-03-07 09:49:47.4694 Info JF8MUH652VSBDH mono-sgen 19302 1  NetSCADA.MESReportServer.NLogLogWriter.InfoFormat Configuration Result:
+[Success] Name MESReportServer
+[Success] Description MESReportServerService
+[Success] ServiceName MESReportServer
+2017-03-07 09:49:47.4846 Info JF8MUH652VSBDH mono-sgen 19302 1  NetSCADA.MESReportServer.NLogLogWriter.InfoFormat Topshelf v4.0.0.0, .NET Framework v4.0.30319.42000
+2017-03-07 09:49:47.5146 Info JF8MUH652VSBDH mono-sgen 19302 1  NetSCADA.MESReportServer.NLogLogWriter.Info MESReportServer is started
+2017-03-07 09:49:47.5189 Info JF8MUH652VSBDH mono-sgen 19302 1  NetSCADA.MESReportServer.NLogLogWriter.Info [Topshelf.Nancy] Starting NancyHost
+2017-03-07 09:50:20.0720 Info JF8MUH652VSBDH mono-sgen 19302 1  NetSCADA.MESReportServer.NLogLogWriter.Info [Topshelf.Nancy] NancyHost started
+2017-03-07 09:50:20.0725 Info JF8MUH652VSBDH mono-sgen 19302 1  NetSCADA.MESReportServer.NLogLogWriter.InfoFormat The MESReportServer service is now running, press Control+C to exit.
+2017-03-07 09:52:17.8264 Info JF8MUH652VSBDH mono-sgen 19302 10 Threadpool worker NetSCADA.MESReportServer.NLogLogWriter.InfoFormat dirs-dirName:
+2017-03-07 09:58:32.6957 Info JF8MUH652VSBDH mono-sgen 19657 1  NetSCADA.MESReportServer.NLogLogWriter.InfoFormat Configuration Result:
+[Success] Name MESReportServer
+[Success] Description MESReportServerService
+[Success] ServiceName MESReportServer
+2017-03-07 09:58:32.7101 Info JF8MUH652VSBDH mono-sgen 19657 1  NetSCADA.MESReportServer.NLogLogWriter.InfoFormat Topshelf v4.0.0.0, .NET Framework v4.0.30319.42000
+2017-03-07 09:58:32.7401 Info JF8MUH652VSBDH mono-sgen 19657 1  NetSCADA.MESReportServer.NLogLogWriter.Info MESReportServer is started
+2017-03-07 09:58:32.7444 Info JF8MUH652VSBDH mono-sgen 19657 1  NetSCADA.MESReportServer.NLogLogWriter.Info [Topshelf.Nancy] Starting NancyHost
+2017-03-07 09:59:02.6727 Info JF8MUH652VSBDH mono-sgen 19657 1  NetSCADA.MESReportServer.NLogLogWriter.Info [Topshelf.Nancy] NancyHost started
+2017-03-07 09:59:02.6727 Info JF8MUH652VSBDH mono-sgen 19657 1  NetSCADA.MESReportServer.NLogLogWriter.InfoFormat The MESReportServer service is now running, press Control+C to exit.
+2017-03-07 09:59:14.3536 Info JF8MUH652VSBDH mono-sgen 19657 7 Threadpool worker NetSCADA.MESReportServer.NLogLogWriter.InfoFormat dirs-dirName:
+2017-03-07 10:01:46.7008 Info JF8MUH652VSBDH mono-sgen 19790 1  NetSCADA.MESReportServer.NLogLogWriter.InfoFormat Configuration Result:
+[Success] Name MESReportServer
+[Success] Description MESReportServerService
+[Success] ServiceName MESReportServer
+2017-03-07 10:01:46.7157 Info JF8MUH652VSBDH mono-sgen 19790 1  NetSCADA.MESReportServer.NLogLogWriter.InfoFormat Topshelf v4.0.0.0, .NET Framework v4.0.30319.42000
+2017-03-07 10:01:46.7474 Info JF8MUH652VSBDH mono-sgen 19790 1  NetSCADA.MESReportServer.NLogLogWriter.Info MESReportServer is started
+2017-03-07 10:01:46.7518 Info JF8MUH652VSBDH mono-sgen 19790 1  NetSCADA.MESReportServer.NLogLogWriter.Info [Topshelf.Nancy] Starting NancyHost
+2017-03-07 10:02:17.1422 Info JF8MUH652VSBDH mono-sgen 19790 1  NetSCADA.MESReportServer.NLogLogWriter.Info [Topshelf.Nancy] NancyHost started
+2017-03-07 10:02:17.1422 Info JF8MUH652VSBDH mono-sgen 19790 1  NetSCADA.MESReportServer.NLogLogWriter.InfoFormat The MESReportServer service is now running, press Control+C to exit.
+2017-03-07 10:02:39.5584 Info JF8MUH652VSBDH mono-sgen 19790 7 Threadpool worker NetSCADA.MESReportServer.NLogLogWriter.InfoFormat dirs-dirName:
+2017-03-07 10:07:50.7983 Info JF8MUH652VSBDH mono-sgen 20078 1  NetSCADA.MESReportServer.NLogLogWriter.InfoFormat Configuration Result:
+[Success] Name MESReportServer
+[Success] Description MESReportServerService
+[Success] ServiceName MESReportServer
+2017-03-07 10:07:50.8124 Info JF8MUH652VSBDH mono-sgen 20078 1  NetSCADA.MESReportServer.NLogLogWriter.InfoFormat Topshelf v4.0.0.0, .NET Framework v4.0.30319.42000
+2017-03-07 10:07:50.8447 Info JF8MUH652VSBDH mono-sgen 20078 1  NetSCADA.MESReportServer.NLogLogWriter.Info MESReportServer is started
+2017-03-07 10:07:50.8487 Info JF8MUH652VSBDH mono-sgen 20078 1  NetSCADA.MESReportServer.NLogLogWriter.Info [Topshelf.Nancy] Starting NancyHost
+2017-03-07 10:09:00.1057 Info JF8MUH652VSBDH mono-sgen 20165 1  NetSCADA.MESReportServer.NLogLogWriter.InfoFormat Configuration Result:
+[Success] Name MESReportServer
+[Success] Description MESReportServerService
+[Success] ServiceName MESReportServer
+2017-03-07 10:09:00.1202 Info JF8MUH652VSBDH mono-sgen 20165 1  NetSCADA.MESReportServer.NLogLogWriter.InfoFormat Topshelf v4.0.0.0, .NET Framework v4.0.30319.42000
+2017-03-07 10:09:00.1541 Info JF8MUH652VSBDH mono-sgen 20165 1  NetSCADA.MESReportServer.NLogLogWriter.Info MESReportServer is started
+2017-03-07 10:09:00.1588 Info JF8MUH652VSBDH mono-sgen 20165 1  NetSCADA.MESReportServer.NLogLogWriter.Info [Topshelf.Nancy] Starting NancyHost
+2017-03-07 10:09:31.2558 Info JF8MUH652VSBDH mono-sgen 20165 1  NetSCADA.MESReportServer.NLogLogWriter.Info [Topshelf.Nancy] NancyHost started
+2017-03-07 10:09:31.2561 Info JF8MUH652VSBDH mono-sgen 20165 1  NetSCADA.MESReportServer.NLogLogWriter.InfoFormat The MESReportServer service is now running, press Control+C to exit.
+2017-03-07 10:13:58.0142 Info JF8MUH652VSBDH mono-sgen 20165 6 Threadpool worker NetSCADA.MESReportServer.NLogLogWriter.InfoFormat dirs-dirName:
+2017-03-07 10:39:49.9793 Info JF8MUH652VSBDH mono-sgen 21059 1  NetSCADA.MESReportServer.NLogLogWriter.InfoFormat Configuration Result:
+[Success] Name MESReportServer
+[Success] Description MESReportServerService
+[Success] ServiceName MESReportServer
+2017-03-07 10:39:49.9945 Info JF8MUH652VSBDH mono-sgen 21059 1  NetSCADA.MESReportServer.NLogLogWriter.InfoFormat Topshelf v4.0.0.0, .NET Framework v4.0.30319.42000
+2017-03-07 10:39:50.0241 Info JF8MUH652VSBDH mono-sgen 21059 1  NetSCADA.MESReportServer.NLogLogWriter.Info MESReportServer is started
+2017-03-07 10:39:50.0290 Info JF8MUH652VSBDH mono-sgen 21059 1  NetSCADA.MESReportServer.NLogLogWriter.Info [Topshelf.Nancy] Starting NancyHost
+2017-03-07 10:40:21.6653 Info JF8MUH652VSBDH mono-sgen 21059 1  NetSCADA.MESReportServer.NLogLogWriter.Info [Topshelf.Nancy] NancyHost started
+2017-03-07 10:40:21.6653 Info JF8MUH652VSBDH mono-sgen 21059 1  NetSCADA.MESReportServer.NLogLogWriter.InfoFormat The MESReportServer service is now running, press Control+C to exit.
+2017-03-07 10:55:45.5801 Info JF8MUH652VSBDH mono-sgen 21461 1  NetSCADA.MESReportServer.NLogLogWriter.InfoFormat Configuration Result:
+[Success] Name MESReportServer
+[Success] Description MESReportServerService
+[Success] ServiceName MESReportServer
+2017-03-07 10:55:45.5939 Info JF8MUH652VSBDH mono-sgen 21461 1  NetSCADA.MESReportServer.NLogLogWriter.InfoFormat Topshelf v4.0.0.0, .NET Framework v4.0.30319.42000
+2017-03-07 10:55:45.6249 Info JF8MUH652VSBDH mono-sgen 21461 1  NetSCADA.MESReportServer.NLogLogWriter.Info MESReportServer is started
+2017-03-07 10:55:45.6290 Info JF8MUH652VSBDH mono-sgen 21461 1  NetSCADA.MESReportServer.NLogLogWriter.Info [Topshelf.Nancy] Starting NancyHost
+2017-03-07 11:17:23.8908 Info JF8MUH652VSBDH mono-sgen 22114 1  NetSCADA.MESReportServer.NLogLogWriter.InfoFormat Configuration Result:
+[Success] Name MESReportServer
+[Success] Description MESReportServerService
+[Success] ServiceName MESReportServer
+2017-03-07 11:17:23.9053 Info JF8MUH652VSBDH mono-sgen 22114 1  NetSCADA.MESReportServer.NLogLogWriter.InfoFormat Topshelf v4.0.0.0, .NET Framework v4.0.30319.42000
+2017-03-07 11:17:23.9438 Info JF8MUH652VSBDH mono-sgen 22114 1  NetSCADA.MESReportServer.NLogLogWriter.Info MESReportServer is started
+2017-03-07 11:17:23.9478 Info JF8MUH652VSBDH mono-sgen 22114 1  NetSCADA.MESReportServer.NLogLogWriter.Info [Topshelf.Nancy] Starting NancyHost
+2017-03-07 11:18:06.6291 Info JF8MUH652VSBDH mono-sgen 22114 1  NetSCADA.MESReportServer.NLogLogWriter.Info [Topshelf.Nancy] NancyHost started
+2017-03-07 11:18:06.6291 Info JF8MUH652VSBDH mono-sgen 22114 1  NetSCADA.MESReportServer.NLogLogWriter.InfoFormat The MESReportServer service is now running, press Control+C to exit.
+2017-03-07 11:18:58.8464 Info JF8MUH652VSBDH mono-sgen 22201 1  NetSCADA.MESReportServer.NLogLogWriter.InfoFormat Configuration Result:
+[Success] Name MESReportServer
+[Success] Description MESReportServerService
+[Success] ServiceName MESReportServer
+2017-03-07 11:18:58.8607 Info JF8MUH652VSBDH mono-sgen 22201 1  NetSCADA.MESReportServer.NLogLogWriter.InfoFormat Topshelf v4.0.0.0, .NET Framework v4.0.30319.42000
+2017-03-07 11:18:58.8991 Info JF8MUH652VSBDH mono-sgen 22201 1  NetSCADA.MESReportServer.NLogLogWriter.Info MESReportServer is started
+2017-03-07 11:18:58.9030 Info JF8MUH652VSBDH mono-sgen 22201 1  NetSCADA.MESReportServer.NLogLogWriter.Info [Topshelf.Nancy] Starting NancyHost
+2017-03-07 11:22:30.7816 Info JF8MUH652VSBDH mono-sgen 22331 1  NetSCADA.MESReportServer.NLogLogWriter.InfoFormat Configuration Result:
+[Success] Name MESReportServer
+[Success] Description MESReportServerService
+[Success] ServiceName MESReportServer
+2017-03-07 11:22:30.7962 Info JF8MUH652VSBDH mono-sgen 22331 1  NetSCADA.MESReportServer.NLogLogWriter.InfoFormat Topshelf v4.0.0.0, .NET Framework v4.0.30319.42000
+2017-03-07 11:22:30.8500 Info JF8MUH652VSBDH mono-sgen 22331 1  NetSCADA.MESReportServer.NLogLogWriter.Info MESReportServer is started
+2017-03-07 11:22:30.8531 Info JF8MUH652VSBDH mono-sgen 22331 1  NetSCADA.MESReportServer.NLogLogWriter.Info [Topshelf.Nancy] Starting NancyHost
+2017-03-07 11:23:04.7140 Info JF8MUH652VSBDH mono-sgen 22331 1  NetSCADA.MESReportServer.NLogLogWriter.Info [Topshelf.Nancy] NancyHost started
+2017-03-07 11:23:04.7140 Info JF8MUH652VSBDH mono-sgen 22331 1  NetSCADA.MESReportServer.NLogLogWriter.InfoFormat The MESReportServer service is now running, press Control+C to exit.
+2017-03-07 11:23:33.8452 Info JF8MUH652VSBDH mono-sgen 22408 1  NetSCADA.MESReportServer.NLogLogWriter.InfoFormat Configuration Result:
+[Success] Name MESReportServer
+[Success] Description MESReportServerService
+[Success] ServiceName MESReportServer
+2017-03-07 11:23:33.8600 Info JF8MUH652VSBDH mono-sgen 22408 1  NetSCADA.MESReportServer.NLogLogWriter.InfoFormat Topshelf v4.0.0.0, .NET Framework v4.0.30319.42000
+2017-03-07 11:23:33.8954 Info JF8MUH652VSBDH mono-sgen 22408 1  NetSCADA.MESReportServer.NLogLogWriter.Info MESReportServer is started
+2017-03-07 11:23:33.8995 Info JF8MUH652VSBDH mono-sgen 22408 1  NetSCADA.MESReportServer.NLogLogWriter.Info [Topshelf.Nancy] Starting NancyHost
+2017-03-07 11:24:09.2589 Info JF8MUH652VSBDH mono-sgen 22408 1  NetSCADA.MESReportServer.NLogLogWriter.Info [Topshelf.Nancy] NancyHost started
+2017-03-07 11:24:09.6576 Info JF8MUH652VSBDH mono-sgen 22408 1  NetSCADA.MESReportServer.NLogLogWriter.InfoFormat The MESReportServer service is now running, press Control+C to exit.
+2017-03-07 11:24:40.7817 Info JF8MUH652VSBDH mono-sgen 22479 1  NetSCADA.MESReportServer.NLogLogWriter.InfoFormat Configuration Result:
+[Success] Name MESReportServer
+[Success] Description MESReportServerService
+[Success] ServiceName MESReportServer
+2017-03-07 11:24:40.7954 Info JF8MUH652VSBDH mono-sgen 22479 1  NetSCADA.MESReportServer.NLogLogWriter.InfoFormat Topshelf v4.0.0.0, .NET Framework v4.0.30319.42000
+2017-03-07 11:24:40.8344 Info JF8MUH652VSBDH mono-sgen 22479 1  NetSCADA.MESReportServer.NLogLogWriter.Info MESReportServer is started
+2017-03-07 11:24:40.8385 Info JF8MUH652VSBDH mono-sgen 22479 1  NetSCADA.MESReportServer.NLogLogWriter.Info [Topshelf.Nancy] Starting NancyHost
+2017-03-07 11:25:12.9886 Info JF8MUH652VSBDH mono-sgen 22479 1  NetSCADA.MESReportServer.NLogLogWriter.Info [Topshelf.Nancy] NancyHost started
+2017-03-07 11:25:14.4041 Info JF8MUH652VSBDH mono-sgen 22479 1  NetSCADA.MESReportServer.NLogLogWriter.InfoFormat The MESReportServer service is now running, press Control+C to exit.
+2017-03-07 13:20:06.7684 Info JF8MUH652VSBDH mono-sgen 23914 1  NetSCADA.MESReportServer.NLogLogWriter.InfoFormat Configuration Result:
+[Success] Name MESReportServer
+[Success] Description MESReportServerService
+[Success] ServiceName MESReportServer
+2017-03-07 13:20:06.7840 Info JF8MUH652VSBDH mono-sgen 23914 1  NetSCADA.MESReportServer.NLogLogWriter.InfoFormat Topshelf v4.0.0.0, .NET Framework v4.0.30319.42000
+2017-03-07 13:20:06.8264 Info JF8MUH652VSBDH mono-sgen 23914 1  NetSCADA.MESReportServer.NLogLogWriter.Info MESReportServer is started
+2017-03-07 13:20:06.8301 Info JF8MUH652VSBDH mono-sgen 23914 1  NetSCADA.MESReportServer.NLogLogWriter.Info [Topshelf.Nancy] Starting NancyHost
+2017-03-07 13:20:51.7448 Info JF8MUH652VSBDH mono-sgen 23914 1  NetSCADA.MESReportServer.NLogLogWriter.Info [Topshelf.Nancy] NancyHost started
+2017-03-07 13:20:51.7448 Info JF8MUH652VSBDH mono-sgen 23914 1  NetSCADA.MESReportServer.NLogLogWriter.InfoFormat The MESReportServer service is now running, press Control+C to exit.
+2017-03-07 13:21:55.8026 Info JF8MUH652VSBDH mono-sgen 23914 12 Threadpool worker NetSCADA.MESReportServer.NLogLogWriter.InfoFormat dirs-dirName:
+2017-03-07 13:29:37.2057 Info JF8MUH652VSBDH mono-sgen 24152 1  NetSCADA.MESReportServer.NLogLogWriter.InfoFormat Configuration Result:
+[Success] Name MESReportServer
+[Success] Description MESReportServerService
+[Success] ServiceName MESReportServer
+2017-03-07 13:29:37.2211 Info JF8MUH652VSBDH mono-sgen 24152 1  NetSCADA.MESReportServer.NLogLogWriter.InfoFormat Topshelf v4.0.0.0, .NET Framework v4.0.30319.42000
+2017-03-07 13:29:37.2594 Info JF8MUH652VSBDH mono-sgen 24152 1  NetSCADA.MESReportServer.NLogLogWriter.Info MESReportServer is started
+2017-03-07 13:29:37.2642 Info JF8MUH652VSBDH mono-sgen 24152 1  NetSCADA.MESReportServer.NLogLogWriter.Info [Topshelf.Nancy] Starting NancyHost
+2017-03-07 13:30:15.1222 Info JF8MUH652VSBDH mono-sgen 24327 1  NetSCADA.MESReportServer.NLogLogWriter.InfoFormat Configuration Result:
+[Success] Name MESReportServer
+[Success] Description MESReportServerService
+[Success] ServiceName MESReportServer
+2017-03-07 13:30:15.1366 Info JF8MUH652VSBDH mono-sgen 24327 1  NetSCADA.MESReportServer.NLogLogWriter.InfoFormat Topshelf v4.0.0.0, .NET Framework v4.0.30319.42000
+2017-03-07 13:30:15.1743 Info JF8MUH652VSBDH mono-sgen 24327 1  NetSCADA.MESReportServer.NLogLogWriter.Info MESReportServer is started
+2017-03-07 13:30:15.1812 Info JF8MUH652VSBDH mono-sgen 24327 1  NetSCADA.MESReportServer.NLogLogWriter.Info [Topshelf.Nancy] Starting NancyHost
+2017-03-07 13:38:14.1796 Info JF8MUH652VSBDH mono-sgen 24327 1  NetSCADA.MESReportServer.NLogLogWriter.Info [Topshelf.Nancy] NancyHost started
+2017-03-07 13:38:14.1803 Info JF8MUH652VSBDH mono-sgen 24327 1  NetSCADA.MESReportServer.NLogLogWriter.InfoFormat The MESReportServer service is now running, press Control+C to exit.
+2017-03-07 13:38:21.5457 Info JF8MUH652VSBDH mono-sgen 24327 13 Threadpool worker NetSCADA.MESReportServer.NLogLogWriter.InfoFormat dirs-dirName:
+2017-03-07 13:41:59.9962 Info JF8MUH652VSBDH mono-sgen 24648 1  NetSCADA.MESReportServer.NLogLogWriter.InfoFormat Configuration Result:
+[Success] Name MESReportServer
+[Success] Description MESReportServerService
+[Success] ServiceName MESReportServer
+2017-03-07 13:42:00.0118 Info JF8MUH652VSBDH mono-sgen 24648 1  NetSCADA.MESReportServer.NLogLogWriter.InfoFormat Topshelf v4.0.0.0, .NET Framework v4.0.30319.42000
+2017-03-07 13:42:00.0500 Info JF8MUH652VSBDH mono-sgen 24648 1  NetSCADA.MESReportServer.NLogLogWriter.Info MESReportServer is started
+2017-03-07 13:42:00.0538 Info JF8MUH652VSBDH mono-sgen 24648 1  NetSCADA.MESReportServer.NLogLogWriter.Info [Topshelf.Nancy] Starting NancyHost
+2017-03-07 13:42:40.5808 Info JF8MUH652VSBDH mono-sgen 24648 1  NetSCADA.MESReportServer.NLogLogWriter.Info [Topshelf.Nancy] NancyHost started
+2017-03-07 13:42:40.5808 Info JF8MUH652VSBDH mono-sgen 24648 1  NetSCADA.MESReportServer.NLogLogWriter.InfoFormat The MESReportServer service is now running, press Control+C to exit.
+2017-03-07 13:43:20.7951 Info JF8MUH652VSBDH mono-sgen 24722 1  NetSCADA.MESReportServer.NLogLogWriter.InfoFormat Configuration Result:
+[Success] Name MESReportServer
+[Success] Description MESReportServerService
+[Success] ServiceName MESReportServer
+2017-03-07 13:43:20.8096 Info JF8MUH652VSBDH mono-sgen 24722 1  NetSCADA.MESReportServer.NLogLogWriter.InfoFormat Topshelf v4.0.0.0, .NET Framework v4.0.30319.42000
+2017-03-07 13:43:20.8492 Info JF8MUH652VSBDH mono-sgen 24722 1  NetSCADA.MESReportServer.NLogLogWriter.Info MESReportServer is started
+2017-03-07 13:43:20.8530 Info JF8MUH652VSBDH mono-sgen 24722 1  NetSCADA.MESReportServer.NLogLogWriter.Info [Topshelf.Nancy] Starting NancyHost
+2017-03-07 13:43:58.0472 Info JF8MUH652VSBDH mono-sgen 24722 1  NetSCADA.MESReportServer.NLogLogWriter.Info [Topshelf.Nancy] NancyHost started
+2017-03-07 13:43:58.0477 Info JF8MUH652VSBDH mono-sgen 24722 1  NetSCADA.MESReportServer.NLogLogWriter.InfoFormat The MESReportServer service is now running, press Control+C to exit.
+2017-03-07 14:03:25.3942 Info JF8MUH652VSBDH mono-sgen 25657 1  NetSCADA.MESReportServer.NLogLogWriter.InfoFormat Configuration Result:
+[Success] Name MESReportServer
+[Success] Description MESReportServerService
+[Success] ServiceName MESReportServer
+2017-03-07 14:03:25.4074 Info JF8MUH652VSBDH mono-sgen 25657 1  NetSCADA.MESReportServer.NLogLogWriter.InfoFormat Topshelf v4.0.0.0, .NET Framework v4.0.30319.42000
+2017-03-07 14:03:25.4439 Info JF8MUH652VSBDH mono-sgen 25657 1  NetSCADA.MESReportServer.NLogLogWriter.Info MESReportServer is started
+2017-03-07 14:03:25.4474 Info JF8MUH652VSBDH mono-sgen 25657 1  NetSCADA.MESReportServer.NLogLogWriter.Info [Topshelf.Nancy] Starting NancyHost
+2017-03-07 14:04:19.4188 Info JF8MUH652VSBDH mono-sgen 25657 1  NetSCADA.MESReportServer.NLogLogWriter.Info [Topshelf.Nancy] NancyHost started
+2017-03-07 14:04:19.4192 Info JF8MUH652VSBDH mono-sgen 25657 1  NetSCADA.MESReportServer.NLogLogWriter.InfoFormat The MESReportServer service is now running, press Control+C to exit.
+2017-03-07 14:07:18.6003 Info JF8MUH652VSBDH mono-sgen 25823 1  NetSCADA.MESReportServer.NLogLogWriter.InfoFormat Configuration Result:
+[Success] Name MESReportServer
+[Success] Description MESReportServerService
+[Success] ServiceName MESReportServer
+2017-03-07 14:07:18.6156 Info JF8MUH652VSBDH mono-sgen 25823 1  NetSCADA.MESReportServer.NLogLogWriter.InfoFormat Topshelf v4.0.0.0, .NET Framework v4.0.30319.42000
+2017-03-07 14:07:18.6704 Info JF8MUH652VSBDH mono-sgen 25823 1  NetSCADA.MESReportServer.NLogLogWriter.Info MESReportServer is started
+2017-03-07 14:07:18.6739 Info JF8MUH652VSBDH mono-sgen 25823 1  NetSCADA.MESReportServer.NLogLogWriter.Info [Topshelf.Nancy] Starting NancyHost
+2017-03-07 14:08:05.0740 Info JF8MUH652VSBDH mono-sgen 25823 1  NetSCADA.MESReportServer.NLogLogWriter.Info [Topshelf.Nancy] NancyHost started
+2017-03-07 14:08:05.0740 Info JF8MUH652VSBDH mono-sgen 25823 1  NetSCADA.MESReportServer.NLogLogWriter.InfoFormat The MESReportServer service is now running, press Control+C to exit.
+2017-03-07 14:09:30.0579 Info JF8MUH652VSBDH mono-sgen 25915 1  NetSCADA.MESReportServer.NLogLogWriter.InfoFormat Configuration Result:
+[Success] Name MESReportServer
+[Success] Description MESReportServerService
+[Success] ServiceName MESReportServer
+2017-03-07 14:09:30.0716 Info JF8MUH652VSBDH mono-sgen 25915 1  NetSCADA.MESReportServer.NLogLogWriter.InfoFormat Topshelf v4.0.0.0, .NET Framework v4.0.30319.42000
+2017-03-07 14:09:30.1064 Info JF8MUH652VSBDH mono-sgen 25915 1  NetSCADA.MESReportServer.NLogLogWriter.Info MESReportServer is started
+2017-03-07 14:09:30.1110 Info JF8MUH652VSBDH mono-sgen 25915 1  NetSCADA.MESReportServer.NLogLogWriter.Info [Topshelf.Nancy] Starting NancyHost
+2017-03-07 14:10:02.1214 Info JF8MUH652VSBDH mono-sgen 25915 1  NetSCADA.MESReportServer.NLogLogWriter.Info [Topshelf.Nancy] NancyHost started
+2017-03-07 14:10:02.1214 Info JF8MUH652VSBDH mono-sgen 25915 1  NetSCADA.MESReportServer.NLogLogWriter.InfoFormat The MESReportServer service is now running, press Control+C to exit.
+2017-03-07 16:45:55.3254 Info JF8MUH652VSBDH mono-sgen 29995 1  NetSCADA.MESReportServer.NLogLogWriter.InfoFormat Configuration Result:
+[Success] Name MESReportServer
+[Success] Description MESReportServerService
+[Success] ServiceName MESReportServer
+2017-03-07 16:45:55.3394 Info JF8MUH652VSBDH mono-sgen 29995 1  NetSCADA.MESReportServer.NLogLogWriter.InfoFormat Topshelf v4.0.0.0, .NET Framework v4.0.30319.42000
+2017-03-07 16:45:55.3677 Info JF8MUH652VSBDH mono-sgen 29995 1  NetSCADA.MESReportServer.NLogLogWriter.Info MESReportServer is started
+2017-03-07 16:45:55.3711 Info JF8MUH652VSBDH mono-sgen 29995 1  NetSCADA.MESReportServer.NLogLogWriter.Info [Topshelf.Nancy] Starting NancyHost
+2017-03-07 16:46:26.4077 Info JF8MUH652VSBDH mono-sgen 29995 1  NetSCADA.MESReportServer.NLogLogWriter.Info [Topshelf.Nancy] NancyHost started
+2017-03-07 16:46:26.4080 Info JF8MUH652VSBDH mono-sgen 29995 1  NetSCADA.MESReportServer.NLogLogWriter.InfoFormat The MESReportServer service is now running, press Control+C to exit.
+2017-03-07 16:47:39.5995 Info JF8MUH652VSBDH mono-sgen 30090 1  NetSCADA.MESReportServer.NLogLogWriter.InfoFormat Configuration Result:
+[Success] Name MESReportServer
+[Success] Description MESReportServerService
+[Success] ServiceName MESReportServer
+2017-03-07 16:47:39.6142 Info JF8MUH652VSBDH mono-sgen 30090 1  NetSCADA.MESReportServer.NLogLogWriter.InfoFormat Topshelf v4.0.0.0, .NET Framework v4.0.30319.42000
+2017-03-07 16:47:39.6453 Info JF8MUH652VSBDH mono-sgen 30090 1  NetSCADA.MESReportServer.NLogLogWriter.Info MESReportServer is started
+2017-03-07 16:47:39.6502 Info JF8MUH652VSBDH mono-sgen 30090 1  NetSCADA.MESReportServer.NLogLogWriter.Info [Topshelf.Nancy] Starting NancyHost
+2017-03-07 16:48:11.3553 Info JF8MUH652VSBDH mono-sgen 30090 1  NetSCADA.MESReportServer.NLogLogWriter.Info [Topshelf.Nancy] NancyHost started
+2017-03-07 16:48:11.3553 Info JF8MUH652VSBDH mono-sgen 30090 1  NetSCADA.MESReportServer.NLogLogWriter.InfoFormat The MESReportServer service is now running, press Control+C to exit.
+2017-03-07 16:51:21.3603 Info JF8MUH652VSBDH mono-sgen 30284 1  NetSCADA.MESReportServer.NLogLogWriter.InfoFormat Configuration Result:
+[Success] Name MESReportServer
+[Success] Description MESReportServerService
+[Success] ServiceName MESReportServer
+2017-03-07 16:51:21.3747 Info JF8MUH652VSBDH mono-sgen 30284 1  NetSCADA.MESReportServer.NLogLogWriter.InfoFormat Topshelf v4.0.0.0, .NET Framework v4.0.30319.42000
+2017-03-07 16:51:21.3997 Info JF8MUH652VSBDH mono-sgen 30284 1  NetSCADA.MESReportServer.NLogLogWriter.Info MESReportServer is started
+2017-03-07 16:51:21.4039 Info JF8MUH652VSBDH mono-sgen 30284 1  NetSCADA.MESReportServer.NLogLogWriter.Info [Topshelf.Nancy] Starting NancyHost
+2017-03-07 16:51:51.4538 Info JF8MUH652VSBDH mono-sgen 30284 1  NetSCADA.MESReportServer.NLogLogWriter.Info [Topshelf.Nancy] NancyHost started
+2017-03-07 16:51:51.4538 Info JF8MUH652VSBDH mono-sgen 30284 1  NetSCADA.MESReportServer.NLogLogWriter.InfoFormat The MESReportServer service is now running, press Control+C to exit.
+2017-03-07 16:52:12.6463 Info JF8MUH652VSBDH mono-sgen 30284 7 Threadpool worker NetSCADA.MESReportServer.NLogLogWriter.InfoFormat dirs-json:{parent:"",id:"",name:"/",flag:"0"}
+2017-03-07 17:07:26.1408 Info JF8MUH652VSBDH mono-sgen 30898 1  NetSCADA.MESReportServer.NLogLogWriter.InfoFormat Configuration Result:
+[Success] Name MESReportServer
+[Success] Description MESReportServerService
+[Success] ServiceName MESReportServer
+2017-03-07 17:07:26.1553 Info JF8MUH652VSBDH mono-sgen 30898 1  NetSCADA.MESReportServer.NLogLogWriter.InfoFormat Topshelf v4.0.0.0, .NET Framework v4.0.30319.42000
+2017-03-07 17:07:26.1968 Info JF8MUH652VSBDH mono-sgen 30898 1  NetSCADA.MESReportServer.NLogLogWriter.Info MESReportServer is started
+2017-03-07 17:07:26.2020 Info JF8MUH652VSBDH mono-sgen 30898 1  NetSCADA.MESReportServer.NLogLogWriter.Info [Topshelf.Nancy] Starting NancyHost
+2017-03-07 17:07:52.2612 Error JF8MUH652VSBDH mono-sgen 30898 1  NetSCADA.MESReportServer.NLogLogWriter.Error Address already in use
+2017-03-07 17:08:13.7950 Info JF8MUH652VSBDH mono-sgen 31000 1  NetSCADA.MESReportServer.NLogLogWriter.InfoFormat Configuration Result:
+[Success] Name MESReportServer
+[Success] Description MESReportServerService
+[Success] ServiceName MESReportServer
+2017-03-07 17:08:13.8087 Info JF8MUH652VSBDH mono-sgen 31000 1  NetSCADA.MESReportServer.NLogLogWriter.InfoFormat Topshelf v4.0.0.0, .NET Framework v4.0.30319.42000
+2017-03-07 17:08:13.8354 Info JF8MUH652VSBDH mono-sgen 31000 1  NetSCADA.MESReportServer.NLogLogWriter.Info MESReportServer is started
+2017-03-07 17:08:13.8391 Info JF8MUH652VSBDH mono-sgen 31000 1  NetSCADA.MESReportServer.NLogLogWriter.Info [Topshelf.Nancy] Starting NancyHost
+2017-03-07 17:08:14.8805 Error JF8MUH652VSBDH mono-sgen 31000 1  NetSCADA.MESReportServer.NLogLogWriter.Error Address already in use
+2017-03-07 17:09:19.7916 Info JF8MUH652VSBDH mono-sgen 31122 1  NetSCADA.MESReportServer.NLogLogWriter.InfoFormat Configuration Result:
+[Success] Name MESReportServer
+[Success] Description MESReportServerService
+[Success] ServiceName MESReportServer
+2017-03-07 17:09:19.8073 Info JF8MUH652VSBDH mono-sgen 31122 1  NetSCADA.MESReportServer.NLogLogWriter.InfoFormat Topshelf v4.0.0.0, .NET Framework v4.0.30319.42000
+2017-03-07 17:09:19.8424 Info JF8MUH652VSBDH mono-sgen 31122 1  NetSCADA.MESReportServer.NLogLogWriter.Info MESReportServer is started
+2017-03-07 17:09:19.8460 Info JF8MUH652VSBDH mono-sgen 31122 1  NetSCADA.MESReportServer.NLogLogWriter.Info [Topshelf.Nancy] Starting NancyHost
+2017-03-07 17:09:45.8952 Info JF8MUH652VSBDH mono-sgen 31122 1  NetSCADA.MESReportServer.NLogLogWriter.Info [Topshelf.Nancy] NancyHost started
+2017-03-07 17:09:45.8957 Info JF8MUH652VSBDH mono-sgen 31122 1  NetSCADA.MESReportServer.NLogLogWriter.InfoFormat The MESReportServer service is now running, press Control+C to exit.

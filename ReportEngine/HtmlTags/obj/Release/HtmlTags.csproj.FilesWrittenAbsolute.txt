@@ -1,0 +1,5 @@
+/home/administrator/svn/ReportEngine/HtmlTags/obj/Release/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/home/administrator/svn/ReportEngine/bin/Debug/HtmlTags.dll.mdb
+/home/administrator/svn/ReportEngine/bin/Debug/HtmlTags.dll
+/home/administrator/svn/ReportEngine/HtmlTags/obj/Release/HtmlTags.dll
+/home/administrator/svn/ReportEngine/HtmlTags/obj/Release/HtmlTags.dll.mdb

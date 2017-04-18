@@ -1,0 +1,5 @@
+/home/administrator/svn/ReportEngine/SvgNet/obj/Release/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/home/administrator/svn/ReportEngine/bin/Debug/SVG.dll.mdb
+/home/administrator/svn/ReportEngine/bin/Debug/SVG.dll
+/home/administrator/svn/ReportEngine/SvgNet/obj/Release/SVG.dll
+/home/administrator/svn/ReportEngine/SvgNet/obj/Release/SVG.dll.mdb

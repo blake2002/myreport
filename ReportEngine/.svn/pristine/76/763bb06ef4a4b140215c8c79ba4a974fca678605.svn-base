@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{1EC424EA-0191-4360-8DF2-63B4D176CDEC}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <OutputType>Library</OutputType>
+    <AssemblyName>SVG</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <WarningLevel>4</WarningLevel>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>..\bin\Debug</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>..\bin\Debug</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SvgNet.SvgElements\SvgAElement.cs" />
+    <Compile Include="SvgNet.SvgElements\SvgClipPathElement.cs" />
+    <Compile Include="SvgNet.SvgElements\SvgDefsElement.cs" />
+    <Compile Include="SvgNet.SvgElements\SvgDescElement.cs" />
+    <Compile Include="SvgNet.SvgElements\SvgEllipseElement.cs" />
+    <Compile Include="SvgNet.SvgElements\SvgFilterElement.cs" />
+    <Compile Include="SvgNet.SvgElements\SvgGenericElement.cs" />
+    <Compile Include="SvgNet.SvgElements\SvgGroupElement.cs" />
+    <Compile Include="SvgNet.SvgElements\SvgImageElement.cs" />
+    <Compile Include="SvgNet.SvgElements\SvgLinearGradient.cs" />
+    <Compile Include="SvgNet.SvgElements\SvgLineElement.cs" />
+    <Compile Include="SvgNet.SvgElements\SvgPathElement.cs" />
+    <Compile Include="SvgNet.SvgElements\SvgPatternElement.cs" />
+    <Compile Include="SvgNet.SvgElements\SvgPolygonElement.cs" />
+    <Compile Include="SvgNet.SvgElements\SvgPolylineElement.cs" />
+    <Compile Include="SvgNet.SvgElements\SvgRadialGradient.cs" />
+    <Compile Include="SvgNet.SvgElements\SvgRectElement.cs" />
+    <Compile Include="SvgNet.SvgElements\SvgStopElement.cs" />
+    <Compile Include="SvgNet.SvgElements\SvgSvgElement.cs" />
+    <Compile Include="SvgNet.SvgElements\SvgSwitchElement.cs" />
+    <Compile Include="SvgNet.SvgElements\SvgSymbolElement.cs" />
+    <Compile Include="SvgNet.SvgElements\SvgTextElement.cs" />
+    <Compile Include="SvgNet.SvgElements\SvgTitleElement.cs" />
+    <Compile Include="SvgNet.SvgElements\SvgTrefElement.cs" />
+    <Compile Include="SvgNet.SvgElements\SvgTspanElement.cs" />
+    <Compile Include="SvgNet.SvgElements\SvgUseElement.cs" />
+    <Compile Include="SvgNet.SvgGdi.MetafileTools.EmfTools\BinaryReaderExtensions.cs" />
+    <Compile Include="SvgNet.SvgGdi.MetafileTools.EmfTools\EmfBinaryRecord.cs" />
+    <Compile Include="SvgNet.SvgGdi.MetafileTools.EmfTools\EmfException.cs" />
+    <Compile Include="SvgNet.SvgGdi.MetafileTools.EmfTools\EmfReader.cs" />
+    <Compile Include="SvgNet.SvgGdi.MetafileTools.EmfTools\EmfUnknownRecord.cs" />
+    <Compile Include="SvgNet.SvgGdi.MetafileTools.EmfTools\IBinaryRecord.cs" />
+    <Compile Include="SvgNet.SvgGdi.MetafileTools\DrawLineDelegate.cs" />
+    <Compile Include="SvgNet.SvgGdi.MetafileTools\FillPolygonDelegate.cs" />
+    <Compile Include="SvgNet.SvgGdi.MetafileTools\MetafileParser.cs" />
+    <Compile Include="SvgNet.SvgGdi\GdiGraphics.cs" />
+    <Compile Include="SvgNet.SvgGdi\IGraphics.cs" />
+    <Compile Include="SvgNet.SvgGdi\SvgGdiNotImpl.cs" />
+    <Compile Include="SvgNet.SvgGdi\SvgGraphics.cs" />
+    <Compile Include="SvgNet.SvgTypes\PathSeg.cs" />
+    <Compile Include="SvgNet.SvgTypes\SvgAngle.cs" />
+    <Compile Include="SvgNet.SvgTypes\SvgAngleType.cs" />
+    <Compile Include="SvgNet.SvgTypes\SvgColor.cs" />
+    <Compile Include="SvgNet.SvgTypes\SvgLength.cs" />
+    <Compile Include="SvgNet.SvgTypes\SvgLengthType.cs" />
+    <Compile Include="SvgNet.SvgTypes\SvgNumber.cs" />
+    <Compile Include="SvgNet.SvgTypes\SvgNumList.cs" />
+    <Compile Include="SvgNet.SvgTypes\SvgPath.cs" />
+    <Compile Include="SvgNet.SvgTypes\SvgPathSegType.cs" />
+    <Compile Include="SvgNet.SvgTypes\SvgPoints.cs" />
+    <Compile Include="SvgNet.SvgTypes\SvgStyle.cs" />
+    <Compile Include="SvgNet.SvgTypes\SvgTransform.cs" />
+    <Compile Include="SvgNet.SvgTypes\SvgTransformList.cs" />
+    <Compile Include="SvgNet.SvgTypes\SvgUriReference.cs" />
+    <Compile Include="SvgNet.SvgTypes\SvgXRef.cs" />
+    <Compile Include="SvgNet\IElementWithText.cs" />
+    <Compile Include="SvgNet\IElementWithXRef.cs" />
+    <Compile Include="SvgNet\SvgElement.cs" />
+    <Compile Include="SvgNet\SvgException.cs" />
+    <Compile Include="SvgNet\SvgFactory.cs" />
+    <Compile Include="SvgNet\SvgStyledTransformedElement.cs" />
+    <Compile Include="SvgNet\TextNode.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

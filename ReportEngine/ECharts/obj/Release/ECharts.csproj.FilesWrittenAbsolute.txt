@@ -1,0 +1,5 @@
+/home/administrator/svn/ReportEngine/ECharts/obj/Release/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/home/administrator/svn/ReportEngine/bin/Debug/ECharts.dll.mdb
+/home/administrator/svn/ReportEngine/bin/Debug/ECharts.dll
+/home/administrator/svn/ReportEngine/ECharts/obj/Release/ECharts.dll
+/home/administrator/svn/ReportEngine/ECharts/obj/Release/ECharts.dll.mdb

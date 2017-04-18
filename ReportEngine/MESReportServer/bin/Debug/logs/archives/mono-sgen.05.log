@@ -1,0 +1,7 @@
+2017-03-14 17:33:18.6649 Info JF8MUH652VSBDH mono-sgen 15652 1  NetSCADA.MESReportServer.NLogLogWriter.InfoFormat Configuration Result:
+[Success] Name MESReportServer
+[Success] Description MESReportServerService
+[Success] ServiceName MESReportServer
+2017-03-14 17:33:18.6819 Info JF8MUH652VSBDH mono-sgen 15652 1  NetSCADA.MESReportServer.NLogLogWriter.InfoFormat Topshelf v4.0.0.0, .NET Framework v4.0.30319.42000
+2017-03-14 17:33:18.7109 Info JF8MUH652VSBDH mono-sgen 15652 1  NetSCADA.MESReportServer.NLogLogWriter.Info MESReportServer is started
+2017-03-14 17:33:18.7152 Info JF8MUH652VSBDH mono-sgen 15652 1  NetSCADA.MESReportServer.NLogLogWriter.Info [Topshelf.Nancy] Starting NancyHost

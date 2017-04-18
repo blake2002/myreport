@@ -1,0 +1,16 @@
+﻿<Properties StartupItem="MESReportServer/MESReportServer-mono.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="PmsReport/Controls/BasicControl/BarCode.cs">
+    <Files>
+      <File FileName="PmsPublicData/CustomPage.cs" Line="1" Column="1" />
+      <File FileName="Host/Host-mono.csproj" Line="187" Column="11" />
+      <File FileName="MESReportServer/ReportModule.cs" Line="18" Column="1" />
+      <File FileName="PmsReport/Controls/BasicControl/BarCode.cs" Line="12" Column="11" />
+      <File FileName="PMSPublicInfo/PublicInterface.cs" Line="5662" Column="37" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

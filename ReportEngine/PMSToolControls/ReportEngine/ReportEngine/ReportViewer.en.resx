@@ -1,0 +1,229 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="splitContainer1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="subReportDrawing.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="subReportDrawing.Size" type="System.Drawing.Size, System.Drawing">
+    <value>356, 404</value>
+  </data>
+  <data name="splitContainer2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="subMainReportDrawing.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
+  </data>
+  <data name="subMainReportDrawing.Size" type="System.Drawing.Size, System.Drawing">
+    <value>718, 197</value>
+  </data>
+  <data name="mainReportDrawing.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
+  </data>
+  <data name="mainReportDrawing.Size" type="System.Drawing.Size, System.Drawing">
+    <value>718, 202</value>
+  </data>
+  <data name="splitContainer2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>718, 404</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="splitContainer2.SplitterDistance" type="System.Int32, mscorlib">
+    <value>197</value>
+  </data>
+  <data name="splitContainer2.SplitterWidth" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="splitContainer1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1079, 404</value>
+  </data>
+  <data name="splitContainer1.SplitterDistance" type="System.Int32, mscorlib">
+    <value>356</value>
+  </data>
+  <data name="splitContainer1.SplitterWidth" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="openfile.Size" type="System.Drawing.Size, System.Drawing">
+    <value>28, 36</value>
+  </data>
+  <data name="openfile.Text" xml:space="preserve">
+    <value>Open</value>
+  </data>
+  <data name="refresh.Size" type="System.Drawing.Size, System.Drawing">
+    <value>28, 36</value>
+  </data>
+  <data name="refresh.Text" xml:space="preserve">
+    <value>Refresh</value>
+  </data>
+  <data name="Printer.Size" type="System.Drawing.Size, System.Drawing">
+    <value>28, 36</value>
+  </data>
+  <data name="Printer.Text" xml:space="preserve">
+    <value>Print</value>
+  </data>
+  <data name="saveas.Size" type="System.Drawing.Size, System.Drawing">
+    <value>28, 36</value>
+  </data>
+  <data name="saveas.Text" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="preview.Size" type="System.Drawing.Size, System.Drawing">
+    <value>28, 36</value>
+  </data>
+  <data name="preview.Text" xml:space="preserve">
+    <value>Navigator</value>
+  </data>
+  <data name="subview.Size" type="System.Drawing.Size, System.Drawing">
+    <value>28, 36</value>
+  </data>
+  <data name="subview.Text" xml:space="preserve">
+    <value>SubView</value>
+  </data>
+  <data name="firstpage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>28, 36</value>
+  </data>
+  <data name="firstpage.Text" xml:space="preserve">
+    <value>First Page</value>
+  </data>
+  <data name="prepage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>28, 36</value>
+  </data>
+  <data name="prepage.Text" xml:space="preserve">
+    <value>Previous Page</value>
+  </data>
+  <data name="pagenumtextbox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>105, 39</value>
+  </data>
+  <data name="pagenumtextbox.ToolTipText" xml:space="preserve">
+    <value>Page Num/Page Count</value>
+  </data>
+  <data name="nextpage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>28, 36</value>
+  </data>
+  <data name="nextpage.Text" xml:space="preserve">
+    <value>Next Page</value>
+  </data>
+  <data name="lastpage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>28, 36</value>
+  </data>
+  <data name="lastpage.Text" xml:space="preserve">
+    <value>Last Page</value>
+  </data>
+  <data name="fitsize.Size" type="System.Drawing.Size, System.Drawing">
+    <value>28, 36</value>
+  </data>
+  <data name="fitsize.Text" xml:space="preserve">
+    <value>Actual Size</value>
+  </data>
+  <data name="fitpage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>28, 36</value>
+  </data>
+  <data name="fitpage.Text" xml:space="preserve">
+    <value>Fit Page</value>
+  </data>
+  <data name="fitwidth.Size" type="System.Drawing.Size, System.Drawing">
+    <value>28, 36</value>
+  </data>
+  <data name="fitwidth.Text" xml:space="preserve">
+    <value>Fit Width</value>
+  </data>
+  <data name="zoomout.Size" type="System.Drawing.Size, System.Drawing">
+    <value>28, 36</value>
+  </data>
+  <data name="zoomout.Text" xml:space="preserve">
+    <value>Zoom Out</value>
+  </data>
+  <data name="zoomcombobox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>105, 39</value>
+  </data>
+  <data name="zoomcombobox.ToolTipText" xml:space="preserve">
+    <value>Zoom Scale</value>
+  </data>
+  <data name="zoomin.Size" type="System.Drawing.Size, System.Drawing">
+    <value>28, 36</value>
+  </data>
+  <data name="zoomin.Text" xml:space="preserve">
+    <value>Zoom In</value>
+  </data>
+  <data name="log.Size" type="System.Drawing.Size, System.Drawing">
+    <value>28, 36</value>
+  </data>
+  <data name="log.Text" xml:space="preserve">
+    <value>Log</value>
+  </data>
+  <data name="toolStrip1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1079, 39</value>
+  </data>
+  <data name="Configer.Text" xml:space="preserve">
+    <value>Config</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>8, 15</value>
+  </data>
+  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1079, 404</value>
+  </data>
+</root>

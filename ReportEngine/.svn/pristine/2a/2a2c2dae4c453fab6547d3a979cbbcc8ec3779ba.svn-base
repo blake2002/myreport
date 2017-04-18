@@ -1,0 +1,424 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using PMS.Libraries.ToolControls.Report.Element;
+using System.Windows.Forms;
+using System.Drawing;
+using PMS.Libraries.ToolControls.Report.Elements.Util;
+using PMS.Libraries.ToolControls.PmsSheet.PmsPublicData;
+using PMS.Libraries.ToolControls.Report;
+using PMS.Libraries.ToolControls.PMSChart;
+using PMS.Libraries.ToolControls;
+using PMS.Libraries.ToolControls.MESTable;
+using MES.Report;
+using PMS.Libraries.ToolControls.PMSPublicInfo;
+using MES.FormLib.Controls.Expressions.Operators;
+
+namespace NetSCADA.ReportEngine
+{
+	public interface IPanelGuid
+	{
+		string Guid { set; get; }
+	}
+
+	/// <summary>
+	/// 报表元素
+	/// </summary>
+	public class ReportElement : IPanelGuid
+	{
+		public ReportElement (Control ctrl, float DpiX, float DpiY)
+		{
+			_Parameter = null;
+			_Tag = ctrl;
+			_Location = new PointF (SizeConversion.ConvertPixelToInches (ctrl.Location.X, DpiX), SizeConversion.ConvertPixelToInches (ctrl.Location.Y, DpiY));
+			_Height = SizeConversion.ConvertPixelToInches (ctrl.Height, DpiX);
+			_Width = SizeConversion.ConvertPixelToInches (ctrl.Width, DpiX);
+			_Text = "";
+		}
+
+		public ReportElement (object ctrl, float DpiX, float DpiY, System.Drawing.PointF location, float width, float height)
+		{
+			_Parameter = null;
+			_Tag = ctrl;
+			_Location = new PointF (SizeConversion.ConvertPixelToInches (location.X, DpiX), SizeConversion.ConvertPixelToInches (location.Y, DpiY));
+			_Height = SizeConversion.ConvertPixelToInches (height, DpiX);
+			_Width = SizeConversion.ConvertPixelToInches (width, DpiX);
+			_Text = "";
+		}
+
+		public ReportElement (ReportElement rpElement)
+		{
+			_Tag = rpElement.Tag;
+			_Location = rpElement.Location;
+			_Height = rpElement.Height;
+			_Width = rpElement.Width;
+			_Text = rpElement.Text;
+			_Parameter = rpElement.Parameter;
+			_guid = rpElement.Guid;
+		}
+
+		private object _Tag = null;
+
+		/// <summary>
+		/// 模板控件
+		/// </summary>
+		public object Tag {
+			get { return _Tag; }
+			set { _Tag = value; } 
+		}
+
+		private string _guid = string.Empty;
+
+		public string Guid {
+			set { _guid = value; }
+			get { return _guid; }
+		}
+
+		public PointF TagLocation {
+			get {
+				if (_Tag is ICell) {
+					return new PointF ((_Tag as ICell).MoveX, (_Tag as ICell).MoveY);
+				} else if (_Tag is Control) {
+					return new PointF ((_Tag as Control).Location.X, (_Tag as Control).Location.Y); 
+				} else { 
+					return new PointF (0.0f, 0.0f);
+				}
+			} 
+		}
+
+		public float TagWidth {
+			get {
+				if (_Tag is ICell) {
+					return (_Tag as ICell).Width;
+				} else if (_Tag is Control) {
+					return (_Tag as Control).Width;
+				} else {
+					return 0.0f;
+				}
+			} 
+		}
+
+		public float TagHeight {
+			get {
+				if (_Tag is ICell) {
+					return (_Tag as ICell).Height;
+				} else if (_Tag is Control) {
+					return (_Tag as Control).Height;
+				} else {
+					return 0.0f;
+				}
+			} 
+		}
+
+		private PointF _Location = new PointF (0, 0);
+
+		/// 位置
+		/// </summary>
+		public PointF Location {
+			get { return _Location; }
+			set { _Location = value; }
+		}
+
+		private float _Height = 0;
+
+		/// <summary>
+		/// 高度
+		/// </summary>
+		public float Height {
+			get { return _Height; }
+			set { _Height = value; }
+		}
+
+		private float _Width = 0;
+
+		/// <summary>
+		/// 宽度
+		/// </summary>
+		public float Width {
+			get { return _Width; }
+			set { _Width = value; }
+		}
+
+		private string _Text = "";
+
+		/// <summary>
+		/// 文本
+		/// </summary>
+		public string Text {
+			get { return _Text; }
+			set { _Text = value; }
+		}
+
+		private object _Parameter = null;
+
+		/// <summary>
+		/// 文本关联参数：ICell的颜色
+		/// /summary>
+		public object Parameter {
+			get { return _Parameter; }
+			set { _Parameter = value; }
+		}
+
+
+		private ReportPage _Page = null;
+
+		public ReportPage Page {
+			get { return _Page; }
+			set { _Page = value; }
+		}
+
+		public void Release ()
+		{
+			if (null == _Tag) {
+				return;
+			}
+//			if (_Tag is IChartElement || _Tag is SectionChart) {
+//				(_Tag as Control).Dispose (); 
+//			}
+			if (_Tag != null && _Tag is Control) {
+				(_Tag as Control).Dispose (); 
+				_Tag = null;
+			}
+		}
+
+		public void Draw2 (Graphics g, PointF location, ReportRuntime rptRuntime)
+		{
+			if (null == _Tag || null == rptRuntime) {
+				return;
+			}
+			RectangleF[] rfC = new RectangleF[1]; 
+			rfC [0] = new RectangleF (location.X, location.Y, (int)SizeConversion.ConvertInchesToPixel (_Width, g.DpiX), (int)SizeConversion.ConvertInchesToPixel (_Height, g.DpiY));
+
+			using (Pen pn = new Pen (Brushes.Black, 1)) {
+				g.DrawLine (pn, new PointF (location.X, location.Y + rfC [0].Height), new PointF (location.X + rfC [0].Width, location.Y + rfC [0].Height));
+				// g.DrawRectangles(pn, rfC);
+			}
+		}
+
+		public void Draw (Graphics g, PointF location, ReportRuntime rptRuntime, RectangleF backRect, bool isExport = false, Extension ext = null)
+		{ 
+			if (null == _Tag || null == rptRuntime) {
+				return;
+			}
+			try { 
+				if (location.X < 0) {
+					location.X = backRect.Location.X;
+				}
+				if (location.Y < 0) {
+					location.Y = backRect.Location.Y;
+				}
+				Canvas DraqCanvas = new Canvas (g);
+				string realText = Text;
+				if (_Tag is PmsLabel) {
+					//需要二次计算的带页参数的报表元素（页码等） 
+					string str = (_Tag as IExpression).Expression;
+					if ((str.IndexOf ("PageIndex") >= 0 || str.IndexOf ("PageCount") >= 0)) {
+						object o = rptRuntime.ExpressionEngine.Execute (str, rptRuntime.DataTables, "");
+						if (o != null) {
+							realText = Convert.ToString (o);
+						}
+					} else {
+						str = Text.ToLower ();
+						if (!string.IsNullOrEmpty (str) && (str.IndexOf ("[#pageindex#]") >= 0 || str.IndexOf ("[#pageCount#]") >= 0)) {
+							object objVisible = rptRuntime.ExpressionEngine.ExcuteBindText (Text, rptRuntime.DataTables, "");
+							if (objVisible != null) {
+								realText = Convert.ToString (objVisible);
+							}
+						}
+					}
+				} else if (_Tag is IVisibleExpression) {
+					string str = (_Tag as IVisibleExpression).VisibleExpression;
+					if (!string.IsNullOrEmpty (str) && ((str.IndexOf ("PageIndex") >= 0 || str.IndexOf ("PageCount") >= 0))) {
+						object o = rptRuntime.ExpressionEngine.Execute (str, rptRuntime.DataTables, "");
+						if (o != null) {
+							bool bVisible = Convert.ToBoolean (o);
+							if (!bVisible)
+								return;
+						}
+					}
+				}
+				float dpiZoom = 1.0f;
+				if (null != _Page && null != _Page.PageManager) {
+					dpiZoom = g.DpiX / _Page.PageManager.ReportConfigDpiX;
+				}
+
+				if (_Tag is ICell) {
+					ICell cell = _Tag as ICell;
+					cell.RealText = realText;
+					if (_Parameter != null) {
+						cell.Style = _Parameter as PMS.Libraries.ToolControls.MESTable.CellStyles.Style;
+					}
+					//todo: qiuleilei
+					if (CurrentPrjInfo.CurrentEnvironment == MESEnvironment.MESReportServer && cell.Style != null) {
+						var ff = FontFamily.Families.FirstOrDefault ((f) => f.Name == "宋体");
+						if (ff == null)
+							cell.Style.Font = SystemFonts.DefaultFont;//ff = FontFamily.Families.FirstOrDefault((f)=> f.Name.Contains("Sans"));
+						if (ff != null)
+							cell.Style.Font = new Font (ff, 9.0f, FontStyle.Regular);
+					}
+					cell.Width = SizeConversion.ConvertInchesToPixel (_Width, backRect.Width - location.X, g.DpiX);
+					cell.Height = SizeConversion.ConvertInchesToPixel (_Height, backRect.Height - location.Y + backRect.Y, g.DpiY);
+					cell.DirectDraw (DraqCanvas, location.X, location.Y, dpiZoom); 
+
+				} else if (_Tag is IChartElement) {
+
+					IChartElement curve = _Tag as IChartElement;
+					//if (curve is IBindDataTableManager)
+					//{
+					//    (curve as IBindReportExpressionEngine).ExpressionEngine = rptRuntime.ExpressionEngine;
+					//    (curve as IBindDataTableManager).BindDataTableManager(rptRuntime.DataTables, realText);
+					//}  
+					curve.Width = (int)SizeConversion.ConvertInchesToPixel (_Width, backRect.Width - location.X, g.DpiX);
+					curve.Height = (int)SizeConversion.ConvertInchesToPixel (_Height, backRect.Height - location.Y + backRect.Y, g.DpiY);
+					if (curve is Control) {
+						(curve as Control).Width = curve.Width;
+						(curve as Control).Height = curve.Height;
+					}
+					curve.DirectDraw (DraqCanvas, location.X, location.Y, dpiZoom);
+				} else if (_Tag is SectionChart) {
+					SectionChart curve = _Tag as SectionChart;
+					//if (curve is IBindDataTableManager)
+					//{
+					//    (curve as IBindReportExpressionEngine).ExpressionEngine = rptRuntime.ExpressionEngine;
+					//    (curve as IBindDataTableManager).BindDataTableManager(rptRuntime.DataTables, realText);
+					//}  
+					(curve as IElementExtended).Width = (int)SizeConversion.ConvertInchesToPixel (_Width, backRect.Width - location.X, g.DpiX);
+					(curve as IElementExtended).Height = (int)SizeConversion.ConvertInchesToPixel (_Height, backRect.Height - location.Y + backRect.Y, g.DpiY);
+					if (curve is Control) {
+						(curve as Control).Width = (curve as IElementExtended).Width;
+						(curve as Control).Height = (curve as IElementExtended).Height;
+					}
+					curve.DirectDraw (DraqCanvas, location.X, location.Y, dpiZoom);
+				} else if (_Tag is IDirectDrawable) {
+					if (_Tag is IElementContent) {
+						(_Tag as IElementContent).RealText = realText;
+					}
+					if (_Tag is IElement) {
+						(_Tag as IElement).Width = (int)SizeConversion.ConvertInchesToPixel (_Width, backRect.Width - location.X, g.DpiX);
+						(_Tag as IElement).Height = (int)SizeConversion.ConvertInchesToPixel (_Height, backRect.Height - location.Y + backRect.Y, g.DpiY);
+					}
+					(_Tag as IDirectDrawable).DirectDraw (DraqCanvas, location.X, location.Y, dpiZoom);
+				}
+				//todo:qiuleilei
+				if (isExport && CurrentPrjInfo.CurrentEnvironment == MESEnvironment.MESReportServer && ext != null) {
+					ext.ToHtml (Page, rptRuntime, _Tag, location, SizeConversion.ConvertInchesToPixel (_Width, backRect.Width - location.X, g.DpiX), SizeConversion.ConvertInchesToPixel (_Height, backRect.Height - location.Y + backRect.Y, g.DpiY));
+//					if (_Tag != null && _Tag is Control) {
+//						(_Tag as Control).Dispose ();
+//						_Tag = null;
+//					}
+				}
+			} catch (System.Exception ex) {
+				if (_Tag is IElement) {
+					rptRuntime.AddReportLog (ex, (_Tag as IElement).Name);
+				} else {
+					rptRuntime.AddReportLog (ex);
+				}
+			} 
+		}
+
+		public void Draw (PointF location, ReportRuntime rptRuntime, MyRectF backRect, bool isExport = false, Extension ext = null)
+		{ 
+			if (null == _Tag || null == rptRuntime) {
+				return;
+			}
+			try { 
+				if (location.X < 0) {
+					location.X = backRect.X;
+				}
+				if (location.Y < 0) {
+					location.Y = backRect.Y;
+				}
+				string realText = Text;
+				if (_Tag is PmsLabel) {
+					//需要二次计算的带页参数的报表元素（页码等） 
+					string str = (_Tag as IExpression).Expression;
+					if ((str.IndexOf ("PageIndex") >= 0 || str.IndexOf ("PageCount") >= 0)) {
+						object o = rptRuntime.ExpressionEngine.Execute (str, rptRuntime.DataTables, "");
+						if (o != null) {
+							realText = Convert.ToString (o);
+						}
+					} else {
+						str = Text.ToLower ();
+						if (!string.IsNullOrEmpty (str) && (str.IndexOf ("[#pageindex#]") >= 0 || str.IndexOf ("[#pageCount#]") >= 0)) {
+							object objVisible = rptRuntime.ExpressionEngine.ExcuteBindText (Text, rptRuntime.DataTables, "");
+							if (objVisible != null) {
+								realText = Convert.ToString (objVisible);
+							}
+						}
+					}
+				} else if (_Tag is IVisibleExpression) {
+					string str = (_Tag as IVisibleExpression).VisibleExpression;
+					if (!string.IsNullOrEmpty (str) && ((str.IndexOf ("PageIndex") >= 0 || str.IndexOf ("PageCount") >= 0))) {
+						object o = rptRuntime.ExpressionEngine.Execute (str, rptRuntime.DataTables, "");
+						if (o != null) {
+							bool bVisible = Convert.ToBoolean (o);
+							if (!bVisible)
+								return;
+						}
+					}
+				}
+				float dpiZoom = 1.0f;
+				if (null != _Page && null != _Page.PageManager) {
+					dpiZoom = 96 / _Page.PageManager.ReportConfigDpiX;
+				}
+
+				if (_Tag is ICell) {
+					ICell cell = _Tag as ICell;
+					cell.RealText = realText;
+					if (_Parameter != null) {
+						cell.Style = _Parameter as PMS.Libraries.ToolControls.MESTable.CellStyles.Style;
+					}
+
+					cell.Width = SizeConversion.ConvertInchesToPixel (_Width, backRect.Width - location.X, 96);
+					cell.Height = SizeConversion.ConvertInchesToPixel (_Height, backRect.Height - location.Y + backRect.Y, 96);
+
+
+				} else if (_Tag is IChartElement) {
+
+					IChartElement curve = _Tag as IChartElement;
+		
+					curve.Width = (int)SizeConversion.ConvertInchesToPixel (_Width, backRect.Width - location.X, 96);
+					curve.Height = (int)SizeConversion.ConvertInchesToPixel (_Height, backRect.Height - location.Y + backRect.Y, 96);
+					if (curve is Control) {
+						(curve as Control).Width = curve.Width;
+						(curve as Control).Height = curve.Height;
+					}
+				} else if (_Tag is SectionChart) {
+					SectionChart curve = _Tag as SectionChart;
+		
+					(curve as IElementExtended).Width = (int)SizeConversion.ConvertInchesToPixel (_Width, backRect.Width - location.X, 96);
+					(curve as IElementExtended).Height = (int)SizeConversion.ConvertInchesToPixel (_Height, backRect.Height - location.Y + backRect.Y, 96);
+					if (curve is Control) {
+						(curve as Control).Width = (curve as IElementExtended).Width;
+						(curve as Control).Height = (curve as IElementExtended).Height;
+					}
+					//curve.DirectDraw (DraqCanvas, location.X, location.Y, dpiZoom);
+				} else if (_Tag is IDirectDrawable) {
+					if (_Tag is IElementContent) {
+						(_Tag as IElementContent).RealText = realText;
+					}
+					if (_Tag is IElement) {
+						(_Tag as IElement).Width = (int)SizeConversion.ConvertInchesToPixel (_Width, backRect.Width - location.X, 96);
+						(_Tag as IElement).Height = (int)SizeConversion.ConvertInchesToPixel (_Height, backRect.Height - location.Y + backRect.Y, 96);
+					}
+					//(_Tag as IDirectDrawable).DirectDraw (DraqCanvas, location.X, location.Y, dpiZoom);
+				}
+				//todo:qiuleilei
+				if (isExport && CurrentPrjInfo.CurrentEnvironment == MESEnvironment.MESReportServer && ext != null) {
+					ext.ToHtml (Page, rptRuntime, _Tag, location, SizeConversion.ConvertInchesToPixel (_Width, backRect.Width - location.X, 96), SizeConversion.ConvertInchesToPixel (_Height, backRect.Height - location.Y + backRect.Y, 96));
+//					if (_Tag != null && (_Tag is Control)) {
+//						(_Tag as Control).Dispose ();
+//						_Tag = null;
+//					}
+				}
+			} catch (System.Exception ex) {
+				if (_Tag is IElement) {
+					rptRuntime.AddReportLog (ex, (_Tag as IElement).Name);
+				} else {
+					rptRuntime.AddReportLog (ex);
+				}
+			} 
+		}
+	}
+}

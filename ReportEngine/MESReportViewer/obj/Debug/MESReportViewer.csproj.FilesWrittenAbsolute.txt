@@ -1,0 +1,11 @@
+/home/administrator/svn/ReportEngine/MESReportViewer/obj/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/home/administrator/svn/ReportEngine/MESReportViewer/obj/Debug/PMS.Libraries.ToolControls.ExportWait.resources
+/home/administrator/svn/ReportEngine/MESReportViewer/obj/Debug/PMS.Libraries.ToolControls.ReportConfigForm.resources
+/home/administrator/svn/ReportEngine/MESReportViewer/obj/Debug/PMS.Libraries.ToolControls.ReportViewerDoModalForm.resources
+/home/administrator/svn/ReportEngine/MESReportViewer/obj/Debug/PMS.Libraries.ToolControls.ReportConfigForm.en.resources
+/home/administrator/svn/ReportEngine/MESReportViewer/obj/Debug/en/MES.MESReportViewer.resources.dll
+/home/administrator/svn/ReportEngine/bin/Debug/MES.MESReportViewer.dll.mdb
+/home/administrator/svn/ReportEngine/bin/Debug/MES.MESReportViewer.dll
+/home/administrator/svn/ReportEngine/bin/Debug/en/MES.MESReportViewer.resources.dll
+/home/administrator/svn/ReportEngine/MESReportViewer/obj/Debug/MES.MESReportViewer.dll
+/home/administrator/svn/ReportEngine/MESReportViewer/obj/Debug/MES.MESReportViewer.dll.mdb

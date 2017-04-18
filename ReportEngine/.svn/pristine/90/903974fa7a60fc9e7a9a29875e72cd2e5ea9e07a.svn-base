@@ -1,0 +1,9 @@
+﻿[{"JobName":"job1",""RptName":"/home/1.rpt","SchedulerRuler":{"RunType":1,"CycleType":"Y","OffsetDays":1,"RealTime":"150000"}},
+{"JobName":"job2","RptName":"/home/1.rpt","SchedulerRuler":{"RunType":1,"CycleType":"M","OffsetDays":1,"RealTime":"150000"}},
+{"JobName":"job3","RptName":"/home/1.rpt","SchedulerRuler":{"RunType":1,"CycleType":"W","OffsetDays":1,"RealTime":"150000"}},
+{"JobName":"job4","RptName":"/home/1.rpt","SchedulerRuler":{"RunType":1,"CycleType":"D","OffsetDays":1,"RealTime":"150000"}},
+{"JobName":"job5","RptName":"/home/1.rpt","SchedulerRuler":{"RunType":1,"CycleType":"H","OffsetDays":1,"RealTime":"150000"}},
+{"JobName":"job6","RptName":"/home/1.rpt","SchedulerRuler":{"RunType":1,"CycleType":"Min","OffsetDays":1,"RealTime":"150000"}},
+{"JobName":"job7","RptName":"/home/1.rpt","SchedulerRuler":{"RunType":1,"CycleType":"S","OffsetDays":1,"RealTime":"150000"}},
+{"JobName":"job8","RptName":"/home/1.rpt","SchedulerRuler":{"RunType":0,"CycleType":"","OffsetDays":0,"RealTime":"20170228150000"}},
+]

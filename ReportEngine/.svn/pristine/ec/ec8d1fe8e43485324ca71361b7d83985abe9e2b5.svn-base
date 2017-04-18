@@ -1,0 +1,7 @@
+﻿RunType:0 只执行1次， 1 周期性执行;
+CycleType:Y-年 M-月 W-周 D-日 H-时 Min-分 S-秒; 
+OffsetDays: 如果RunType = 1 && CycleType 为 Y M W, 则需要指定 具体哪一天 
+例如 CycleType = Y OffsetDays =1 则 是说明在每年的第一天执行 CycleType = M OffsetDays =2 
+则 是说明在每月的第二天执行 CycleType = W OffsetDays =3 则 是说明在每周的第三天执行;
+RealTime:具体的执行时间 如果runtype=0 则 规则为yyyyMMddHHmmss如果runtype=1 则 规则为HHmmss
+RptName:rpt文件的路径，注意这里是相对的，例如 UserCustom/1.rpt 或者UserCustom/文件夹1/22.rpt

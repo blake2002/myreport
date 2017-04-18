@@ -1,0 +1,166 @@
+2017-03-31 10:30:06.5332 Info JF8MUH652VSBDH mono-sgen 8757 1  NetSCADA.MESReportServer.NLogLogWriter.InfoFormat Configuration Result:
+[Success] Name MESReportServer
+[Success] Description MESReportServerService
+[Success] ServiceName MESReportServer
+2017-03-31 10:30:06.5478 Info JF8MUH652VSBDH mono-sgen 8757 1  NetSCADA.MESReportServer.NLogLogWriter.InfoFormat Topshelf v4.0.0.0, .NET Framework v4.0.30319.42000
+2017-03-31 10:30:06.5783 Info JF8MUH652VSBDH mono-sgen 8757 1  NetSCADA.MESReportServer.NLogLogWriter.Info MESReportServer is started
+2017-03-31 10:30:06.5818 Info JF8MUH652VSBDH mono-sgen 8757 1  NetSCADA.MESReportServer.NLogLogWriter.Info [Topshelf.Nancy] Starting NancyHost
+2017-03-31 10:30:17.1060 Info JF8MUH652VSBDH mono-sgen 8757 7 Threadpool worker NetSCADA.MESReportServer.NLogLogWriter.Info DealWithDirs Ok..
+2017-03-31 10:30:33.7947 Info JF8MUH652VSBDH mono-sgen 8757 1  NetSCADA.MESReportServer.NLogLogWriter.Info [Topshelf.Nancy] NancyHost started
+2017-03-31 10:30:33.7951 Info JF8MUH652VSBDH mono-sgen 8757 1  NetSCADA.MESReportServer.NLogLogWriter.InfoFormat The MESReportServer service is now running, press Control+C to exit.
+2017-03-31 10:37:17.1742 Info JF8MUH652VSBDH mono-sgen 8757 9 Threadpool worker NetSCADA.MESReportServer.NLogLogWriter.InfoFormat query-cliendId:11,queryId:3211,reportName:reportall1,filter:
+2017-03-31 10:37:27.1185 Info JF8MUH652VSBDH mono-sgen 8757 24 ManagedPoolThread #8 PMS.Libraries.ToolControls.PMSPublicInfo.Message.LogMsg user:,msg:Start to stop analyse report
+2017-03-31 10:37:27.1206 Info JF8MUH652VSBDH mono-sgen 8757 24 ManagedPoolThread #8 PMS.Libraries.ToolControls.PMSPublicInfo.Message.LogMsg user:,msg:Start to set parameter
+2017-03-31 10:37:27.1209 Info JF8MUH652VSBDH mono-sgen 8757 24 ManagedPoolThread #8 PMS.Libraries.ToolControls.PMSPublicInfo.Message.LogMsg user:,msg:Finished to set parameter
+2017-03-31 10:37:27.1209 Info JF8MUH652VSBDH mono-sgen 8757 24 ManagedPoolThread #8 PMS.Libraries.ToolControls.PMSPublicInfo.Message.LogMsg user:,msg:Start to get data from database
+2017-03-31 10:37:27.2966 Info JF8MUH652VSBDH mono-sgen 8757 24 ManagedPoolThread #8 PMS.Libraries.ToolControls.PMSPublicInfo.Message.LogMsg user:,msg:Finished to get data from database
+2017-03-31 10:37:27.2968 Info JF8MUH652VSBDH mono-sgen 8757 24 ManagedPoolThread #8 PMS.Libraries.ToolControls.PMSPublicInfo.Message.LogMsg user:,msg:Start to analyse report
+2017-03-31 10:37:27.2968 Info JF8MUH652VSBDH mono-sgen 8757 24 ManagedPoolThread #8 PMS.Libraries.ToolControls.PMSPublicInfo.Message.LogMsg user:,msg:Start to analyse report's header
+2017-03-31 10:37:27.3588 Info JF8MUH652VSBDH mono-sgen 8757 24 ManagedPoolThread #8 PMS.Libraries.ToolControls.PMSPublicInfo.Message.LogMsg user:,msg:Finished to analyse report's header
+2017-03-31 10:37:27.3588 Info JF8MUH652VSBDH mono-sgen 8757 24 ManagedPoolThread #8 PMS.Libraries.ToolControls.PMSPublicInfo.Message.LogMsg user:,msg:Start to analyse page's header
+2017-03-31 10:37:27.3588 Info JF8MUH652VSBDH mono-sgen 8757 24 ManagedPoolThread #8 PMS.Libraries.ToolControls.PMSPublicInfo.Message.LogMsg user:,msg:Finished to analyse page's header
+2017-03-31 10:37:27.3588 Info JF8MUH652VSBDH mono-sgen 8757 24 ManagedPoolThread #8 PMS.Libraries.ToolControls.PMSPublicInfo.Message.LogMsg user:,msg:Start to analyse report's data
+2017-03-31 10:37:27.5797 Info JF8MUH652VSBDH mono-sgen 8757 24 ManagedPoolThread #8 PMS.Libraries.ToolControls.PMSPublicInfo.Message.LogMsg user:,msg:Finished to analyse report's data
+2017-03-31 10:37:27.5799 Info JF8MUH652VSBDH mono-sgen 8757 24 ManagedPoolThread #8 PMS.Libraries.ToolControls.PMSPublicInfo.Message.LogMsg user:,msg:Start to analyse page's footer
+2017-03-31 10:37:27.5799 Info JF8MUH652VSBDH mono-sgen 8757 24 ManagedPoolThread #8 PMS.Libraries.ToolControls.PMSPublicInfo.Message.LogMsg user:,msg:Finished to analyse page's footer
+2017-03-31 10:37:27.5808 Info JF8MUH652VSBDH mono-sgen 8757 24 ManagedPoolThread #8 PMS.Libraries.ToolControls.PMSPublicInfo.Message.LogMsg user:,msg:Start to analyse report's footer
+2017-03-31 10:37:27.5808 Info JF8MUH652VSBDH mono-sgen 8757 24 ManagedPoolThread #8 PMS.Libraries.ToolControls.PMSPublicInfo.Message.LogMsg user:,msg:Finished to analyse report's footer
+2017-03-31 10:37:27.5818 Info JF8MUH652VSBDH mono-sgen 8757 24 ManagedPoolThread #8 PMS.Libraries.ToolControls.PMSPublicInfo.Message.LogMsg user:,msg:Finished to analyse report
+2017-03-31 10:37:27.5893 Info JF8MUH652VSBDH mono-sgen 8757 24 ManagedPoolThread #8 PMS.Libraries.ToolControls.PMSPublicInfo.Message.LogMsg user:,msg:Start to stop export report
+2017-03-31 10:37:27.5984 Info JF8MUH652VSBDH mono-sgen 8757 17 ManagedPoolThread #1 PMS.Libraries.ToolControls.PMSPublicInfo.Message.LogMsg user:,msg:Start to export report
+2017-03-31 10:37:29.4338 Info JF8MUH652VSBDH mono-sgen 8757 17 ManagedPoolThread #1 PMS.Libraries.ToolControls.PMSPublicInfo.Message.LogMsg user:,msg:Finished to export report
+2017-03-31 10:37:29.4461 Info JF8MUH652VSBDH mono-sgen 8757 17 ManagedPoolThread #1 PMS.Libraries.ToolControls.PMSPublicInfo.Message.LogMsg user:,msg:OnExportComplete,queryid:3211
+2017-03-31 10:37:29.4461 Info JF8MUH652VSBDH mono-sgen 8757 17 ManagedPoolThread #1 PMS.Libraries.ToolControls.PMSPublicInfo.Message.LogMsg user:,msg:OnExportComplete,queryid:3211,IsCompleted=1
+2017-03-31 10:37:29.4470 Info JF8MUH652VSBDH mono-sgen 8757 17 ManagedPoolThread #1 PMS.Libraries.ToolControls.PMSPublicInfo.Message.LogMsg user:,msg:Finished to export report
+2017-03-31 10:42:49.3392 Info JF8MUH652VSBDH mono-sgen 10675 1  NetSCADA.MESReportServer.NLogLogWriter.InfoFormat Configuration Result:
+[Success] Name MESReportServer
+[Success] Description MESReportServerService
+[Success] ServiceName MESReportServer
+2017-03-31 10:42:49.3531 Info JF8MUH652VSBDH mono-sgen 10675 1  NetSCADA.MESReportServer.NLogLogWriter.InfoFormat Topshelf v4.0.0.0, .NET Framework v4.0.30319.42000
+2017-03-31 10:42:49.3824 Info JF8MUH652VSBDH mono-sgen 10675 1  NetSCADA.MESReportServer.NLogLogWriter.Info MESReportServer is started
+2017-03-31 10:42:49.3862 Info JF8MUH652VSBDH mono-sgen 10675 1  NetSCADA.MESReportServer.NLogLogWriter.Info [Topshelf.Nancy] Starting NancyHost
+2017-03-31 10:42:59.9008 Info JF8MUH652VSBDH mono-sgen 10675 8 Threadpool worker NetSCADA.MESReportServer.NLogLogWriter.Info DealWithDirs Ok..
+2017-03-31 10:43:16.0854 Info JF8MUH652VSBDH mono-sgen 10675 1  NetSCADA.MESReportServer.NLogLogWriter.Info [Topshelf.Nancy] NancyHost started
+2017-03-31 10:43:16.0854 Info JF8MUH652VSBDH mono-sgen 10675 1  NetSCADA.MESReportServer.NLogLogWriter.InfoFormat The MESReportServer service is now running, press Control+C to exit.
+2017-03-31 10:43:53.2151 Info JF8MUH652VSBDH mono-sgen 10675 10 Threadpool worker NetSCADA.MESReportServer.NLogLogWriter.InfoFormat query-cliendId:11,queryId:3211,reportName:reportall1,filter:
+2017-03-31 10:46:50.3223 Info JF8MUH652VSBDH mono-sgen 10861 1  NetSCADA.MESReportServer.NLogLogWriter.InfoFormat Configuration Result:
+[Success] Name MESReportServer
+[Success] Description MESReportServerService
+[Success] ServiceName MESReportServer
+2017-03-31 10:46:50.3357 Info JF8MUH652VSBDH mono-sgen 10861 1  NetSCADA.MESReportServer.NLogLogWriter.InfoFormat Topshelf v4.0.0.0, .NET Framework v4.0.30319.42000
+2017-03-31 10:46:50.3631 Info JF8MUH652VSBDH mono-sgen 10861 1  NetSCADA.MESReportServer.NLogLogWriter.Info MESReportServer is started
+2017-03-31 10:46:50.3665 Info JF8MUH652VSBDH mono-sgen 10861 1  NetSCADA.MESReportServer.NLogLogWriter.Info [Topshelf.Nancy] Starting NancyHost
+2017-03-31 10:47:27.5769 Info JF8MUH652VSBDH mono-sgen 10986 1  NetSCADA.MESReportServer.NLogLogWriter.InfoFormat Configuration Result:
+[Success] Name MESReportServer
+[Success] Description MESReportServerService
+[Success] ServiceName MESReportServer
+2017-03-31 10:47:27.5911 Info JF8MUH652VSBDH mono-sgen 10986 1  NetSCADA.MESReportServer.NLogLogWriter.InfoFormat Topshelf v4.0.0.0, .NET Framework v4.0.30319.42000
+2017-03-31 10:47:27.6202 Info JF8MUH652VSBDH mono-sgen 10986 1  NetSCADA.MESReportServer.NLogLogWriter.Info MESReportServer is started
+2017-03-31 10:47:27.6241 Info JF8MUH652VSBDH mono-sgen 10986 1  NetSCADA.MESReportServer.NLogLogWriter.Info [Topshelf.Nancy] Starting NancyHost
+2017-03-31 10:47:28.7742 Info JF8MUH652VSBDH mono-sgen 10986 1  NetSCADA.MESReportServer.NLogLogWriter.Info [Topshelf.Nancy] NancyHost started
+2017-03-31 10:47:28.7742 Info JF8MUH652VSBDH mono-sgen 10986 1  NetSCADA.MESReportServer.NLogLogWriter.InfoFormat The MESReportServer service is now running, press Control+C to exit.
+2017-03-31 10:47:38.1325 Info JF8MUH652VSBDH mono-sgen 10986 7 Threadpool worker NetSCADA.MESReportServer.NLogLogWriter.Info DealWithDirs Ok..
+2017-03-31 10:47:46.8136 Info JF8MUH652VSBDH mono-sgen 10986 7 Threadpool worker NetSCADA.MESReportServer.NLogLogWriter.InfoFormat query-cliendId:11,queryId:3211,reportName:reportall1,filter:
+2017-03-31 10:48:41.8077 Info JF8MUH652VSBDH mono-sgen 10986 25 ManagedPoolThread #5 PMS.Libraries.ToolControls.PMSPublicInfo.Message.LogMsg user:,msg:Start to stop analyse report
+2017-03-31 10:48:41.8113 Info JF8MUH652VSBDH mono-sgen 10986 25 ManagedPoolThread #5 PMS.Libraries.ToolControls.PMSPublicInfo.Message.LogMsg user:,msg:Start to set parameter
+2017-03-31 10:48:41.8113 Info JF8MUH652VSBDH mono-sgen 10986 25 ManagedPoolThread #5 PMS.Libraries.ToolControls.PMSPublicInfo.Message.LogMsg user:,msg:Finished to set parameter
+2017-03-31 10:48:41.8126 Info JF8MUH652VSBDH mono-sgen 10986 25 ManagedPoolThread #5 PMS.Libraries.ToolControls.PMSPublicInfo.Message.LogMsg user:,msg:Start to get data from database
+2017-03-31 10:48:42.0096 Info JF8MUH652VSBDH mono-sgen 10986 25 ManagedPoolThread #5 PMS.Libraries.ToolControls.PMSPublicInfo.Message.LogMsg user:,msg:Finished to get data from database
+2017-03-31 10:48:42.0098 Info JF8MUH652VSBDH mono-sgen 10986 25 ManagedPoolThread #5 PMS.Libraries.ToolControls.PMSPublicInfo.Message.LogMsg user:,msg:Start to analyse report
+2017-03-31 10:48:42.0098 Info JF8MUH652VSBDH mono-sgen 10986 25 ManagedPoolThread #5 PMS.Libraries.ToolControls.PMSPublicInfo.Message.LogMsg user:,msg:Start to analyse report's header
+2017-03-31 10:48:42.0837 Info JF8MUH652VSBDH mono-sgen 10986 25 ManagedPoolThread #5 PMS.Libraries.ToolControls.PMSPublicInfo.Message.LogMsg user:,msg:Finished to analyse report's header
+2017-03-31 10:48:42.0839 Info JF8MUH652VSBDH mono-sgen 10986 25 ManagedPoolThread #5 PMS.Libraries.ToolControls.PMSPublicInfo.Message.LogMsg user:,msg:Start to analyse page's header
+2017-03-31 10:48:42.0839 Info JF8MUH652VSBDH mono-sgen 10986 25 ManagedPoolThread #5 PMS.Libraries.ToolControls.PMSPublicInfo.Message.LogMsg user:,msg:Finished to analyse page's header
+2017-03-31 10:48:42.0839 Info JF8MUH652VSBDH mono-sgen 10986 25 ManagedPoolThread #5 PMS.Libraries.ToolControls.PMSPublicInfo.Message.LogMsg user:,msg:Start to analyse report's data
+2017-03-31 10:48:42.3080 Info JF8MUH652VSBDH mono-sgen 10986 25 ManagedPoolThread #5 PMS.Libraries.ToolControls.PMSPublicInfo.Message.LogMsg user:,msg:Finished to analyse report's data
+2017-03-31 10:48:42.3080 Info JF8MUH652VSBDH mono-sgen 10986 25 ManagedPoolThread #5 PMS.Libraries.ToolControls.PMSPublicInfo.Message.LogMsg user:,msg:Start to analyse page's footer
+2017-03-31 10:48:42.3090 Info JF8MUH652VSBDH mono-sgen 10986 25 ManagedPoolThread #5 PMS.Libraries.ToolControls.PMSPublicInfo.Message.LogMsg user:,msg:Finished to analyse page's footer
+2017-03-31 10:48:42.3090 Info JF8MUH652VSBDH mono-sgen 10986 25 ManagedPoolThread #5 PMS.Libraries.ToolControls.PMSPublicInfo.Message.LogMsg user:,msg:Start to analyse report's footer
+2017-03-31 10:48:42.3097 Info JF8MUH652VSBDH mono-sgen 10986 25 ManagedPoolThread #5 PMS.Libraries.ToolControls.PMSPublicInfo.Message.LogMsg user:,msg:Finished to analyse report's footer
+2017-03-31 10:48:42.3097 Info JF8MUH652VSBDH mono-sgen 10986 25 ManagedPoolThread #5 PMS.Libraries.ToolControls.PMSPublicInfo.Message.LogMsg user:,msg:Finished to analyse report
+2017-03-31 10:48:42.3474 Info JF8MUH652VSBDH mono-sgen 10986 25 ManagedPoolThread #5 PMS.Libraries.ToolControls.PMSPublicInfo.Message.LogMsg user:,msg:Start to stop export report
+2017-03-31 10:48:42.3511 Info JF8MUH652VSBDH mono-sgen 10986 26 ManagedPoolThread #6 PMS.Libraries.ToolControls.PMSPublicInfo.Message.LogMsg user:,msg:Start to export report
+2017-03-31 10:49:17.2925 Info JF8MUH652VSBDH mono-sgen 10986 26 ManagedPoolThread #6 PMS.Libraries.ToolControls.PMSPublicInfo.Message.LogMsg user:,msg:Finished to export report
+2017-03-31 10:49:17.3136 Info JF8MUH652VSBDH mono-sgen 10986 26 ManagedPoolThread #6 PMS.Libraries.ToolControls.PMSPublicInfo.Message.LogMsg user:,msg:OnExportComplete,queryid:3211
+2017-03-31 10:49:17.3140 Info JF8MUH652VSBDH mono-sgen 10986 26 ManagedPoolThread #6 PMS.Libraries.ToolControls.PMSPublicInfo.Message.LogMsg user:,msg:OnExportComplete,queryid:3211,IsCompleted=1
+2017-03-31 10:49:17.3147 Info JF8MUH652VSBDH mono-sgen 10986 26 ManagedPoolThread #6 PMS.Libraries.ToolControls.PMSPublicInfo.Message.LogMsg user:,msg:Finished to export report
+2017-03-31 10:51:36.0914 Info JF8MUH652VSBDH mono-sgen 10986 7 Threadpool worker NetSCADA.MESReportServer.NLogLogWriter.InfoFormat query-cliendId:11,queryId:3222211,reportName:reportall1,filter:
+2017-03-31 10:51:38.4433 Info JF8MUH652VSBDH mono-sgen 10986 23 ManagedPoolThread #3 PMS.Libraries.ToolControls.PMSPublicInfo.Message.LogMsg user:,msg:Start to stop analyse report
+2017-03-31 10:51:38.4433 Info JF8MUH652VSBDH mono-sgen 10986 23 ManagedPoolThread #3 PMS.Libraries.ToolControls.PMSPublicInfo.Message.LogMsg user:,msg:Start to set parameter
+2017-03-31 10:51:38.4440 Info JF8MUH652VSBDH mono-sgen 10986 23 ManagedPoolThread #3 PMS.Libraries.ToolControls.PMSPublicInfo.Message.LogMsg user:,msg:Finished to set parameter
+2017-03-31 10:51:38.4440 Info JF8MUH652VSBDH mono-sgen 10986 23 ManagedPoolThread #3 PMS.Libraries.ToolControls.PMSPublicInfo.Message.LogMsg user:,msg:Start to get data from database
+2017-03-31 10:51:38.4850 Info JF8MUH652VSBDH mono-sgen 10986 23 ManagedPoolThread #3 PMS.Libraries.ToolControls.PMSPublicInfo.Message.LogMsg user:,msg:Finished to get data from database
+2017-03-31 10:51:38.4850 Info JF8MUH652VSBDH mono-sgen 10986 23 ManagedPoolThread #3 PMS.Libraries.ToolControls.PMSPublicInfo.Message.LogMsg user:,msg:Start to analyse report
+2017-03-31 10:51:38.4850 Info JF8MUH652VSBDH mono-sgen 10986 23 ManagedPoolThread #3 PMS.Libraries.ToolControls.PMSPublicInfo.Message.LogMsg user:,msg:Start to analyse report's header
+2017-03-31 10:51:38.5321 Info JF8MUH652VSBDH mono-sgen 10986 23 ManagedPoolThread #3 PMS.Libraries.ToolControls.PMSPublicInfo.Message.LogMsg user:,msg:Finished to analyse report's header
+2017-03-31 10:51:38.5321 Info JF8MUH652VSBDH mono-sgen 10986 23 ManagedPoolThread #3 PMS.Libraries.ToolControls.PMSPublicInfo.Message.LogMsg user:,msg:Start to analyse page's header
+2017-03-31 10:51:38.5321 Info JF8MUH652VSBDH mono-sgen 10986 23 ManagedPoolThread #3 PMS.Libraries.ToolControls.PMSPublicInfo.Message.LogMsg user:,msg:Finished to analyse page's header
+2017-03-31 10:51:38.5329 Info JF8MUH652VSBDH mono-sgen 10986 23 ManagedPoolThread #3 PMS.Libraries.ToolControls.PMSPublicInfo.Message.LogMsg user:,msg:Start to analyse report's data
+2017-03-31 10:51:38.5623 Info JF8MUH652VSBDH mono-sgen 10986 23 ManagedPoolThread #3 PMS.Libraries.ToolControls.PMSPublicInfo.Message.LogMsg user:,msg:Finished to analyse report's data
+2017-03-31 10:51:38.5623 Info JF8MUH652VSBDH mono-sgen 10986 23 ManagedPoolThread #3 PMS.Libraries.ToolControls.PMSPublicInfo.Message.LogMsg user:,msg:Start to analyse page's footer
+2017-03-31 10:51:38.5631 Info JF8MUH652VSBDH mono-sgen 10986 23 ManagedPoolThread #3 PMS.Libraries.ToolControls.PMSPublicInfo.Message.LogMsg user:,msg:Finished to analyse page's footer
+2017-03-31 10:51:38.5631 Info JF8MUH652VSBDH mono-sgen 10986 23 ManagedPoolThread #3 PMS.Libraries.ToolControls.PMSPublicInfo.Message.LogMsg user:,msg:Start to analyse report's footer
+2017-03-31 10:51:38.5631 Info JF8MUH652VSBDH mono-sgen 10986 23 ManagedPoolThread #3 PMS.Libraries.ToolControls.PMSPublicInfo.Message.LogMsg user:,msg:Finished to analyse report's footer
+2017-03-31 10:51:38.5640 Info JF8MUH652VSBDH mono-sgen 10986 23 ManagedPoolThread #3 PMS.Libraries.ToolControls.PMSPublicInfo.Message.LogMsg user:,msg:Finished to analyse report
+2017-03-31 10:51:38.5640 Info JF8MUH652VSBDH mono-sgen 10986 23 ManagedPoolThread #3 PMS.Libraries.ToolControls.PMSPublicInfo.Message.LogMsg user:,msg:Start to stop export report
+2017-03-31 10:51:38.5649 Info JF8MUH652VSBDH mono-sgen 10986 29 ManagedPoolThread #9 PMS.Libraries.ToolControls.PMSPublicInfo.Message.LogMsg user:,msg:Start to export report
+2017-03-31 10:51:41.0031 Info JF8MUH652VSBDH mono-sgen 10986 29 ManagedPoolThread #9 PMS.Libraries.ToolControls.PMSPublicInfo.Message.LogMsg user:,msg:Finished to export report
+2017-03-31 10:51:41.0031 Info JF8MUH652VSBDH mono-sgen 10986 29 ManagedPoolThread #9 PMS.Libraries.ToolControls.PMSPublicInfo.Message.LogMsg user:,msg:OnExportComplete,queryid:3222211
+2017-03-31 10:51:41.0038 Info JF8MUH652VSBDH mono-sgen 10986 29 ManagedPoolThread #9 PMS.Libraries.ToolControls.PMSPublicInfo.Message.LogMsg user:,msg:OnExportComplete,queryid:3222211,IsCompleted=1
+2017-03-31 10:51:41.0038 Info JF8MUH652VSBDH mono-sgen 10986 29 ManagedPoolThread #9 PMS.Libraries.ToolControls.PMSPublicInfo.Message.LogMsg user:,msg:Finished to export report
+2017-03-31 10:54:36.9181 Info JF8MUH652VSBDH mono-sgen 10986 31 Threadpool worker NetSCADA.MESReportServer.NLogLogWriter.InfoFormat exportquery-cliendId:11,queryId:321211,reportName:reportall1
+2017-03-31 10:55:46.6035 Info JF8MUH652VSBDH mono-sgen 10986 28 ManagedPoolThread #8 PMS.Libraries.ToolControls.PMSPublicInfo.Message.LogMsg user:,msg:Start to stop analyse report
+2017-03-31 10:55:46.6084 Info JF8MUH652VSBDH mono-sgen 10986 28 ManagedPoolThread #8 PMS.Libraries.ToolControls.PMSPublicInfo.Message.LogMsg user:,msg:Start to set parameter
+2017-03-31 10:55:46.6084 Info JF8MUH652VSBDH mono-sgen 10986 28 ManagedPoolThread #8 PMS.Libraries.ToolControls.PMSPublicInfo.Message.LogMsg user:,msg:Finished to set parameter
+2017-03-31 10:55:46.6090 Info JF8MUH652VSBDH mono-sgen 10986 28 ManagedPoolThread #8 PMS.Libraries.ToolControls.PMSPublicInfo.Message.LogMsg user:,msg:Start to get data from database
+2017-03-31 10:55:46.6651 Info JF8MUH652VSBDH mono-sgen 10986 28 ManagedPoolThread #8 PMS.Libraries.ToolControls.PMSPublicInfo.Message.LogMsg user:,msg:Finished to get data from database
+2017-03-31 10:55:46.6651 Info JF8MUH652VSBDH mono-sgen 10986 28 ManagedPoolThread #8 PMS.Libraries.ToolControls.PMSPublicInfo.Message.LogMsg user:,msg:Start to analyse report
+2017-03-31 10:55:46.6651 Info JF8MUH652VSBDH mono-sgen 10986 28 ManagedPoolThread #8 PMS.Libraries.ToolControls.PMSPublicInfo.Message.LogMsg user:,msg:Start to analyse report's header
+2017-03-31 10:55:46.7019 Info JF8MUH652VSBDH mono-sgen 10986 28 ManagedPoolThread #8 PMS.Libraries.ToolControls.PMSPublicInfo.Message.LogMsg user:,msg:Finished to analyse report's header
+2017-03-31 10:55:46.7019 Info JF8MUH652VSBDH mono-sgen 10986 28 ManagedPoolThread #8 PMS.Libraries.ToolControls.PMSPublicInfo.Message.LogMsg user:,msg:Start to analyse page's header
+2017-03-31 10:55:46.7019 Info JF8MUH652VSBDH mono-sgen 10986 28 ManagedPoolThread #8 PMS.Libraries.ToolControls.PMSPublicInfo.Message.LogMsg user:,msg:Finished to analyse page's header
+2017-03-31 10:55:46.7019 Info JF8MUH652VSBDH mono-sgen 10986 28 ManagedPoolThread #8 PMS.Libraries.ToolControls.PMSPublicInfo.Message.LogMsg user:,msg:Start to analyse report's data
+2017-03-31 10:55:46.7372 Info JF8MUH652VSBDH mono-sgen 10986 28 ManagedPoolThread #8 PMS.Libraries.ToolControls.PMSPublicInfo.Message.LogMsg user:,msg:Finished to analyse report's data
+2017-03-31 10:55:46.7372 Info JF8MUH652VSBDH mono-sgen 10986 28 ManagedPoolThread #8 PMS.Libraries.ToolControls.PMSPublicInfo.Message.LogMsg user:,msg:Start to analyse page's footer
+2017-03-31 10:55:46.7380 Info JF8MUH652VSBDH mono-sgen 10986 28 ManagedPoolThread #8 PMS.Libraries.ToolControls.PMSPublicInfo.Message.LogMsg user:,msg:Finished to analyse page's footer
+2017-03-31 10:55:46.7380 Info JF8MUH652VSBDH mono-sgen 10986 28 ManagedPoolThread #8 PMS.Libraries.ToolControls.PMSPublicInfo.Message.LogMsg user:,msg:Start to analyse report's footer
+2017-03-31 10:55:46.7380 Info JF8MUH652VSBDH mono-sgen 10986 28 ManagedPoolThread #8 PMS.Libraries.ToolControls.PMSPublicInfo.Message.LogMsg user:,msg:Finished to analyse report's footer
+2017-03-31 10:55:46.7389 Info JF8MUH652VSBDH mono-sgen 10986 28 ManagedPoolThread #8 PMS.Libraries.ToolControls.PMSPublicInfo.Message.LogMsg user:,msg:Finished to analyse report
+2017-03-31 10:55:46.7389 Info JF8MUH652VSBDH mono-sgen 10986 28 ManagedPoolThread #8 PMS.Libraries.ToolControls.PMSPublicInfo.Message.LogMsg user:,msg:Start to stop export report
+2017-03-31 10:55:46.7397 Info JF8MUH652VSBDH mono-sgen 10986 27 ManagedPoolThread #7 PMS.Libraries.ToolControls.PMSPublicInfo.Message.LogMsg user:,msg:Start to export report
+2017-03-31 10:56:31.2802 Info JF8MUH652VSBDH mono-sgen 10986 27 ManagedPoolThread #7 PMS.Libraries.ToolControls.PMSPublicInfo.Message.LogMsg user:,msg:Finished to export report
+2017-03-31 10:56:31.2802 Info JF8MUH652VSBDH mono-sgen 10986 27 ManagedPoolThread #7 PMS.Libraries.ToolControls.PMSPublicInfo.Message.LogMsg user:,msg:OnExportComplete,queryid:321211
+2017-03-31 10:56:31.2802 Info JF8MUH652VSBDH mono-sgen 10986 27 ManagedPoolThread #7 PMS.Libraries.ToolControls.PMSPublicInfo.Message.LogMsg user:,msg:OnExportComplete,queryid:321211,IsCompleted=1
+2017-03-31 10:56:31.2809 Info JF8MUH652VSBDH mono-sgen 10986 27 ManagedPoolThread #7 PMS.Libraries.ToolControls.PMSPublicInfo.Message.LogMsg user:,msg:Finished to export report
+2017-03-31 13:15:37.2022 Info JF8MUH652VSBDH mono-sgen 16549 1  NetSCADA.MESReportServer.NLogLogWriter.InfoFormat Configuration Result:
+[Success] Name MESReportServer
+[Success] Description MESReportServerService
+[Success] ServiceName MESReportServer
+2017-03-31 13:15:37.2165 Info JF8MUH652VSBDH mono-sgen 16549 1  NetSCADA.MESReportServer.NLogLogWriter.InfoFormat Topshelf v4.0.0.0, .NET Framework v4.0.30319.42000
+2017-03-31 13:15:37.2450 Info JF8MUH652VSBDH mono-sgen 16549 1  NetSCADA.MESReportServer.NLogLogWriter.Info MESReportServer is started
+2017-03-31 13:15:37.2494 Info JF8MUH652VSBDH mono-sgen 16549 1  NetSCADA.MESReportServer.NLogLogWriter.Info [Topshelf.Nancy] Starting NancyHost
+2017-03-31 13:15:47.7967 Info JF8MUH652VSBDH mono-sgen 16549 6 Threadpool worker NetSCADA.MESReportServer.NLogLogWriter.Info DealWithDirs Ok..
+2017-03-31 13:16:11.8166 Info JF8MUH652VSBDH mono-sgen 16549 1  NetSCADA.MESReportServer.NLogLogWriter.Info [Topshelf.Nancy] NancyHost started
+2017-03-31 13:16:11.8166 Info JF8MUH652VSBDH mono-sgen 16549 1  NetSCADA.MESReportServer.NLogLogWriter.InfoFormat The MESReportServer service is now running, press Control+C to exit.
+2017-03-31 13:17:02.5047 Info JF8MUH652VSBDH mono-sgen 16549 6 Threadpool worker NetSCADA.MESReportServer.NLogLogWriter.Info clear ServerWebQuery...
+2017-03-31 13:19:45.1208 Info JF8MUH652VSBDH mono-sgen 16768 1  NetSCADA.MESReportServer.NLogLogWriter.InfoFormat Configuration Result:
+[Success] Name MESReportServer
+[Success] Description MESReportServerService
+[Success] ServiceName MESReportServer
+2017-03-31 13:19:45.1344 Info JF8MUH652VSBDH mono-sgen 16768 1  NetSCADA.MESReportServer.NLogLogWriter.InfoFormat Topshelf v4.0.0.0, .NET Framework v4.0.30319.42000
+2017-03-31 13:19:45.1597 Info JF8MUH652VSBDH mono-sgen 16768 1  NetSCADA.MESReportServer.NLogLogWriter.Info MESReportServer is started
+2017-03-31 13:19:45.1639 Info JF8MUH652VSBDH mono-sgen 16768 1  NetSCADA.MESReportServer.NLogLogWriter.Info [Topshelf.Nancy] Starting NancyHost
+2017-03-31 13:19:55.6994 Info JF8MUH652VSBDH mono-sgen 16768 6 Threadpool worker NetSCADA.MESReportServer.NLogLogWriter.Info DealWithDirs Ok..
+2017-03-31 13:20:11.4400 Info JF8MUH652VSBDH mono-sgen 16768 1  NetSCADA.MESReportServer.NLogLogWriter.Info [Topshelf.Nancy] NancyHost started
+2017-03-31 13:20:11.4400 Info JF8MUH652VSBDH mono-sgen 16768 1  NetSCADA.MESReportServer.NLogLogWriter.InfoFormat The MESReportServer service is now running, press Control+C to exit.
+2017-03-31 13:32:10.2822 Info JF8MUH652VSBDH mono-sgen 18204 1  NetSCADA.MESReportServer.NLogLogWriter.InfoFormat Configuration Result:
+[Success] Name MESReportServer
+[Success] Description MESReportServerService
+[Success] ServiceName MESReportServer
+2017-03-31 13:32:10.2951 Info JF8MUH652VSBDH mono-sgen 18204 1  NetSCADA.MESReportServer.NLogLogWriter.InfoFormat Topshelf v4.0.0.0, .NET Framework v4.0.30319.42000
+2017-03-31 13:32:10.3239 Info JF8MUH652VSBDH mono-sgen 18204 1  NetSCADA.MESReportServer.NLogLogWriter.Info MESReportServer is started
+2017-03-31 13:32:10.3277 Info JF8MUH652VSBDH mono-sgen 18204 1  NetSCADA.MESReportServer.NLogLogWriter.Info [Topshelf.Nancy] Starting NancyHost
+2017-03-31 13:32:21.2784 Info JF8MUH652VSBDH mono-sgen 18204 8 Threadpool worker NetSCADA.MESReportServer.NLogLogWriter.Info DealWithDirs Ok..
+2017-03-31 13:32:36.8975 Info JF8MUH652VSBDH mono-sgen 18204 1  NetSCADA.MESReportServer.NLogLogWriter.Info [Topshelf.Nancy] NancyHost started
+2017-03-31 13:32:36.8975 Info JF8MUH652VSBDH mono-sgen 18204 1  NetSCADA.MESReportServer.NLogLogWriter.InfoFormat The MESReportServer service is now running, press Control+C to exit.
+2017-03-31 13:33:29.5565 Info JF8MUH652VSBDH mono-sgen 18204 7 Threadpool worker NetSCADA.MESReportServer.NLogLogWriter.InfoFormat rptlist-dirName:,isDir:

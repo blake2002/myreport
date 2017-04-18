@@ -1,0 +1,22 @@
+2017-03-13 15:42:24.5643 Info JF8MUH652VSBDH mono-sgen 16795 1  NetSCADA.MESReportServer.NLogLogWriter.InfoFormat Configuration Result:
+[Success] Name MESReportServer
+[Success] Description MESReportServerService
+[Success] ServiceName MESReportServer
+2017-03-13 15:42:24.5790 Info JF8MUH652VSBDH mono-sgen 16795 1  NetSCADA.MESReportServer.NLogLogWriter.InfoFormat Topshelf v4.0.0.0, .NET Framework v4.0.30319.42000
+2017-03-13 15:42:24.6115 Info JF8MUH652VSBDH mono-sgen 16795 1  NetSCADA.MESReportServer.NLogLogWriter.Info MESReportServer is started
+2017-03-13 15:42:24.6156 Info JF8MUH652VSBDH mono-sgen 16795 1  NetSCADA.MESReportServer.NLogLogWriter.Info [Topshelf.Nancy] Starting NancyHost
+2017-03-13 15:42:51.8630 Info JF8MUH652VSBDH mono-sgen 16795 1  NetSCADA.MESReportServer.NLogLogWriter.Info [Topshelf.Nancy] NancyHost started
+2017-03-13 15:42:51.8636 Info JF8MUH652VSBDH mono-sgen 16795 1  NetSCADA.MESReportServer.NLogLogWriter.InfoFormat The MESReportServer service is now running, press Control+C to exit.
+2017-03-13 15:42:56.5728 Error JF8MUH652VSBDH mono-sgen 16795 9 Threadpool worker NetSCADA.MESReportServer.NLogLogWriter.Error message:Timeout in IO operation,StackTrace:  at MySql.Data.MySqlClient.TimedStream.StopTimer () [0x00030] in <0a135c8e4d604d948724bf6960583b7f>:0 
+  at MySql.Data.MySqlClient.TimedStream.Read (System.Byte[] buffer, System.Int32 offset, System.Int32 count) [0x00015] in <0a135c8e4d604d948724bf6960583b7f>:0 
+2017-03-13 15:44:28.7243 Info JF8MUH652VSBDH mono-sgen 16795 7 Threadpool worker NetSCADA.MESReportServer.NLogLogWriter.InfoFormat /dirs--id:,name:$,parent:,flag:2
+2017-03-13 15:44:47.2858 Info JF8MUH652VSBDH mono-sgen 16795 7 Threadpool worker PMS.Libraries.ToolControls.PMSPublicInfo.Message.LogMsg user:,msg:message:Object reference not set to an instance of an object,StackTrace:  at NetSCADA.MESReportServer.RptManageModule.<RptManageModule>m__0 (System.Object _) [0x00114] in /home/administrator/svn/ReportEngine/MESReportServer/RptManageModule.cs:47 
+2017-03-13 15:49:23.0449 Info JF8MUH652VSBDH mono-sgen 17182 1  NetSCADA.MESReportServer.NLogLogWriter.InfoFormat Configuration Result:
+[Success] Name MESReportServer
+[Success] Description MESReportServerService
+[Success] ServiceName MESReportServer
+2017-03-13 15:49:23.0597 Info JF8MUH652VSBDH mono-sgen 17182 1  NetSCADA.MESReportServer.NLogLogWriter.InfoFormat Topshelf v4.0.0.0, .NET Framework v4.0.30319.42000
+2017-03-13 15:49:23.0887 Info JF8MUH652VSBDH mono-sgen 17182 1  NetSCADA.MESReportServer.NLogLogWriter.Info MESReportServer is started
+2017-03-13 15:49:23.0926 Info JF8MUH652VSBDH mono-sgen 17182 1  NetSCADA.MESReportServer.NLogLogWriter.Info [Topshelf.Nancy] Starting NancyHost
+2017-03-13 15:49:49.6574 Info JF8MUH652VSBDH mono-sgen 17182 1  NetSCADA.MESReportServer.NLogLogWriter.Info [Topshelf.Nancy] NancyHost started
+2017-03-13 15:49:49.6578 Info JF8MUH652VSBDH mono-sgen 17182 1  NetSCADA.MESReportServer.NLogLogWriter.InfoFormat The MESReportServer service is now running, press Control+C to exit.

@@ -1,0 +1,497 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8B2D4BFA-37D5-4E33-9B8A-7DF35E2CD963}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PMS.Libraries.ToolControls.Report</RootNamespace>
+    <AssemblyName>PMS.ReportControls</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>PMSKey.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MES.2DCodeLib">
+      <HintPath>..\bin\$(Configuration)\MES.2DCodeLib.dll</HintPath>
+    </Reference>
+    <Reference Include="MES.ExpressionEditor">
+      <HintPath>..\bin\$(Configuration)\MES.ExpressionEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="MES.ExpressionEngine">
+      <HintPath>..\bin\$(Configuration)\MES.ExpressionEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="MES.ReportExpressionEditor">
+      <HintPath>..\bin\$(Configuration)\MES.ReportExpressionEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="MES.ReportExpressionEngine">
+      <HintPath>..\bin\$(Configuration)\MES.ReportExpressionEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="PMS.PMSPublicInfo">
+      <HintPath>..\bin\$(Configuration)\PMS.PMSPublicInfo.dll</HintPath>
+    </Reference>
+    <Reference Include="PMS.PMSReport">
+      <HintPath>..\bin\$(Configuration)\PMS.PMSReport.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="ColorComBoBox">
+      <HintPath>..\bin\$(Configuration)\ColorComBoBox.dll</HintPath>
+    </Reference>
+    <Reference Include="ColorPicker">
+      <HintPath>..\bin\$(Configuration)\ColorPicker.dll</HintPath>
+    </Reference>
+    <Reference Include="PMS.BarcodeLib">
+      <HintPath>..\bin\$(Configuration)\PMS.BarcodeLib.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows" />
+    <Reference Include="NetSCADA.ReportEngine">
+      <HintPath>..\bin\$(Configuration)\NetSCADA.ReportEngine.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Behavior\IDirectDrawable.cs" />
+    <Compile Include="Behavior\IDataMapping.cs" />
+    <Compile Include="Behavior\IExpression.cs" />
+    <Compile Include="Behavior\IPageSplitter.cs" />
+    <Compile Include="Behavior\IPMSFormate.cs" />
+    <Compile Include="Behavior\IVirtualPrintable.cs" />
+    <Compile Include="Behavior\IVisibleExpression.cs" />
+    <Compile Include="Controls\BasicControl\BarCode.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\BasicControl\BarCodeWrapper.cs" />
+    <Compile Include="Controls\BasicControl\QRCode.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\BasicControl\QRCodeWrapper.cs" />
+    <Compile Include="Controls\BasicControl\PmsEdit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\BasicControl\PmsEditWrapper.cs" />
+    <Compile Include="Controls\BasicControl\PmsFlowLayoutWrapper.cs" />
+    <Compile Include="Controls\BasicControl\PmsImageBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\BasicControl\PmsLabelWrapper.cs" />
+    <Compile Include="Controls\BasicControl\PmsPanelWrapper.cs" />
+    <Compile Include="Controls\BasicControl\PmsPageSplitter.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\BasicControl\PmsPageSplitterWrapper.cs" />
+    <Compile Include="Controls\Component\PrintPara.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Component\ReportViewerToolBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Designer\PmsImageBoxDesigner.cs" />
+    <Compile Include="Controls\EditorDialog\Border\BorderCfgFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\EditorDialog\Border\BorderCfgFrm.Designer.cs">
+      <DependentUpon>BorderCfgFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\EditorDialog\Border\BorderCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\EditorDialog\Border\BorderCtrl.designer.cs">
+      <DependentUpon>BorderCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\EditorDialog\Border\CustomList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\EditorDialog\Border\CustomList.designer.cs">
+      <DependentUpon>CustomList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\EditorDialog\Border\IBorder.cs" />
+    <Compile Include="Controls\EditorDialog\Border\ICustomDrawItem.cs" />
+    <Compile Include="Controls\EditorDialog\Border\LineItem.cs" />
+    <Compile Include="Controls\EditorDialog\Border\MESList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\EditorDialog\Border\MESList.designer.cs">
+      <DependentUpon>MESList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\EditorDialog\MappingTableEditorPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\EditorDialog\MappingTableEditorPanel.Designer.cs">
+      <DependentUpon>MappingTableEditorPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\EditorDialog\Tabel\TabelRowsEditorDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\EditorDialog\Tabel\TabelRowsEditorDialog.Designer.cs">
+      <DependentUpon>TabelRowsEditorDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\EditorDialog\Text\EditTextBindDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\EditorDialog\Text\EditTextBindDialog.Designer.cs">
+      <DependentUpon>EditTextBindDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Editor\EditTextEditor.cs" />
+    <Compile Include="Controls\Editor\ExpressionEditor.cs" />
+    <Compile Include="Controls\Editor\Line.cs" />
+    <Compile Include="Controls\Editor\LineCombobox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Editor\DataMappingEditor.cs" />
+    <Compile Include="Controls\MarkupAnnotation\PmsImageBoxActionList.cs" />
+    <Compile Include="Controls\BasicControl\PmsImageBoxWrapper.cs" />
+    <Compile Include="Controls\TypeConvert\EditConverter.cs" />
+    <Compile Include="Controls\TypeConvert\ExpressionConverter.cs" />
+    <Compile Include="Controls\TypeConvert\ReportTabelRowsTypeConverter.cs" />
+    <Compile Include="Elements\IChartElement.cs" />
+    <Compile Include="Elements\IElementExtended.cs" />
+    <Compile Include="Elements\IBindField.cs" />
+    <Compile Include="Elements\ExtendObject.cs" />
+    <Compile Include="Elements\IBindDataTableManager.cs" />
+    <Compile Include="Behavior\ICompatible.cs" />
+    <Compile Include="Behavior\IDeepDefinitionClone.cs" />
+    <Compile Include="Behavior\IDefinitionCopy.cs" />
+    <Compile Include="Behavior\ILightClone.cs" />
+    <Compile Include="Behavior\IPmsReportDataBind.cs" />
+    <Compile Include="Behavior\IPrintable.cs" />
+    <Compile Include="Behavior\IRepeatable.cs" />
+    <Compile Include="Behavior\IResizable.cs" />
+    <Compile Include="Controls\Designer\LineDesigner.cs" />
+    <Compile Include="Controls\EditorDialog\Border\BorderEditorDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\EditorDialog\Border\BorderEditorDialog.Designer.cs">
+      <DependentUpon>BorderEditorDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\EditorDialog\Border\BorderSettingPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\EditorDialog\Border\BorderSettingPage.Designer.cs">
+      <DependentUpon>BorderSettingPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\EditorDialog\Border\EllipseBorderSettingPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\EditorDialog\Border\EllipseBorderSettingPage.Designer.cs">
+      <DependentUpon>EllipseBorderSettingPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\EditorDialog\Border\EllipseDisplayBorderControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\EditorDialog\Border\RectangleDisplayBorderControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\EditorDialog\Border\RectangleBorderSettingPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\EditorDialog\Border\RectangleBorderSettingPage.Designer.cs">
+      <DependentUpon>RectangleBorderSettingPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\EditorDialog\Source\SourceBindDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\EditorDialog\Source\SourceBindDialog.Designer.cs">
+      <DependentUpon>SourceBindDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\EditorDialog\TestFileDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\EditorDialog\TestFileDialog.Designer.cs">
+      <DependentUpon>TestFileDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\EditorDialog\Text\FieldBindDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\EditorDialog\Text\FieldBindDialog.Designer.cs">
+      <DependentUpon>FieldBindDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Editor\BorderEditor.cs" />
+    <Compile Include="Controls\Editor\SourceEditor.cs" />
+    <Compile Include="Controls\Editor\TestEditor.cs" />
+    <Compile Include="Controls\Editor\TextEditor.cs" />
+    <Compile Include="Controls\BasicControl\PmsFlowLayout.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\BasicControl\PmsLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\MarkupAnnotation\LineActionList.cs" />
+    <Compile Include="Controls\BasicControl\PmsPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Test\MyTestControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Test\MyTestPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\TypeConvert\BorderConverter.cs" />
+    <Compile Include="Controls\TypeConvert\SourceConverter.cs" />
+    <Compile Include="Controls\TypeConvert\TextConverter.cs" />
+    <Compile Include="Controls\WindowsControl\PmsLineCombobox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DataBinding\EntityToDataSource.cs" />
+    <Compile Include="DataBinding\IBindingSource.cs" />
+    <Compile Include="DataBinding\IDataColumn.cs" />
+    <Compile Include="DataBinding\IDataRow.cs" />
+    <Compile Include="DataBinding\IDataSource.cs" />
+    <Compile Include="DataBinding\IDataToDataSource.cs" />
+    <Compile Include="DataBinding\PmsDataColumn.cs" />
+    <Compile Include="DataBinding\PmsDataRow.cs" />
+    <Compile Include="DataBinding\PmsReportDataSource.cs" />
+    <Compile Include="Elements\Canvas.cs" />
+    <Compile Include="Elements\ElementBase.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Elements\ElementBorder.cs" />
+    <Compile Include="Elements\IControlTranslator.cs" />
+    <Compile Include="Elements\IElementContainer.cs" />
+    <Compile Include="Elements\IElementContent.cs" />
+    <Compile Include="Elements\IElementTranslator.cs" />
+    <Compile Include="Elements\IPanelElement.cs" />
+    <Compile Include="Elements\Util\Attributes\DeepCloneAttribute.cs" />
+    <Compile Include="Elements\Util\BorderFactory.cs" />
+    <Compile Include="Elements\Util\DeepClone.cs" />
+    <Compile Include="Elements\Util\ColorUtil.cs" />
+    <Compile Include="Elements\Util\ElementCollection.cs" />
+    <Compile Include="Elements\ElementPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Elements\EllipseBorder.cs" />
+    <Compile Include="Elements\IElement.cs" />
+    <Compile Include="Elements\RectangleBorder.cs" />
+    <Compile Include="Elements\Util\ExternData.cs" />
+    <Compile Include="Event\Args\EraseBkgArgs.cs" />
+    <Compile Include="Event\Delegate\Win32Delagate.cs" />
+    <Compile Include="Behavior\IPmsDataBindList.cs" />
+    <Compile Include="Controls\EditorDialog\MappingFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\EditorDialog\MappingFrm.Designer.cs">
+      <DependentUpon>MappingFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Win32\Win32API.cs" />
+    <Compile Include="Win32\Win32Constant.cs" />
+    <Compile Include="Win32\Win32Message.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Controls\EditorDialog\Border\BorderCfgFrm.resx">
+      <DependentUpon>BorderCfgFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\EditorDialog\Border\BorderCtrl.resx">
+      <DependentUpon>BorderCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\EditorDialog\Border\BorderEditorDialog.resx">
+      <DependentUpon>BorderEditorDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\EditorDialog\Border\BorderSettingPage.resx">
+      <DependentUpon>BorderSettingPage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\EditorDialog\Border\EllipseBorderSettingPage.resx">
+      <DependentUpon>EllipseBorderSettingPage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\EditorDialog\Border\MESList.resx">
+      <DependentUpon>MESList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\EditorDialog\Border\RectangleBorderSettingPage.resx">
+      <DependentUpon>RectangleBorderSettingPage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\EditorDialog\MappingTableEditorPanel.resx">
+      <DependentUpon>MappingTableEditorPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\EditorDialog\Source\SourceBindDialog.resx">
+      <DependentUpon>SourceBindDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\EditorDialog\TestFileDialog.resx">
+      <DependentUpon>TestFileDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\EditorDialog\Text\FieldBindDialog.resx">
+      <DependentUpon>FieldBindDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Elements\ElementBase.resx">
+      <DependentUpon>ElementBase.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PMSKey.snk" />
+    <EmbeddedResource Include="Controls\EditorDialog\Text\EditTextBindDialog.resx">
+      <DependentUpon>EditTextBindDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\EditorDialog\MappingFrm.resx">
+      <DependentUpon>MappingFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Flow.png" />
+    <EmbeddedResource Include="Resources\Panel.png" />
+    <EmbeddedResource Include="Resources\Label.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Controls\EditorDialog\Tabel\TabelRowsEditorDialog.resx">
+      <DependentUpon>TabelRowsEditorDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Error.png" />
+    <EmbeddedResource Include="Resources\Image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Tabel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Barcode.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Border.png" />
+    <EmbeddedResource Include="Resources\Field.ico" />
+    <EmbeddedResource Include="Resources\source.png" />
+    <EmbeddedResource Include="Resources\Fx.png" />
+    <EmbeddedResource Include="Resources\BottomCenter.png" />
+    <EmbeddedResource Include="Resources\BottomLeft.png" />
+    <EmbeddedResource Include="Resources\BottomRight.png" />
+    <EmbeddedResource Include="Resources\MidCenter.png" />
+    <EmbeddedResource Include="Resources\MidLeft.png" />
+    <EmbeddedResource Include="Resources\MidRight.png" />
+    <EmbeddedResource Include="Resources\TopCenter.png" />
+    <EmbeddedResource Include="Resources\TopLeft.png" />
+    <EmbeddedResource Include="Resources\TopRight.png" />
+    <EmbeddedResource Include="Resources\MapTable.png" />
+    <EmbeddedResource Include="Resources\Font.png" />
+    <EmbeddedResource Include="Resources\LabelFont.ico" />
+    <Content Include="Resources\NoneBorder.png" />
+    <Content Include="Resources\AllBorder.png" />
+    <EmbeddedResource Include="Resources\PageSplit.ico" />
+    <EmbeddedResource Include="Resources\PageSplitSmall.png" />
+    <EmbeddedResource Include="Resources\QRCode.png" />
+    <Content Include="Resources\Var.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Controls\ComplexControl\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ItemGroup>
+    <ProjectReference Include="..\DesignerLib\DesignerLib.csproj">
+      <Project>{90A4D424-B4D8-4D6C-9C77-C225DC55C599}</Project>
+      <Name>DesignerLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PmsPublicData\PmsPublicData.csproj">
+      <Project>{7E954C96-CCD4-4D7A-9C62-BC87609A6EF1}</Project>
+      <Name>PmsPublicData</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MESPublicInterface\MESPublicInterface.csproj">
+      <Project>{5A8061E9-58DF-44FA-A983-85813A8ABA10}</Project>
+      <Name>MESPublicInterface</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <PostBuildEvent>python $(SolutionDir)copy.py $(TargetPath)  $(SolutionDir)bin\$(ConfigurationName) $(TargetDir)$(TargetName)  $(SolutionDir)bin\$(ConfigurationName)\pdb\ $(TargetPath) $(SolutionDir)bin\</PostBuildEvent>
+  </PropertyGroup>
+</Project>

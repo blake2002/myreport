@@ -1,0 +1,17 @@
+2017-03-29 17:04:24.9179 Info JF8MUH652VSBDH mono-sgen 31096 1  NetSCADA.MESReportServer.NLogLogWriter.InfoFormat Configuration Result:
+[Success] Name MESReportServer
+[Success] Description MESReportServerService
+[Success] ServiceName MESReportServer
+2017-03-29 17:04:24.9312 Info JF8MUH652VSBDH mono-sgen 31096 1  NetSCADA.MESReportServer.NLogLogWriter.InfoFormat Topshelf v4.0.0.0, .NET Framework v4.0.30319.42000
+2017-03-29 17:04:24.9634 Info JF8MUH652VSBDH mono-sgen 31096 1  NetSCADA.MESReportServer.NLogLogWriter.Info MESReportServer is started
+2017-03-29 17:04:24.9648 Info JF8MUH652VSBDH mono-sgen 31096 1  NetSCADA.MESReportServer.NLogLogWriter.Info [Topshelf.Nancy] Starting NancyHost
+2017-03-29 17:04:35.3938 Info JF8MUH652VSBDH mono-sgen 31096 7 Threadpool worker NetSCADA.MESReportServer.NLogLogWriter.Info DealWithDirs Ok..
+2017-03-29 17:04:50.9041 Info JF8MUH652VSBDH mono-sgen 31096 1  NetSCADA.MESReportServer.NLogLogWriter.Info [Topshelf.Nancy] NancyHost started
+2017-03-29 17:04:50.9041 Info JF8MUH652VSBDH mono-sgen 31096 1  NetSCADA.MESReportServer.NLogLogWriter.InfoFormat The MESReportServer service is now running, press Control+C to exit.
+2017-03-29 17:34:40.5736 Info JF8MUH652VSBDH mono-sgen 31096 14 Threadpool worker NetSCADA.MESReportServer.NLogLogWriter.Info Control+C detected, attempting to stop service.
+2017-03-29 17:34:40.5793 Info JF8MUH652VSBDH mono-sgen 31096 14 Threadpool worker NetSCADA.MESReportServer.NLogLogWriter.Info [Topshelf.Nancy] Stopping NancyHost
+2017-03-29 17:34:50.0627 Info JF8MUH652VSBDH mono-sgen 31096 5 Threadpool worker NetSCADA.MESReportServer.NLogLogWriter.Info Control+C detected, attempting to stop service.
+2017-03-29 17:34:50.0631 Info JF8MUH652VSBDH mono-sgen 31096 5 Threadpool worker NetSCADA.MESReportServer.NLogLogWriter.Info [Topshelf.Nancy] Stopping NancyHost
+2017-03-29 17:34:50.0631 Info JF8MUH652VSBDH mono-sgen 31096 5 Threadpool worker NetSCADA.MESReportServer.NLogLogWriter.Info [Topshelf.Nancy] NancyHost stopped
+2017-03-29 17:34:50.0643 Info JF8MUH652VSBDH mono-sgen 31096 5 Threadpool worker NetSCADA.MESReportServer.NLogLogWriter.Info MESReportServer is stopped
+2017-03-29 17:34:50.0662 Info JF8MUH652VSBDH mono-sgen 31096 1  NetSCADA.MESReportServer.NLogLogWriter.InfoFormat The MESReportServer service has stopped.

@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F8158BA8-F643-4E41-A55C-38C1882B0CDC}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PMS.Libraries.ToolControls</RootNamespace>
+    <AssemblyName>MES.MESReportRun</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>PMSKey.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Host">
+      <HintPath>..\bin\$(Configuration)\Host.dll</HintPath>
+    </Reference>
+    <Reference Include="Loader">
+      <HintPath>..\bin\$(Configuration)\Loader.dll</HintPath>
+    </Reference>
+    <Reference Include="MES.PublicInterface">
+      <HintPath>..\bin\$(Configuration)\MES.PublicInterface.dll</HintPath>
+    </Reference>
+    <Reference Include="NetSCADA.ReportEngine">
+      <HintPath>..\bin\$(Configuration)\NetSCADA.ReportEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="PMS.CollapsiblePanel">
+      <HintPath>..\bin\$(Configuration)\PMS.CollapsiblePanel.dll</HintPath>
+    </Reference>
+    <Reference Include="PMS.PmsPublicData">
+      <HintPath>..\bin\$(Configuration)\PMS.PmsPublicData.dll</HintPath>
+    </Reference>
+    <Reference Include="PMS.PMSPublicInfo">
+      <HintPath>..\bin\$(Configuration)\PMS.PMSPublicInfo.dll</HintPath>
+    </Reference>
+    <Reference Include="PMS.PMSReport">
+      <HintPath>..\bin\$(Configuration)\PMS.PMSReport.dll</HintPath>
+    </Reference>
+    <Reference Include="PMS.ReportControls">
+      <HintPath>..\bin\$(Configuration)\PMS.ReportControls.dll</HintPath>
+    </Reference>
+    <Reference Include="PMS.ToolBox">
+      <HintPath>..\bin\$(Configuration)\PMS.ToolBox.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Toolbox">
+      <HintPath>..\bin\$(Configuration)\Toolbox.dll</HintPath>
+    </Reference>
+    <Reference Include="FluentScheduler">
+      <HintPath>..\bin\$(Configuration)\FluentScheduler.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\bin\$(Configuration)\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MESReportRun.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PMSKey.snk" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\field.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>python $(SolutionDir)copy.py $(TargetPath)  $(SolutionDir)bin\$(ConfigurationName) $(TargetDir)$(TargetName)  $(SolutionDir)bin\$(ConfigurationName)\pdb\ $(TargetPath) $(SolutionDir)bin\</PostBuildEvent>
+  </PropertyGroup>
+</Project>

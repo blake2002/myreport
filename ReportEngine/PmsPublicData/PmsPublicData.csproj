@@ -1,0 +1,397 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7E954C96-CCD4-4D7A-9C62-BC87609A6EF1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PMS.Libraries.ToolControls.PmsSheet.PmsPublicData</RootNamespace>
+    <AssemblyName>PMS.PmsPublicData</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SignAssembly>false</SignAssembly>
+    <AssemblyOriginatorKeyFile>PMSKey.snk</AssemblyOriginatorKeyFile>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <PublishUrl>http://localhost/PMS.PmsPublicData/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PMS.DropDownPanel">
+      <HintPath>..\bin\$(Configuration)\PMS.DropDownPanel.dll</HintPath>
+    </Reference>
+    <Reference Include="PMS.ForeignKeyCtrl">
+      <HintPath>..\bin\$(Configuration)\PMS.ForeignKeyCtrl.dll</HintPath>
+    </Reference>
+    <Reference Include="PMS.ToolBox">
+      <HintPath>..\bin\$(Configuration)\PMS.ToolBox.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="MES.ScreenKeyBoard">
+      <HintPath>..\bin\$(Configuration)\MES.ScreenKeyBoard.dll</HintPath>
+    </Reference>
+    <Reference Include="PMS.PMSSqlEditor">
+      <HintPath>..\bin\$(Configuration)\PMS.PMSSqlEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="PMS.PMSPublicInfo">
+      <HintPath>..\bin\$(Configuration)\PMS.PMSPublicInfo.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CollocateToolBar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CollocateToolBar.designer.cs">
+      <DependentUpon>CollocateToolBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DSDataWindow.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomPage.Designer.cs">
+      <DependentUpon>CustomPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomPageRun.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomPageRun.Designer.cs">
+      <DependentUpon>CustomPageRun.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DSSelectControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DSSelectControl.Designer.cs">
+      <DependentUpon>DSSelectControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IControlsToHtml.cs" />
+    <Compile Include="SourceFieldStoreProcedure.cs" />
+    <Compile Include="SqlDataWindow.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DSSqlPair.cs" />
+    <Compile Include="Field.cs" />
+    <Compile Include="FieldCollection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FieldCollection.Designer.cs">
+      <DependentUpon>FieldCollection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FileDisplay.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FileDisplay.Designer.cs">
+      <DependentUpon>FileDisplay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCollection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCollection.Designer.cs">
+      <DependentUpon>FormCollection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormComboBoxItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormComboBoxItem.Designer.cs">
+      <DependentUpon>FormComboBoxItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPage.Designer.cs">
+      <DependentUpon>FormPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormReportVar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormReportVar.Designer.cs">
+      <DependentUpon>FormReportVar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSqlEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSqlEdit.Designer.cs">
+      <DependentUpon>FormSqlEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IDataTableManager.cs" />
+    <Compile Include="MultiDataSourceConfigForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MultiDataSourceConfigForm.Designer.cs">
+      <DependentUpon>MultiDataSourceConfigForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OkCancelText.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OkCancelText.Designer.cs">
+      <DependentUpon>OkCancelText.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PmsPublicData.cs" />
+    <Compile Include="PmsSheetToolBox.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RelationFieldChoose.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RelationFieldChoose.Designer.cs">
+      <DependentUpon>RelationFieldChoose.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="SampleDistanceVar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SampleDistanceVar.Designer.cs">
+      <DependentUpon>SampleDistanceVar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SheetToolboxService.cs" />
+    <Compile Include="SourceFieldDataField.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SourceFieldDataTable.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SqlEditorControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SqlEditorControl.Designer.cs">
+      <DependentUpon>SqlEditorControl.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PMSKey.snk" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CollocateToolBar.resx">
+      <DependentUpon>CollocateToolBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomPage.resx">
+      <DependentUpon>CustomPage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomPageRun.resx">
+      <DependentUpon>CustomPageRun.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DSSelectControl.resx">
+      <DependentUpon>DSSelectControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FieldCollection.resx">
+      <DependentUpon>FieldCollection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FileDisplay.resx">
+      <DependentUpon>FileDisplay.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCollection.resx">
+      <DependentUpon>FormCollection.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormComboBoxItem.resx">
+      <DependentUpon>FormComboBoxItem.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPage.resx">
+      <DependentUpon>FormPage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormReportVar.resx">
+      <DependentUpon>FormReportVar.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSqlEdit.resx">
+      <DependentUpon>FormSqlEdit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MultiDataSourceConfigForm.resx">
+      <DependentUpon>MultiDataSourceConfigForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OkCancelText.resx">
+      <DependentUpon>OkCancelText.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RelationFieldChoose.resx">
+      <DependentUpon>RelationFieldChoose.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SampleDistanceVar.resx">
+      <DependentUpon>SampleDistanceVar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlEditorControl.resx">
+      <DependentUpon>SqlEditorControl.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\%2811,19%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\%2805,47%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\file.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\%2805,29%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\%2818,45%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\%2849,08%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\%2802,37%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\%2801,30%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\%2803,02%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\%2802,24%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\%2800,35%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\%2810,04%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\%2816,42%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\%2806,42%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\%2818,07%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Up.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Down.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Text.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ComboBox.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\default.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DropDownButton.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lable.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PrograssBar.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Split.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\radiobutton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GroupBox1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Control_NumericUpDown.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\ASC.png" />
+    <Content Include="Resources\DESC.png" />
+    <Content Include="Resources\NoSort.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>python $(SolutionDir)copy.py $(TargetPath)  $(SolutionDir)bin\$(ConfigurationName) $(TargetDir)$(TargetName)  $(SolutionDir)bin\$(ConfigurationName)\pdb\ $(TargetPath) $(SolutionDir)bin\</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
