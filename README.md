@@ -38,7 +38,7 @@ https://github.com/ecomfe/echarts
 
 
 
-**其他未说明的，都是原有类库，并且改动不大，所有改动的地方都标记了//TODO: qiuleilei 的字样，以便在开发环境中的todolist中查找到。**
+**其他未说明的，都是原有类库，并且改动不大，所有改动的地方都标记了//TODO: 的字样，以便在开发环境中的todolist中查找到。**
 
 # 使用monodevelop开发说明
 + mono 版本：目前使用的是 mono .Net Framework4.6.1 如图
