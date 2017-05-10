@@ -143,8 +143,7 @@ protected override void ConfigureConventions (NancyConventions nancyConventions)
 		<add key="removeQueryIdInterval" value="30" /><!--queryid清理周期 默认30分钟清理一次过期的queryid-->
 		<add key="conStr" value="server=192.167.8.51;database=rptdbtest;uid=root;pwd=root;pooling=true;charset='utf8';port=3306" /><!--数据库链接地址-->
 	</appSettings>
-</configuration>
-    ```
+</configuration>```
 
 + 部署说明
     * windows 部署
@@ -167,6 +166,9 @@ protected override void ConfigureConventions (NancyConventions nancyConventions)
 + 存在的问题
     * queryid 存储机制(回话管理)需要独立出来
     * MesReportRun 单例机制需要搞成池
+    
     * 所有使用线程的地方换成task
+    
     * 取消winform的依赖
+    
     * 引入actor模型 akka
