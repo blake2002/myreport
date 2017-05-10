@@ -167,4 +167,6 @@ protected override void ConfigureConventions (NancyConventions nancyConventions)
 + 存在的问题
     * queryid 存储机制(回话管理)需要独立出来
     * MesReportRun 单例机制需要搞成池
-    
+    * 所有使用线程的地方换成task
+    * 取消winform的依赖
+    * 引入actor模型 akka
